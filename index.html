@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <title>Florida Coastal Prep | Elite WordPress FSE Theme</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FBBF24",
+                        navy: {
+                            800: "#112240",
+                            900: "#0A192F",
+                            950: "#020C1B"
+                        }
+                    },
+                    fontFamily: {
+                        display: ["Bebas Neue", "sans-serif"],
+                        heading: ["Oswald", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    animation: {
+                      'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @layer base {
+            body {
+                @apply font-sans antialiased bg-slate-50 text-navy-900;
+                overflow-x: hidden;
+            }
+            .wp-block-group { box-sizing: border-box; }
+            .wp-site-layout { display: flex; flex-direction: column; min-height: 100vh; }
+        }
+        
+        button { @apply transition-all duration-300; }
+        button:active { transform: scale(0.95); }
+
+        ::selection {
+            background-color: #FBBF24;
+            color: #020C1B;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020C1B; }
+        ::-webkit-scrollbar-thumb { background: #FBBF24; border-radius: 4px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

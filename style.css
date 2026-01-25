@@ -1,0 +1,20 @@
+/*
+Theme Name: Florida Coastal Prep
+Theme URI: https://flcoastalprep.com
+Author: Senior Frontend Engineer
+Author URI: https://google.com
+Description: A high-performance, elite athletic block theme for Florida Coastal Preparatory Academy. Built with Full Site Editing (FSE) capabilities.
+Version: 1.0.0
+Requires at least: 6.2
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fl-coastal-prep
+Tags: block-theme, full-site-editing, athletic, sports, gold, navy, college-prep
+*/
+
+/* 
+This file is primarily for theme metadata. 
+All global styles are handled via theme.json or tailwind in this environment.
+*/
