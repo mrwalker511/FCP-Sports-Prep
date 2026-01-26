@@ -31,34 +31,8 @@ endif;
 add_action('after_setup_theme', 'fl_coastal_prep_setup');
 
 /**
- * Register Block Patterns
- * This ensures FSE templates can find the slugs referenced in .html files
+ * Note: Block Patterns are automatically registered from the /patterns directory in WP 6.4+
  */
-function fl_coastal_prep_register_patterns()
-{
-    $patterns = array(
-        'programs-hero' => 'Programs Overview Hero',
-        'programs-detail' => 'Programs Detail Section',
-        'campus-showcase' => 'Coastal Facilities Showcase',
-        'news-archive' => 'Academy Intel News Feed',
-        'schedule-results' => 'Game Schedule and Results',
-        'apply-form' => 'Admissions Application Portal',
-        'donors-showcase' => 'Donors Wall of Honor',
-        'contact-form' => 'Academy Contact Portal'
-    );
-
-    foreach ($patterns as $slug => $title) {
-        register_block_pattern(
-            'fl-coastal-prep/' . $slug,
-            array(
-                'title' => $title,
-                'categories' => array('featured'),
-                'content' => '<!-- wp:paragraph --><p>Template for ' . $slug . '</p><!-- /wp:paragraph -->',
-            )
-        );
-    }
-}
-add_action('init', 'fl_coastal_prep_register_patterns');
 
 /**
  * SEO Optimization: Meta Tags & Open Graph

@@ -38,9 +38,9 @@
     <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"}}}} -->
     <div class="wp-block-columns alignwide">
 
-        <!-- wp:column {"className":"grid-card group has-shadow-xl","style":{"color":{"background":"#ffffff"},"border":{"radius":"2px"}}} -->
+        <!-- wp:column {"className":"grid-card group has-shadow-xl","style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"radius":"2px"}}} -->
         <div class="wp-block-column grid-card group has-shadow-xl has-background"
-            style="background-color:#ffffff;border-radius:2px">
+            style="background-color:var(--wp--preset--color--base);border-radius:2px">
             <!-- wp:cover {"url":"https://images.unsplash.com/photo-1518063319789-7217e6706b04?auto=format\u0026fit=crop\u0026q=80\u0026w=800","dimRatio":20,"overlayColor":"secondary","minHeight":250,"contentPosition":"center center","isUserOverlayColor":true} -->
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
@@ -76,9 +76,9 @@
         </div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"className":"grid-card group has-shadow-xl","style":{"color":{"background":"#ffffff"},"border":{"radius":"2px"}}} -->
+        <!-- wp:column {"className":"grid-card group has-shadow-xl","style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"radius":"2px"}}} -->
         <div class="wp-block-column grid-card group has-shadow-xl has-background"
-            style="background-color:#ffffff;border-radius:2px">
+            style="background-color:var(--wp--preset--color--base);border-radius:2px">
             <!-- wp:cover {"url":"https://images.unsplash.com/photo-1523050335102-c6744729ea2a?auto=format\u0026fit=crop\u0026q=80\u0026w=800","dimRatio":20,"overlayColor":"secondary","minHeight":250,"contentPosition":"center center","isUserOverlayColor":true} -->
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
@@ -114,9 +114,9 @@
         </div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"className":"grid-card group has-shadow-xl","style":{"color":{"background":"#ffffff"},"border":{"radius":"2px"}}} -->
+        <!-- wp:column {"className":"grid-card group has-shadow-xl","style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"radius":"2px"}}} -->
         <div class="wp-block-column grid-card group has-shadow-xl has-background"
-            style="background-color:#ffffff;border-radius:2px">
+            style="background-color:var(--wp--preset--color--base);border-radius:2px">
             <!-- wp:cover {"url":"https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format\u0026fit=crop\u0026q=80\u0026w=800","dimRatio":20,"overlayColor":"secondary","minHeight":250,"contentPosition":"center center","isUserOverlayColor":true} -->
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"

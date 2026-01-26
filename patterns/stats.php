@@ -5,9 +5,9 @@
  * Categories: featured, text
  */
 ?>
-<!-- wp:group {"style":{"color":{"background":"#ffffff"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}},"border":{"width":"0px 0px 0px 0px","style":"solid","radius":"0px"}},"className":"has-shadow-2xl","layout":{"type":"constrained","contentSize":"1200px"}} -->
+<!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--base)"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}},"border":{"width":"0px 0px 0px 0px","style":"solid","radius":"0px"}},"className":"has-shadow-2xl","layout":{"type":"constrained","contentSize":"1200px"}} -->
 <div class="wp-block-group has-shadow-2xl has-background"
-    style="background-color:#ffffff;padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-radius:0px">
+    style="background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-radius:0px">
     <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0px","left":"0px"}}}} -->
     <div class="wp-block-columns">
 
