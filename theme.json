@@ -6,18 +6,50 @@
     "useRootPaddingAwareAlignments": true,
     "color": {
       "palette": [
-        { "name": "Base", "slug": "base", "color": "#FFFFFF" },
-        { "name": "Contrast", "slug": "contrast", "color": "#0A192F" },
-        { "name": "Primary Gold", "slug": "primary", "color": "#FBBF24" },
-        { "name": "Secondary Navy", "slug": "secondary", "color": "#112240" },
-        { "name": "Deep Space", "slug": "tertiary", "color": "#020C1B" }
+        {
+          "name": "Base",
+          "slug": "base",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "Contrast",
+          "slug": "contrast",
+          "color": "#0A192F"
+        },
+        {
+          "name": "Primary Gold",
+          "slug": "primary",
+          "color": "#FBBF24"
+        },
+        {
+          "name": "Secondary Navy",
+          "slug": "secondary",
+          "color": "#112240"
+        },
+        {
+          "name": "Deep Space",
+          "slug": "tertiary",
+          "color": "#020C1B"
+        }
       ]
     },
     "typography": {
       "fontFamilies": [
-        { "fontFamily": "\"Bebas Neue\", sans-serif", "name": "Display (Bebas)", "slug": "display" },
-        { "fontFamily": "\"Oswald\", sans-serif", "name": "Heading (Oswald)", "slug": "heading" },
-        { "fontFamily": "\"Inter\", sans-serif", "name": "Body (Inter)", "slug": "sans" }
+        {
+          "fontFamily": "\"Bebas Neue\", sans-serif",
+          "name": "Display (Bebas)",
+          "slug": "display"
+        },
+        {
+          "fontFamily": "\"Oswald\", sans-serif",
+          "name": "Heading (Oswald)",
+          "slug": "heading"
+        },
+        {
+          "fontFamily": "\"Inter\", sans-serif",
+          "name": "Body (Inter)",
+          "slug": "sans"
+        }
       ]
     },
     "layout": {
@@ -26,14 +58,62 @@
     }
   },
   "customTemplates": [
-    { "name": "page-elementor-full-width", "title": "Elementor Full Width (No Sidebar/Padding)", "postTypes": ["page", "post", "faculty", "program"] },
-    { "name": "page-elementor-canvas", "title": "Elementor Canvas (Blank Page)", "postTypes": ["page"] },
-    { "name": "archive-faculty", "title": "Coaches List", "postTypes": ["faculty"] },
-    { "name": "archive-program", "title": "Program Archive", "postTypes": ["program"] },
-    { "name": "archive-schedule", "title": "Game Schedule", "postTypes": ["schedule"] }
+    {
+      "name": "page-elementor-full-width",
+      "title": "Elementor Full Width (No Sidebar/Padding)",
+      "postTypes": [
+        "page",
+        "post",
+        "faculty",
+        "program"
+      ]
+    },
+    {
+      "name": "page-elementor-canvas",
+      "title": "Elementor Canvas (Blank Page)",
+      "postTypes": [
+        "page"
+      ]
+    },
+    {
+      "name": "archive-faculty",
+      "title": "Coaches List",
+      "postTypes": [
+        "faculty"
+      ]
+    },
+    {
+      "name": "archive-program",
+      "title": "Program Archive",
+      "postTypes": [
+        "program"
+      ]
+    },
+    {
+      "name": "archive-schedule",
+      "title": "Game Schedule",
+      "postTypes": [
+        "schedule"
+      ]
+    },
+    {
+      "name": "test-tokens",
+      "title": "Test Design Tokens",
+      "postTypes": [
+        "page"
+      ]
+    }
   ],
   "templateParts": [
-    { "area": "header", "name": "header", "title": "Header" },
-    { "area": "footer", "name": "footer", "title": "Footer" }
+    {
+      "area": "header",
+      "name": "header",
+      "title": "Header"
+    },
+    {
+      "area": "footer",
+      "name": "footer",
+      "title": "Footer"
+    }
   ]
 }

@@ -1,14 +1,33 @@
+<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"},"spacing":{"padding":{"top":"1.5rem","right":"2rem","bottom":"1.5rem","left":"2rem"}},"color":{"background":"#0a192f"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+<div class="wp-block-group has-background"
+    style="background-color:#0a192f;position:sticky;top:0px;padding-top:1.5rem;padding-right:2rem;padding-bottom:1.5rem;padding-left:2rem">
 
-<!-- wp:group {"layout":{"type":"flex","justifyContent":"space-between"}} -->
-<div class="wp-block-group">
-    <!-- wp:site-logo /-->
-    <!-- wp:navigation {"layout":{"type":"flex","setIndistinguishableColors":false}} /-->
-    <!-- wp:buttons -->
+    <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.5rem"}}} -->
+    <div class="wp-block-group">
+        <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"400","lineHeight":"1","fontSize":"2rem"}},"textColor":"base","fontFamily":"display","className":"wp-block-site-title"} -->
+        <p class="wp-block-site-title has-base-color has-text-color has-display-font-family"
+            style="font-size:2rem;font-style:normal;font-weight:400;line-height:1">
+            <a href="/" style="text-decoration: none; color: inherit;">FLORIDA <span
+                    class="has-primary-color has-text-color" style="font-style:italic">COASTAL</span></a>
+        </p>
+        <!-- /wp:paragraph -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- wp:navigation {"ref":null,"textColor":"base","overlayTextColor":"base","overlayBackgroundColor":"contrast","layout":{"type":"flex","justifyContent":"center","orientation":"horizontal"},"style":{"typography":{"fontSize":"0.675rem","fontStyle":"normal","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}}} /-->
+
+    <!-- wp:buttons {"layout":{"type":"flex"},"style":{"spacing":{"blockGap":"0"}}} -->
     <div class="wp-block-buttons">
-        <!-- wp:button {"backgroundColor":"primary","textColor":"contrast"} -->
-        <div class="wp-block-button"><a class="wp-block-button__link has-contrast-color has-primary-background-color has-text-color has-background">Apply Now</a></div>
+        <!-- wp:button {"backgroundColor":"primary","textColor":"secondary","style":{"typography":{"fontSize":"0.675rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"},"spacing":{"padding":{"top":"0.75rem","right":"2rem","bottom":"0.75rem","left":"2rem"}}}} -->
+        <div class="wp-block-button">
+            <a class="wp-block-button__link has-secondary-color has-primary-background-color has-text-color has-background"
+                href="/apply"
+                style="font-size:0.675rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding-top:0.75rem;padding-right:2rem;padding-bottom:0.75rem;padding-left:2rem">Apply
+                Now</a>
+        </div>
         <!-- /wp:button -->
     </div>
     <!-- /wp:buttons -->
+
 </div>
 <!-- /wp:group -->

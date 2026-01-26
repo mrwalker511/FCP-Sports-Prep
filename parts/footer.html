@@ -1,22 +1,77 @@
+<!-- wp:group {"tagName":"footer","style":{"spacing":{"padding":{"top":"6rem","bottom":"3rem"},"blockGap":"0"},"color":{"background":"var:preset|color|contrast"}},"className":"has-contrast-background-color","layout":{"type":"constrained","contentSize":"1200px"}} -->
+<footer class="wp-block-group has-contrast-background-color has-background"
+    style="padding-top:6rem;padding-bottom:3rem">
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"80px","bottom":"40px"}}},"backgroundColor":"tertiary","textColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-base-color has-tertiary-background-color has-text-color has-background" style="padding-top:80px;padding-bottom:40px">
-    <!-- wp:columns {"align":"wide"} -->
-    <div class="wp-block-columns alignwide">
+    <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"},"margin":{"bottom":"6rem"}}}} -->
+    <div class="wp-block-columns" style="margin-bottom:6rem">
+
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
-            <!-- wp:site-title {"style":{"typography":{"fontStyle":"italic","fontWeight":"700"}}} /-->
-            <!-- wp:paragraph -->
-            <p>Elite training for the next generation of collegiate prospects.</p>
+            <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"400","lineHeight":"1","fontSize":"2.25rem"}},"textColor":"base","fontFamily":"display"} -->
+            <p class="has-base-color has-text-color has-display-font-family"
+                style="font-size:2.25rem;font-style:normal;font-weight:400;line-height:1">
+                FLORIDA <span class="has-primary-color has-text-color"
+                    style="font-style:italic;text-decoration:underline">COASTAL</span> PREP
+            </p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","fontWeight":"300","fontSize":"1.125rem","lineHeight":"1.75"}},"textColor":"base","className":"has-text-color opacity-80"} -->
+            <p class="has-base-color has-text-color opacity-80"
+                style="font-size:1.125rem;font-style:italic;font-weight:300;line-height:1.75">
+                The southeast region's most exclusive training environment for elite collegiate prospects.
+            </p>
             <!-- /wp:paragraph -->
         </div>
         <!-- /wp:column -->
-        <!-- wp:column -->
-        <div class="wp-block-column">
-            <!-- wp:navigation {"layout":{"type":"vertical"}} /-->
+
+        <!-- wp:column {"width":"25%"} -->
+        <div class="wp-block-column" style="flex-basis:25%">
+            <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"0.625rem","fontStyle":"normal","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-50"} -->
+            <h4 class="wp-block-heading has-base-color has-text-color opacity-50"
+                style="font-size:0.625rem;font-style:normal;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">
+                Sitemaps</h4>
+            <!-- /wp:heading -->
+
+            <!-- wp:navigation {"ref":null,"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"},"style":{"typography":{"fontSize":"0.75rem","fontStyle":"normal","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}}} /-->
         </div>
         <!-- /wp:column -->
+
+        <!-- wp:column {"width":"25%"} -->
+        <div class="wp-block-column" style="flex-basis:25%">
+            <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"0.625rem","fontStyle":"normal","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-50"} -->
+            <h4 class="wp-block-heading has-base-color has-text-color opacity-50"
+                style="font-size:0.625rem;font-style:normal;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">
+                Headquarters</h4>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","lineHeight":"1.75"}},"textColor":"base","className":"opacity-80"} -->
+            <p class="has-base-color has-text-color opacity-80" style="font-size:0.875rem;line-height:1.75">
+                100 Coastal Elite Dr.<br>Miami, FL 33101<br>
+                <a href="mailto:info@flcprep.com" class="has-primary-color has-text-color">info@flcprep.com</a>
+            </p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:column -->
+
     </div>
     <!-- /wp:columns -->
-</div>
+
+    <!-- wp:separator {"className":"is-style-wide","backgroundColor":"base","style":{"opacity":"0.1"}} -->
+    <hr class="wp-block-separator has-text-color has-base-color has-alpha-channel-opacity has-base-background-color has-background is-style-wide"
+        style="opacity:0.1" />
+    <!-- /wp:separator -->
+
+    <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
+    <div class="wp-block-group">
+        <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-50"} -->
+        <p class="has-base-color has-text-color opacity-50"
+            style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">© 2024 Florida
+            Coastal Preparatory. Built for Elite Athletes.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:navigation {"ref":null,"overlayMenu":"never","layout":{"type":"flex","orientation":"horizontal"},"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}}} /-->
+    </div>
+    <!-- /wp:group -->
+
+</footer>
 <!-- /wp:group -->

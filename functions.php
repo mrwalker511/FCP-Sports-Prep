@@ -35,13 +35,10 @@ add_action( 'after_setup_theme', 'fl_coastal_prep_setup' );
  */
 function fl_coastal_prep_register_patterns() {
     $patterns = array(
-        'hero' => 'The Future of Elite Ball',
-        'stats' => 'Academy Statistics Bar',
         'grid' => 'The Coastal Blueprint Grid',
         'cta' => 'Ready to Level Up Call to Action',
         'programs-hero' => 'Programs Overview Hero',
         'programs-detail' => 'Programs Detail Section',
-        'section-header' => 'Generic Section Header',
         'faculty-grid' => 'Elite Leadership Faculty Grid',
         'campus-showcase' => 'Coastal Facilities Showcase',
         'news-archive' => 'Academy Intel News Feed',
