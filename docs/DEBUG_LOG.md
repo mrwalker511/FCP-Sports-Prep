@@ -21,9 +21,9 @@
 - **Resolution**: Modified the function to allow for easier filtering and added a check to ensure the script only loads on the front end.
 
 ### 4. Issue: Broken Navigation in React Simulation
-- **Discovery**: Some buttons in `parts/Footer.tsx` and `patterns/ApplyPattern.tsx` had incomplete `setPage` calls or missing state updates, preventing full-path testing of the "Apply" flow.
+- **Discovery**: Some buttons in `prototype/react/parts/Footer.tsx` and `prototype/react/patterns/ApplyPattern.tsx` had incomplete `setPage` calls or missing state updates, preventing full-path testing of the "Apply" flow.
 - **Risk**: Poor staging experience for the client.
-- **Resolution**: Audited all `setPage` hooks in `App.tsx` and child components to ensure every link correctly maps to the `PageType` union.
+- **Resolution**: Audited all `setPage` hooks in `prototype/react/App.tsx` and child components to ensure every link correctly maps to the `PageType` union.
 
 ### 5. Issue: Meta Description Redundancy
 - **Discovery**: The SEO function was adding a meta description even if a plugin like Yoast or RankMath was already present.
@@ -33,7 +33,7 @@
 ### 6. Issue: Template Part naming in index.html (FSE)
 - **Discovery**: `templates/index.html` used a generic structure that didn't match the specific visual branding of the News archive.
 - **Risk**: The "News" page looking like a generic blog.
-- **Resolution**: Synchronized `templates/index.html` to mirror the high-impact grid layout found in `patterns/NewsArchivePattern.tsx`.
+- **Resolution**: Synchronized `templates/index.html` to mirror the high-impact grid layout found in `prototype/react/patterns/NewsArchivePattern.tsx`.
 
 ---
 *Status: All high-priority issues resolved. Theme is production-ready.*

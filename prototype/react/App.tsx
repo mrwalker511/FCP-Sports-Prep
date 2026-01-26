@@ -96,9 +96,9 @@ const App: React.FC = () => {
                   <p>Select "Elementor Full Width" in Page Attributes to use the Header/Footer while building full-width content. Use "Canvas" for landing pages.</p>
                </section>
                <div className="bg-slate-50 p-8 border-l-4 border-primary">
-                  <p className="text-sm">For full technical details, refer to <strong>USER_MANUAL.md</strong> and <strong>DEBUG_LOG.md</strong> in the project root.</p>
+                  <p className="text-sm">For full technical details, refer to <strong>docs/USER_MANUAL.md</strong> and <strong>docs/DEBUG_LOG.md</strong>.</p>
                </div>
-            </div>
+
             <button onClick={() => setCurrentPage('home')} className="mt-12 text-navy-900 font-bold uppercase tracking-widest text-[10px] hover:text-primary flex items-center gap-2">
                <span className="material-icons text-sm">arrow_back</span> Return to Court
             </button>

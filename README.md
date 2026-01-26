@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Florida Coastal Prep — WordPress FSE Block Theme
 
-# Run and deploy your AI Studio app
+This repository contains the **Florida Coastal Prep** Full Site Editing (FSE) WordPress block theme (production files live in the repo root) plus supporting documentation and a React/Vite prototype used as a visual reference during migration.
 
-This contains everything you need to run your app locally.
+## Folder layout
 
-View your app in AI Studio: https://ai.studio/apps/drive/1QkI3LnFCoGOAIK9KCBQfoanaVkOVGUlO
+### Production theme (uploadable)
+- `style.css`, `functions.php`, `theme.json`, `readme.txt`, `metadata.json`
+- `templates/` — block templates (HTML)
+- `parts/` — template parts (HTML)
+- `patterns/` — block patterns (PHP)
 
-## Run Locally
+### Internal docs
+- `docs/` — migration notes, inventories, and the theme owner manual
 
-**Prerequisites:**  Node.js
+### React prototype (reference only)
+- `prototype/react/` — original React/Tailwind implementation (TSX) used as a design source
 
+## Local prototype preview (optional)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The repo-level Vite config points at `prototype/react/` as its project root.
+
+```bash
+npm install
+npm run dev
+```
+
+Note: The prototype is **not** used by WordPress at runtime and should be excluded from any production theme ZIP.

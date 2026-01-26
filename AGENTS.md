@@ -8,11 +8,16 @@ You are an expert WordPress Developer specializing in Full Site Editing (FSE) an
 - **Text Domain**: Always use `fl-coastal-prep`.
 
 ## PROJECT STRUCTURE
-- `theme.json`: Global styles and settings (Primary source of design tokens).
-- `functions.php`: Registration of patterns and Custom Post Types (CPTs).
-- `/templates`: HTML block markup for site pages.
-- `/parts`: Reusable site areas (Header/Footer).
-- `/patterns`: The visual logic of the site.
+### Production WordPress Block Theme (uploadable)
+- `theme.json`: Global styles and settings (primary source of design tokens).
+- `functions.php`: Theme supports, CPT registration, and theme-level wiring.
+- `/templates`: Block templates (HTML).
+- `/parts`: Template parts (HTML only).
+- `/patterns`: Block patterns (PHP only).
+
+### Reference / Prototype (not shipped with the theme)
+- `/prototype/react`: The original React/Vite prototype (TSX) used as a design/reference source.
+- `/docs`: Internal implementation notes and migration documentation.
 
 ## COMMANDS & PERMISSIONS
 - Allowed: Reading `.tsx` and `.md` reference files.
