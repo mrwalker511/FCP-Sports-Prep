@@ -18,3 +18,19 @@ Tags: block-theme, full-site-editing, athletic, sports, gold, navy, college-prep
 This file is primarily for theme metadata. 
 All global styles are handled via theme.json or tailwind in this environment.
 */
+
+/* Faculty Grid Hover Effects */
+.faculty-card {
+  transition: all 0.3s ease;
+}
+.faculty-card:hover {
+  border-color: rgba(251, 191, 36, 0.5) !important;
+}
+.faculty-image img {
+  filter: grayscale(100%);
+  transition: all 0.7s ease;
+}
+.faculty-card:hover .faculty-image img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
