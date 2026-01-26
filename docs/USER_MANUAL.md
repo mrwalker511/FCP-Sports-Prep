@@ -17,7 +17,7 @@ This theme follows the modern FSE structure:
 - `theme.json`: The "Brain" of the theme, controlling global colors and typography.
 
 ## 3. Installation Steps
-1. **Compress**: Zip the entire directory (excluding the React staging files like `App.tsx` if you are deploying to production).
+1. **Compress**: Zip the theme directory (exclude `prototype/react/` and other development-only files if you are deploying to production).
 2. **Upload**: Go to `Appearance > Themes > Add New > Upload`.
 3. **Activate**: Once activated, go to `Appearance > Editor` to begin customizing your site via the Site Editor.
 

@@ -5,7 +5,7 @@
 
 ## PROJECT OVERVIEW
 
-This is a **Full Site Editing (FSE) Block Theme** for WordPress, currently built as a React/TypeScript preview application. The theme is designed for **Florida Coastal Preparatory Academy**, an elite athletic academy with a high-contrast dark aesthetic (Navy/Gold color scheme).
+This is a **Full Site Editing (FSE) Block Theme** for WordPress. The repository also includes a React/TypeScript preview application (design reference) under `prototype/react/`. The theme is designed for **Florida Coastal Preparatory Academy**, an elite athletic academy with a high-contrast dark aesthetic (Navy/Gold color scheme).
 
 ### Theme Identity
 - **Name**: Florida Coastal Prep
@@ -89,20 +89,24 @@ These are **FSE HTML templates** using WordPress block markup:
 
 Reusable site sections:
 
-| File | Purpose | Type | Migration Need |
-|------|---------|------|----------------|
-| **header.html** | Site header block markup | HTML | ✅ Ready - Basic structure |
-| **Header.tsx** | Full header with navigation | React | 🔄 Convert to PHP/HTML blocks |
-| **footer.html** | Site footer block markup | HTML | ✅ Ready - Basic structure |
-| **Footer.tsx** | Full footer with links | React | 🔄 Convert to PHP/HTML blocks |
+| File | Purpose | Type | Status |
+|------|---------|------|--------|
+| **header.html** | Site header block markup | HTML | ✅ Ready |
+| **footer.html** | Site footer block markup | HTML | ✅ Ready |
 
-**Migration Strategy**: The `.html` files provide basic structure. The `.tsx` files show the full visual design that needs to be recreated using WordPress blocks or custom block patterns.
+**React reference** (not shipped with the theme):
+- `prototype/react/parts/Header.tsx`
+- `prototype/react/parts/Footer.tsx`
+
+**Migration Strategy**: The `.html` files provide the production WordPress structure. The React `.tsx` files are the full design reference.
 
 ---
 
 ### 📁 Block Patterns (/patterns/)
 
-**These are React preview files** showing the visual design. They need to be converted to WordPress block markup (HTML with block comments).
+**Production patterns** live in `/patterns/` as WordPress pattern PHP files.
+
+**React reference patterns** (design source) live in `prototype/react/patterns/` as `.tsx`.
 
 #### Registered Pattern Slugs (in functions.php):
 1. **fl-coastal-prep/hero** - Hero section with background image

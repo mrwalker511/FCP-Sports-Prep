@@ -3,6 +3,10 @@
 
 Quick reference guide to every file in this project.
 
+> **Note (repo structure):** The production WordPress theme files live in the repository root.
+> The original React/Vite reference implementation has been moved to `prototype/react/`.
+> Internal documentation has been consolidated under `docs/`.
+
 ---
 
 ## 📋 QUICK SUMMARY
@@ -62,81 +66,73 @@ Quick reference guide to every file in this project.
 
 | File | Type | Status | Purpose |
 |------|------|--------|---------|
-| `header.html` | WordPress | ✅ Ready | Basic header block structure |
-| `Header.tsx` | React | ℹ️ Reference | Full header with mobile menu |
-| `footer.html` | WordPress | ✅ Ready | Basic footer block structure |
-| `Footer.tsx` | React | ℹ️ Reference | Full footer with navigation |
+| `header.html` | WordPress | ✅ Ready | Site header (block markup) |
+| `footer.html` | WordPress | ✅ Ready | Site footer (block markup) |
 
-**Migration Note**: The `.html` files provide minimal structure. The `.tsx` files show the complete design to recreate.
+**React reference** (not shipped with the theme):
+- `prototype/react/parts/Header.tsx`
+- `prototype/react/parts/Footer.tsx`
 
 ---
 
 ## 📁 PATTERNS FOLDER (/patterns/)
 
-### 🔄 React Pattern Files (Need WordPress Conversion)
+### WordPress Block Patterns (PHP — ✅ ready)
 
-| File | Lines | Block Slug | Complexity | Description |
-|------|-------|-----------|-----------|-------------|
-| `HeroPattern.tsx` | 42 | hero | High | Full-screen hero with image overlay |
-| `StatsPattern.tsx` | 28 | stats | Low | 3-column stats bar |
-| `GridPattern.tsx` | 68 | grid | Medium | 3-column feature cards |
-| `CTAPattern.tsx` | 38 | cta | Low | Full-width call-to-action banner |
-| `ProgramsHeroPattern.tsx` | 46 | programs-hero | Medium | Programs page hero section |
-| `ProgramsDetailPattern.tsx` | 77 | programs-detail | High | Timeline/curriculum breakdown |
-| `FacultyPattern.tsx` | 72 | faculty-grid | Medium | Faculty member grid (needs Query Loop) |
-| `CampusPattern.tsx` | 75 | campus-showcase | Medium | Image gallery with overlays |
-| `SectionHeaderPattern.tsx` | 21 | section-header | Low | Reusable section header |
-| `NewsArchivePattern.tsx` | 89 | news-archive | Medium | Blog post grid (needs Query Loop) |
-| `SchedulePattern.tsx` | 131 | schedule-results | High | Game schedule table with tabs |
-| `ApplyPattern.tsx` | 257 | apply-form | Very High | Multi-step form (use plugin instead) |
-| `DonorsPattern.tsx` | 140 | donors-showcase | Medium | Tiered donor recognition |
-| `ContactPattern.tsx` | 134 | contact-form | High | Contact info + form (use plugin) |
-| `LegalPattern.tsx` | 77 | N/A | Low | Generic legal page template |
+| File | Status | Purpose |
+|------|--------|---------|
+| `hero.php` | ✅ Ready | Homepage hero section |
+| `stats.php` | ✅ Ready | Homepage stats bar |
+| `grid.php` | ✅ Ready | Homepage feature grid |
+| `cta.php` | ✅ Ready | Call-to-action banner |
+| `programs-hero.php` | ✅ Ready | Programs page hero |
+| `programs-detail.php` | ✅ Ready | Programs detail/timeline |
+| `faculty-grid.php` | ✅ Ready | Faculty CPT grid/query loop |
+| `campus-showcase.php` | ✅ Ready | Campus facilities showcase |
+| `section-header.php` | ✅ Ready | Reusable section header |
+| `news-archive.php` | ✅ Ready | News/posts archive grid |
+| `schedule-results.php` | ✅ Ready | Schedule CPT results table |
+| `apply-form.php` | ✅ Ready | Apply page form (pattern markup) |
+| `donors-showcase.php` | ✅ Ready | Donor recognition tiers |
+| `contact-form.php` | ✅ Ready | Contact page form/info |
 
-**Complexity Guide**:
-- **Low**: Simple blocks, < 1 hour to convert
-- **Medium**: Multiple blocks or Query Loop needed, 2-3 hours
-- **High**: Complex structure or custom CSS, 4-6 hours
-- **Very High**: Consider using plugin instead, 8+ hours
-
-**Total Conversion Estimate**: 40-50 hours for all patterns
-
-**Recommended Approach**: Convert high-priority patterns first (Hero, Stats, Grid, CTA, Section Header), use plugins for forms.
+**React reference** (not shipped with the theme): `prototype/react/patterns/*.tsx`
 
 ---
 
-## 📁 COMPONENTS FOLDER (/components/)
+## 📁 PROTOTYPE REACT COMPONENTS (`prototype/react/components/`)
 
-### ℹ️ Legacy React Components (Reference Only)
+Legacy React components used by the Vite prototype only.
 
-| File | Lines | Status | Notes |
-|------|-------|--------|-------|
-| `Hero.tsx` | 68 | Deprecated | Functionality moved to HeroPattern.tsx |
-| `Navbar.tsx` | 68 | Deprecated | Functionality moved to Header.tsx |
-| `Footer.tsx` | 102 | Deprecated | Duplicate of parts/Footer.tsx |
-| `StatsBar.tsx` | 23 | Deprecated | Functionality moved to StatsPattern.tsx |
-| `CTASection.tsx` | 49 | Deprecated | Functionality moved to CTAPattern.tsx |
-| `DifferenceSection.tsx` | 91 | Deprecated | Functionality moved to GridPattern.tsx |
+| File | Status | Notes |
+|------|--------|-------|
+| `Hero.tsx` | Reference | Legacy component (superseded by TSX patterns) |
+| `Navbar.tsx` | Reference | Legacy component (superseded by `prototype/react/parts/Header.tsx`) |
+| `Footer.tsx` | Reference | Legacy component (superseded by `prototype/react/parts/Footer.tsx`) |
+| `StatsBar.tsx` | Reference | Legacy component |
+| `CTASection.tsx` | Reference | Legacy component |
+| `DifferenceSection.tsx` | Reference | Legacy component |
 
-**Action**: ❌ Exclude entire `/components/` folder from WordPress theme package.
+**Action**: ❌ Exclude `prototype/react/**` from the WordPress theme ZIP.
 
 ---
 
 ## ❌ DEVELOPMENT FILES (Do Not Include in WordPress)
 
-### React Development
+### React/Vite Prototype (reference only)
 | File | Purpose |
 |------|---------|
-| `App.tsx` | React application entry point |
-| `index.tsx` | React DOM renderer |
-| `index.html` | React dev server HTML template |
+| `prototype/react/App.tsx` | React application entry point |
+| `prototype/react/index.tsx` | React DOM renderer |
+| `prototype/react/index.html` | Vite dev server HTML template |
 
-### Build Configuration
+### Build Configuration (development-only)
 | File | Purpose |
 |------|---------|
-| `package.json` | npm dependencies and scripts |
-| `vite.config.ts` | Vite bundler configuration |
-| `tsconfig.json` | TypeScript compiler settings |
+| `package.json` | npm dependencies and scripts (drives the React prototype) |
+| `package-lock.json` | npm lockfile |
+| `vite.config.ts` | Vite bundler configuration (uses `prototype/react/` as Vite root) |
+| `prototype/react/tsconfig.json` | TypeScript compiler settings for the prototype |
 
 ### Git & Misc
 | File | Purpose |
@@ -155,13 +151,13 @@ Quick reference guide to every file in this project.
 | File | Purpose | Audience | Pages |
 |------|---------|----------|-------|
 | `README.md` | Project overview | Developers | 1 |
-| `USER_MANUAL.md` | Theme usage guide | End users | 2 |
-| `DEBUG_LOG.md` | Development log | Developers | 1.5 |
-| `WORDPRESS_MIGRATION_GUIDE.md` | Migration instructions | Developers/LLM | 12 |
-| `PATTERN_VISUAL_REFERENCE.md` | Pattern design specs | Developers/LLM | 15 |
-| `FILE_INVENTORY.md` | This file | All | 3 |
+| `docs/USER_MANUAL.md` | Theme usage guide | End users | 2 |
+| `docs/DEBUG_LOG.md` | Development log | Developers | 1.5 |
+| `docs/WORDPRESS_MIGRATION_GUIDE.md` | Migration instructions | Developers/LLM | 12 |
+| `docs/PATTERN_VISUAL_REFERENCE.md` | Pattern design specs | Developers/LLM | 15 |
+| `docs/FILE_INVENTORY.md` | This file | All | 3 |
 
-**Recommendation**: Include `USER_MANUAL.md` in WordPress theme. Others are for development reference.
+**Recommendation**: Include `docs/USER_MANUAL.md` in the WordPress theme ZIP (or copy it to the theme root before packaging). Others are for development reference.
 
 ---
 
@@ -275,13 +271,13 @@ florida-coastal-prep/
 
 ### Where to find navigation:
 - **Registered**: `functions.php` lines 24-27
-- **Header usage**: `parts/Header.tsx` lines 13-21
-- **Footer usage**: `parts/Footer.tsx`
+- **React reference header**: `prototype/react/parts/Header.tsx`
+- **React reference footer**: `prototype/react/parts/Footer.tsx`
 
 ### Where to find block patterns:
-- **Registered**: `functions.php` lines 36-64
+- **WordPress patterns (production)**: `/patterns/*.php`
 - **Referenced in**: All `/templates/*.html` files
-- **Visual designs**: All `/patterns/*.tsx` files
+- **React visual reference**: `prototype/react/patterns/*.tsx`
 
 ---
 

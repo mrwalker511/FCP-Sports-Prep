@@ -66,56 +66,26 @@
 ✅ patterns/stats.php                (5,749 bytes)
 ```
 
-### 📚 Documentation (Optional - 2 files)
+### 📚 Documentation (Optional)
 ```
-✅ USER_MANUAL.md               (2,818 bytes)  - End user guide
-✅ README.md                      (553 bytes)  - Project overview
+✅ docs/USER_MANUAL.md            - End user guide (optional; include in ZIP if desired)
+✅ README.md                     - Project overview
 ```
 
 ---
 
 ## ❌ EXCLUDE THESE FILES (Development Only)
 
-### React/TypeScript Source Files (ALL .tsx and .ts files)
+### React/Vite Prototype (reference only)
 ```
-❌ App.tsx
-❌ index.tsx
-❌ vite.config.ts
-❌ tsconfig.json
-
-❌ components/CTASection.tsx
-❌ components/DifferenceSection.tsx
-❌ components/Footer.tsx
-❌ components/Hero.tsx
-❌ components/Navbar.tsx
-❌ components/StatsBar.tsx
-
-❌ parts/Footer.tsx
-❌ parts/Header.tsx
-
-❌ patterns/ApplyPattern.tsx
-❌ patterns/CTAPattern.tsx
-❌ patterns/CampusPattern.tsx
-❌ patterns/ContactPattern.tsx
-❌ patterns/DonorsPattern.tsx
-❌ patterns/FacultyPattern.tsx
-❌ patterns/GridPattern.tsx
-❌ patterns/HeroPattern.tsx
-❌ patterns/LegalPattern.tsx
-❌ patterns/NewsArchivePattern.tsx
-❌ patterns/ProgramsDetailPattern.tsx
-❌ patterns/ProgramsHeroPattern.tsx
-❌ patterns/SchedulePattern.tsx
-❌ patterns/SectionHeaderPattern.tsx
-❌ patterns/StatsPattern.tsx
+❌ prototype/react/**   (all React .tsx source files)
 ```
 
 ### Build/Development Configuration
 ```
 ❌ package.json
+❌ package-lock.json
 ❌ vite.config.ts
-❌ tsconfig.json
-❌ index.html (root level - React dev server template)
 ```
 
 ### Version Control & Dependencies
@@ -129,12 +99,7 @@
 ### Development Documentation
 ```
 ❌ AGENTS.md
-❌ ARCHITECT.md
-❌ DEBUG_LOG.md
-❌ DESIGN_SYSTEM.md
-❌ FILE_INVENTORY.md
-❌ PATTERN_VISUAL_REFERENCE.md
-❌ WORDPRESS_MIGRATION_GUIDE.md
+❌ docs/**   (internal docs; optionally include docs/USER_MANUAL.md)
 ```
 
 ### Test/Development Templates
@@ -158,7 +123,7 @@ Compress-Archive -Path @(
     "FCP-Sports-Prep\theme.json",
     "FCP-Sports-Prep\readme.txt",
     "FCP-Sports-Prep\metadata.json",
-    "FCP-Sports-Prep\USER_MANUAL.md",
+    "FCP-Sports-Prep\docs\USER_MANUAL.md",
     "FCP-Sports-Prep\README.md",
     "FCP-Sports-Prep\templates\*.html",
     "FCP-Sports-Prep\parts\header.html",
@@ -178,13 +143,15 @@ cd "C:\Users\Matt Walker\Desktop\FCP"
 
 zip -r florida-coastal-prep-theme.zip FCP-Sports-Prep/ \
   -i "*.php" "*.html" "*.css" "*.json" "*.txt" "*.md" \
-  -x "*.tsx" "*.ts" "*node_modules/*" "*/.git/*" "*/dist/*" \
-  -x "*/components/*" "*index.tsx" "*App.tsx" "*vite.config.ts" \
-  -x "*tsconfig.json" "*package.json" "*/index.html" \
-  -x "*AGENTS.md" "*ARCHITECT.md" "*DEBUG_LOG.md" \
-  -x "*DESIGN_SYSTEM.md" "*FILE_INVENTORY.md" \
-  -x "*PATTERN_VISUAL_REFERENCE.md" "*WORDPRESS_MIGRATION_GUIDE.md" \
-  -x "*/test-tokens.html" "*.tsx"
+  -x "*.tsx" "*.ts" \
+  -x "prototype/react/*" "prototype/react/**" \
+  -x "*node_modules/*" "*/.git/*" "*/dist/*" \
+  -x "package.json" "package-lock.json" "vite.config.ts" \
+  -x "AGENTS.md" \
+  -x "docs/ARCHITECT.md" "docs/DEBUG_LOG.md" "docs/DESIGN_SYSTEM.md" \
+  -x "docs/FILE_INVENTORY.md" "docs/PATTERN_VISUAL_REFERENCE.md" "docs/PRODUCTION_FILE_LIST.md" \
+  -x "docs/WORDPRESS_MIGRATION_GUIDE.md" \
+  -x "*/test-tokens.html"
 ```
 
 ---

@@ -20,7 +20,7 @@ This theme is optimized for Elementor users, providing dedicated "Full Width" an
 4. (Optional) Install Elementor to build custom landing pages using our "Full Width" FSE template.
 
 == Documentation ==
-For detailed instructions on managing Custom Post Types, SEO, and Elementor integration, please refer to the `USER_MANUAL.md` file included in the theme root.
+For detailed instructions on managing Custom Post Types, SEO, and Elementor integration, please refer to `docs/USER_MANUAL.md`.
 
 == Quick Start ==
 - Edit Global Styles: `Appearance > Editor > Styles`
