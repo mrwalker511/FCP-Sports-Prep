@@ -37,8 +37,6 @@ add_action('after_setup_theme', 'fl_coastal_prep_setup');
 function fl_coastal_prep_register_patterns()
 {
     $patterns = array(
-        'grid' => 'The Coastal Blueprint Grid',
-        'cta' => 'Ready to Level Up Call to Action',
         'programs-hero' => 'Programs Overview Hero',
         'programs-detail' => 'Programs Detail Section',
         'campus-showcase' => 'Coastal Facilities Showcase',
