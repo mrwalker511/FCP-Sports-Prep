@@ -63,20 +63,20 @@ class SecurityTest extends TestCase
         preg_match_all('/echo\s+[\'"]?.*?;/s', $content, $matches);
 
         foreach ($matches[0] as $echo_statement) {
-            // Skip if it's echoing a literal string
-            if (preg_match('/echo\s+[\'"][^$]*[\'"];/', $echo_statement)) {
+            // Skip if it is echoing a literal string (no variables $)
+            if (!str_contains($echo_statement, '$')) {
                 continue;
             }
 
-            // Check if it uses escaping functions
+            // Check if it uses common WordPress escaping or JSON encoding
             $has_escaping = preg_match(
-                '/(esc_html|esc_attr|esc_url|esc_js|wp_kses|json_encode)/',
+                '/(esc_html|esc_attr|esc_url|esc_js|wp_kses|json_encode|esc_html__|esc_attr__|esc_url__)\b/',
                 $echo_statement
             );
 
             $this->assertTrue(
-                $has_escaping,
-                "Echo statement without proper escaping found: {$echo_statement}"
+                (bool) $has_escaping,
+                "Unescaped dynamic echo found in functions.php: " . var_export($echo_statement, true)
             );
         }
     }

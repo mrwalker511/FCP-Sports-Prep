@@ -23,14 +23,61 @@ All global styles are handled via theme.json or tailwind in this environment.
 .faculty-card {
   transition: all 0.3s ease;
 }
+
 .faculty-card:hover {
   border-color: rgba(251, 191, 36, 0.5) !important;
 }
+
 .faculty-image img {
   filter: grayscale(100%);
   transition: all 0.7s ease;
 }
+
 .faculty-card:hover .faculty-image img {
   filter: grayscale(0%);
   transform: scale(1.05);
+}
+
+/* Utility Classes for Patterns */
+.text-blueprint-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.text-blueprint-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+}
+
+.text-blueprint-card-title {
+  font-size: 1.875rem;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.text-blueprint-body {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.text-blueprint-link {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-70 {
+  opacity: 0.7;
 }

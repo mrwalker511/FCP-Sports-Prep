@@ -12,21 +12,20 @@
     <div class="wp-block-group alignwide" style="margin-bottom:4rem">
         <!-- wp:group {"layout":{"type":"constrained"}} -->
         <div class="wp-block-group">
-            <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.3em","fontSize":"0.75rem"}},"textColor":"primary"} -->
-            <p class="has-primary-color has-text-color"
-                style="font-size:0.75rem;font-style:normal;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">
+            <!-- wp:paragraph {"className":"text-blueprint-label","textColor":"primary"} -->
+            <p class="has-primary-color has-text-color text-blueprint-label">
                 ELITE STANDARDS</p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","letterSpacing":"-0.025em","fontSize":"clamp(3rem, 6vw, 5rem)","lineHeight":"1"}},"textColor":"secondary","fontFamily":"display"} -->
-            <h2 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
-                style="font-size:clamp(3rem, 6vw, 5rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
+            <!-- wp:heading {"className":"text-blueprint-title","textColor":"secondary","fontFamily":"display"} -->
+            <h2
+                class="wp-block-heading has-secondary-color has-text-color has-display-font-family text-blueprint-title">
                 The Coastal <br>Blueprint</h2>
             <!-- /wp:heading -->
         </div>
         <!-- /wp:group -->
 
-        <!-- wp:paragraph {"align":"right","style":{"typography":{"fontStyle":"italic","fontWeight":"300"}},"textColor":"base","className":"has-text-color opacity-60"} -->
+        <!-- wp:paragraph {"align":"right","className":"has-text-color opacity-60","style":{"typography":{"fontStyle":"italic","fontWeight":"300"}},"textColor":"base"} -->
         <p class="has-text-align-right has-base-color has-text-color opacity-60"
             style="font-style:italic;font-weight:300">
             We don't just build athletes; we build complete leaders ready for the next level.
@@ -55,21 +54,20 @@
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
             <div class="wp-block-group"
                 style="padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
-                <!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","fontSize":"1.875rem"}},"textColor":"secondary","fontFamily":"display"} -->
-                <h3 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
-                    style="font-size:1.875rem;font-style:italic;text-transform:uppercase">Performance</h3>
+                <!-- wp:heading {"level":3,"className":"text-blueprint-card-title","textColor":"secondary","fontFamily":"display"} -->
+                <h3
+                    class="wp-block-heading has-secondary-color has-text-color has-display-font-family text-blueprint-card-title">
+                    Performance</h3>
                 <!-- /wp:heading -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","lineHeight":"1.75","fontWeight":"300"}},"textColor":"base","className":"opacity-70"} -->
-                <p class="has-base-color has-text-color opacity-70"
-                    style="font-size:0.875rem;font-weight:300;line-height:1.75">Advanced biometrics and professional
+                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"base"} -->
+                <p class="has-base-color has-text-color opacity-70 text-blueprint-body">Advanced biometrics and
+                    professional
                     strength programs.</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"primary"} -->
-                <p class="has-primary-color has-text-color"
-                    style="font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase"><a
-                        href="#">Explore Block</a></p>
+                <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
+                <p class="has-primary-color has-text-color text-blueprint-link"><a href="#">Explore Block</a></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
@@ -93,21 +91,20 @@
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
             <div class="wp-block-group"
                 style="padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
-                <!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","fontSize":"1.875rem"}},"textColor":"secondary","fontFamily":"display"} -->
-                <h3 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
-                    style="font-size:1.875rem;font-style:italic;text-transform:uppercase">Academic Lab</h3>
+                <!-- wp:heading {"level":3,"className":"text-blueprint-card-title","textColor":"secondary","fontFamily":"display"} -->
+                <h3
+                    class="wp-block-heading has-secondary-color has-text-color has-display-font-family text-blueprint-card-title">
+                    Academic Lab</h3>
                 <!-- /wp:heading -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","lineHeight":"1.75","fontWeight":"300"}},"textColor":"base","className":"opacity-70"} -->
-                <p class="has-base-color has-text-color opacity-70"
-                    style="font-size:0.875rem;font-weight:300;line-height:1.75">Tailored educational pathways for
+                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"base"} -->
+                <p class="has-base-color has-text-color opacity-70 text-blueprint-body">Tailored educational pathways
+                    for
                     college placement.</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"primary"} -->
-                <p class="has-primary-color has-text-color"
-                    style="font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase"><a
-                        href="#">Explore Block</a></p>
+                <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
+                <p class="has-primary-color has-text-color text-blueprint-link"><a href="#">Explore Block</a></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
@@ -131,21 +128,20 @@
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
             <div class="wp-block-group"
                 style="padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
-                <!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","fontSize":"1.875rem"}},"textColor":"secondary","fontFamily":"display"} -->
-                <h3 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
-                    style="font-size:1.875rem;font-style:italic;text-transform:uppercase">Lifestyle</h3>
+                <!-- wp:heading {"level":3,"className":"text-blueprint-card-title","textColor":"secondary","fontFamily":"display"} -->
+                <h3
+                    class="wp-block-heading has-secondary-color has-text-color has-display-font-family text-blueprint-card-title">
+                    Lifestyle</h3>
                 <!-- /wp:heading -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem","lineHeight":"1.75","fontWeight":"300"}},"textColor":"base","className":"opacity-70"} -->
-                <p class="has-base-color has-text-color opacity-70"
-                    style="font-size:0.875rem;font-weight:300;line-height:1.75">Ocean-front residency with professional
+                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"base"} -->
+                <p class="has-base-color has-text-color opacity-70 text-blueprint-body">Ocean-front residency with
+                    professional
                     nutrition.</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"primary"} -->
-                <p class="has-primary-color has-text-color"
-                    style="font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase"><a
-                        href="#">Explore Block</a></p>
+                <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
+                <p class="has-primary-color has-text-color text-blueprint-link"><a href="#">Explore Block</a></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->

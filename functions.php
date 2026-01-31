@@ -62,13 +62,19 @@ function fl_coastal_prep_seo_meta()
         }
     }
 
-    echo '<meta name="description" content="' . esc_attr($description) . '" />' . "\n";
-    echo '<meta property="og:title" content="' . esc_attr($title) . '" />' . "\n";
-    echo '<meta property="og:description" content="' . esc_attr($description) . '" />' . "\n";
-    echo '<meta property="og:type" content="website" />' . "\n";
-    echo '<meta property="og:url" content="' . esc_url($url) . '" />' . "\n";
+    echo '<meta name="description" content="' . esc_attr($description) . '" />';
+    echo "\n";
+    echo '<meta property="og:title" content="' . esc_attr($title) . '" />';
+    echo "\n";
+    echo '<meta property="og:description" content="' . esc_attr($description) . '" />';
+    echo "\n";
+    echo '<meta property="og:type" content="website" />';
+    echo "\n";
+    echo '<meta property="og:url" content="' . esc_url($url) . '" />';
+    echo "\n";
     if ($image) {
-        echo '<meta property="og:image" content="' . esc_url($image) . '" />' . "\n";
+        echo '<meta property="og:image" content="' . esc_url($image) . '" />';
+        echo "\n";
     }
 }
 add_action('wp_head', 'fl_coastal_prep_seo_meta', 1);
@@ -97,7 +103,10 @@ function fl_coastal_prep_schema_markup()
             "addressCountry" => "US"
         )
     );
-    echo '<script type="application/ld+json">' . json_encode($schema) . '</script>' . "\n";
+    echo '<script type="application/ld+json">';
+    echo json_encode($schema);
+    echo '</script>';
+    echo "\n";
 }
 add_action('wp_head', 'fl_coastal_prep_schema_markup');
 
