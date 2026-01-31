@@ -1,0 +1,46 @@
+<!-- wp:template-part {"slug":"header","theme":"fl-coastal-prep","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}},"color":{"background":"var(--wp--preset--color--base)"}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group has-background"
+    style="background-color:var(--wp--preset--color--base);padding-top:4rem;padding-bottom:4rem">
+
+    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--heading)"}}} -->
+    <h1 class="wp-block-heading has-text-align-center" style="font-family:var(--wp--preset--font-family--heading)">Our
+        Programs</h1>
+    <!-- /wp:heading -->
+
+    <!-- wp:spacer {"height":"2rem"} -->
+    <div style="height:2rem" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
+
+    <!-- wp:query {"queryId":1,"query":{"perPage":12,"pages":0,"offset":0,"postType":"program","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"flex","columns":3}} -->
+    <div class="wp-block-query">
+        <!-- wp:post-template -->
+        <!-- wp:group {"style":{"border":{"radius":"8px"},"spacing":{"padding":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"backgroundColor":"secondary"} -->
+        <div class="wp-block-group has-secondary-background-color has-background"
+            style="border-radius:8px;padding:1rem">
+            <!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"4px"}}} /-->
+            <!-- wp:post-title {"level":3,"isLink":true,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--heading)"},"elements":{"link":{"color":{"text":"var(--wp--preset--color--primary)"}}}}} /-->
+            <!-- wp:post-excerpt {"moreText":"Learn More →","excerptLength":20} /-->
+        </div>
+        <!-- /wp:group -->
+        <!-- /wp:post-template -->
+
+        <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+        <!-- wp:query-pagination-previous /-->
+        <!-- wp:query-pagination-numbers /-->
+        <!-- wp:query-pagination-next /-->
+        <!-- /wp:query-pagination -->
+
+        <!-- wp:query-no-results -->
+        <!-- wp:paragraph {"align":"center"} -->
+        <p class="has-text-align-center">No programs found. Check back soon!</p>
+        <!-- /wp:paragraph -->
+        <!-- /wp:query-no-results -->
+    </div>
+    <!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"fl-coastal-prep","area":"footer"} /-->

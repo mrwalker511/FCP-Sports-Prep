@@ -12,6 +12,26 @@ This test suite provides automated testing for:
 - **Template Validation**: Template file structure and registration
 - **Code Quality**: WordPress coding standards and best practices
 
+## Quick Start
+
+```bash
+# 1. Install dependencies
+composer install
+
+# 2. Run all tests
+composer test
+
+# 3. Run specific test suites
+composer test:security    # Security tests only
+composer test:debugging   # Debugging tests only
+composer test:patterns    # Pattern validation only
+```
+
+**Expected Results:**
+- ✅ 56+ tests passing
+- ⚠️ 22 tests skipped (WordPress test suite not installed - this is normal)
+- ⚠️ 1 warning (informational - inline styles in grid.php)
+
 ## Requirements
 
 - PHP 7.4 or higher
@@ -336,11 +356,14 @@ jobs:
 
 ### "WordPress test suite not found"
 
-Many tests will be skipped if WordPress test suite is not installed. To fix:
+Many tests will be skipped if WordPress test suite is not installed. **This is normal and expected.**
 
+- ✅ **56+ tests will still pass** without WordPress test suite
+- ⚠️ **22 tests will be skipped** (these require full WordPress environment)
+
+To run all tests:
 1. Install WordPress test suite (see Installation section)
 2. Or set `WP_TESTS_DIR` environment variable
-3. Or run only non-WordPress tests
 
 ### "Class not found" errors
 
@@ -349,6 +372,27 @@ Run `composer install` to ensure all dependencies are installed.
 ### "Permission denied" errors on Windows
 
 Run PowerShell as Administrator or adjust file permissions.
+
+### "Unclosed block" errors (FIXED)
+
+**Issue:** Tests were incorrectly flagging self-closing WordPress blocks as unclosed.
+
+**Solution:** The block markup validator has been fixed to properly handle self-closing blocks like:
+```html
+<!-- wp:template-part {"slug":"header"} /-->
+```
+
+### "Risky test" warnings (FIXED)
+
+**Issue:** Some tests didn't perform assertions when no matching code was found.
+
+**Solution:** All tests now include final assertions to avoid risky test warnings.
+
+### "Function does not exist" errors (FIXED)
+
+**Issue:** Theme functions weren't loaded when WordPress test suite was unavailable.
+
+**Solution:** The test bootstrap now loads `functions.php` directly, allowing function existence tests to pass without WordPress.
 
 ## Best Practices
 

@@ -169,16 +169,40 @@ class TestHelpers
     public static function validateBlockMarkup($content)
     {
         $errors = [];
+        $open_blocks = [];
 
-        // Check for properly formatted block comments
-        if (preg_match_all('/<!--\s*wp:(\S+)/', $content, $opening_blocks)) {
-            foreach ($opening_blocks[1] as $block_type) {
-                // Check if there's a corresponding closing comment
-                $closing_pattern = '/<!--\s*\/wp:' . preg_quote($block_type, '/') . '\s*-->/';
-                if (!preg_match($closing_pattern, $content)) {
-                    $errors[] = "Unclosed block: wp:{$block_type}";
-                }
+        // Find all WordPress block comments using a more robust pattern
+        // Match: <!-- [/]wp:blockname ... [/]--> where / before wp: means closing, / before --> means self-closing
+        // Use non-greedy matching with .*? to handle complex JSON attributes
+        $pattern = '/<!--\s*(\/?)wp:([^\s\/{]+).*?(\/?)-->/s';
+        preg_match_all($pattern, $content, $all_blocks, PREG_SET_ORDER);
+
+        foreach ($all_blocks as $block) {
+            $is_closing = !empty($block[1]);      // Has / before wp:
+            $block_type = $block[2];
+            $is_self_closing = !empty($block[3]); // Has / before -->
+
+            if ($is_self_closing) {
+                // Self-closing block like <!-- wp:template-part {...} /-->
+                continue;
             }
+
+            if ($is_closing) {
+                // This is a closing tag <!-- /wp:blockname -->
+                if (empty($open_blocks) || end($open_blocks) !== $block_type) {
+                    $errors[] = "Closing block without matching opening: wp:{$block_type}";
+                } else {
+                    array_pop($open_blocks);
+                }
+            } else {
+                // This is an opening tag
+                $open_blocks[] = $block_type;
+            }
+        }
+
+        // Check for any unclosed blocks
+        foreach ($open_blocks as $unclosed) {
+            $errors[] = "Unclosed block: wp:{$unclosed}";
         }
 
         return [
