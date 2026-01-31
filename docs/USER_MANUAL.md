@@ -48,5 +48,18 @@ To change the brand colors:
 3. Change the Hex codes for `primary` and `contrast`.
 4. The changes will instantly reflect in both the Gutenberg Editor and Elementor.
 
+## 8. Quality Assurance & Testing
+The theme includes a comprehensive automated test suite to ensure security and code quality.
+
+**To run tests**:
+1. Open a terminal in the theme root directory.
+2. Ensure dependencies are installed: `composer install`.
+3. Run the test command: `composer test`.
+
+This will verify:
+- **Security**: Protection against XSS and SQL injection.
+- **Integrity**: Validation of all WordPress block markup in patterns and templates.
+- **Availability**: Confirmation that all necessary WordPress functions and Custom Post Types are loaded correctly.
+
 ---
 *Built by the Senior Engineering Team for Florida Coastal Preparatory.*
