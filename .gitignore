@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Testing
+/vendor/
+coverage-report/
+.phpunit.result.cache
+/tmp/

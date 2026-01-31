@@ -16,6 +16,31 @@ This repository contains the **Florida Coastal Prep** Full Site Editing (FSE) Wo
 ### React prototype (reference only)
 - `prototype/react/` — original React/Tailwind implementation (TSX) used as a design source
 
+### Test suite
+- `tests/` — comprehensive security and debugging test suite
+- See [tests/README.md](tests/README.md) for full documentation
+
+## Testing
+
+This theme includes a comprehensive test suite for security and debugging validation.
+
+### Quick Start
+
+```bash
+# Install test dependencies
+composer install
+
+# Run all tests
+composer test
+
+# Run specific test suites
+composer test:security    # Security tests only
+composer test:debugging   # Debugging tests only
+composer test:patterns    # Pattern validation only
+```
+
+For detailed testing documentation, see [tests/README.md](tests/README.md).
+
 ## Local prototype preview (optional)
 
 The repo-level Vite config points at `prototype/react/` as its project root.
