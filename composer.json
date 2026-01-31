@@ -1,0 +1,31 @@
+{
+    "name": "florida-coastal-prep/theme",
+    "description": "Florida Coastal Prep WordPress Block Theme",
+    "type": "wordpress-theme",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "yoast/phpunit-polyfills": "^2.0",
+        "wp-phpunit/wp-phpunit": "^6.4"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FCPTheme\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:security": "phpunit tests/security",
+        "test:debugging": "phpunit tests/debugging",
+        "test:patterns": "phpunit tests/patterns",
+        "test:coverage": "phpunit --coverage-html coverage-report"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}

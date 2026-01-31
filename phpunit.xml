@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<phpunit
+    bootstrap="tests/bootstrap.php"
+    backupGlobals="false"
+    colors="true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    verbose="true"
+>
+    <testsuites>
+        <testsuite name="Security Tests">
+            <directory>tests/security</directory>
+        </testsuite>
+        <testsuite name="Debugging Tests">
+            <directory>tests/debugging</directory>
+        </testsuite>
+        <testsuite name="Pattern Validation Tests">
+            <directory>tests/patterns</directory>
+        </testsuite>
+        <testsuite name="Template Validation Tests">
+            <directory>tests/templates</directory>
+        </testsuite>
+        <testsuite name="Code Quality Tests">
+            <directory>tests/code-quality</directory>
+        </testsuite>
+    </testsuites>
+    <coverage>
+        <include>
+            <directory suffix=".php">./</directory>
+        </include>
+        <exclude>
+            <directory>./tests</directory>
+            <directory>./vendor</directory>
+            <directory>./node_modules</directory>
+            <directory>./prototype</directory>
+        </exclude>
+    </coverage>
+    <php>
+        <const name="WP_TESTS_PHPUNIT_POLYFILLS_PATH" value="./vendor/yoast/phpunit-polyfills" />
+    </php>
+</phpunit>
