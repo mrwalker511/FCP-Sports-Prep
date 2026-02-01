@@ -5,6 +5,8 @@
     "appearanceTools": true,
     "useRootPaddingAwareAlignments": true,
     "color": {
+      "custom": true,
+      "customDuotone": true,
       "palette": [
         {
           "name": "Base",
@@ -34,6 +36,9 @@
       ]
     },
     "typography": {
+      "customFontSize": true,
+      "customLineHeight": true,
+      "dropCap": true,
       "fontFamilies": [
         {
           "fontFamily": "\"Bebas Neue\", sans-serif",
@@ -55,6 +60,27 @@
     "layout": {
       "contentSize": "800px",
       "wideSize": "1200px"
+    },
+    "spacing": {
+      "customPadding": true,
+      "customMargin": true
+    },
+    "border": {
+      "customColor": true,
+      "customRadius": true,
+      "customStyle": true,
+      "customWidth": true
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--contrast)",
+      "text": "var(--wp--preset--color--base)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--sans)",
+      "fontSize": "1rem",
+      "lineHeight": "1.6"
     }
   }
 }
