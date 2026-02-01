@@ -20,9 +20,9 @@
         <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center","alignItems":"center"}} -->
         <div class="wp-block-group">
 
-            <!-- wp:group {"style":{"border":{"width":"1px","color":"var(--wp--preset--color--primary)","style":"solid"},"spacing":{"padding":{"top":"0.25rem","right":"1rem","bottom":"0.25rem","left":"1rem"}},"color":{"background":"var(--wp--preset--color--primary)"},"opacity":0.3},"className":"backdrop-blur-sm"} -->
-            <div class="wp-block-group backdrop-blur-sm has-background"
-                style="border-style:solid;border-width:1px;border-color:var(--wp--preset--color--primary);background-color:var(--wp--preset--color--primary);padding-top:0.25rem;padding-right:1rem;padding-bottom:0.25rem;padding-left:1rem;opacity:0.3">
+            <!-- wp:group {"style":{"border":{"width":"1px","color":"var(--wp--preset--color--primary)","style":"solid"},"spacing":{"padding":{"top":"0.25rem","right":"1rem","bottom":"0.25rem","left":"1rem"}},"color":{"background":"var(--wp--preset--color--primary)"}},"className":"backdrop-blur-sm"} -->
+            <div class="wp-block-group backdrop-blur-sm has-border-color has-background"
+                style="border-color:var(--wp--preset--color--primary);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--primary);padding-top:0.25rem;padding-right:1rem;padding-bottom:0.25rem;padding-left:1rem">
                 <!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.5em","textTransform":"uppercase","fontSize":"0.875rem"}},"textColor":"primary","fontFamily":"heading"} -->
                 <p class="has-primary-color has-text-color has-heading-font-family"
                     style="font-size:0.875rem;letter-spacing:0.5em;text-transform:uppercase">Official Prep Academy</p>
@@ -46,18 +46,18 @@
 
             <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
             <div class="wp-block-buttons">
-                <!-- wp:button {"backgroundColor":"primary","textColor":"secondary","style":{"typography":{"letterSpacing":"0.2em","textTransform":"uppercase","fontSize":"0.75rem","fontWeight":"700"},"spacing":{"padding":{"top":"1.25rem","right":"3.5rem","bottom":"1.25rem","left":"3.5rem"}}}} -->
+                <!-- wp:button {"backgroundColor":"primary","textColor":"secondary","style":{"typography":{"letterSpacing":"0.2em","textTransform":"uppercase","fontWeight":"700"},"spacing":{"padding":{"top":"1.25rem","right":"3.5rem","bottom":"1.25rem","left":"3.5rem"}}},"fontSize":"small"} -->
                 <div class="wp-block-button">
-                    <a class="wp-block-button__link has-secondary-color has-primary-background-color has-text-color has-background wp-element-button"
-                        style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding-top:1.25rem;padding-right:3.5rem;padding-bottom:1.25rem;padding-left:3.5rem">Start
+                    <a class="wp-block-button__link has-secondary-color has-primary-background-color has-text-color has-background has-custom-font-size wp-element-button"
+                        style="padding-top:1.25rem;padding-right:3.5rem;padding-bottom:1.25rem;padding-left:3.5rem;font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Start
                         Journey</a>
                 </div>
                 <!-- /wp:button -->
 
-                <!-- wp:button {"style":{"typography":{"letterSpacing":"0.2em","textTransform":"uppercase","fontSize":"0.75rem","fontWeight":"700"},"spacing":{"padding":{"top":"1.25rem","right":"3.5rem","bottom":"1.25rem","left":"3.5rem"}},"border":{"width":"1px","style":"solid","color":"var(--wp--preset--color--base)"}},"className":"is-style-outline","textColor":"base"} -->
+                <!-- wp:button {"style":{"typography":{"letterSpacing":"0.2em","textTransform":"uppercase","fontWeight":"700"},"spacing":{"padding":{"top":"1.25rem","right":"3.5rem","bottom":"1.25rem","left":"3.5rem"}},"border":{"width":"1px","style":"solid","color":"var(--wp--preset--color--base)"}},"className":"is-style-outline","textColor":"base","fontSize":"small"} -->
                 <div class="wp-block-button is-style-outline">
-                    <a class="wp-block-button__link has-base-color has-text-color wp-element-button"
-                        style="border-width:1px;border-style:solid;border-color:var(--wp--preset--color--base);font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding-top:1.25rem;padding-right:3.5rem;padding-bottom:1.25rem;padding-left:3.5rem">Academy
+                    <a class="wp-block-button__link has-base-color has-text-color has-border-color has-custom-font-size wp-element-button"
+                        style="border-color:var(--wp--preset--color--base);border-style:solid;border-width:1px;padding-top:1.25rem;padding-right:3.5rem;padding-bottom:1.25rem;padding-left:3.5rem;font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Academy
                         Tour</a>
                 </div>
                 <!-- /wp:button -->

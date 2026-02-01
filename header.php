@@ -50,7 +50,7 @@ if (!defined('ABSPATH'))
 
             <!-- CTA Button -->
             <div class="header-cta">
-                <a href="<?php echo esc_url(home_url('/apply')); ?>" class="btn-primary"
+                <a href="<?php echo esc_url(home_url('/apply')); ?>" class="btn-primary wp-element-button"
                     style="display:inline-block;background-color:var(--wp--preset--color--primary);color:var(--wp--preset--color--secondary);font-size:0.675rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem 2rem;text-decoration:none;">
                     Apply Now
                 </a>
