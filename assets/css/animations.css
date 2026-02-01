@@ -1,0 +1,60 @@
+/* Custom Animations for Florida Coastal Prep */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceSlow {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-bounce-slow {
+    animation: bounceSlow 2s infinite;
+}
+
+/* Block Style: Animated Fade In Up */
+.is-style-animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Block Style: Animated Slide In */
+.is-style-animate-slide-in {
+    animation: slideInLeft 1s ease-out forwards;
+}
