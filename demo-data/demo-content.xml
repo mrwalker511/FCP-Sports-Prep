@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+    xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+    <title>Florida Coastal Prep</title>
+    <link>https://floridacoastalprep.com</link>
+    <description>The Future of Elite Ball</description>
+    <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+    <language>en-US</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    <wp:base_site_url>https://floridacoastalprep.com</wp:base_site_url>
+    <wp:base_blog_url>https://floridacoastalprep.com</wp:base_blog_url>
+
+    <!-- Faculty -->
+    <item>
+        <title>Marcus Thompson</title>
+        <link>https://floridacoastalprep.com/faculty/marcus-thompson/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=faculty&#038;p=1</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Head Coach Marcus Thompson brings over 20 years of elite coaching experience to Florida Coastal Prep. Former Division I standout and professional player, Coach Thompson specializes in player development and tactical strategy.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+        <excerpt:encoded><![CDATA[Head Coach]]></excerpt:encoded>
+        <wp:post_id>1</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[marcus-thompson]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[faculty]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <item>
+        <title>Sarah Williams</title>
+        <link>https://floridacoastalprep.com/faculty/sarah-williams/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=faculty&#038;p=2</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Assistant Coach Sarah Williams leads our defensive systems and scouting department. A former WNBA player, she focuses on discipline and high-IQ play.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+        <excerpt:encoded><![CDATA[Assistant Coach]]></excerpt:encoded>
+        <wp:post_id>2</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[sarah-williams]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[faculty]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <item>
+        <title>Dr. James Chen</title>
+        <link>https://floridacoastalprep.com/faculty/james-chen/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=faculty&#038;p=3</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Academic Director Dr. James Chen ensures that our student-athletes exceed NCAA Eligibility requirements and prepare for the rigors of university life.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+        <excerpt:encoded><![CDATA[Academic Director]]></excerpt:encoded>
+        <wp:post_id>3</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[james-chen]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[faculty]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <item>
+        <title>Michael Rodriguez</title>
+        <link>https://floridacoastalprep.com/faculty/michael-rodriguez/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=faculty&#038;p=4</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Strength Coach Michael Rodriguez designs personalized conditioning programs to optimize explosive power and endurance.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+        <excerpt:encoded><![CDATA[Strength Coach]]></excerpt:encoded>
+        <wp:post_id>4</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[michael-rodriguez]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[faculty]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <item>
+        <title>Lisa Park</title>
+        <link>https://floridacoastalprep.com/faculty/lisa-park/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=faculty&#038;p=5</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Athletic Trainer Lisa Park manages injury prevention and recovery protocols, ensuring our athletes stay on the court.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+        <excerpt:encoded><![CDATA[Athletic Trainer]]></excerpt:encoded>
+        <wp:post_id>5</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[lisa-park]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[faculty]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <!-- Programs -->
+    <item>
+        <title>Elite Basketball Program</title>
+        <link>https://floridacoastalprep.com/program/elite-basketball/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=program&#038;p=6</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Our flagship program offering intensive on-court training, film study, and national competition cycles.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>6</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[elite-basketball]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[program]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <item>
+        <title>University Preparatory Academics</title>
+        <link>https://floridacoastalprep.com/program/prep-academics/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=program&#038;p=7</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>A rigorous curriculum focused on STEM and leadership, designed to prepare athletes for top-tier university environments.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>7</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[prep-academics]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[program]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <item>
+        <title>Strength &amp; Conditioning Track</title>
+        <link>https://floridacoastalprep.com/program/strength-conditioning/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=program&#038;p=8</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph -->
+<p>Focused on functional movement, recovery, and peak physical performance.</p>
+<!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>8</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[strength-conditioning]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[program]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <!-- Schedule -->
+    <item>
+        <title>FCP vs. Miami Elite Academy</title>
+        <link>https://floridacoastalprep.com/schedule/fcp-vs-miami-elite/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=schedule&#038;p=9</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph --><p>Location: Coastal Elite Center</p><!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>9</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[fcp-vs-miami-elite]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[schedule]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta><wp:meta_key>event_date</wp:meta_key><wp:meta_value>2026-03-15</wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key>opponent</wp:meta_key><wp:meta_value>Miami Elite Academy</wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>FCP vs. Orlando Hoop State</title>
+        <link>https://floridacoastalprep.com/schedule/fcp-vs-orlando-hoop/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=schedule&#038;p=10</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph --><p>Location: Away</p><!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>10</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[fcp-vs-orlando-hoop]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[schedule]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta><wp:meta_key>event_date</wp:meta_key><wp:meta_value>2026-03-22</wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key>opponent</wp:meta_key><wp:meta_value>Orlando Hoop State</wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>FCP vs. Tampa Prep Select</title>
+        <link>https://floridacoastalprep.com/schedule/fcp-vs-tampa-prep/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=schedule&#038;p=11</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph --><p>Location: Coastal Elite Center</p><!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>11</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[fcp-vs-tampa-prep]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[schedule]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta><wp:meta_key>event_date</wp:meta_key><wp:meta_value>2026-04-05</wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key>opponent</wp:meta_key><wp:meta_value>Tampa Prep Select</wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>Florida Coastal Classic</title>
+        <link>https://floridacoastalprep.com/schedule/coastal-classic/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=schedule&#038;p=12</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph --><p>Annual Tournament Showcase</p><!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>12</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[coastal-classic]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[schedule]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta><wp:meta_key>event_date</wp:meta_key><wp:meta_value>2026-04-12</wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key>opponent</wp:meta_key><wp:meta_value>Multi-Team Event</wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>FCP vs. Sunshine State Prep</title>
+        <link>https://floridacoastalprep.com/schedule/fcp-vs-sunshine-state/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=schedule&#038;p=13</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph --><p>Location: Away</p><!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>13</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[fcp-vs-sunshine-state]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[schedule]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta><wp:meta_key>event_date</wp:meta_key><wp:meta_value>2026-04-26</wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key>opponent</wp:meta_key><wp:meta_value>Sunshine State Prep</wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>FCP vs. Gulf Coast Elite</title>
+        <link>https://floridacoastalprep.com/schedule/fcp-vs-gulf-coast/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=schedule&#038;p=14</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph --><p>Location: Coastal Elite Center</p><!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>14</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[fcp-vs-gulf-coast]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[schedule]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta><wp:meta_key>event_date</wp:meta_key><wp:meta_value>2026-05-10</wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key>opponent</wp:meta_key><wp:meta_value>Gulf Coast Elite</wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>Regional Finals</title>
+        <link>https://floridacoastalprep.com/schedule/regional-finals/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=schedule&#038;p=15</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph --><p>TBD</p><!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>15</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[regional-finals]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[schedule]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta><wp:meta_key>event_date</wp:meta_key><wp:meta_value>2026-05-24</wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key>opponent</wp:meta_key><wp:meta_value>TBD</wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>State Championship</title>
+        <link>https://floridacoastalprep.com/schedule/state-championship/</link>
+        <pubDate>Sun, 01 Feb 2026 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <guid isPermaLink="false">https://floridacoastalprep.com/?post_type=schedule&#038;p=16</guid>
+        <description></description>
+        <content:encoded><![CDATA[<!-- wp:paragraph --><p>TBD</p><!-- /wp:paragraph -->]]></content:encoded>
+        <wp:post_id>16</wp:post_id>
+        <wp:post_date><![CDATA[2026-02-01 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-02-01 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[state-championship]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[schedule]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+        <wp:postmeta><wp:meta_key>event_date</wp:meta_key><wp:meta_value>2026-06-05</wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key>opponent</wp:meta_key><wp:meta_value>TBD</wp:meta_value></wp:postmeta>
+    </item>
+
+</channel>
+</rss>

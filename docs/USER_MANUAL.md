@@ -61,5 +61,28 @@ This will verify:
 - **Integrity**: Validation of all WordPress block markup in patterns and templates.
 - **Availability**: Confirmation that all necessary WordPress functions and Custom Post Types are loaded correctly.
 
+## 9. Demo Content
+
+The theme includes demo content to help you get started quickly.
+
+### Starter Content (Pages & Menus)
+On a **fresh WordPress install**, the theme automatically provides Starter Content:
+1. Activate the theme.
+2. Go to `Appearance → Customize`.
+3. Click **Publish** to create demo pages and navigation menus.
+
+> **Note**: Starter Content only appears on new installations. Existing sites will not see this option.
+
+### Importing CPT Demo Data
+For demo Faculty, Programs, and Schedule entries:
+1. Go to `Tools → Import → WordPress` (install the importer if prompted).
+2. Upload the file: `demo-data/demo-content.xml`.
+3. Assign imported content to your user account.
+4. Check **Download and import file attachments**.
+
+After import, visit the Faculty, Programs, and Schedule archive pages to see demo content.
+
+See [DEMO_CONTENT.md](DEMO_CONTENT.md) for technical details.
+
 ---
 *Built by the Senior Engineering Team for Florida Coastal Preparatory.*

@@ -69,7 +69,13 @@
 ### 📚 Documentation (Optional)
 ```
 ✅ docs/USER_MANUAL.md            - End user guide (optional; include in ZIP if desired)
+✅ docs/DEMO_CONTENT.md           - Demo content setup instructions
 ✅ README.md                     - Project overview
+```
+
+### 📦 Demo Data (Optional)
+```
+✅ demo-data/demo-content.xml    - WXR import file for CPT demo content
 ```
 
 ---

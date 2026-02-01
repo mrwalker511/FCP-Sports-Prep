@@ -20,6 +20,11 @@ This repository contains the **Florida Coastal Prep** Full Site Editing (FSE) Wo
 - `tests/` — comprehensive security and debugging test suite
 - See [tests/README.md](tests/README.md) for full documentation
 
+### Demo content
+- `demo-data/` — WXR export file for CPT demo content (Faculty, Programs, Schedule)
+- Theme includes Starter Content API for auto-creating pages and menus
+- See [docs/DEMO_CONTENT.md](docs/DEMO_CONTENT.md) for setup instructions
+
 ## Testing
 
 This theme includes a comprehensive test suite for security and debugging validation.
