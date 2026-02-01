@@ -28,7 +28,7 @@
             </h1>
             <!-- /wp:heading -->
 
-            <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"layout":{"selfStretch":"fixed","flexSize":"1px"}},"layout":{"type":"constrained"}} -->
+            <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"blockGap":"0"},"dimensions":{"minHeight":"4px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
             <div class="wp-block-group has-background"
                 style="background-color:var(--wp--preset--color--primary);height:4px;width:128px"></div>
             <!-- /wp:group -->

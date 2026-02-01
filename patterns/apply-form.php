@@ -19,7 +19,7 @@
         <h2 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
             style="font-size:3rem;font-style:italic;text-transform:uppercase">Personal Profile</h2>
         <!-- /wp:heading -->
-        <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"}},"layout":{"selfStretch":"fixed","flexSize":"4px"}} -->
+        <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"blockGap":"0"},"dimensions":{"minHeight":"4px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
         <div class="wp-block-group has-background"
             style="background-color:var(--wp--preset--color--primary);height:4px;width:33%"></div>
         <!-- /wp:group -->
