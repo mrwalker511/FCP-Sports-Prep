@@ -19,8 +19,10 @@ if (!function_exists('fl_coastal_prep_setup')):
         add_theme_support('automatic-feed-links');
         add_theme_support('title-tag');
 
-        // Elementor Optimization
+        // Elementor Full Compatibility (Classic Theme Mode)
         add_theme_support('elementor');
+        add_theme_support('elementor-default-skin');
+        add_theme_support('elementor-pro');
 
         register_nav_menus(array(
             'primary' => __('Primary Menu', 'fl-coastal-prep'),
@@ -270,6 +272,10 @@ function fl_coastal_prep_register_cpts()
         'menu_icon' => 'dashicons-calendar-alt',
         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'elementor'),
     ));
+
+    // Enable Elementor on all core post types (runs after WP core registers them)
+    add_post_type_support('page', 'elementor');
+    add_post_type_support('post', 'elementor');
 }
 add_action('init', 'fl_coastal_prep_register_cpts');
 
