@@ -12,13 +12,26 @@ define('FCP_TESTS_DIR', __DIR__);
 
 // WordPress test suite location (adjust if needed)
 $_tests_dir = getenv('WP_TESTS_DIR');
+
+// Check for Composer-installed wp-phpunit
+if (!$_tests_dir && file_exists(dirname(__DIR__) . '/vendor/wp-phpunit/wp-phpunit')) {
+    $_tests_dir = dirname(__DIR__) . '/vendor/wp-phpunit/wp-phpunit';
+}
+
 if (!$_tests_dir) {
     $_tests_dir = rtrim(sys_get_temp_dir(), '/\\') . '/wordpress-tests-lib';
 }
 
-// Check if WordPress test suite is available
-if (!file_exists($_tests_dir . '/includes/functions.php')) {
-    echo "WordPress test suite not found. Running in standalone mode.\n";
+// Check if WordPress test suite is available and requirements are met
+$wp_tests_requirements_met = file_exists($_tests_dir . '/includes/functions.php') && function_exists('mysqli_connect');
+
+if (!$wp_tests_requirements_met) {
+    if (!function_exists('mysqli_connect')) {
+        echo "Requirements missing: mysqli extension not found.\n";
+    } else {
+        echo "WordPress test suite not found at " . $_tests_dir . ".\n";
+    }
+    echo "Running in standalone mode.\n";
     // Continue without WordPress for basic PHP tests
     define('WP_TESTS_AVAILABLE', false);
 
