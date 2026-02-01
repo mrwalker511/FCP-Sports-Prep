@@ -19,8 +19,13 @@ if (!function_exists('fl_coastal_prep_setup')):
         add_theme_support('automatic-feed-links');
         add_theme_support('title-tag');
 
-        // Elementor Full Compatibility (Classic Theme Mode)
+        // Full Site Editing Support
+        add_theme_support('block-templates');
+        add_theme_support('block-template-parts');
+
+        // Elementor Full Compatibility (FSE Mode)
         add_theme_support('elementor');
+        add_theme_support('elementor-experimental');
         add_theme_support('elementor-default-skin');
         add_theme_support('elementor-pro');
 
@@ -253,6 +258,8 @@ function fl_coastal_prep_register_cpts()
         'show_in_rest' => true,
         'menu_icon' => 'dashicons-groups',
         'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'elementor'),
+        'template' => array(array('core/post-featured-image'), array('core/post-title'), array('core/post-content')),
+        'template_lock' => false,
     ));
 
     register_post_type('program', array(
@@ -262,6 +269,8 @@ function fl_coastal_prep_register_cpts()
         'show_in_rest' => true,
         'menu_icon' => 'dashicons-welcome-learn-more',
         'supports' => array('title', 'editor', 'thumbnail', 'elementor'),
+        'template' => array(array('core/post-featured-image'), array('core/post-title'), array('core/post-content')),
+        'template_lock' => false,
     ));
 
     register_post_type('schedule', array(
@@ -271,13 +280,43 @@ function fl_coastal_prep_register_cpts()
         'show_in_rest' => true,
         'menu_icon' => 'dashicons-calendar-alt',
         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'elementor'),
+        'template' => array(array('core/post-featured-image'), array('core/post-title'), array('core/post-content')),
+        'template_lock' => false,
     ));
 
     // Enable Elementor on all core post types (runs after WP core registers them)
     add_post_type_support('page', 'elementor');
     add_post_type_support('post', 'elementor');
+    add_post_type_support('faculty', 'elementor');
+    add_post_type_support('program', 'elementor');
+    add_post_type_support('schedule', 'elementor');
 }
 add_action('init', 'fl_coastal_prep_register_cpts');
+
+/**
+ * Ensure FSE template hierarchy works correctly
+ */
+function fl_coastal_prep_template_hierarchy($template) {
+    // For FSE themes, we want to use block templates when available
+    if (function_exists('get_block_template')) {
+        $block_template = get_block_template();
+        if ($block_template) {
+            return $block_template;
+        }
+    }
+    return $template;
+}
+add_filter('template_include', 'fl_coastal_prep_template_hierarchy');
+
+/**
+ * Register block pattern categories
+ */
+function fl_coastal_prep_register_pattern_categories() {
+    register_block_pattern_category('fl-coastal-prep', array(
+        'label' => __('Florida Coastal Prep', 'fl-coastal-prep'),
+    ));
+}
+add_action('init', 'fl_coastal_prep_register_pattern_categories');
 
 function fl_coastal_prep_scripts()
 {

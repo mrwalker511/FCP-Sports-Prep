@@ -28,3 +28,6 @@ dist-ssr
 coverage-report/
 .phpunit.result.cache
 /tmp/
+
+# Development/Prototype (exclude from production)
+/prototype/
