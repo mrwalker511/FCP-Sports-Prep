@@ -3,14 +3,14 @@
  * Florida Coastal Prep functions and definitions
  *
  * THEME ARCHITECTURE:
- * - Elementor: Used for page/post content editing (disabled Gutenberg)
- * - WordPress Blocks: Used for theme structure (header, footer, patterns)
- * - Full Site Editing: Patterns available as reusable block templates
+ * - WordPress Blocks (Gutenberg): Primary content editor for all post types
+ * - Full Site Editing: Complete FSE block theme with templates and template parts
+ * - Elementor: Optional page builder - users can choose between Gutenberg and Elementor
  *
  * CONTENT EDITING WORKFLOW:
- * - Pages/Posts: Edit with Elementor builder → No Gutenberg block validation errors
+ * - Pages/Posts: Edit with Gutenberg (Site Editor available) or Elementor (optional)
  * - Patterns: Defined as WordPress block patterns in /patterns/ directory
- * - Theme Structure: Header/Footer are traditional PHP templates
+ * - Theme Structure: Header/Footer are block template parts in /parts/
  */
 
 if (!defined('ABSPATH')) {
@@ -33,7 +33,7 @@ if (!function_exists('fl_coastal_prep_setup')):
         add_theme_support('block-templates');
         add_theme_support('block-template-parts');
 
-        // Elementor Full Compatibility (FSE Mode)
+        // Elementor Support (Optional)
         add_theme_support('elementor');
         add_theme_support('elementor-experimental');
         add_theme_support('elementor-default-skin');
@@ -178,7 +178,11 @@ endif;
 add_action('after_setup_theme', 'fl_coastal_prep_setup');
 
 /**
- * Note: Block Patterns are automatically registered from the /patterns directory in WP 6.4+
+ * Note: Block Patterns are registered from /patterns directory.
+ *
+ * This theme uses PHP pattern files with proper headers (Title, Slug, Categories).
+ * WordPress automatically registers these patterns when they have valid file headers.
+ * Both PHP (with headers) and HTML pattern files are supported in WP 6.4+.
  */
 
 /**
@@ -256,19 +260,6 @@ function fl_coastal_prep_schema_markup()
     echo "\n";
 }
 add_action('wp_head', 'fl_coastal_prep_schema_markup');
-
-/**
- * Disable Gutenberg on pages and posts - let Elementor handle content editing
- * Keep blocks for template parts (header, footer) and patterns only
- */
-function fl_coastal_prep_disable_gutenberg_on_posts( $use_block_editor, $post_type ) {
-    // Disable block editor for pages and posts - use Elementor instead
-    if ( in_array( $post_type, [ 'page', 'post' ] ) ) {
-        return false;
-    }
-    return $use_block_editor;
-}
-add_filter( 'use_block_editor_for_post_type', 'fl_coastal_prep_disable_gutenberg_on_posts', 10, 2 );
 
 /**
  * Register Custom Post Types
@@ -373,9 +364,13 @@ add_action('init', 'fl_coastal_prep_register_block_styles');
 
 function fl_coastal_prep_scripts()
 {
-    wp_enqueue_style('fl-coastal-prep-style', get_stylesheet_uri(), array(), '1.5.0');
+    // Main stylesheet - version matches theme version
+    wp_enqueue_style('fl-coastal-prep-style', get_stylesheet_uri(), array(), '1.0.0');
+
+    // Custom animations CSS
     wp_enqueue_style('fl-coastal-prep-animations', get_template_directory_uri() . '/assets/css/animations.css', array(), '1.0.0');
-    wp_enqueue_style('fl-coastal-prep-fonts', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Oswald:wght@400;600;700&display=swap', array(), null);
+
+    // Material Icons (Google Fonts are already defined in theme.json)
     wp_enqueue_style('material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), null);
 }
 add_action('wp_enqueue_scripts', 'fl_coastal_prep_scripts');
