@@ -47,11 +47,12 @@ if (!function_exists('fl_coastal_prep_setup')):
         // Starter Content
         add_theme_support('starter-content', array(
             'posts' => array(
-                'home' => array(
+                        'home' => array(
                     'post_type' => 'page',
                     'post_title' => _x('Home', 'Theme starter content', 'fl-coastal-prep'),
                     'content' => '<!-- wp:pattern {"slug":"fl-coastal-prep/hero"} /-->
                                   <!-- wp:pattern {"slug":"fl-coastal-prep/stats"} /-->
+                                  <!-- wp:pattern {"slug":"fl-coastal-prep/blueprint-gallery"} /-->
                                   <!-- wp:pattern {"slug":"fl-coastal-prep/grid"} /-->
                                   <!-- wp:pattern {"slug":"fl-coastal-prep/cta"} /-->',
                     'template' => 'front-page',
@@ -328,9 +329,52 @@ function fl_coastal_prep_register_pattern_categories() {
 }
 add_action('init', 'fl_coastal_prep_register_pattern_categories');
 
+/**
+ * Register Block Styles
+ */
+function fl_coastal_prep_register_block_styles() {
+    register_block_style('core/button', array(
+        'name'  => 'outline-gold',
+        'label' => __('Outline Gold', 'fl-coastal-prep'),
+    ));
+
+    register_block_style('core/group', array(
+        'name'  => 'glassmorphism',
+        'label' => __('Glassmorphism', 'fl-coastal-prep'),
+    ));
+
+    register_block_style('core/group', array(
+        'name'  => 'grid-background',
+        'label' => __('Grid Background', 'fl-coastal-prep'),
+    ));
+
+    register_block_style('core/heading', array(
+        'name'  => 'blueprint',
+        'label' => __('Blueprint', 'fl-coastal-prep'),
+    ));
+
+    // Animation Styles
+    register_block_style('core/group', array(
+        'name'  => 'animate-fade-in-up',
+        'label' => __('Animate: Fade In Up', 'fl-coastal-prep'),
+    ));
+
+    register_block_style('core/column', array(
+        'name'  => 'animate-fade-in-up',
+        'label' => __('Animate: Fade In Up', 'fl-coastal-prep'),
+    ));
+
+    register_block_style('core/image', array(
+        'name'  => 'animate-slide-in',
+        'label' => __('Animate: Slide In', 'fl-coastal-prep'),
+    ));
+}
+add_action('init', 'fl_coastal_prep_register_block_styles');
+
 function fl_coastal_prep_scripts()
 {
     wp_enqueue_style('fl-coastal-prep-style', get_stylesheet_uri(), array(), '1.5.0');
+    wp_enqueue_style('fl-coastal-prep-animations', get_template_directory_uri() . '/assets/css/animations.css', array(), '1.0.0');
     wp_enqueue_style('fl-coastal-prep-fonts', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Oswald:wght@400;600;700&display=swap', array(), null);
     wp_enqueue_style('material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), null);
 }

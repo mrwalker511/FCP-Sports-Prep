@@ -7,14 +7,15 @@
     "color": {
       "custom": true,
       "customDuotone": true,
+      "customGradient": true,
       "palette": [
         {
-          "name": "Base",
+          "name": "Base (White)",
           "slug": "base",
           "color": "#FFFFFF"
         },
         {
-          "name": "Contrast",
+          "name": "Contrast (Navy)",
           "slug": "contrast",
           "color": "#0A192F"
         },
@@ -32,6 +33,23 @@
           "name": "Deep Space",
           "slug": "tertiary",
           "color": "#020C1B"
+        },
+        {
+          "name": "Light Gray",
+          "slug": "light-gray",
+          "color": "#F1F5F9"
+        }
+      ],
+      "gradients": [
+        {
+          "name": "Navy to Deep Space",
+          "slug": "navy-deep",
+          "gradient": "linear-gradient(180deg, #112240 0%, #020C1B 100%)"
+        },
+        {
+          "name": "Gold to Transparent",
+          "slug": "gold-trans",
+          "gradient": "linear-gradient(180deg, rgba(251, 191, 36, 0.2) 0%, rgba(251, 191, 36, 0) 100%)"
         }
       ]
     },
@@ -39,6 +57,7 @@
       "customFontSize": true,
       "customLineHeight": true,
       "dropCap": true,
+      "fluid": true,
       "fontFamilies": [
         {
           "fontFamily": "\"Bebas Neue\", sans-serif",
@@ -55,21 +74,68 @@
           "name": "Body (Inter)",
           "slug": "sans"
         }
+      ],
+      "fontSizes": [
+        {
+          "name": "Small",
+          "slug": "small",
+          "size": "0.875rem"
+        },
+        {
+          "name": "Medium",
+          "slug": "medium",
+          "size": "1rem"
+        },
+        {
+          "name": "Large",
+          "slug": "large",
+          "size": "1.25rem"
+        },
+        {
+          "name": "Extra Large",
+          "slug": "x-large",
+          "size": "1.5rem"
+        },
+        {
+          "name": "Huge",
+          "slug": "huge",
+          "size": "clamp(2.5rem, 5vw, 4rem)"
+        },
+        {
+          "name": "Gigantic",
+          "slug": "gigantic",
+          "size": "clamp(4.5rem, 8vw, 10rem)"
+        }
       ]
     },
-    "layout": {
-      "contentSize": "800px",
-      "wideSize": "1200px"
-    },
     "spacing": {
-      "customPadding": true,
-      "customMargin": true
+      "spacingScale": {
+        "operator": "*",
+        "increment": 1.5,
+        "steps": 7,
+        "mediumStep": 1.5,
+        "unit": "rem"
+      },
+      "units": ["px", "em", "rem", "vh", "vw"]
     },
-    "border": {
-      "customColor": true,
-      "customRadius": true,
-      "customStyle": true,
-      "customWidth": true
+    "shadows": {
+      "presets": [
+        {
+          "name": "Natural",
+          "slug": "natural",
+          "shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
+        },
+        {
+          "name": "Deep",
+          "slug": "deep",
+          "shadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+        },
+        {
+          "name": "Gold Glow",
+          "slug": "gold-glow",
+          "shadow": "0 0 15px rgba(251, 191, 36, 0.3)"
+        }
+      ]
     }
   },
   "styles": {
@@ -79,8 +145,45 @@
     },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--sans)",
-      "fontSize": "1rem",
+      "fontSize": "var(--wp--preset--font-size--medium)",
       "lineHeight": "1.6"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--primary)"
+        },
+        "typography": {
+          "textDecoration": "none"
+        },
+        ":hover": {
+          "typography": {
+            "textDecoration": "underline"
+          }
+        }
+      },
+      "button": {
+        "border": {
+          "radius": "0px"
+        },
+        "color": {
+          "background": "var(--wp--preset--color--primary)",
+          "text": "var(--wp--preset--color--secondary)"
+        },
+        "typography": {
+          "fontWeight": "700",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.1em"
+        },
+        "spacing": {
+          "padding": {
+            "top": "1rem",
+            "bottom": "1rem",
+            "left": "2rem",
+            "right": "2rem"
+          }
+        }
+      }
     }
   }
 }

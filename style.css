@@ -47,6 +47,41 @@ All global styles are handled via theme.json or tailwind in this environment.
   font-style: normal;
 }
 
+/* Block Style: Grid Background */
+.is-style-grid-background {
+  background-image: radial-gradient(circle, rgba(251, 191, 36, 0.15) 1px, transparent 1px) !important;
+  background-size: 40px 40px !important;
+}
+
+/* Block Style: Glassmorphism */
+.is-style-glassmorphism {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Block Style: Blueprint */
+.is-style-blueprint {
+  font-family: var(--wp--preset--font-family--display) !important;
+  font-style: italic !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.025em !important;
+  line-height: 0.8 !important;
+}
+
+/* Block Style: Outline Gold */
+.wp-block-button.is-style-outline-gold .wp-block-button__link {
+  border: 2px solid var(--wp--preset--color--primary) !important;
+  background: transparent !important;
+  color: var(--wp--preset--color--primary) !important;
+}
+
+.wp-block-button.is-style-outline-gold .wp-block-button__link:hover {
+  background: var(--wp--preset--color--primary) !important;
+  color: var(--wp--preset--color--secondary) !important;
+}
+
 .text-blueprint-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-style: italic;
