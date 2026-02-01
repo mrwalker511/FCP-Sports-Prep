@@ -3,6 +3,8 @@
  * Title: Ready to Level Up Call to Action
  * Slug: fl-coastal-prep/cta
  * Categories: featured, call-to-action
+ * Block Types: core/cover, core/group, core/heading, core/paragraph, core/button
+ * Description: Full-width CTA section with headline, description, and dual action buttons
  */
 ?>
 <!-- wp:cover {"url":"https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format\u0026fit=crop\u0026q=80\u0026w=1600","dimRatio":90,"overlayColor":"contrast","minHeight":500,"isUserOverlayColor":true,"align":"full"} -->

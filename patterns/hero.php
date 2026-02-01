@@ -4,6 +4,8 @@
  * Slug: fl-coastal-prep/hero
  * Categories: featured, banner
  * Viewport Width: 1600
+ * Block Types: core/cover, core/group, core/paragraph, core/button
+ * Description: Full-width hero section with title, subtitle, and CTA buttons
  */
 ?>
 <!-- wp:cover {"url":"https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format\u0026fit=crop\u0026q=80\u0026w=2000","dimRatio":40,"overlayColor":"contrast","minHeight":100,"minHeightUnit":"vh","align":"full","style":{"color":{"duotone":"unset"}},"layout":{"type":"constrained"}} -->

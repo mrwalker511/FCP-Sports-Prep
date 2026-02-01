@@ -1,6 +1,16 @@
 <?php
 /**
  * Florida Coastal Prep functions and definitions
+ *
+ * THEME ARCHITECTURE:
+ * - Elementor: Used for page/post content editing (disabled Gutenberg)
+ * - WordPress Blocks: Used for theme structure (header, footer, patterns)
+ * - Full Site Editing: Patterns available as reusable block templates
+ *
+ * CONTENT EDITING WORKFLOW:
+ * - Pages/Posts: Edit with Elementor builder → No Gutenberg block validation errors
+ * - Patterns: Defined as WordPress block patterns in /patterns/ directory
+ * - Theme Structure: Header/Footer are traditional PHP templates
  */
 
 if (!defined('ABSPATH')) {
@@ -245,6 +255,19 @@ function fl_coastal_prep_schema_markup()
     echo "\n";
 }
 add_action('wp_head', 'fl_coastal_prep_schema_markup');
+
+/**
+ * Disable Gutenberg on pages and posts - let Elementor handle content editing
+ * Keep blocks for template parts (header, footer) and patterns only
+ */
+function fl_coastal_prep_disable_gutenberg_on_posts( $use_block_editor, $post_type ) {
+    // Disable block editor for pages and posts - use Elementor instead
+    if ( in_array( $post_type, [ 'page', 'post' ] ) ) {
+        return false;
+    }
+    return $use_block_editor;
+}
+add_filter( 'use_block_editor_for_post_type', 'fl_coastal_prep_disable_gutenberg_on_posts', 10, 2 );
 
 /**
  * Register Custom Post Types
