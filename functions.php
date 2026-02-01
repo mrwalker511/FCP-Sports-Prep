@@ -39,11 +39,6 @@ if (!function_exists('fl_coastal_prep_setup')):
         add_theme_support('elementor-default-skin');
         add_theme_support('elementor-pro');
 
-        register_nav_menus(array(
-            'primary' => __('Primary Menu', 'fl-coastal-prep'),
-            'footer' => __('Footer Menu', 'fl-coastal-prep'),
-        ));
-
         // Starter Content
         add_theme_support('starter-content', array(
             'posts' => array(
@@ -114,63 +109,6 @@ if (!function_exists('fl_coastal_prep_setup')):
                 'show_on_front' => 'page',
                 'page_on_front' => '{{home}}',
                 'blogdescription' => _x('The Future of Elite Ball', 'Theme starter content', 'fl-coastal-prep'),
-            ),
-            'nav_menus' => array(
-                'primary' => array(
-                    'name' => _x('Primary Menu', 'Theme starter content', 'fl-coastal-prep'),
-                    'items' => array(
-                        'link.home' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{home}}',
-                        ),
-                        'link.programs' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{programs}}',
-                        ),
-                        'link.faculty' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{faculty}}',
-                        ),
-                        'link.campus' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{campus}}',
-                        ),
-                        'link.news' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{news}}',
-                        ),
-                        'link.apply' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{apply}}',
-                        ),
-                    ),
-                ),
-                'footer' => array(
-                    'name' => _x('Footer Menu', 'Theme starter content', 'fl-coastal-prep'),
-                    'items' => array(
-                        'link.privacy' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{privacy-policy}}',
-                        ),
-                        'link.terms' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{terms-of-service}}',
-                        ),
-                        'link.contact' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{contact}}',
-                        ),
-                    ),
-                ),
             ),
         ));
     }
