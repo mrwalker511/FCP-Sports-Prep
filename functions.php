@@ -293,20 +293,7 @@ function fl_coastal_prep_register_cpts()
 }
 add_action('init', 'fl_coastal_prep_register_cpts');
 
-/**
- * Ensure FSE template hierarchy works correctly
- */
-function fl_coastal_prep_template_hierarchy($template) {
-    // For FSE themes, we want to use block templates when available
-    if (function_exists('get_block_template')) {
-        $block_template = get_block_template();
-        if ($block_template) {
-            return $block_template;
-        }
-    }
-    return $template;
-}
-add_filter('template_include', 'fl_coastal_prep_template_hierarchy');
+
 
 /**
  * Register block pattern categories
