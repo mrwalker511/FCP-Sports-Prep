@@ -15,7 +15,7 @@
         <p class="has-primary-color has-text-color"
             style="font-size:0.625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">Step 1 of 3</p>
         <!-- /wp:paragraph -->
-        <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"3rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
+        <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"3rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
         <h2 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
             style="font-size:3rem;font-style:italic;text-transform:uppercase">Personal Profile</h2>
         <!-- /wp:heading -->
@@ -33,7 +33,7 @@
     <!-- /wp:paragraph -->
 
     <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}},"backgroundColor":"base"} -->
-    <div class="wp-block-group has-base-background-color has-background"
+    <div class="wp-block-group has-border-color has-base-background-color has-background"
         style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
         <!-- wp:paragraph {"align":"center"} -->
         <p class="has-text-align-center">[FORM PLACEHOLDER: Insert WPForms or Contact Form 7 Shortcode Here]</p>
