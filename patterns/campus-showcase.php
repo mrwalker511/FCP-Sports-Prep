@@ -43,7 +43,7 @@
     <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"}}}} -->
     <div class="wp-block-columns alignwide">
         <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}}} -->
-        <div class="wp-block-column has-background"
+        <div class="wp-block-column has-border-color has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
@@ -58,7 +58,7 @@
                     style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Training
                     Hub</p>
                 <!-- /wp:paragraph -->
-                <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"1.5rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
+                <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"1.5rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
                 <h4 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                     style="font-size:1.5rem;font-style:italic;text-transform:uppercase">The Performance Lab</h4>
                 <!-- /wp:heading -->
@@ -72,7 +72,7 @@
         <!-- /wp:column -->
 
         <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}}} -->
-        <div class="wp-block-column has-background"
+        <div class="wp-block-column has-border-color has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
@@ -87,7 +87,7 @@
                     style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Core
                     Education</p>
                 <!-- /wp:paragraph -->
-                <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"1.5rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
+                <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"1.5rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
                 <h4 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                     style="font-size:1.5rem;font-style:italic;text-transform:uppercase">The Academic Wing</h4>
                 <!-- /wp:heading -->
@@ -101,7 +101,7 @@
         <!-- /wp:column -->
 
         <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}}} -->
-        <div class="wp-block-column has-background"
+        <div class="wp-block-column has-border-color has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
@@ -115,7 +115,7 @@
                 <p class="has-primary-color has-text-color"
                     style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Housing</p>
                 <!-- /wp:paragraph -->
-                <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"1.5rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
+                <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"1.5rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
                 <h4 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                     style="font-size:1.5rem;font-style:italic;text-transform:uppercase">Residency Suites</h4>
                 <!-- /wp:heading -->
