@@ -13,7 +13,7 @@
         <!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"3rem"}},"layout":{"type":"grid","columnCount":2}} -->
 
         <!-- wp:group {"style":{"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.1)"},"color":{"background":"var(--wp--preset--color--base)"}},"className":"news-card","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group news-card has-background"
+        <div class="wp-block-group news-card has-border-color has-background"
             style="border-color:rgba(17,34,64,0.1);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
 
             <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","className":"news-image"} /-->

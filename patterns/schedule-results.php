@@ -13,7 +13,7 @@
         <!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"1rem"}}} -->
 
         <!-- wp:group {"style":{"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"},"color":{"background":"var(--wp--preset--color--base)"},"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}},"className":"schedule-card","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-        <div class="wp-block-group schedule-card has-background"
+        <div class="wp-block-group schedule-card has-border-color has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
 
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"3rem"}}} -->

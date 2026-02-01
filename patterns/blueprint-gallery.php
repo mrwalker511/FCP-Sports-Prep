@@ -32,7 +32,8 @@
             <div class="wp-block-group is-style-glassmorphism has-background" style="background-color:var(--wp--preset--color--secondary);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
                 <!-- wp:heading {"level":4,"textColor":"primary","fontFamily":"heading"} -->
                 <h4 class="wp-block-heading has-primary-color has-text-color has-heading-font-family">ELITE TRAINING</h4>
-                <!-- /wp:paragraph -->
+                <!-- /wp:heading -->
+                <!-- wp:paragraph -->
                 <p class="has-base-color has-text-color">Advanced metrics and personalized development plans for every athlete.</p>
                 <!-- /wp:paragraph -->
             </div>

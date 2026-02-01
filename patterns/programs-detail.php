@@ -29,7 +29,7 @@
             </p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em"}},"textColor":"secondary","fontFamily":"display"} -->
+            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
             <h2 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                 style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
                 The Pro-Informed Methodology</h2>
@@ -81,7 +81,7 @@
             </p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em"}},"textColor":"secondary","fontFamily":"display"} -->
+            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
             <h2 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                 style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
                 University Preparatory Core</h2>

@@ -12,7 +12,7 @@
     <div class="wp-block-columns">
 
         <!-- wp:column {"style":{"border":{"right":{"color":"rgba(17, 34, 64, 0.05)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
-        <div class="wp-block-column"
+        <div class="wp-block-column has-border-color"
             style="border-right-color:rgba(17, 34, 64, 0.05);border-right-width:1px;padding-right:1rem;padding-left:1rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
             <p class="has-text-align-center has-secondary-color has-text-color has-display-font-family"
@@ -27,7 +27,7 @@
         <!-- /wp:column -->
 
         <!-- wp:column {"style":{"border":{"right":{"color":"rgba(17, 34, 64, 0.05)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
-        <div class="wp-block-column"
+        <div class="wp-block-column has-border-color"
             style="border-right-color:rgba(17, 34, 64, 0.05);border-right-width:1px;padding-right:1rem;padding-left:1rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
             <p class="has-text-align-center has-secondary-color has-text-color has-display-font-family"
@@ -42,7 +42,7 @@
         <!-- /wp:column -->
 
         <!-- wp:column {"style":{"border":{"right":{"color":"rgba(17, 34, 64, 0.05)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
-        <div class="wp-block-column"
+        <div class="wp-block-column has-border-color"
             style="border-right-color:rgba(17, 34, 64, 0.05);border-right-width:1px;padding-right:1rem;padding-left:1rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
             <p class="has-text-align-center has-secondary-color has-text-color has-display-font-family"

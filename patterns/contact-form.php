@@ -12,13 +12,13 @@
     <div class="wp-block-columns alignwide">
         <!-- wp:column {"width":"60%"} -->
         <div class="wp-block-column" style="flex-basis:60%">
-            <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
+            <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
             <h3 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                 style="font-size:2.25rem;font-style:italic;text-transform:uppercase">Direct Inquiry</h3>
             <!-- /wp:heading -->
 
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}},"backgroundColor":"base"} -->
-            <div class="wp-block-group has-base-background-color has-background"
+            <div class="wp-block-group has-border-color has-base-background-color has-background"
                 style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
                 <!-- wp:paragraph -->
                 <p>For fully functional forms, please integrate with a plugin such as <strong>Contact Form 7</strong> or
@@ -50,7 +50,7 @@
             <!-- /wp:group -->
 
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"color":{"background":"var(--wp--preset--color--base)"},"border":{"left":{"color":"var(--wp--preset--color--primary)","width":"4px"}},"layout":{"type":"flex","orientation":"vertical"}}} -->
-            <div class="wp-block-group has-background"
+            <div class="wp-block-group has-border-color has-background"
                 style="border-left-color:var(--wp--preset--color--primary);border-left-width:4px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-40 mb-2"} -->
                 <p class="has-base-color has-text-color opacity-40 mb-2"

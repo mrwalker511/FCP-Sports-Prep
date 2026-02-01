@@ -16,7 +16,7 @@
             <p class="has-primary-color has-text-color"
                 style="font-size:0.625rem;font-weight:700;letter-spacing:0.4em;text-transform:uppercase">Our Mission</p>
             <!-- /wp:paragraph -->
-            <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1"}},"textColor":"secondary","fontFamily":"display"} -->
+            <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
             <h3 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                 style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;text-transform:uppercase">
                 EQUITY IN <br>ELITE ATHLETICS</h3>
@@ -41,7 +41,7 @@
     </div>
     <!-- /wp:columns -->
 
-    <!-- wp:heading {"textAlign":"center","level":4,"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","letterSpacing":"-0.025em"}},"textColor":"secondary","fontFamily":"display"} -->
+    <!-- wp:heading {"textAlign":"center","level":4,"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
     <h4 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-display-font-family"
         style="font-size:2.25rem;font-style:italic;letter-spacing:-0.025em;text-transform:uppercase">WALL OF HONOR</h4>
     <!-- /wp:heading -->
@@ -54,28 +54,28 @@
     <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"}}}} -->
     <div class="wp-block-columns alignwide">
         <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
-        <div class="wp-block-column has-background"
+        <div class="wp-block-column has-border-color has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.5rem"}}},"backgroundColor":"contrast","textColor":"base","className":"donor-tier"} -->
             <p class="has-text-align-center has-base-color has-text-color has-contrast-background-color has-background donor-tier"
                 style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;padding:0.25rem 0.75rem;display:inline-block;margin-bottom:1.5rem">Platinum Tier
             </p>
             <!-- /wp:paragraph -->
-            <!-- wp:heading {"textAlign":"center","level":5,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
+            <!-- wp:heading {"textAlign":"center","level":5,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
             <h5 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-display-font-family"
                 style="font-size:1.875rem;font-style:italic;text-transform:uppercase">The Gold Coast Foundation</h5>
             <!-- /wp:heading -->
         </div>
         <!-- /wp:column -->
         <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
-        <div class="wp-block-column has-background"
+        <div class="wp-block-column has-border-color has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.5rem"}}},"backgroundColor":"contrast","textColor":"base","className":"donor-tier"} -->
             <p class="has-text-align-center has-base-color has-text-color has-contrast-background-color has-background donor-tier"
                 style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;padding:0.25rem 0.75rem;display:inline-block;margin-bottom:1.5rem">Platinum Tier
             </p>
             <!-- /wp:paragraph -->
-            <!-- wp:heading {"textAlign":"center","level":5,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
+            <!-- wp:heading {"textAlign":"center","level":5,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
             <h5 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-display-font-family"
                 style="font-size:1.875rem;font-style:italic;text-transform:uppercase">Global Sports Alliance</h5>
             <!-- /wp:heading -->
