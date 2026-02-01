@@ -34,8 +34,8 @@
 
         <!-- wp:column {"width":"40%"} -->
         <div class="wp-block-column" style="flex-basis:40%">
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"color":{"background":"var(--wp--preset--color--base)"},"border":{"left":{"color":"var(--wp--preset--color--primary)","width":"4px"}}},"className":"mb-8"} -->
-            <div class="wp-block-group mb-8 has-background"
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"color":{"background":"var(--wp--preset--color--base)"},"border":{"left":{"color":"var(--wp--preset--color--primary)","width":"4px"}}},"className":"mb-8","layout":{"type":"flex","orientation":"vertical"}} -->
+            <div class="wp-block-group has-background mb-8"
                 style="border-left-color:var(--wp--preset--color--primary);border-left-width:4px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-40 mb-2"} -->
                 <p class="has-base-color has-text-color opacity-40 mb-2"
@@ -49,7 +49,7 @@
             </div>
             <!-- /wp:group -->
 
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"color":{"background":"var(--wp--preset--color--base)"},"border":{"left":{"color":"var(--wp--preset--color--primary)","width":"4px"}}}} -->
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"color":{"background":"var(--wp--preset--color--base)"},"border":{"left":{"color":"var(--wp--preset--color--primary)","width":"4px"}},"layout":{"type":"flex","orientation":"vertical"}}} -->
             <div class="wp-block-group has-background"
                 style="border-left-color:var(--wp--preset--color--primary);border-left-width:4px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-40 mb-2"} -->

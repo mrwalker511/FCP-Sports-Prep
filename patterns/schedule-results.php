@@ -12,8 +12,8 @@
     <div class="wp-block-query alignwide">
         <!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"1rem"}}} -->
 
-        <!-- wp:group {"style":{"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"},"color":{"background":"var(--wp--preset--color--base)"},"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}},"className":"shadow-sm hover:shadow-lg transition-all","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-        <div class="wp-block-group shadow-sm hover:shadow-lg transition-all has-background"
+        <!-- wp:group {"style":{"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"},"color":{"background":"var(--wp--preset--color--base)"},"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}},"className":"schedule-card","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+        <div class="wp-block-group schedule-card has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
 
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"3rem"}}} -->
@@ -47,7 +47,7 @@
                 <div class="wp-block-buttons">
                     <!-- wp:button {"style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.1)"}},"className":"is-style-outline","textColor":"secondary"} -->
                     <div class="wp-block-button is-style-outline"><a
-                            class="wp-block-button__link has-secondary-color has-text-color"
+                            class="wp-block-button__link has-secondary-color has-text-color wp-element-button"
                             style="border-color:rgba(17,34,64,0.1);border-style:solid;border-width:1px;font-size:0.5625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">View
                             Details</a></div>
                     <!-- /wp:button -->

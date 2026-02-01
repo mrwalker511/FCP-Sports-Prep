@@ -45,8 +45,8 @@
         <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}}} -->
         <div class="wp-block-column has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
-            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"grayscale hover:grayscale-0 transition-all duration-500"} -->
-            <figure class="wp-block-image size-large grayscale hover:grayscale-0 transition-all duration-500"><img
+            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
+            <figure class="wp-block-image size-large facility-image"><img
                     src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=800"
                     alt="Training Hub" /></figure>
             <!-- /wp:image -->
@@ -74,8 +74,8 @@
         <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}}} -->
         <div class="wp-block-column has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
-            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"grayscale hover:grayscale-0 transition-all duration-500"} -->
-            <figure class="wp-block-image size-large grayscale hover:grayscale-0 transition-all duration-500"><img
+            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
+            <figure class="wp-block-image size-large facility-image"><img
                     src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800"
                     alt="Core Education" /></figure>
             <!-- /wp:image -->
@@ -103,8 +103,8 @@
         <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}}} -->
         <div class="wp-block-column has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
-            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"grayscale hover:grayscale-0 transition-all duration-500"} -->
-            <figure class="wp-block-image size-large grayscale hover:grayscale-0 transition-all duration-500"><img
+            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
+            <figure class="wp-block-image size-large facility-image"><img
                     src="https://images.unsplash.com/photo-1522770179533-24471fcdba45?auto=format&fit=crop&q=80&w=800"
                     alt="Housing" /></figure>
             <!-- /wp:image -->

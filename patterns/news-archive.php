@@ -12,18 +12,18 @@
     <div class="wp-block-query alignwide">
         <!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"3rem"}},"layout":{"type":"grid","columnCount":2}} -->
 
-        <!-- wp:group {"style":{"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.1)"},"color":{"background":"var(--wp--preset--color--base)"}},"className":"shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden has-background"
+        <!-- wp:group {"style":{"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.1)"},"color":{"background":"var(--wp--preset--color--base)"}},"className":"news-card","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group news-card has-background"
             style="border-color:rgba(17,34,64,0.1);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
 
-            <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","className":"grayscale hover:grayscale-0 transition-all duration-700"} /-->
+            <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","className":"news-image"} /-->
 
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}},"layout":{"type":"constrained"}} -->
             <div class="wp-block-group"
                 style="padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
                 <!-- wp:post-date {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-60"} /-->
 
-                <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","lineHeight":"1.1"}},"textColor":"secondary","fontFamily":"display","className":"hover:text-primary transition-colors"} /-->
+                <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","lineHeight":"1.1"}},"textColor":"secondary","fontFamily":"display","className":"news-title"} /-->
 
                 <!-- wp:post-excerpt {"style":{"typography":{"fontSize":"0.875rem","fontStyle":"italic"}},"textColor":"base","className":"opacity-60"} /-->
 
@@ -34,7 +34,7 @@
                         style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Read
                         Story</p>
                     <!-- /wp:paragraph -->
-                    <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"layout":{"selfStretch":"fixed","flexSize":"32px"}},"layout":{"type":"constrained"}} -->
+                    <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"dimensions":{"minWidth":"32px","minHeight":"1px"}},"layout":{"type":"flex"}} -->
                     <div class="wp-block-group has-background"
                         style="background-color:var(--wp--preset--color--primary);height:1px;width:32px"></div>
                     <!-- /wp:group -->

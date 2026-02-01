@@ -31,8 +31,8 @@
         <!-- /wp:column -->
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
-            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"shadow-2xl grayscale transition-all duration-700"} -->
-            <figure class="wp-block-image size-large shadow-2xl grayscale transition-all duration-700"><img
+            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"donor-image"} -->
+            <figure class="wp-block-image size-large donor-image"><img
                     src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=1200"
                     alt="Impact" /></figure>
             <!-- /wp:image -->
@@ -45,7 +45,7 @@
     <h4 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-display-font-family"
         style="font-size:2.25rem;font-style:italic;letter-spacing:-0.025em;text-transform:uppercase">WALL OF HONOR</h4>
     <!-- /wp:heading -->
-    <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"margin":{"top":"1rem","bottom":"4rem"}}},"layout":{"selfStretch":"fixed","flexSize":"4px"}} -->
+    <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"margin":{"top":"1rem","bottom":"4rem"}},"dimensions":{"minHeight":"4px"}},"layout":{"type":"flex"}} -->
     <div class="wp-block-group has-background"
         style="background-color:var(--wp--preset--color--primary);height:4px;width:96px;margin-top:1rem;margin-bottom:4rem;margin-left:auto;margin-right:auto">
     </div>
@@ -56,9 +56,9 @@
         <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
         <div class="wp-block-column has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
-            <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"}},"textColor":"base","className":"bg-navy-900 text-white px-3 py-1 inline-block mb-6"} -->
-            <p class="has-text-align-center has-base-color has-text-color bg-navy-900 text-white px-3 py-1 inline-block mb-6"
-                style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">Platinum Tier
+            <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.5rem"}}},"backgroundColor":"contrast","textColor":"base","className":"donor-tier"} -->
+            <p class="has-text-align-center has-base-color has-text-color has-contrast-background-color has-background donor-tier"
+                style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;padding:0.25rem 0.75rem;display:inline-block;margin-bottom:1.5rem">Platinum Tier
             </p>
             <!-- /wp:paragraph -->
             <!-- wp:heading {"textAlign":"center","level":5,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
@@ -70,9 +70,9 @@
         <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
         <div class="wp-block-column has-background"
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
-            <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"}},"textColor":"base","className":"bg-navy-900 text-white px-3 py-1 inline-block mb-6"} -->
-            <p class="has-text-align-center has-base-color has-text-color bg-navy-900 text-white px-3 py-1 inline-block mb-6"
-                style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">Platinum Tier
+            <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.5rem"}}},"backgroundColor":"contrast","textColor":"base","className":"donor-tier"} -->
+            <p class="has-text-align-center has-base-color has-text-color has-contrast-background-color has-background donor-tier"
+                style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;padding:0.25rem 0.75rem;display:inline-block;margin-bottom:1.5rem">Platinum Tier
             </p>
             <!-- /wp:paragraph -->
             <!-- wp:heading {"textAlign":"center","level":5,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
