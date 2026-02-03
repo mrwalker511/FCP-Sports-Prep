@@ -3,6 +3,9 @@
  * Title: Admissions Application Portal
  * Slug: fl-coastal-prep/apply-form
  * Categories: featured, text
+ * Viewport Width: 800
+ * Block Types: core/group, core/heading, core/paragraph
+ * Description: Application form placeholder with progress indicator. Requires form plugin integration.
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}},"color":{"background":"var(--wp--preset--color--base)"}},"layout":{"type":"constrained"}} -->

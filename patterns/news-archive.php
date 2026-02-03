@@ -3,6 +3,9 @@
  * Title: Academy Intel News Feed
  * Slug: fl-coastal-prep/news-archive
  * Categories: featured, query
+ * Viewport Width: 1400
+ * Block Types: core/query, core/post-template, core/post-featured-image, core/post-title, core/post-date
+ * Description: Two-column news grid with featured images, dates, and excerpts.
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"layout":{"type":"constrained"}} -->

@@ -3,6 +3,9 @@
  * Title: Academy Statistics Bar
  * Slug: fl-coastal-prep/stats
  * Categories: featured, text
+ * Viewport Width: 1200
+ * Block Types: core/group, core/columns, core/paragraph
+ * Description: Four-column statistics display with D1 commitments, GPA, facility access, and coaching staff info.
  */
 ?>
 <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--base)"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}},"border":{"radius":"0px"}},"className":"has-shadow-2xl","layout":{"type":"constrained","contentSize":"1200px"}} -->

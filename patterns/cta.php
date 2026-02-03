@@ -3,6 +3,7 @@
  * Title: Ready to Level Up Call to Action
  * Slug: fl-coastal-prep/cta
  * Categories: featured, call-to-action
+ * Viewport Width: 1600
  * Block Types: core/cover, core/group, core/heading, core/paragraph, core/button
  * Description: Full-width CTA section with headline, description, and dual action buttons
  */

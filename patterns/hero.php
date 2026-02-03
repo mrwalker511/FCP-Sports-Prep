@@ -14,7 +14,7 @@
         class="wp-block-cover__background has-contrast-background-color has-background-dim-40 has-background-dim"></span>
     <img class="wp-block-cover__image-background"
         src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=2000"
-        alt="Elite Training Background" data-object-fit="cover" />
+        alt="Basketball players in competitive game action on an indoor court" data-object-fit="cover" />
 
     <div class="wp-block-cover__inner-container">
         <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center","alignItems":"center"}} -->

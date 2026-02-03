@@ -3,6 +3,9 @@
  * Title: Game Schedule and Results
  * Slug: fl-coastal-prep/schedule-results
  * Categories: featured, query
+ * Viewport Width: 1200
+ * Block Types: core/query, core/post-template, core/group, core/post-title
+ * Description: Schedule query loop displaying games with date, opponent, and results.
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"layout":{"type":"constrained"}} -->

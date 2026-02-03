@@ -3,6 +3,9 @@
  * Title: Elite Leadership Faculty Grid
  * Slug: fl-coastal-prep/faculty-grid
  * Categories: featured, query
+ * Viewport Width: 1400
+ * Block Types: core/query, core/post-template, core/post-featured-image, core/post-title
+ * Description: Grid display of faculty members with hover effects and 3-column layout.
  */
 ?>
 <!-- wp:query {"query":{"perPage":99,"pages":0,"offset":0,"postType":"faculty","order":"ASC","orderBy":"menu_order","author":"","search":"","exclude":[],"sticky":"","inherit":false},"align":"wide","layout":{"type":"constrained"}} -->

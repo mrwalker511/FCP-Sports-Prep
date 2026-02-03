@@ -3,6 +3,9 @@
  * Title: Blueprint Gallery
  * Slug: fl-coastal-prep/blueprint-gallery
  * Categories: gallery, featured
+ * Viewport Width: 1600
+ * Block Types: core/group, core/columns, core/column, core/image
+ * Description: Full-width gallery section with grid background and image showcase.
  */
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"8rem","bottom":"8rem"}},"color":{"background":"var(--wp--preset--color--tertiary)"}},"className":"is-style-grid-background","layout":{"type":"constrained"}} -->

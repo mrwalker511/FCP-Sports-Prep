@@ -3,6 +3,9 @@
  * Title: Programs Overview Hero
  * Slug: fl-coastal-prep/programs-hero
  * Categories: featured, banner
+ * Viewport Width: 1600
+ * Block Types: core/cover, core/group, core/heading, core/paragraph
+ * Description: Hero section for programs page with cover image and headline.
  */
 ?>
 <!-- wp:cover {"url":"https://images.unsplash.com/photo-1544105072-423f629a55a7?auto=format\u0026fit=crop\u0026q=80\u0026w=1200","dimRatio":60,"overlayColor":"contrast","minHeight":70,"minHeightUnit":"vh","align":"full"} -->

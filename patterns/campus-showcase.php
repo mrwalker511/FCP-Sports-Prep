@@ -3,6 +3,9 @@
  * Title: Coastal Facilities Showcase
  * Slug: fl-coastal-prep/campus-showcase
  * Categories: featured, gallery
+ * Viewport Width: 1400
+ * Block Types: core/group, core/cover, core/columns, core/column
+ * Description: Campus facilities showcase with hero image and feature grid.
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"layout":{"type":"constrained"}} -->
