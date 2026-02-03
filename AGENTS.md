@@ -4,28 +4,89 @@
 
 ---
 
-# PROJECT: Florida Coastal Prep - FSE Theme
-You are an expert WordPress Developer specializing in Full Site Editing (FSE) and Block Themes. Your goal is to migrate a React/Tailwind design into a production-ready WordPress theme.
+# ROLE-SPECIFIC GUIDELINES
 
-## CORE PRINCIPLES
-- **Strict FSE**: Use only HTML templates in `/templates` and `/parts`. No legacy PHP templates.
-- **Theme JSON First**: All colors, typography, and spacing must be defined in `theme.json`.
-- **Atomic Patterns**: Break React components into individual WordPress Block Patterns in `/patterns`.
-- **Text Domain**: Always use `fl-coastal-prep`.
+This file contains additional guidelines specific to different agent roles. For general rules and project overview, see `AGENT_MEDIATOR.md`.
 
-## PROJECT STRUCTURE
-### Production WordPress Block Theme (uploadable)
-- `theme.json`: Global styles and settings (primary source of design tokens).
-- `functions.php`: Theme supports, CPT registration, and theme-level wiring.
-- `/templates`: Block templates (HTML).
-- `/parts`: Template parts (HTML only).
-- `/patterns`: Block patterns (PHP only).
+## 🎨 Design Agent
+**Focus**: Design system, theme.json, visual consistency
 
-### Reference / Prototype (not shipped with the theme)
-- `/prototype/react`: The original React/Vite prototype (TSX) used as a design/reference source.
-- `/docs`: Internal implementation notes and migration documentation.
+### Responsibilities:
+- Maintain and extend design tokens in `theme.json`
+- Ensure visual consistency across all patterns and templates
+- Reference the React prototype for design decisions
+- Document design decisions in `docs/DESIGN_SYSTEM.md`
 
-## COMMANDS & PERMISSIONS
-- Allowed: Reading `.tsx` and `.md` reference files.
-- Allowed: Creating/Editing `.html`, `.php`, and `.json` theme files.
-- **ASK FIRST**: Before installing any new plugins or running `npm` commands.
+### Key Files:
+- `theme.json` (primary)
+- `docs/DESIGN_SYSTEM.md`
+- `/prototype/react/` (reference only)
+
+## 🧩 Pattern Agent
+**Focus**: Block patterns creation and maintenance
+
+### Responsibilities:
+- Create new block patterns in `/patterns/` (PHP only)
+- Ensure patterns use design tokens from theme.json
+- Test patterns in the WordPress block editor
+- Document patterns in `docs/PATTERN_VISUAL_REFERENCE.md`
+
+### Key Files:
+- `/patterns/*.php`
+- `docs/PATTERN_VISUAL_REFERENCE.md`
+- `theme.json` (for design tokens)
+
+## 📝 Template Agent
+**Focus**: Block templates and template parts
+
+### Responsibilities:
+- Create and maintain HTML templates in `/templates/`
+- Create reusable template parts in `/parts/`
+- Ensure templates reference patterns correctly
+- Never use PHP in templates (HTML only)
+
+### Key Files:
+- `/templates/*.html`
+- `/parts/*.html`
+- `docs/FILE_INVENTORY.md`
+
+## 🔧 Functionality Agent
+**Focus**: Theme functionality, CPTs, and PHP logic
+
+### Responsibilities:
+- Maintain `functions.php`
+- Register and manage Custom Post Types
+- Implement theme supports and features
+- Ensure PHP code follows WordPress standards
+
+### Key Files:
+- `functions.php`
+- `docs/WORDPRESS_MIGRATION_GUIDE.md`
+
+## 🧪 QA Agent
+**Focus**: Testing, validation, and quality assurance
+
+### Responsibilities:
+- Run test suites and validate fixes
+- Update audit reports and findings
+- Ensure code quality and security
+- Document testing results
+
+### Key Files:
+- `/tests/`
+- `THEME_AUDIT_REPORT.md`
+- `docs/*-findings.md`
+
+## 📚 Documentation Agent
+**Focus**: Documentation maintenance and organization
+
+### Responsibilities:
+- Maintain `docs/INDEX.md` and `docs/DOCUMENTATION_MAP.md`
+- Update documentation when changes are made
+- Ensure all docs reference AGENT_MEDIATOR.md
+- Keep file inventories current
+
+### Key Files:
+- `docs/INDEX.md`
+- `docs/DOCUMENTATION_MAP.md`
+- `docs/FILE_INVENTORY.md`

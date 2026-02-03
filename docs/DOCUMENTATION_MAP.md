@@ -13,13 +13,14 @@ This visual guide shows the relationship between all documentation files and whe
 │              ┌────────────────────────┐                      │
 │              │  AGENT_MEDIATOR.md     │                      │
 │              │  (MANDATORY FIRST)     │                      │
+│              │  (includes quick start)│                      │
 │              └──────────┬─────────────┘                      │
 │                         │                                    │
 │         ┌───────────────┼───────────────┐                    │
 │         ▼               ▼               ▼                    │
 │   ┌─────────┐    ┌──────────┐   ┌─────────────┐            │
 │   │AGENTS.md│    │README.md │   │THEME_STATUS │            │
-│   │(Rules)  │    │(Overview)│   │_REPORT.md   │            │
+│   │(Roles)  │    │(Overview)│   │_REPORT.md   │            │
 │   └─────────┘    └──────────┘   └─────────────┘            │
 │                                                              │
 └─────────────────────────────────────────────────────────────┘
@@ -38,6 +39,7 @@ These files ensure all LLM agents work together without conflicts.
 │ • Central coordination file                    │
 │ • Critical rules and architecture              │
 │ • Multi-agent conflict prevention              │
+│ • Quick start guide (now included)            │
 ├────────────────────────────────────────────────┤
 │ AGENTS.md                                      │
 │ • Role-specific guidelines                     │
@@ -45,7 +47,7 @@ These files ensure all LLM agents work together without conflicts.
 ├────────────────────────────────────────────────┤
 │ README.md                                      │
 │ • Project overview                             │
-│ • Quick start guide                            │
+│ • Repository structure                         │
 └────────────────────────────────────────────────┘
 ```
 
@@ -109,7 +111,7 @@ tests/
 ### Task: Create a New Block Pattern
 
 ```
-1. AGENT_MEDIATOR.md (Section: Block Pattern Registration)
+1. AGENT_MEDIATOR.md (Quick Start + Section: Block Pattern Registration)
       ↓
 2. DESIGN_SYSTEM.md (Design tokens)
       ↓
@@ -298,12 +300,12 @@ START
 
 | I need to... | Read this file(s) |
 |--------------|-------------------|
-| Start working on this repo | `AGENT_MEDIATOR.md` → `THEME_STATUS_REPORT.md` |
-| Understand file structure | `AGENT_MEDIATOR.md` → `FILE_INVENTORY.md` |
-| Create a pattern | `AGENT_MEDIATOR.md` → `DESIGN_SYSTEM.md` → `PATTERN_VISUAL_REFERENCE.md` |
-| Modify theme.json | `AGENT_MEDIATOR.md` → `DESIGN_SYSTEM.md` → `theme.json` |
-| Fix a bug | `AGENT_MEDIATOR.md` → `THEME_STATUS_REPORT.md` → relevant findings |
-| Work with CPTs | `AGENT_MEDIATOR.md` → `WORDPRESS_MIGRATION_GUIDE.md` → `functions.php` |
+| Start working on this repo | `AGENT_MEDIATOR.md` (includes quick start) → `THEME_STATUS_REPORT.md` |
+| Understand file structure | `AGENT_MEDIATOR.md` (Quick Start) → `FILE_INVENTORY.md` |
+| Create a pattern | `AGENT_MEDIATOR.md` (Quick Start) → `DESIGN_SYSTEM.md` → `PATTERN_VISUAL_REFERENCE.md` |
+| Modify theme.json | `AGENT_MEDIATOR.md` (Quick Start) → `DESIGN_SYSTEM.md` → `theme.json` |
+| Fix a bug | `AGENT_MEDIATOR.md` (Quick Start) → `THEME_STATUS_REPORT.md` → relevant findings |
+| Work with CPTs | `AGENT_MEDIATOR.md` (Quick Start) → `WORDPRESS_MIGRATION_GUIDE.md` → `functions.php` |
 | Prepare production ZIP | `PRODUCTION_FILE_LIST.md` |
 | Understand what's working | `THEME_STATUS_REPORT.md` |
 | Find all docs | `docs/INDEX.md` |
