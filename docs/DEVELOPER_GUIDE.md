@@ -1,3 +1,48 @@
+# Developer Guide
+## Architecture
+# THEME ARCHITECTURE GUIDE
+
+## ⚠️ READ FIRST
+Before reading this file, see [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) for critical coordination rules and architecture overview.
+
+## 1. PATTERN CONVERSION (CRITICAL)
+When converting a `.tsx` pattern to a WordPress Block Pattern:
+- Use standard WordPress Block Comments: ``.
+- Map Tailwind utility classes to WordPress "Layout" or "Custom CSS" settings.
+- **Query Loops**: For `FacultyPattern.tsx` and `NewsArchivePattern.tsx`, use the `wp:query` block.
+- **Registering**: Ensure every pattern is registered in `functions.php` with the slug format `fl-coastal-prep/[name]`.
+
+## 2. TEMPLATE HIERARCHY
+- Follow `docs/REFERENCE.md` exactly for template naming.
+- Ensure `front-page.html` is the primary entry point.
+- Use the `wp:pattern` block within templates to include patterns.
+
+## 3. CUSTOM POST TYPES
+- Ensure the `Faculty`, `Program`, and `Schedule` types in `functions.php` have `'show_in_rest' => true` to enable the Block Editor.
+- Support Elementor by including `'elementor'` in the `'supports'` array.\n## Design System
+# DESIGN & STYLING SYSTEM
+
+## ⚠️ For AI Agents
+Before modifying design tokens, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) — especially the section on theme.json and design tokens.
+
+---
+
+## 1. COLOR PALETTE
+Strictly follow the hex codes from `theme.json`:
+- Gold: `#FBBF24` (Primary CTA)
+- Navy: `#0A192F` (Contrast)
+- Deep Space: `#020C1B` (Section Backgrounds)
+
+## 2. TYPOGRAPHY
+Map font-families as defined in the project:
+- `Display`: Bebas Neue (Titles)
+- `Heading`: Oswald (Section Headers)
+- `Body`: Inter (Content)
+
+## 3. COMPONENT STYLING
+- **Buttons**: Must be `wp-block-button`. Use "Outline" or "Fill" styles rather than custom HTML.
+- **Spacing**: Use the WordPress spacing scale (10, 20, 30, etc.) which maps to the Tailwind `gap` and `padding` scales.
+- **Animations**: Add the custom CSS animations (fade-in, slide-in) to a dedicated `assets/css/animations.css` and enqueue it in `functions.php`.\n## Migration Guide
 # WordPress Theme Migration Guide
 ## Florida Coastal Prep - FSE Block Theme
 
