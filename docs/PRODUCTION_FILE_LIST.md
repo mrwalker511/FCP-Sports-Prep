@@ -7,6 +7,11 @@
 
 ---
 
+## ⚠️ For AI Agents
+Before modifying production file structure, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) for critical file organization rules.
+
+---
+
 ## 📂 REQUIRED FOLDERS
 
 The following folder structure **MUST** be maintained in the production theme package:

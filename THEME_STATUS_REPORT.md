@@ -1,5 +1,10 @@
 # Florida Coastal Prep Theme - Comprehensive Status Review
 
+## ⚠️ For AI Agents
+**MANDATORY**: Read [`/AGENT_MEDIATOR.md`](./AGENT_MEDIATOR.md) FIRST before making any changes based on this status report. That file coordinates all LLM agents and prevents conflicting changes.
+
+---
+
 ## Executive Summary
 ✅ **Theme is now fully compatible with WordPress Full Site Editing (FSE) and Elementor**
 ✅ **All duplicate files removed**

@@ -9,6 +9,11 @@
 
 ---
 
+## ⚠️ For AI Agents
+**MANDATORY**: Before addressing any findings in this report, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) for coordination rules and critical constraints.
+
+---
+
 ## EXECUTIVE SUMMARY
 
 ### 🟢 Overall Quality Assessment: EXCELLENT

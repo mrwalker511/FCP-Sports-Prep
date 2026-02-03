@@ -5,6 +5,11 @@
 
 ---
 
+## ⚠️ For AI Agents
+Before implementing performance optimizations, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) for coordination rules and theme constraints.
+
+---
+
 ## Executive Summary
 
 **Overall Performance Rating:** ✅ GOOD - Well-optimized core, room for enhancement

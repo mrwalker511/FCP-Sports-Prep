@@ -1,5 +1,10 @@
 # Florida Coastal Prep - Theme Owner's Manual
 
+## ⚠️ For AI Agents / Developers
+If you are an AI agent working on this theme, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) FIRST for coordination rules and architecture guidelines.
+
+---
+
 Welcome to the **Florida Coastal Prep** FSE Block Theme. This theme is designed for high-performance athletic academies, combining the power of WordPress Full Site Editing (FSE) with seamless Elementor compatibility.
 
 ## 1. Technical Requirements

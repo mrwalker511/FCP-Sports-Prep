@@ -5,6 +5,11 @@
 
 ---
 
+## ⚠️ For AI Agents
+Before modifying functionality, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) — especially sections on CPTs and theme features.
+
+---
+
 ## Executive Summary
 
 **Overall Functionality Rating:** ✅ COMPLETE - All core components implemented

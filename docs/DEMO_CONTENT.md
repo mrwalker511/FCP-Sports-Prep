@@ -1,5 +1,10 @@
 # Demo Content Technical Guide
 
+## ⚠️ For AI Agents
+Before modifying demo content systems, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) for coordination rules.
+
+---
+
 This document describes the demo content system for the Florida Coastal Prep theme.
 
 ---

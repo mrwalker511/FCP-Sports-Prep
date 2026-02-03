@@ -5,6 +5,11 @@
 
 ---
 
+## ⚠️ For AI Agents
+**MANDATORY**: Read [`/AGENT_MEDIATOR.md`](./AGENT_MEDIATOR.md) FIRST before making additional fixes. That file coordinates all LLM agents.
+
+---
+
 ## Overview
 
 All critical and high-priority issues identified in the audit have been resolved. The theme is now compliant with strict Full Site Editing (FSE) principles and is ready for production use.

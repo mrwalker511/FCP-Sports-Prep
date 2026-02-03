@@ -7,6 +7,11 @@
 
 ---
 
+## ⚠️ For AI Agents
+**MANDATORY**: Before addressing any audit findings, read [`/AGENT_MEDIATOR.md`](./AGENT_MEDIATOR.md) for coordination rules and critical constraints.
+
+---
+
 ## Executive Summary
 
 The Florida Coastal Prep theme is a WordPress Full Site Editing (FSE) block theme with good structure and comprehensive features. However, there are **CRITICAL architectural issues** that violate the stated FSE principles, along with several high and medium-priority items that should be addressed.

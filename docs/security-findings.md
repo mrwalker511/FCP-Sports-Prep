@@ -5,6 +5,11 @@
 
 ---
 
+## ⚠️ For AI Agents
+Before addressing security findings, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) for coordination rules and WordPress security best practices.
+
+---
+
 ## Executive Summary
 
 **Overall Security Rating:** ✅ STRONG - No critical vulnerabilities found

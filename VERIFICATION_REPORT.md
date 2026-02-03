@@ -5,6 +5,11 @@
 
 ---
 
+## ⚠️ For AI Agents
+**MANDATORY**: Before making changes based on verification findings, read [`/AGENT_MEDIATOR.md`](./AGENT_MEDIATOR.md) for coordination rules.
+
+---
+
 ## ✅ VERIFICATION CHECKLIST
 
 ### Critical Issues - VERIFIED FIXED ✅

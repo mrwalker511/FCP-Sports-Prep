@@ -1,6 +1,11 @@
 # Pattern Visual Reference Guide
 ## Detailed Component Descriptions for WordPress Block Conversion
 
+## ⚠️ For AI Agents
+Before creating or modifying patterns, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) — especially sections on pattern registration and design tokens.
+
+---
+
 This document provides detailed visual descriptions of each React pattern component to assist in converting them to WordPress block patterns.
 
 > **Reference source location:** The React pattern components now live in `prototype/react/patterns/`.

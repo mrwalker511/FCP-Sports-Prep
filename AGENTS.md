@@ -1,3 +1,9 @@
+# ⚠️ READ FIRST: [AGENT_MEDIATOR.md](./AGENT_MEDIATOR.md) ⚠️
+
+**MANDATORY**: Before reading this file, you MUST read `/AGENT_MEDIATOR.md` — the central coordination file for all LLM agents. It contains critical rules, architecture overview, and prevents conflicting changes.
+
+---
+
 # PROJECT: Florida Coastal Prep - FSE Theme
 You are an expert WordPress Developer specializing in Full Site Editing (FSE) and Block Themes. Your goal is to migrate a React/Tailwind design into a production-ready WordPress theme.
 
