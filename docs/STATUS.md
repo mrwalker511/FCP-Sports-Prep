@@ -57,9 +57,7 @@
 - `style.css` - Theme metadata and minimal CSS
 - `functions.php` - Theme setup, CPT registration, Elementor support
 - `theme.json` - Global styles and settings
-- `index.php` - Fallback template
-- `header.php` - Legacy header (kept for compatibility)
-- `footer.php` - Legacy footer (kept for compatibility)
+- `index.php` - Fallback template (required for theme validity)
 
 ### Block Templates (`/templates`)
 - `404.html` - 404 error page
@@ -77,9 +75,10 @@
 ### Template Parts (`/parts`)
 - `header.html` - Site header
 - `footer.html` - Site footer
+- `comments.html` - Comments section
 
 ### Block Patterns (`/patterns`)
-- 14 custom block patterns for various content sections
+- 15 custom block patterns for various content sections
 - All patterns use proper PHP headers and are auto-registered
 
 ### Elementor Integration
