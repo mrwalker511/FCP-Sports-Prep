@@ -1,5 +1,10 @@
 # DESIGN & STYLING SYSTEM
 
+## ⚠️ For AI Agents
+Before modifying design tokens, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) — especially the section on theme.json and design tokens.
+
+---
+
 ## 1. COLOR PALETTE
 Strictly follow the hex codes from `theme.json`:
 - Gold: `#FBBF24` (Primary CTA)

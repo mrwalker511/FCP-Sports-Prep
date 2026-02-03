@@ -5,6 +5,11 @@
 
 ---
 
+## ⚠️ For AI Agents
+Before addressing code quality findings, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) for coordination rules and WordPress coding standards.
+
+---
+
 ## Executive Summary
 
 **Overall Code Quality Rating:** ✅ GOOD - High quality, well-structured code

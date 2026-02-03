@@ -1,5 +1,8 @@
 # THEME ARCHITECTURE GUIDE
 
+## ⚠️ READ FIRST
+Before reading this file, see [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) for critical coordination rules and architecture overview.
+
 ## 1. PATTERN CONVERSION (CRITICAL)
 When converting a `.tsx` pattern to a WordPress Block Pattern:
 - Use standard WordPress Block Comments: ``.

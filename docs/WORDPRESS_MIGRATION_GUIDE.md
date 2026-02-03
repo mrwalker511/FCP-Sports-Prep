@@ -3,6 +3,11 @@
 
 ---
 
+## ⚠️ IMPORTANT — For AI Agents
+**Before using this guide**, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) — the central coordination file that prevents conflicting changes between different LLM sessions.
+
+---
+
 ## PROJECT OVERVIEW
 
 This is a **Full Site Editing (FSE) Block Theme** for WordPress. The repository also includes a React/TypeScript preview application (design reference) under `prototype/react/`. The theme is designed for **Florida Coastal Preparatory Academy**, an elite athletic academy with a high-contrast dark aesthetic (Navy/Gold color scheme).

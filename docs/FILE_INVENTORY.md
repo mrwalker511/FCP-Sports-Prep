@@ -1,6 +1,11 @@
 # Complete File Inventory
 ## Florida Coastal Prep WordPress Theme
 
+## ⚠️ For AI Agents
+Before modifying files listed in this inventory, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) for critical file structure rules and constraints.
+
+---
+
 Quick reference guide to every file in this project.
 
 > **Note (repo structure):** The production WordPress theme files live in the repository root.

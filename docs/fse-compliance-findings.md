@@ -5,6 +5,11 @@
 
 ---
 
+## ⚠️ For AI Agents
+Before addressing FSE compliance findings, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) — especially the sections on file structure and FSE rules.
+
+---
+
 ## Executive Summary
 
 **Overall FSE Compliance Rating:** ✅ STRONG - Well-structured FSE block theme
