@@ -26,8 +26,7 @@ All documentation is organized into three categories:
 
 | Document | Purpose | Location |
 |----------|---------|----------|
-| **AGENT_MEDIATOR.md** | ⚠️ **MANDATORY FIRST READ** - Central coordination file for all LLM agents | `/AGENT_MEDIATOR.md` |
-| **AI_AGENT_QUICK_START.md** | ⚡ 2-minute orientation for new agents | `/AI_AGENT_QUICK_START.md` |
+| **AGENT_MEDIATOR.md** | ⚠️ **MANDATORY FIRST READ** - Central coordination file for all LLM agents (includes quick start) | `/AGENT_MEDIATOR.md` |
 | **DOCUMENTATION_MAP.md** | 📊 Visual flowchart showing how all docs relate | `/docs/DOCUMENTATION_MAP.md` |
 | **INDEX.md** | 📚 Complete documentation index (this file) | `/docs/INDEX.md` |
 | **AGENTS.md** | Role-specific guidelines and permissions | `/AGENTS.md` |

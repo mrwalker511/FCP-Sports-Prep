@@ -6,9 +6,9 @@ This repository contains the **Florida Coastal Prep** Full Site Editing (FSE) Wo
 
 **⚠️ MANDATORY**: If you are an AI agent working on this repository, you MUST read [`AGENT_MEDIATOR.md`](./AGENT_MEDIATOR.md) FIRST before making any changes. This file serves as the central coordination point to prevent conflicting changes between different LLM sessions.
 
-**⚡ Quick Start**: New to this project? See [`AI_AGENT_QUICK_START.md`](./AI_AGENT_QUICK_START.md) for a 2-minute orientation.
-
 📚 **Documentation Index**: See [`docs/INDEX.md`](./docs/INDEX.md) for a complete guide to all documentation files.
+
+🎯 **Quick Start**: AGENT_MEDIATOR.md now includes a quick start section with the essential information you need to begin working.
 
 ## Folder layout
 

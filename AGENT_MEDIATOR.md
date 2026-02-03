@@ -5,6 +5,32 @@
 ## Purpose
 This file serves as the **single source of truth** and coordination point for all AI agents working on the Florida Coastal Prep WordPress FSE Block Theme. It prevents conflicting changes and ensures consistency across different LLM sessions.
 
+## 🚀 Quick Start (60-Second Overview)
+
+**What is this project?**
+- WordPress Full Site Editing (FSE) Block Theme
+- Production-ready theme for Florida Coastal Prep academy  
+- React prototype exists as reference only (not shipped)
+
+**Where are the files?**
+```
+/                          ← Production theme files (root)
+├── theme.json            ← Design tokens (colors, fonts, spacing)
+├── functions.php         ← Theme logic, CPT registration
+├── /templates/           ← Block templates (.html ONLY)
+├── /parts/               ← Template parts (.html ONLY)
+├── /patterns/            ← Block patterns (.php ONLY)
+├── /prototype/react/     ← Reference implementation (not shipped)
+└── /docs/                ← Internal documentation
+```
+
+**Text Domain:** `fl-coastal-prep` (NEVER change this)
+
+**Your First 3 Steps:**
+1. Read this entire file (10 minutes)
+2. Check `THEME_STATUS_REPORT.md` (2 minutes)
+3. Review recent commits: `git log -5`
+
 ---
 
 ## 🎯 Project Identity
@@ -152,7 +178,7 @@ This file serves as the **single source of truth** and coordination point for al
 
 ### For All Agents
 - **THIS FILE**: `/AGENT_MEDIATOR.md` — Central coordination (you are here)
-- **Agent Guidelines**: `/AGENTS.md` — Role-specific rules and permissions
+- **Role-Specific Rules**: `/AGENTS.md` — Additional role-specific guidelines
 - **Project Overview**: `/README.md` — Repository structure and setup
 - **Current Status**: `/THEME_STATUS_REPORT.md` — What works, what doesn't
 
