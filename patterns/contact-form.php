@@ -3,6 +3,9 @@
  * Title: Academy Contact Portal
  * Slug: fl-coastal-prep/contact-form
  * Categories: featured, text
+ * Viewport Width: 1200
+ * Block Types: core/columns, core/column, core/group, core/heading, core/paragraph
+ * Description: Two-column contact layout with form placeholder and contact information.
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"layout":{"type":"constrained"}} -->

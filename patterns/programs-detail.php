@@ -3,6 +3,9 @@
  * Title: Programs Detail Section
  * Slug: fl-coastal-prep/programs-detail
  * Categories: featured, text
+ * Viewport Width: 1400
+ * Block Types: core/group, core/columns, core/column, core/image, core/heading, core/paragraph
+ * Description: Detailed program information with alternating image/text layout.
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"8rem","bottom":"8rem"}}},"layout":{"type":"constrained"}} -->

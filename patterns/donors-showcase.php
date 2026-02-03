@@ -3,6 +3,9 @@
  * Title: Donors Wall of Honor
  * Slug: fl-coastal-prep/donors-showcase
  * Categories: featured, text
+ * Viewport Width: 1200
+ * Block Types: core/group, core/columns, core/column, core/heading, core/paragraph
+ * Description: Donor recognition section with tiered giving levels display.
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"layout":{"type":"constrained"}} -->

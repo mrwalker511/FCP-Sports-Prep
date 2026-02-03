@@ -4,6 +4,9 @@
  * Slug: fl-coastal-prep/section-header
  * Categories: text
  * Keywords: title, heading
+ * Viewport Width: 800
+ * Block Types: core/group, core/paragraph, core/heading, core/separator
+ * Description: Reusable section header with label, title, description, and accent separator.
  */
 ?>
 <!-- wp:group {"className":"text-navy-900","layout":{"type":"constrained"}} -->

@@ -116,3 +116,7 @@ All global styles are handled via theme.json or tailwind in this environment.
 .opacity-70 {
   opacity: 0.7;
 }
+
+.opacity-80 {
+  opacity: 0.8;
+}

@@ -3,6 +3,9 @@
  * Title: The Coastal Blueprint Grid
  * Slug: fl-coastal-prep/grid
  * Categories: featured, columns
+ * Viewport Width: 1400
+ * Block Types: core/group, core/columns, core/column, core/heading, core/paragraph
+ * Description: Three-column feature grid showcasing blueprint cards with icons, titles, and descriptions.
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"constrained"}} -->
