@@ -17,9 +17,9 @@ This file serves as the **single source of truth** and coordination point for al
 /                          ← Production theme files (root)
 ├── theme.json            ← Design tokens (colors, fonts, spacing)
 ├── functions.php         ← Theme logic, CPT registration
-├── /templates/           ← Block templates (.html ONLY)
-├── /parts/               ← Template parts (.html ONLY)
-├── /patterns/            ← Block patterns (.php ONLY)
+├── /templates/           ← Block templates (22 .html files)
+├── /parts/               ← Template parts (header, footer, comments)
+├── /patterns/            ← Block patterns (15 .php files)
 ├── /prototype/react/     ← Reference implementation (not shipped)
 └── /docs/                ← Internal documentation
 ```

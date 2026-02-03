@@ -83,7 +83,7 @@ This is a **Full Site Editing (FSE) Block Theme** for WordPress. The repository 
 - **Status**: ✅ Complete and WordPress-ready
 - **Key Functions**:
   - `fl_coastal_prep_setup()` - Theme support declarations
-  - `fl_coastal_prep_register_patterns()` - Registers 13 block patterns
+  - `fl_coastal_prep_register_patterns()` - Registers 15 block patterns
   - `fl_coastal_prep_seo_meta()` - SEO meta tags (fallback if no plugin)
   - `fl_coastal_prep_schema_markup()` - JSON-LD structured data
   - `fl_coastal_prep_register_cpts()` - Registers 3 Custom Post Types
@@ -143,6 +143,7 @@ Reusable site sections:
 |------|---------|------|--------|
 | **header.html** | Site header block markup | HTML | ✅ Ready |
 | **footer.html** | Site footer block markup | HTML | ✅ Ready |
+| **comments.html** | Comments section block markup | HTML | ✅ Ready |
 
 **React reference** (not shipped with the theme):
 - `prototype/react/parts/Header.tsx`
@@ -634,7 +635,7 @@ The theme architecture is **production-ready** with:
 
 ---
 
-**Generated**: January 2026
+**Generated**: February 2026
 **Theme Version**: 1.0.0
 **WordPress**: 6.2+ required (6.4+ recommended)
 **PHP**: 7.4+ required
