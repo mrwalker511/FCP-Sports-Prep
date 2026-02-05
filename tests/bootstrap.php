@@ -23,7 +23,11 @@ if (!$_tests_dir) {
 }
 
 // Check if WordPress test suite is available and requirements are met
-$wp_tests_requirements_met = file_exists($_tests_dir . '/includes/functions.php') && function_exists('mysqli_connect');
+// Must have: wp-phpunit library, mysqli extension, AND actual WordPress installation
+$wp_core_path = sys_get_temp_dir() . '/wordpress/wp-settings.php';
+$wp_tests_requirements_met = file_exists($_tests_dir . '/includes/functions.php')
+    && function_exists('mysqli_connect')
+    && file_exists($wp_core_path);
 
 if (!$wp_tests_requirements_met) {
     if (!function_exists('mysqli_connect')) {

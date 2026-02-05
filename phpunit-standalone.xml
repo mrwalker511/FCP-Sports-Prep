@@ -25,19 +25,9 @@
             <directory>tests/code-quality</directory>
         </testsuite>
     </testsuites>
-    <coverage>
-        <include>
-            <directory suffix=".php">./</directory>
-        </include>
-        <exclude>
-            <directory>./tests</directory>
-            <directory>./vendor</directory>
-            <directory>./node_modules</directory>
-            <directory>./prototype</directory>
-        </exclude>
-    </coverage>
     <php>
-        <!-- Only set WP_PHPUNIT__TESTS_CONFIG when WordPress test suite is available -->
-        <!-- <env name="WP_PHPUNIT__TESTS_CONFIG" value="tests/wp-tests-config.php" /> -->
+        <!-- Explicitly unset WP config to force standalone mode -->
+        <env name="WP_PHPUNIT__TESTS_CONFIG" value="" force="true"/>
+        <env name="WP_TESTS_DIR" value="" force="true"/>
     </php>
 </phpunit>
