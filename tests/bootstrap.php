@@ -52,24 +52,67 @@ if (!$wp_tests_requirements_met) {
         $GLOBALS['wp_actions'] = [];
         function add_action($tag, $callback, $priority = 10, $accepted_args = 1)
         {
-            $GLOBALS['wp_actions'][$tag][] = $callback;
+            if (!isset($GLOBALS['wp_actions'][$tag])) {
+                $GLOBALS['wp_actions'][$tag] = [];
+            }
+            $GLOBALS['wp_actions'][$tag][] = ['callback' => $callback, 'priority' => $priority];
+        }
+    }
+    if (!function_exists('do_action')) {
+        function do_action($tag, ...$args)
+        {
+            if (!isset($GLOBALS['wp_actions'][$tag])) {
+                return;
+            }
+            // Sort by priority
+            usort($GLOBALS['wp_actions'][$tag], function ($a, $b) {
+                return $a['priority'] - $b['priority'];
+            });
+            foreach ($GLOBALS['wp_actions'][$tag] as $action) {
+                call_user_func_array($action['callback'], $args);
+            }
         }
     }
     if (!function_exists('add_filter')) {
         $GLOBALS['wp_filters'] = [];
         function add_filter($tag, $callback, $priority = 10, $accepted_args = 1)
         {
-            $GLOBALS['wp_filters'][$tag][] = $callback;
+            if (!isset($GLOBALS['wp_filters'][$tag])) {
+                $GLOBALS['wp_filters'][$tag] = [];
+            }
+            $GLOBALS['wp_filters'][$tag][] = ['callback' => $callback, 'priority' => $priority];
+        }
+    }
+    if (!function_exists('apply_filters')) {
+        function apply_filters($tag, $value, ...$args)
+        {
+            if (!isset($GLOBALS['wp_filters'][$tag])) {
+                return $value;
+            }
+            usort($GLOBALS['wp_filters'][$tag], function ($a, $b) {
+                return $a['priority'] - $b['priority'];
+            });
+            foreach ($GLOBALS['wp_filters'][$tag] as $filter) {
+                $value = call_user_func($filter['callback'], $value, ...$args);
+            }
+            return $value;
         }
     }
     if (!function_exists('has_action')) {
         function has_action($tag, $callback = false)
         {
-            if (!isset($GLOBALS['wp_actions'][$tag]))
+            if (!isset($GLOBALS['wp_actions'][$tag])) {
                 return false;
-            if ($callback === false)
+            }
+            if ($callback === false) {
                 return !empty($GLOBALS['wp_actions'][$tag]);
-            return in_array($callback, $GLOBALS['wp_actions'][$tag]);
+            }
+            foreach ($GLOBALS['wp_actions'][$tag] as $action) {
+                if ($action['callback'] === $callback) {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 
@@ -104,6 +147,30 @@ if (!$wp_tests_requirements_met) {
         function _e($text, $domain = 'default')
         {
             echo $text;
+        }
+    }
+    if (!function_exists('_x')) {
+        function _x($text, $context, $domain = 'default')
+        {
+            return $text;
+        }
+    }
+    if (!function_exists('_ex')) {
+        function _ex($text, $context, $domain = 'default')
+        {
+            echo $text;
+        }
+    }
+    if (!function_exists('_n')) {
+        function _n($single, $plural, $number, $domain = 'default')
+        {
+            return ($number == 1) ? $single : $plural;
+        }
+    }
+    if (!function_exists('_nx')) {
+        function _nx($single, $plural, $number, $context, $domain = 'default')
+        {
+            return ($number == 1) ? $single : $plural;
         }
     }
     if (!function_exists('esc_html__')) {
@@ -267,14 +334,51 @@ if (!$wp_tests_requirements_met) {
         $GLOBALS['wp_post_types'] = [];
         function register_post_type($post_type, $args = array())
         {
-            $GLOBALS['wp_post_types'][$post_type] = $args;
-            return (object) $args;
+            // Default CPT settings
+            $defaults = [
+                'public' => false,
+                'has_archive' => false,
+                'show_in_rest' => false,
+                'supports' => ['title', 'editor'],
+                'labels' => [],
+            ];
+            $args = array_merge($defaults, $args);
+
+            // Ensure labels object
+            $label_defaults = [
+                'name' => $post_type,
+                'singular_name' => $post_type,
+            ];
+            $args['labels'] = (object) array_merge($label_defaults, (array) ($args['labels'] ?? []));
+
+            // Store as object
+            $cpt_object = (object) $args;
+            $cpt_object->name = $post_type;
+            $GLOBALS['wp_post_types'][$post_type] = $cpt_object;
+            return $cpt_object;
         }
     }
     if (!function_exists('post_type_exists')) {
         function post_type_exists($post_type)
         {
             return isset($GLOBALS['wp_post_types'][$post_type]);
+        }
+    }
+    if (!function_exists('get_post_type_object')) {
+        function get_post_type_object($post_type)
+        {
+            return $GLOBALS['wp_post_types'][$post_type] ?? null;
+        }
+    }
+    if (!function_exists('post_type_supports')) {
+        function post_type_supports($post_type, $feature)
+        {
+            if (!isset($GLOBALS['wp_post_types'][$post_type])) {
+                return false;
+            }
+            $cpt = $GLOBALS['wp_post_types'][$post_type];
+            $supports = is_object($cpt) ? ($cpt->supports ?? []) : ($cpt['supports'] ?? []);
+            return in_array($feature, (array) $supports);
         }
     }
     if (!function_exists('wp_enqueue_style')) {
@@ -295,10 +399,55 @@ if (!$wp_tests_requirements_met) {
             return FCP_THEME_DIR . '/style.css';
         }
     }
+    if (!function_exists('get_template_directory_uri')) {
+        function get_template_directory_uri()
+        {
+            return FCP_THEME_DIR;
+        }
+    }
+
+    // Block and CPT support functions
+    if (!function_exists('add_post_type_support')) {
+        function add_post_type_support($post_type, $feature)
+        {
+            if (isset($GLOBALS['wp_post_types'][$post_type])) {
+                $cpt = $GLOBALS['wp_post_types'][$post_type];
+                if (!isset($cpt->supports)) {
+                    $cpt->supports = [];
+                }
+                if (is_array($feature)) {
+                    $cpt->supports = array_merge($cpt->supports, $feature);
+                } else {
+                    $cpt->supports[] = $feature;
+                }
+            }
+        }
+    }
+    if (!function_exists('register_block_style')) {
+        $GLOBALS['wp_block_styles'] = [];
+        function register_block_style($block_name, $style_properties)
+        {
+            $GLOBALS['wp_block_styles'][$block_name][] = $style_properties;
+            return true;
+        }
+    }
+    if (!function_exists('register_block_pattern_category')) {
+        $GLOBALS['wp_block_pattern_categories'] = [];
+        function register_block_pattern_category($category_name, $category_properties)
+        {
+            $GLOBALS['wp_block_pattern_categories'][$category_name] = $category_properties;
+            return true;
+        }
+    }
 
     // Load theme functions directly for non-WordPress tests
     // This allows function existence tests to work
     require_once FCP_THEME_DIR . '/functions.php';
+
+    // Trigger WordPress hooks to register CPTs and theme setup
+    // This simulates WordPress boot sequence
+    do_action('after_setup_theme');
+    do_action('init');
 } else {
     define('WP_TESTS_AVAILABLE', true);
 
