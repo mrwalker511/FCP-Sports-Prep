@@ -18,6 +18,7 @@
         <!-- /wp:paragraph -->
         <!-- wp:heading {"textAlign":"center","style":{"typography":{"fontSize":"clamp(3rem, 6vw, 6rem)","fontStyle":"italic","lineHeight":"1"}},"textColor":"base","fontFamily":"display","className":"is-style-blueprint"} -->
         <h2 class="wp-block-heading has-text-align-center is-style-blueprint has-base-color has-text-color has-display-font-family" style="font-size:clamp(3rem, 6vw, 6rem);font-style:italic;line-height:1">ACADEMY LIFE</h2>
+        <!-- /wp:heading -->
     </div>
     <!-- /wp:group -->
 
