@@ -16,12 +16,7 @@ class CustomPostTypeTest extends TestCase
      */
     public function test_faculty_cpt_registered()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
-        // Trigger the init hook to register CPTs
-        do_action('init');
+        // CPTs are registered via bootstrap.php calling do_action('init')
 
         $this->assertTrue(
             post_type_exists('faculty'),
@@ -34,11 +29,7 @@ class CustomPostTypeTest extends TestCase
      */
     public function test_program_cpt_registered()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
-        do_action('init');
+        // CPTs are registered via bootstrap.php calling do_action('init')
 
         $this->assertTrue(
             post_type_exists('program'),
@@ -51,11 +42,7 @@ class CustomPostTypeTest extends TestCase
      */
     public function test_schedule_cpt_registered()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
-        do_action('init');
+        // CPTs are registered via bootstrap.php calling do_action('init')
 
         $this->assertTrue(
             post_type_exists('schedule'),
@@ -68,11 +55,7 @@ class CustomPostTypeTest extends TestCase
      */
     public function test_faculty_cpt_settings()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
-        do_action('init');
+        // CPTs are registered via bootstrap.php calling do_action('init')
 
         $cpt = get_post_type_object('faculty');
 
@@ -87,11 +70,7 @@ class CustomPostTypeTest extends TestCase
      */
     public function test_program_cpt_settings()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
-        do_action('init');
+        // CPTs are registered via bootstrap.php calling do_action('init')
 
         $cpt = get_post_type_object('program');
 
@@ -106,11 +85,7 @@ class CustomPostTypeTest extends TestCase
      */
     public function test_schedule_cpt_settings()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
-        do_action('init');
+        // CPTs are registered via bootstrap.php calling do_action('init')
 
         $cpt = get_post_type_object('schedule');
 
@@ -125,11 +100,7 @@ class CustomPostTypeTest extends TestCase
      */
     public function test_faculty_cpt_supports()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
-        do_action('init');
+        // CPTs are registered via bootstrap.php calling do_action('init')
 
         $this->assertTrue(
             post_type_supports('faculty', 'title'),
@@ -150,11 +121,7 @@ class CustomPostTypeTest extends TestCase
      */
     public function test_program_cpt_supports()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
-        do_action('init');
+        // CPTs are registered via bootstrap.php calling do_action('init')
 
         $this->assertTrue(
             post_type_supports('program', 'title'),
@@ -175,11 +142,7 @@ class CustomPostTypeTest extends TestCase
      */
     public function test_schedule_cpt_supports()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
-        do_action('init');
+        // CPTs are registered via bootstrap.php calling do_action('init')
 
         $this->assertTrue(
             post_type_supports('schedule', 'title'),
@@ -200,11 +163,7 @@ class CustomPostTypeTest extends TestCase
      */
     public function test_cpt_labels_exist()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
-        do_action('init');
+        // CPTs are registered via bootstrap.php calling do_action('init')
 
         $cpts = ['faculty', 'program', 'schedule'];
 
