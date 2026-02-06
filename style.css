@@ -133,6 +133,85 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 	opacity: 0.9;
 }
 
+/* Grid Card Styles */
+.grid-card {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	overflow: hidden;
+}
+
+.grid-card:hover {
+	transform: translateY(-4px);
+}
+
+/* News Card Styles */
+.news-card {
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	overflow: hidden;
+}
+
+.news-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.news-image img {
+	transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+	transform: scale(1.05);
+}
+
+.news-title a {
+	transition: color 0.2s ease;
+}
+
+.news-title a:hover {
+	color: var(--wp--preset--color--primary) !important;
+}
+
+/* Facility Image Styles */
+.facility-image img {
+	transition: transform 0.7s ease;
+}
+
+.facility-image:hover img {
+	transform: scale(1.05);
+}
+
+/* Donor Styles */
+.donor-image img {
+	transition: transform 0.5s ease;
+}
+
+.donor-image:hover img {
+	transform: scale(1.05);
+}
+
+.donor-tier {
+	padding: 0.25rem 0.75rem;
+	display: inline-block;
+}
+
+/* Program Image Styles */
+.program-image img {
+	transition: transform 0.5s ease;
+}
+
+.program-image:hover img {
+	transform: scale(1.05);
+}
+
+/* Schedule Card Styles */
+.schedule-card {
+	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-card:hover {
+	border-color: rgba(251, 191, 36, 0.3) !important;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
 /* Shadow Utilities */
 .has-shadow-xl {
 	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
