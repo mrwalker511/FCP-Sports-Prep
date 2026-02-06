@@ -37,7 +37,7 @@
                 <!-- wp:heading {"level":4,"textColor":"primary","fontFamily":"heading"} -->
                 <h4 class="wp-block-heading has-primary-color has-text-color has-heading-font-family">ELITE TRAINING</h4>
                 <!-- /wp:heading -->
-                <!-- wp:paragraph -->
+                <!-- wp:paragraph {"textColor":"base"} -->
                 <p class="has-base-color has-text-color">Advanced metrics and personalized development plans for every athlete.</p>
                 <!-- /wp:paragraph -->
             </div>

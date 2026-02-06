@@ -17,8 +17,8 @@
         COASTAL BLUEPRINT</p>
     <!-- /wp:paragraph -->
 
-    <!-- wp:heading {"style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","letterSpacing":"-0.025em","fontSize":"clamp(3rem, 5vw, 4.5rem)","lineHeight":"1"}},"fontFamily":"display"} -->
-    <h2 class="wp-block-heading has-display-font-family"
+    <!-- wp:heading {"textColor":"base","style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","letterSpacing":"-0.025em","fontSize":"clamp(3rem, 5vw, 4.5rem)","lineHeight":"1"}},"fontFamily":"display"} -->
+    <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family"
         style="font-size:clamp(3rem, 5vw, 4.5rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
         WHAT SETS US APART</h2>
     <!-- /wp:heading -->
