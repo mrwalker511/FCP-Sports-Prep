@@ -10,7 +10,8 @@
       "Bash(echo:*)",
       "Bash(done)",
       "Bash(find:*)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "Bash(do head -10 \"$file\")"
     ]
   }
 }

@@ -26,8 +26,8 @@
     <div class="wp-block-columns alignwide">
         <!-- wp:column {"width":"33.33%"} -->
         <div class="wp-block-column" style="flex-basis:33.33%">
-            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-animate-fade-in-up"} -->
-            <figure class="wp-block-image size-large is-style-animate-fade-in-up"><img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a26?auto=format&fit=crop&q=80&w=800" alt="Training"/></figure>
+            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-animate-slide-in"} -->
+            <figure class="wp-block-image size-large is-style-animate-slide-in"><img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a26?auto=format&fit=crop&q=80&w=800" alt="Training"/></figure>
             <!-- /wp:image -->
             <!-- wp:spacer {"height":"2rem"} -->
             <div style="height:2rem" aria-hidden="true" class="wp-block-spacer"></div>
