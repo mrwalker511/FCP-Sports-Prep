@@ -37,12 +37,12 @@
 
         <!-- wp:column {"width":"40%"} -->
         <div class="wp-block-column" style="flex-basis:40%">
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"color":{"background":"var(--wp--preset--color--base)"},"border":{"left":{"color":"var(--wp--preset--color--primary)","width":"4px"}}},"layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"margin":{"bottom":"2rem"}}}} -->
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"},"margin":{"bottom":"2rem"}},"color":{"background":"var(--wp--preset--color--base)"},"border":{"left":{"color":"var(--wp--preset--color--primary)","width":"4px"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
             <div class="wp-block-group has-background"
-                style="border-left-color:var(--wp--preset--color--primary);border-left-width:4px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-40","style":{"spacing":{"margin":{"bottom":"0.5rem"}}}} -->
+                style="border-left-color:var(--wp--preset--color--primary);border-left-width:4px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem;margin-bottom:2rem">
+                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.5rem"}}},"textColor":"base","className":"opacity-40"} -->
                 <p class="has-base-color has-text-color opacity-40"
-                    style="font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Scouting
+                    style="font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem">Scouting
                     Line</p>
                 <!-- /wp:paragraph -->
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.5rem"}},"textColor":"secondary","fontFamily":"display"} -->
@@ -52,12 +52,12 @@
             </div>
             <!-- /wp:group -->
 
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"color":{"background":"var(--wp--preset--color--base)"},"border":{"left":{"color":"var(--wp--preset--color--primary)","width":"4px"}},"layout":{"type":"flex","orientation":"vertical"}}} -->
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"color":{"background":"var(--wp--preset--color--base)"},"border":{"left":{"color":"var(--wp--preset--color--primary)","width":"4px"}}},"layout":{"type":"flex","orientation":"vertical"}} -->
             <div class="wp-block-group has-border-color has-background"
                 style="border-left-color:var(--wp--preset--color--primary);border-left-width:4px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-40","style":{"spacing":{"margin":{"bottom":"0.5rem"}}}} -->
+                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"0.5rem"}}},"textColor":"base","className":"opacity-40"} -->
                 <p class="has-base-color has-text-color opacity-40"
-                    style="font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Office
+                    style="font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem">Office
                     Hours</p>
                 <!-- /wp:paragraph -->
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.5rem"}},"textColor":"secondary","fontFamily":"display"} -->
