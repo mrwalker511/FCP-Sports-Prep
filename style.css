@@ -220,3 +220,107 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 .has-shadow-2xl {
 	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
+
+/* ============================================
+   GLOBAL LAYOUT & EDGE SPACING
+   ============================================ */
+
+/* Root Container Padding - Mobile First */
+body {
+	padding-left: max(1rem, env(safe-area-inset-left));
+	padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+/* Tablet: Increase breathing room */
+@media (min-width: 768px) {
+	body {
+		padding-left: max(1.5rem, env(safe-area-inset-left));
+		padding-right: max(1.5rem, env(safe-area-inset-right));
+	}
+}
+
+/* Desktop: Maximum comfortable padding */
+@media (min-width: 1024px) {
+	body {
+		padding-left: max(2rem, env(safe-area-inset-left));
+		padding-right: max(2rem, env(safe-area-inset-right));
+	}
+}
+
+/* Full-Width Sections Safety Net */
+.alignfull {
+	margin-left: calc(-1 * max(1rem, env(safe-area-inset-left)));
+	margin-right: calc(-1 * max(1rem, env(safe-area-inset-right)));
+}
+
+@media (min-width: 768px) {
+	.alignfull {
+		margin-left: calc(-1 * max(1.5rem, env(safe-area-inset-left)));
+		margin-right: calc(-1 * max(1.5rem, env(safe-area-inset-right)));
+	}
+}
+
+@media (min-width: 1024px) {
+	.alignfull {
+		margin-left: calc(-1 * max(2rem, env(safe-area-inset-left)));
+		margin-right: calc(-1 * max(2rem, env(safe-area-inset-right)));
+	}
+}
+
+/* Full-Width Inner Container Padding */
+.alignfull .wp-block-cover__inner-container,
+.alignfull > .wp-block-group {
+	padding-left: max(1rem, env(safe-area-inset-left));
+	padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+@media (min-width: 768px) {
+	.alignfull .wp-block-cover__inner-container,
+	.alignfull > .wp-block-group {
+		padding-left: max(2rem, env(safe-area-inset-left));
+		padding-right: max(2rem, env(safe-area-inset-right));
+	}
+}
+
+@media (min-width: 1024px) {
+	.alignfull .wp-block-cover__inner-container,
+	.alignfull > .wp-block-group {
+		padding-left: max(3rem, env(safe-area-inset-left));
+		padding-right: max(3rem, env(safe-area-inset-right));
+	}
+}
+
+/* Wide Alignment Spacing */
+.alignwide {
+	max-width: calc(1400px + 2rem);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Fix Header Overlap */
+.wp-block-template-part.header {
+	margin-left: calc(-1 * max(1rem, env(safe-area-inset-left)));
+	margin-right: calc(-1 * max(1rem, env(safe-area-inset-right)));
+}
+
+@media (min-width: 768px) {
+	.wp-block-template-part.header {
+		margin-left: calc(-1 * max(1.5rem, env(safe-area-inset-left)));
+		margin-right: calc(-1 * max(1.5rem, env(safe-area-inset-right)));
+	}
+}
+
+@media (min-width: 1024px) {
+	.wp-block-template-part.header {
+		margin-left: calc(-1 * max(2rem, env(safe-area-inset-left)));
+		margin-right: calc(-1 * max(2rem, env(safe-area-inset-right)));
+	}
+}
+
+/* Mobile: Stack columns with padding */
+@media (max-width: 767px) {
+	.wp-block-columns {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+}
