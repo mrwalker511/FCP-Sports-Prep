@@ -75,7 +75,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"https://fonts.gstatic.com/s/bebasneue/v14/JTUSjIg69CK48gW7PXooxW5rygbi49c.woff2"
+								"file:./assets/fonts/bebas-neue-v14-latin.woff2"
 							]
 						}
 					]
@@ -91,7 +91,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"https://fonts.gstatic.com/s/oswald/v53/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.woff2"
+								"file:./assets/fonts/oswald-v53-latin.woff2"
 							]
 						}
 					]
@@ -107,7 +107,7 @@
 							"fontStyle": "normal",
 							"fontDisplay": "swap",
 							"src": [
-								"https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2"
+								"file:./assets/fonts/inter-v13-latin.woff2"
 							]
 						},
 						{
@@ -116,7 +116,7 @@
 							"fontStyle": "italic",
 							"fontDisplay": "swap",
 							"src": [
-								"https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZNhiJ-Ek-_EeA.woff2"
+								"file:./assets/fonts/inter-v13-latin-italic.woff2"
 							]
 						}
 					]
