@@ -38,6 +38,14 @@ if ( ! function_exists( 'fl_coastal_prep_setup' ) ) :
 		) );
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'title-tag' );
+		add_theme_support( 'custom-logo', array(
+			'height'               => 100,
+			'width'                => 400,
+			'flex-height'          => true,
+			'flex-width'           => true,
+			'header-text'          => array( 'site-title', 'site-description' ),
+			'unlink-homepage-logo' => true,
+		) );
 
 		// Elementor Support (Optional)
 		add_theme_support( 'elementor' );
@@ -45,8 +53,97 @@ if ( ! function_exists( 'fl_coastal_prep_setup' ) ) :
 		add_theme_support( 'elementor-default-skin' );
 		add_theme_support( 'elementor-pro' );
 
+		// Register navigation menus.
+		register_nav_menus( array(
+			'primary' => __( 'Primary Navigation', 'fl-coastal-prep' ),
+			'footer'  => __( 'Footer Navigation', 'fl-coastal-prep' ),
+			'legal'   => __( 'Legal Navigation', 'fl-coastal-prep' ),
+		) );
+
 		// Starter Content
 		add_theme_support( 'starter-content', array(
+			'nav_menus' => array(
+				'primary' => array(
+					'name'  => __( 'Primary Navigation', 'fl-coastal-prep' ),
+					'items' => array(
+						'page_programs' => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{programs}}',
+						),
+						'page_faculty'  => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{faculty}}',
+						),
+						'page_campus'   => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{campus}}',
+						),
+						'page_schedule' => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{schedule}}',
+						),
+						'page_news'     => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{news}}',
+						),
+						'page_contact'  => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{contact}}',
+						),
+					),
+				),
+				'footer'  => array(
+					'name'  => __( 'Footer Navigation', 'fl-coastal-prep' ),
+					'items' => array(
+						'page_programs' => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{programs}}',
+						),
+						'page_faculty'  => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{faculty}}',
+						),
+						'page_campus'   => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{campus}}',
+						),
+						'page_donors'   => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{donors}}',
+						),
+						'page_apply'    => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{apply}}',
+						),
+					),
+				),
+				'legal'   => array(
+					'name'  => __( 'Legal Navigation', 'fl-coastal-prep' ),
+					'items' => array(
+						'page_privacy' => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{privacy-policy}}',
+						),
+						'page_terms'   => array(
+							'type'      => 'post_type',
+							'object'    => 'page',
+							'object_id' => '{{terms-of-service}}',
+						),
+					),
+				),
+			),
 			'posts'   => array(
 				'home'     => array(
 					'post_type'  => 'page',

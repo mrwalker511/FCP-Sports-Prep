@@ -49,7 +49,7 @@
                 <!-- wp:buttons -->
                 <div class="wp-block-buttons">
                     <!-- wp:button {"style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.1)"}},"className":"is-style-outline","textColor":"secondary"} -->
-                    <div class="wp-block-button is-style-outline"><a
+                    <div class="wp-block-button is-style-outline"><a href="/schedule"
                             class="wp-block-button__link has-secondary-color has-text-color wp-element-button"
                             style="border-color:rgba(17,34,64,0.1);border-style:solid;border-width:1px;font-size:0.5625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">View
                             Details</a></div>
