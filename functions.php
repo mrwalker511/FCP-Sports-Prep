@@ -39,10 +39,6 @@ if ( ! function_exists( 'fl_coastal_prep_setup' ) ) :
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'title-tag' );
 
-		// Full Site Editing Support
-		add_theme_support( 'block-templates' );
-		add_theme_support( 'block-template-parts' );
-
 		// Elementor Support (Optional)
 		add_theme_support( 'elementor' );
 		add_theme_support( 'elementor-experimental' );
@@ -143,7 +139,7 @@ function fl_coastal_prep_seo_meta() {
 
 	$description = get_bloginfo( 'description' );
 	$image       = get_header_image();
-	$url         = home_url( add_query_arg( array(), '' ) );
+	$url         = home_url( '/' );
 	$title       = wp_get_document_title();
 
 	if ( is_singular() ) {
@@ -360,6 +356,5 @@ function fl_coastal_prep_scripts() {
 
 	wp_enqueue_style( 'fl-coastal-prep-style', get_stylesheet_uri(), array(), $theme_version );
 	wp_enqueue_style( 'fl-coastal-prep-animations', get_template_directory_uri() . '/assets/css/animations.css', array(), $theme_version );
-	wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'fl_coastal_prep_scripts' );
