@@ -48,7 +48,7 @@
             <div class="wp-block-buttons">
                 <!-- wp:button {"backgroundColor":"primary","textColor":"secondary","style":{"typography":{"letterSpacing":"0.2em","textTransform":"uppercase","fontWeight":"700"},"spacing":{"padding":{"top":"1.25rem","right":"3.5rem","bottom":"1.25rem","left":"3.5rem"}}},"fontSize":"small"} -->
                 <div class="wp-block-button">
-                    <a class="wp-block-button__link has-secondary-color has-primary-background-color has-text-color has-background has-small-font-size has-custom-font-size wp-element-button"
+                    <a href="/apply" class="wp-block-button__link has-secondary-color has-primary-background-color has-text-color has-background has-small-font-size has-custom-font-size wp-element-button"
                         style="padding-top:1.25rem;padding-right:3.5rem;padding-bottom:1.25rem;padding-left:3.5rem;font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Start
                         Journey</a>
                 </div>
@@ -56,7 +56,7 @@
 
                 <!-- wp:button {"style":{"typography":{"letterSpacing":"0.2em","textTransform":"uppercase","fontWeight":"700"},"spacing":{"padding":{"top":"1.25rem","right":"3.5rem","bottom":"1.25rem","left":"3.5rem"}},"border":{"width":"1px","style":"solid","color":"var(--wp--preset--color--base)"}},"className":"is-style-outline","textColor":"base","fontSize":"small"} -->
                 <div class="wp-block-button is-style-outline">
-                    <a class="wp-block-button__link has-base-color has-text-color has-border-color has-small-font-size has-custom-font-size wp-element-button"
+                    <a href="/campus" class="wp-block-button__link has-base-color has-text-color has-border-color has-small-font-size has-custom-font-size wp-element-button"
                         style="border-color:var(--wp--preset--color--base);border-style:solid;border-width:1px;padding-top:1.25rem;padding-right:3.5rem;padding-bottom:1.25rem;padding-left:3.5rem;font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Academy
                         Tour</a>
                 </div>

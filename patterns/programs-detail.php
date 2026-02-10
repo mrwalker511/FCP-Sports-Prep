@@ -19,7 +19,7 @@
             <figure
                 class="wp-block-image size-large program-image">
                 <img src="https://images.unsplash.com/photo-1505666287802-931dc8394b5f?auto=format&fit=crop&q=80&w=1000"
-                    alt="Athletic Track" /></figure>
+                    alt="Athletes in a professional track and field training session" /></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:column -->
@@ -62,7 +62,7 @@
             <!-- wp:buttons -->
             <div class="wp-block-buttons">
                 <!-- wp:button {"backgroundColor":"secondary","textColor":"base","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1rem","right":"2.5rem","bottom":"1rem","left":"2.5rem"}}}} -->
-                <div class="wp-block-button"><a
+                <div class="wp-block-button"><a href="/contact"
                         class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background wp-element-button"
                         style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;padding-top:1rem;padding-right:2.5rem;padding-bottom:1rem;padding-left:2.5rem;text-transform:uppercase">Download
                         Brochure</a></div>
@@ -114,7 +114,7 @@
             <!-- wp:buttons -->
             <div class="wp-block-buttons">
                 <!-- wp:button {"backgroundColor":"secondary","textColor":"base","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1rem","right":"2.5rem","bottom":"1rem","left":"2.5rem"}}}} -->
-                <div class="wp-block-button"><a
+                <div class="wp-block-button"><a href="/contact"
                         class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background wp-element-button"
                         style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;padding-top:1rem;padding-right:2.5rem;padding-bottom:1rem;padding-left:2.5rem;text-transform:uppercase">Download
                         Brochure</a></div>
@@ -130,7 +130,7 @@
             <figure
                 class="wp-block-image size-large program-image">
                 <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1000"
-                    alt="Academic Track" /></figure>
+                    alt="Students studying in the university preparatory academic wing" /></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:column -->

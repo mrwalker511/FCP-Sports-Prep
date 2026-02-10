@@ -17,7 +17,7 @@
             class="wp-block-cover__background has-contrast-background-color has-background-dim-60 has-background-dim"></span>
         <img class="wp-block-cover__image-background"
             src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&q=80&w=1600"
-            alt="Main Campus" data-object-fit="cover" />
+            alt="Aerial view of Florida Coastal Prep main campus and athletic complex" data-object-fit="cover" />
         <div class="wp-block-cover__inner-container">
             <!-- wp:group {"layout":{"type":"constrained"}} -->
             <div class="wp-block-group">
@@ -51,7 +51,7 @@
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
                     src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=800"
-                    alt="Training Hub" /></figure>
+                    alt="Interior of the high-tech basketball training facility with multiple courts" /></figure>
             <!-- /wp:image -->
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->
             <div class="wp-block-group"
@@ -80,7 +80,7 @@
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
                     src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800"
-                    alt="Core Education" /></figure>
+                    alt="Modern classroom building with collaborative learning spaces" /></figure>
             <!-- /wp:image -->
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->
             <div class="wp-block-group"
@@ -109,7 +109,7 @@
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
                     src="https://images.unsplash.com/photo-1522770179533-24471fcdba45?auto=format&fit=crop&q=80&w=800"
-                    alt="Housing" /></figure>
+                    alt="Premium student residency suites with ocean-view balconies" /></figure>
             <!-- /wp:image -->
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->
             <div class="wp-block-group"

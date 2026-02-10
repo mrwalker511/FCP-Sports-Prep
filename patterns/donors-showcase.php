@@ -37,7 +37,7 @@
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"donor-image"} -->
             <figure class="wp-block-image size-large donor-image"><img
                     src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=1200"
-                    alt="Impact" /></figure>
+                    alt="Student-athletes celebrating together after a successful scholarship fundraiser" /></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:column -->
