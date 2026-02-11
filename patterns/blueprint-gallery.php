@@ -27,7 +27,7 @@
         <!-- wp:column {"width":"33.33%"} -->
         <div class="wp-block-column" style="flex-basis:33.33%">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-animate-slide-in"} -->
-            <figure class="wp-block-image size-large is-style-animate-slide-in"><img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a26?auto=format&fit=crop&q=80&w=800" alt="Training"/></figure>
+            <figure class="wp-block-image size-large is-style-animate-slide-in"><img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a26?auto=format&fit=crop&q=80&w=800" alt="Elite basketball player executing a training drill on the court"/></figure>
             <!-- /wp:image -->
             <!-- wp:spacer {"height":"2rem"} -->
             <div style="height:2rem" aria-hidden="true" class="wp-block-spacer"></div>
@@ -48,7 +48,7 @@
         <!-- wp:column {"width":"66.66%"} -->
         <div class="wp-block-column" style="flex-basis:66.66%">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"is-style-animate-slide-in"} -->
-            <figure class="wp-block-image size-large is-style-animate-slide-in"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1200" alt="Arena"/></figure>
+            <figure class="wp-block-image size-large is-style-animate-slide-in"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1200" alt="Full-court view of the basketball arena during a competitive game"/></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:column -->

@@ -49,7 +49,7 @@
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
                 <img class="wp-block-cover__image-background"
                     src="https://images.unsplash.com/photo-1518063319789-7217e6706b04?auto=format&fit=crop&q=80&w=800"
-                    alt="Performance" data-object-fit="cover" />
+                    alt="Athlete performing advanced strength training exercises in the gym" data-object-fit="cover" />
                 <div class="wp-block-cover__inner-container"></div>
             </div>
             <!-- /wp:cover -->
@@ -70,7 +70,7 @@
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
-                <p class="has-primary-color has-text-color text-blueprint-link"><a href="#">Explore Block</a></p>
+                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
@@ -86,7 +86,7 @@
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
                 <img class="wp-block-cover__image-background"
                     src="https://images.unsplash.com/photo-1523050335102-c6744729ea2a?auto=format&fit=crop&q=80&w=800"
-                    alt="Academic Lab" data-object-fit="cover" />
+                    alt="Students collaborating in a modern science laboratory classroom" data-object-fit="cover" />
                 <div class="wp-block-cover__inner-container"></div>
             </div>
             <!-- /wp:cover -->
@@ -107,7 +107,7 @@
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
-                <p class="has-primary-color has-text-color text-blueprint-link"><a href="#">Explore Block</a></p>
+                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
@@ -123,7 +123,7 @@
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
                 <img class="wp-block-cover__image-background"
                     src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&q=80&w=800"
-                    alt="Lifestyle" data-object-fit="cover" />
+                    alt="Oceanfront campus residence with palm trees and modern architecture" data-object-fit="cover" />
                 <div class="wp-block-cover__inner-container"></div>
             </div>
             <!-- /wp:cover -->
@@ -144,7 +144,7 @@
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
-                <p class="has-primary-color has-text-color text-blueprint-link"><a href="#">Explore Block</a></p>
+                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a></p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->

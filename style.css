@@ -25,7 +25,7 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 }
 
 .faculty-card:hover {
-	border-color: rgba(251, 191, 36, 0.5) !important;
+	border-color: rgba(251, 191, 36, 0.5);
 }
 
 .faculty-image img {
@@ -67,7 +67,7 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 	font-style: italic !important;
 	text-transform: uppercase !important;
 	letter-spacing: -0.025em !important;
-	line-height: 0.8 !important;
+	line-height: 0.9 !important;
 }
 
 /* Block Style: Outline Gold */
@@ -110,23 +110,23 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 }
 
 .opacity-40 {
-	opacity: 0.4;
+	opacity: 0.55;
 }
 
 .opacity-50 {
-	opacity: 0.5;
-}
-
-.opacity-60 {
 	opacity: 0.6;
 }
 
-.opacity-70 {
+.opacity-60 {
 	opacity: 0.7;
 }
 
+.opacity-70 {
+	opacity: 0.75;
+}
+
 .opacity-80 {
-	opacity: 0.8;
+	opacity: 0.85;
 }
 
 .opacity-90 {
@@ -167,7 +167,7 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 }
 
 .news-title a:hover {
-	color: var(--wp--preset--color--primary) !important;
+	color: var(--wp--preset--color--primary);
 }
 
 /* Facility Image Styles */
@@ -208,7 +208,7 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 }
 
 .schedule-card:hover {
-	border-color: rgba(251, 191, 36, 0.3) !important;
+	border-color: rgba(251, 191, 36, 0.3);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
