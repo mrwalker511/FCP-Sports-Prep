@@ -1,6 +1,6 @@
 === Florida Coastal Prep ===
 Contributors: Senior Frontend Engineer
-Tags: full-site-editing, wp-block-styles, custom-colors, editor-style, one-column, wide-blocks
+Tags: full-site-editing, wp-block-styles, custom-colors, custom-logo, editor-style, one-column, wide-blocks
 Requires at least: 6.2
 Tested up to: 6.7
 Requires PHP: 8.0
