@@ -29,15 +29,26 @@ Quick reference guide to every file in this project.
 
 ## ✅ CORE WORDPRESS FILES (Ready to Deploy)
 
-| File | Purpose | Size | Priority |
-|------|---------|------|----------|
-| `style.css` | Theme header metadata | 706 B | 🔴 Critical |
-| `functions.php` | Theme functionality | 6.1 KB | 🔴 Critical |
-| `theme.json` | FSE configuration | 1.7 KB | 🔴 Critical |
-| `readme.txt` | WordPress.org format docs | 1.3 KB | 🟡 Important |
-| `metadata.json` | Additional theme metadata | 259 B | 🟢 Optional |
+| File | Purpose | Priority |
+|------|---------|----------|
+| `style.css` | Theme header metadata + CSS | 🔴 Critical |
+| `functions.php` | Slim loader — requires 5 inc/ modules | 🔴 Critical |
+| `theme.json` | FSE configuration | 🔴 Critical |
+| `readme.txt` | WordPress.org format docs | 🟡 Important |
+| `metadata.json` | Additional theme metadata | 🟢 Optional |
+| `.distignore` | Distribution exclusion list | 🟡 Important |
 
-**Status**: These 5 files are production-ready and require no changes.
+### inc/ Module Files (v1.1.0+)
+
+| File | Purpose | Priority |
+|------|---------|----------|
+| `inc/setup.php` | Theme supports, menus, starter content | 🔴 Critical |
+| `inc/post-types.php` | CPT registration + post meta with sanitize_callback | 🔴 Critical |
+| `inc/seo.php` | Meta tags, Open Graph, JSON-LD schema, Customizer | 🔴 Critical |
+| `inc/block-styles.php` | Block pattern categories, custom block styles | 🔴 Critical |
+| `inc/security.php` | CSP headers, security hardening | 🔴 Critical |
+
+**Status**: All files are production-ready. Version 1.1.0.
 
 ---
 

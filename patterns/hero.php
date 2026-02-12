@@ -8,12 +8,12 @@
  * Description: Full-width hero section with title, subtitle, and CTA buttons
  */
 ?>
-<!-- wp:cover {"url":"https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format\u0026fit=crop\u0026q=80\u0026w=2000","dimRatio":40,"overlayColor":"contrast","minHeight":100,"minHeightUnit":"vh","align":"full","style":{"color":{"duotone":"unset"}},"layout":{"type":"constrained"}} -->
+<!-- wp:cover {"url":"assets/images/placeholder-hero.webp","dimRatio":40,"overlayColor":"contrast","minHeight":100,"minHeightUnit":"vh","align":"full","style":{"color":{"duotone":"unset"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull" style="min-height:100vh">
     <span aria-hidden="true"
         class="wp-block-cover__background has-contrast-background-color has-background-dim-40 has-background-dim"></span>
     <img class="wp-block-cover__image-background"
-        src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=2000"
+        src="assets/images/placeholder-hero.webp"
         alt="Basketball players in competitive game action on an indoor court" data-object-fit="cover" />
 
     <div class="wp-block-cover__inner-container">
