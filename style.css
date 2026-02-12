@@ -4,14 +4,14 @@ Theme URI: https://flcoastalprep.com
 Author: Senior Frontend Engineer
 Author URI: https://flcoastalprep.com
 Description: A high-performance, elite athletic block theme for Florida Coastal Preparatory Academy. Built with Full Site Editing (FSE) capabilities, custom block patterns, and three custom post types for faculty, programs, and game schedules.
-Version: 1.0.0
+Version: 1.1.0
 Requires at least: 6.2
 Tested up to: 6.7
 Requires PHP: 8.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: fl-coastal-prep
-Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style, one-column, wide-blocks
+Tags: full-site-editing, wp-block-styles, custom-colors, custom-logo, editor-style, one-column, wide-blocks
 */
 
 /*
@@ -22,6 +22,7 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 /* Faculty Grid Hover Effects */
 .faculty-card {
 	transition: all 0.3s ease;
+	will-change: transform;
 }
 
 .faculty-card:hover {
@@ -47,39 +48,39 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 	font-style: normal;
 }
 
-/* Block Style: Grid Background */
-.is-style-grid-background {
-	background-image: radial-gradient(circle, rgba(251, 191, 36, 0.15) 1px, transparent 1px) !important;
-	background-size: 40px 40px !important;
+/* Block Style: Grid Background — scoped under body for specificity */
+body .is-style-grid-background {
+	background-image: radial-gradient(circle, rgba(251, 191, 36, 0.15) 1px, transparent 1px);
+	background-size: 40px 40px;
 }
 
 /* Block Style: Glassmorphism */
-.is-style-glassmorphism {
-	background: rgba(255, 255, 255, 0.05) !important;
+body .is-style-glassmorphism {
+	background: rgba(255, 255, 255, 0.05);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Block Style: Blueprint */
-.is-style-blueprint {
-	font-family: var(--wp--preset--font-family--display) !important;
-	font-style: italic !important;
-	text-transform: uppercase !important;
-	letter-spacing: -0.025em !important;
-	line-height: 0.9 !important;
+body .is-style-blueprint {
+	font-family: var(--wp--preset--font-family--display);
+	font-style: italic;
+	text-transform: uppercase;
+	letter-spacing: -0.025em;
+	line-height: 0.9;
 }
 
 /* Block Style: Outline Gold */
-.wp-block-button.is-style-outline-gold .wp-block-button__link {
-	border: 2px solid var(--wp--preset--color--primary) !important;
-	background: transparent !important;
-	color: var(--wp--preset--color--primary) !important;
+body .wp-block-button.is-style-outline-gold .wp-block-button__link {
+	border: 2px solid var(--wp--preset--color--primary);
+	background: transparent;
+	color: var(--wp--preset--color--primary);
 }
 
-.wp-block-button.is-style-outline-gold .wp-block-button__link:hover {
-	background: var(--wp--preset--color--primary) !important;
-	color: var(--wp--preset--color--secondary) !important;
+body .wp-block-button.is-style-outline-gold .wp-block-button__link:hover {
+	background: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--secondary);
 }
 
 .text-blueprint-title {
@@ -109,24 +110,25 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 	text-transform: uppercase;
 }
 
+/* Opacity Utilities — values match class names */
 .opacity-40 {
-	opacity: 0.55;
+	opacity: 0.4;
 }
 
 .opacity-50 {
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 .opacity-60 {
-	opacity: 0.7;
+	opacity: 0.6;
 }
 
 .opacity-70 {
-	opacity: 0.75;
+	opacity: 0.7;
 }
 
 .opacity-80 {
-	opacity: 0.85;
+	opacity: 0.8;
 }
 
 .opacity-90 {
@@ -137,6 +139,8 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 .grid-card {
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	overflow: hidden;
+	will-change: transform;
+	contain: layout style;
 }
 
 .grid-card:hover {
@@ -147,6 +151,8 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 .news-card {
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	overflow: hidden;
+	will-change: transform;
+	contain: layout style;
 }
 
 .news-card:hover {
@@ -205,6 +211,7 @@ Tags: block-styles, full-site-editing, custom-colors, custom-logo, editor-style,
 /* Schedule Card Styles */
 .schedule-card {
 	transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	will-change: transform;
 }
 
 .schedule-card:hover {

@@ -11,12 +11,12 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:6rem;padding-bottom:6rem">
 
-    <!-- wp:cover {"url":"https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format\u0026fit=crop\u0026q=80\u0026w=1600","dimRatio":60,"overlayColor":"contrast","minHeight":60,"minHeightUnit":"vh","align":"wide","style":{"spacing":{"margin":{"bottom":"6rem"}}}} -->
+    <!-- wp:cover {"url":"assets/images/placeholder-campus-aerial.webp","dimRatio":60,"overlayColor":"contrast","minHeight":60,"minHeightUnit":"vh","align":"wide","style":{"spacing":{"margin":{"bottom":"6rem"}}}} -->
     <div class="wp-block-cover alignwide" style="margin-bottom:6rem;min-height:60vh">
         <span aria-hidden="true"
             class="wp-block-cover__background has-contrast-background-color has-background-dim-60 has-background-dim"></span>
         <img class="wp-block-cover__image-background"
-            src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&q=80&w=1600"
+            src="assets/images/placeholder-campus-aerial.webp"
             alt="Aerial view of Florida Coastal Prep main campus and athletic complex" data-object-fit="cover" />
         <div class="wp-block-cover__inner-container">
             <!-- wp:group {"layout":{"type":"constrained"}} -->
@@ -50,7 +50,7 @@
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
-                    src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=800"
+                    src="assets/images/placeholder-basketball-facility.webp"
                     alt="Interior of the high-tech basketball training facility with multiple courts" /></figure>
             <!-- /wp:image -->
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->
@@ -79,7 +79,7 @@
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
-                    src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=800"
+                    src="assets/images/placeholder-classroom.webp"
                     alt="Modern classroom building with collaborative learning spaces" /></figure>
             <!-- /wp:image -->
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->
@@ -108,7 +108,7 @@
             style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
-                    src="https://images.unsplash.com/photo-1522770179533-24471fcdba45?auto=format&fit=crop&q=80&w=800"
+                    src="assets/images/placeholder-residency.webp"
                     alt="Premium student residency suites with ocean-view balconies" /></figure>
             <!-- /wp:image -->
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->

@@ -8,12 +8,12 @@
  * Description: Hero section for programs page with cover image and headline.
  */
 ?>
-<!-- wp:cover {"url":"https://images.unsplash.com/photo-1544105072-423f629a55a7?auto=format\u0026fit=crop\u0026q=80\u0026w=1200","dimRatio":60,"overlayColor":"contrast","minHeight":70,"minHeightUnit":"vh","align":"full"} -->
+<!-- wp:cover {"url":"assets/images/placeholder-programs-hero.webp","dimRatio":60,"overlayColor":"contrast","minHeight":70,"minHeightUnit":"vh","align":"full"} -->
 <div class="wp-block-cover alignfull" style="min-height:70vh">
     <span aria-hidden="true"
         class="wp-block-cover__background has-contrast-background-color has-background-dim-60 has-background-dim"></span>
     <img class="wp-block-cover__image-background"
-        src="https://images.unsplash.com/photo-1544105072-423f629a55a7?auto=format&fit=crop&q=80&w=1200"
+        src="assets/images/placeholder-programs-hero.webp"
         alt="Curriculum Hero" data-object-fit="cover" />
     <div class="wp-block-cover__inner-container">
         <!-- wp:group {"layout":{"type":"constrained"}} -->
