@@ -11,7 +11,11 @@
       "Bash(done)",
       "Bash(find:*)",
       "Bash(git restore:*)",
-      "Bash(do head -10 \"$file\")"
+      "Bash(do head -10 \"$file\")",
+      "Bash(gemini:*)",
+      "WebFetch(domain:www.reddit.com)",
+      "Bash(curl:*)",
+      "Bash(python3:*)"
     ]
   },
   "prefersReducedMotion": true
