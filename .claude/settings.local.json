@@ -13,5 +13,6 @@
       "Bash(git restore:*)",
       "Bash(do head -10 \"$file\")"
     ]
-  }
+  },
+  "prefersReducedMotion": true
 }
