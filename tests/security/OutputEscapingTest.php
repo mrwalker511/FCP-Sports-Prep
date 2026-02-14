@@ -55,11 +55,14 @@ class OutputEscapingTest extends TestCase
      */
     public function test_meta_tags_escaped()
     {
-        $functions_file = $this->theme_dir . '/functions.php';
-        $content = file_get_contents($functions_file);
+        $seo_file = $this->theme_dir . '/inc/seo.php';
+        $this->assertFileExists($seo_file, 'SEO module file should exist');
+        $content = file_get_contents($seo_file);
 
         // Find all meta tag output
         preg_match_all('/<meta[^>]+>/', $content, $matches);
+
+        $this->assertNotEmpty($matches[0], 'SEO file should contain meta tag output');
 
         foreach ($matches[0] as $meta_tag) {
             // If it contains a variable, it should use esc_attr or esc_url

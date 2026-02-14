@@ -265,16 +265,26 @@ class TemplateValidationTest extends TestCase
         $theme_json_file = dirname(dirname(__DIR__)) . '/theme.json';
         $theme_json = json_decode(file_get_contents($theme_json_file), true);
 
+        $required_parts = ['header', 'footer'];
+
         if (isset($theme_json['templateParts'])) {
             $registered_parts = array_column($theme_json['templateParts'], 'name');
-
-            $required_parts = ['header', 'footer'];
 
             foreach ($required_parts as $part) {
                 $this->assertContains(
                     $part,
                     $registered_parts,
                     "Template part {$part} is not registered in theme.json"
+                );
+            }
+        } else {
+            // templateParts key is optional in theme.json for FSE themes;
+            // verify the physical part files exist instead.
+            $parts_dir = dirname(dirname(__DIR__)) . '/parts';
+            foreach ($required_parts as $part) {
+                $this->assertFileExists(
+                    $parts_dir . '/' . $part . '.html',
+                    "Template part file {$part}.html should exist in parts/"
                 );
             }
         }

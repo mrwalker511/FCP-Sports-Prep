@@ -56,29 +56,45 @@ class SecurityTest extends TestCase
      */
     public function test_output_escaping_in_functions()
     {
-        $functions_file = $this->theme_dir . '/functions.php';
-        $content = file_get_contents($functions_file);
+        $files_to_scan = [
+            $this->theme_dir . '/functions.php',
+            $this->theme_dir . '/inc/seo.php',
+            $this->theme_dir . '/inc/forms.php',
+            $this->theme_dir . '/inc/security.php',
+        ];
 
-        // Find all echo statements
-        preg_match_all('/echo\s+[\'"]?.*?;/s', $content, $matches);
-
-        foreach ($matches[0] as $echo_statement) {
-            // Skip if it is echoing a literal string (no variables $)
-            if (!str_contains($echo_statement, '$')) {
+        $checked = 0;
+        foreach ($files_to_scan as $file) {
+            if (!file_exists($file)) {
                 continue;
             }
+            $content = file_get_contents($file);
 
-            // Check if it uses common WordPress escaping or JSON encoding
-            $has_escaping = preg_match(
-                '/(esc_html|esc_attr|esc_url|esc_js|wp_kses|json_encode|esc_html__|esc_attr__|esc_url__)\b/',
-                $echo_statement
-            );
+            // Find all echo statements
+            preg_match_all('/echo\s+[\'"]?.*?;/s', $content, $matches);
 
-            $this->assertTrue(
-                (bool) $has_escaping,
-                "Unescaped dynamic echo found in functions.php: " . var_export($echo_statement, true)
-            );
+            foreach ($matches[0] as $echo_statement) {
+                // Skip if it is echoing a literal string (no variables $)
+                if (!str_contains($echo_statement, '$')) {
+                    continue;
+                }
+
+                $checked++;
+
+                // Check if it uses common WordPress escaping or JSON encoding
+                $has_escaping = preg_match(
+                    '/(esc_html|esc_attr|esc_url|esc_js|wp_kses|json_encode|wp_json_encode|esc_html__|esc_attr__|esc_url__)\b/',
+                    $echo_statement
+                );
+
+                $this->assertTrue(
+                    (bool) $has_escaping,
+                    "Unescaped dynamic echo found in {$file}: " . var_export($echo_statement, true)
+                );
+            }
         }
+
+        $this->assertGreaterThan(0, $checked, 'Should have checked at least one dynamic echo statement');
     }
 
     /**
@@ -86,29 +102,30 @@ class SecurityTest extends TestCase
      */
     public function test_seo_meta_escaping()
     {
-        $functions_file = $this->theme_dir . '/functions.php';
-        $content = file_get_contents($functions_file);
+        $seo_file = $this->theme_dir . '/inc/seo.php';
+        $this->assertFileExists($seo_file, 'SEO module file should exist');
+        $content = file_get_contents($seo_file);
 
         // Extract the fl_coastal_prep_seo_meta function
         preg_match('/function fl_coastal_prep_seo_meta\(\).*?^}/ms', $content, $matches);
 
-        if (!empty($matches[0])) {
-            $function_content = $matches[0];
+        $this->assertNotEmpty($matches, 'fl_coastal_prep_seo_meta function should exist in inc/seo.php');
 
-            // Check that esc_attr is used for attributes
-            $this->assertMatchesRegularExpression(
-                '/esc_attr/',
-                $function_content,
-                'SEO meta function should use esc_attr() for attribute values'
-            );
+        $function_content = $matches[0];
 
-            // Check that esc_url is used for URLs
-            $this->assertMatchesRegularExpression(
-                '/esc_url/',
-                $function_content,
-                'SEO meta function should use esc_url() for URL values'
-            );
-        }
+        // Check that esc_attr is used for attributes
+        $this->assertMatchesRegularExpression(
+            '/esc_attr/',
+            $function_content,
+            'SEO meta function should use esc_attr() for attribute values'
+        );
+
+        // Check that esc_url is used for URLs
+        $this->assertMatchesRegularExpression(
+            '/esc_url/',
+            $function_content,
+            'SEO meta function should use esc_url() for URL values'
+        );
     }
 
     /**
@@ -116,22 +133,23 @@ class SecurityTest extends TestCase
      */
     public function test_schema_markup_json_encoding()
     {
-        $functions_file = $this->theme_dir . '/functions.php';
-        $content = file_get_contents($functions_file);
+        $seo_file = $this->theme_dir . '/inc/seo.php';
+        $this->assertFileExists($seo_file, 'SEO module file should exist');
+        $content = file_get_contents($seo_file);
 
         // Extract the schema markup function
         preg_match('/function fl_coastal_prep_schema_markup\(\).*?^}/ms', $content, $matches);
 
-        if (!empty($matches[0])) {
-            $function_content = $matches[0];
+        $this->assertNotEmpty($matches, 'fl_coastal_prep_schema_markup function should exist in inc/seo.php');
 
-            // Check that json_encode is used
-            $this->assertMatchesRegularExpression(
-                '/json_encode/',
-                $function_content,
-                'Schema markup should use json_encode() for safe JSON output'
-            );
-        }
+        $function_content = $matches[0];
+
+        // Check that json_encode is used
+        $this->assertMatchesRegularExpression(
+            '/json_encode/',
+            $function_content,
+            'Schema markup should use json_encode() for safe JSON output'
+        );
     }
 
     /**

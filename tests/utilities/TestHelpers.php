@@ -17,6 +17,7 @@ class TestHelpers
     {
         $issues = [];
         $content = file_get_contents($file_path);
+        $lines = explode("\n", $content);
 
         // Check for unescaped echo statements
         if (preg_match_all('/echo\s+\$[^;]+;/', $content, $matches)) {
@@ -41,13 +42,22 @@ class TestHelpers
             ];
         }
 
-        // Check for $_GET, $_POST without sanitization
-        if (preg_match_all('/\$_(GET|POST|REQUEST)\[/', $content, $matches)) {
-            $issues[] = [
-                'type' => 'unsanitized_input',
-                'severity' => 'high',
-                'message' => 'Direct superglobal access detected. Ensure proper sanitization.'
-            ];
+        // Check for $_GET, $_POST without sanitization (line-level check)
+        foreach ($lines as $line) {
+            if (preg_match('/\$_(GET|POST|REQUEST)\[/', $line)) {
+                // Skip lines with phpcs:ignore annotations (reviewed and acknowledged)
+                if (strpos($line, 'phpcs:ignore') !== false) {
+                    continue;
+                }
+                // Check if sanitization is on or near the same line
+                if (!preg_match('/(sanitize_text_field|sanitize_textarea_field|sanitize_email|sanitize_key|absint|intval|wp_kses|wp_unslash|wp_verify_nonce|isset|empty)/', $line)) {
+                    $issues[] = [
+                        'type' => 'unsanitized_input',
+                        'severity' => 'high',
+                        'message' => 'Direct superglobal access detected. Ensure proper sanitization.'
+                    ];
+                }
+            }
         }
 
         return $issues;

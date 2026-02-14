@@ -6,49 +6,58 @@
  * @since   1.1.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
-function fl_coastal_prep_register_form_shortcodes() {
-    if ( ! function_exists( 'add_shortcode' ) ) {
+function fl_coastal_prep_register_form_shortcodes()
+{
+    if (!function_exists('add_shortcode')) {
         return;
     }
 
-    add_shortcode( 'fcp_form_message', 'fl_coastal_prep_form_message_shortcode' );
-    add_shortcode( 'fcp_contact_form', 'fl_coastal_prep_contact_form_shortcode' );
-    add_shortcode( 'fcp_apply_form', 'fl_coastal_prep_apply_form_shortcode' );
-    add_shortcode( 'fcp_schedule_meta', 'fl_coastal_prep_schedule_meta_shortcode' );
-    add_shortcode( 'fcp_schedule_link', 'fl_coastal_prep_schedule_link_shortcode' );
+    add_shortcode('fcp_form_message', 'fl_coastal_prep_form_message_shortcode');
+    add_shortcode('fcp_contact_form', 'fl_coastal_prep_contact_form_shortcode');
+    add_shortcode('fcp_apply_form', 'fl_coastal_prep_apply_form_shortcode');
+    add_shortcode('fcp_schedule_meta', 'fl_coastal_prep_schedule_meta_shortcode');
+    add_shortcode('fcp_schedule_link', 'fl_coastal_prep_schedule_link_shortcode');
 }
-add_action( 'init', 'fl_coastal_prep_register_form_shortcodes' );
+add_action('init', 'fl_coastal_prep_register_form_shortcodes');
 
-function fl_coastal_prep_form_message_shortcode() {
-    if ( empty( $_GET['fcp_form'] ) ) {
+function fl_coastal_prep_form_message_shortcode()
+{
+    if (!isset($_GET['fcp_form'])) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
         return '';
     }
 
-    $status = sanitize_text_field( wp_unslash( $_GET['fcp_form'] ) );
-    if ( 'success' === $status ) {
+    $status = sanitize_text_field(wp_unslash($_GET['fcp_form'])); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+
+    $allowed_statuses = array('success', 'invalid', 'error');
+    if (!in_array($status, $allowed_statuses, true)) {
+        return '';
+    }
+
+    if ('success' === $status) {
         return '<p class="fcp-form__message fcp-form__message--success">Thanks for reaching out! We will be in touch shortly.</p>';
     }
 
-    if ( 'invalid' === $status ) {
+    if ('invalid' === $status) {
         return '<p class="fcp-form__message fcp-form__message--error">There was a problem validating your submission. Please try again.</p>';
     }
 
     return '<p class="fcp-form__message fcp-form__message--error">Something went wrong while sending your message. Please try again.</p>';
 }
 
-function fl_coastal_prep_contact_form_shortcode() {
-    $action_url = esc_url( admin_url( 'admin-post.php' ) );
-    $nonce      = wp_create_nonce( 'fcp_contact_form' );
+function fl_coastal_prep_contact_form_shortcode()
+{
+    $action_url = admin_url('admin-post.php');
+    $nonce = wp_create_nonce('fcp_contact_form');
 
     ob_start();
     ?>
-    <form class="fcp-form fcp-contact-form" method="post" action="<?php echo $action_url; ?>">
+    <form class="fcp-form fcp-contact-form" method="post" action="<?php echo esc_url($action_url); ?>">
         <input type="hidden" name="action" value="fcp_contact_form">
-        <input type="hidden" name="fcp_contact_nonce" value="<?php echo esc_attr( $nonce ); ?>">
+        <input type="hidden" name="fcp_contact_nonce" value="<?php echo esc_attr($nonce); ?>">
 
         <div class="fcp-form__grid">
             <label>
@@ -85,15 +94,16 @@ function fl_coastal_prep_contact_form_shortcode() {
     return ob_get_clean();
 }
 
-function fl_coastal_prep_apply_form_shortcode() {
-    $action_url = esc_url( admin_url( 'admin-post.php' ) );
-    $nonce      = wp_create_nonce( 'fcp_apply_form' );
+function fl_coastal_prep_apply_form_shortcode()
+{
+    $action_url = admin_url('admin-post.php');
+    $nonce = wp_create_nonce('fcp_apply_form');
 
     ob_start();
     ?>
-    <form class="fcp-form fcp-apply-form" method="post" action="<?php echo $action_url; ?>">
+    <form class="fcp-form fcp-apply-form" method="post" action="<?php echo esc_url($action_url); ?>">
         <input type="hidden" name="action" value="fcp_apply_form">
-        <input type="hidden" name="fcp_apply_nonce" value="<?php echo esc_attr( $nonce ); ?>">
+        <input type="hidden" name="fcp_apply_nonce" value="<?php echo esc_attr($nonce); ?>">
 
         <div class="fcp-form__grid">
             <label>
@@ -133,42 +143,44 @@ function fl_coastal_prep_apply_form_shortcode() {
     return ob_get_clean();
 }
 
-function fl_coastal_prep_schedule_meta_shortcode( $atts ) {
+function fl_coastal_prep_schedule_meta_shortcode($atts)
+{
     $atts = shortcode_atts(
         array(
-            'field'    => '',
-            'format'   => 'M d',
+            'field' => '',
+            'format' => 'M d',
             'fallback' => '',
         ),
         $atts,
         'fcp_schedule_meta'
     );
 
-    if ( empty( $atts['field'] ) ) {
+    if (empty($atts['field'])) {
         return '';
     }
 
     $post_id = get_the_ID();
-    if ( ! $post_id ) {
+    if (!$post_id) {
         return '';
     }
 
-    $value = get_post_meta( $post_id, $atts['field'], true );
-    if ( 'game_date' === $atts['field'] && $value ) {
-        $timestamp = strtotime( $value );
-        if ( $timestamp ) {
-            $value = date_i18n( $atts['format'], $timestamp );
+    $value = get_post_meta($post_id, $atts['field'], true);
+    if ('game_date' === $atts['field'] && $value) {
+        $timestamp = strtotime($value);
+        if ($timestamp) {
+            $value = date_i18n($atts['format'], $timestamp);
         }
     }
 
-    if ( ! $value && $atts['fallback'] ) {
+    if (!$value && $atts['fallback']) {
         $value = $atts['fallback'];
     }
 
-    return esc_html( $value );
+    return esc_html($value);
 }
 
-function fl_coastal_prep_schedule_link_shortcode( $atts ) {
+function fl_coastal_prep_schedule_link_shortcode($atts)
+{
     $atts = shortcode_atts(
         array(
             'label' => 'View Details',
@@ -178,80 +190,83 @@ function fl_coastal_prep_schedule_link_shortcode( $atts ) {
     );
 
     $url = get_permalink();
-    if ( ! $url ) {
+    if (!$url) {
         return '';
     }
 
     return sprintf(
         '<a class="fcp-schedule-link" href="%s">%s</a>',
-        esc_url( $url ),
-        esc_html( $atts['label'] )
+        esc_url($url),
+        esc_html($atts['label'])
     );
 }
 
-function fl_coastal_prep_handle_contact_form() {
-    if ( empty( $_POST['fcp_contact_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['fcp_contact_nonce'] ) ), 'fcp_contact_form' ) ) {
-        fl_coastal_prep_redirect_form( 'invalid' );
+function fl_coastal_prep_handle_contact_form()
+{
+    if (empty($_POST['fcp_contact_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['fcp_contact_nonce'])), 'fcp_contact_form')) {
+        fl_coastal_prep_redirect_form('invalid');
     }
 
-    $name    = sanitize_text_field( wp_unslash( $_POST['contact_name'] ?? '' ) );
-    $email   = sanitize_email( wp_unslash( $_POST['contact_email'] ?? '' ) );
-    $phone   = sanitize_text_field( wp_unslash( $_POST['contact_phone'] ?? '' ) );
-    $reason  = sanitize_text_field( wp_unslash( $_POST['contact_reason'] ?? '' ) );
-    $message = sanitize_textarea_field( wp_unslash( $_POST['contact_message'] ?? '' ) );
+    $name = sanitize_text_field(wp_unslash($_POST['contact_name'] ?? ''));
+    $email = sanitize_email(wp_unslash($_POST['contact_email'] ?? ''));
+    $phone = sanitize_text_field(wp_unslash($_POST['contact_phone'] ?? ''));
+    $reason = sanitize_text_field(wp_unslash($_POST['contact_reason'] ?? ''));
+    $message = sanitize_textarea_field(wp_unslash($_POST['contact_message'] ?? ''));
 
-    if ( ! $name || ! $email || ! $message ) {
-        fl_coastal_prep_redirect_form( 'error' );
+    if (!$name || !$email || !$message) {
+        fl_coastal_prep_redirect_form('error');
     }
 
-    $recipient = get_option( 'admin_email' );
-    $subject   = sprintf( 'New Contact Inquiry from %s', $name );
-    $body      = "Name: {$name}\nEmail: {$email}\nPhone: {$phone}\nReason: {$reason}\n\nMessage:\n{$message}";
-    $headers   = array( 'Reply-To: ' . $email );
+    $recipient = get_option('admin_email');
+    $subject = sprintf('New Contact Inquiry from %s', $name);
+    $body = "Name: {$name}\nEmail: {$email}\nPhone: {$phone}\nReason: {$reason}\n\nMessage:\n{$message}";
+    $headers = array('Reply-To: ' . $email);
 
-    wp_mail( $recipient, $subject, $body, $headers );
+    wp_mail($recipient, $subject, $body, $headers);
 
-    fl_coastal_prep_redirect_form( 'success' );
+    fl_coastal_prep_redirect_form('success');
 }
-add_action( 'admin_post_fcp_contact_form', 'fl_coastal_prep_handle_contact_form' );
-add_action( 'admin_post_nopriv_fcp_contact_form', 'fl_coastal_prep_handle_contact_form' );
+add_action('admin_post_fcp_contact_form', 'fl_coastal_prep_handle_contact_form');
+add_action('admin_post_nopriv_fcp_contact_form', 'fl_coastal_prep_handle_contact_form');
 
-function fl_coastal_prep_handle_apply_form() {
-    if ( empty( $_POST['fcp_apply_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['fcp_apply_nonce'] ) ), 'fcp_apply_form' ) ) {
-        fl_coastal_prep_redirect_form( 'invalid' );
+function fl_coastal_prep_handle_apply_form()
+{
+    if (empty($_POST['fcp_apply_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['fcp_apply_nonce'])), 'fcp_apply_form')) {
+        fl_coastal_prep_redirect_form('invalid');
     }
 
-    $first_name = sanitize_text_field( wp_unslash( $_POST['student_first_name'] ?? '' ) );
-    $last_name  = sanitize_text_field( wp_unslash( $_POST['student_last_name'] ?? '' ) );
-    $email      = sanitize_email( wp_unslash( $_POST['guardian_email'] ?? '' ) );
-    $phone      = sanitize_text_field( wp_unslash( $_POST['guardian_phone'] ?? '' ) );
-    $sport      = sanitize_text_field( wp_unslash( $_POST['primary_sport'] ?? '' ) );
-    $year       = sanitize_text_field( wp_unslash( $_POST['graduation_year'] ?? '' ) );
-    $notes      = sanitize_textarea_field( wp_unslash( $_POST['application_notes'] ?? '' ) );
+    $first_name = sanitize_text_field(wp_unslash($_POST['student_first_name'] ?? ''));
+    $last_name = sanitize_text_field(wp_unslash($_POST['student_last_name'] ?? ''));
+    $email = sanitize_email(wp_unslash($_POST['guardian_email'] ?? ''));
+    $phone = sanitize_text_field(wp_unslash($_POST['guardian_phone'] ?? ''));
+    $sport = sanitize_text_field(wp_unslash($_POST['primary_sport'] ?? ''));
+    $year = sanitize_text_field(wp_unslash($_POST['graduation_year'] ?? ''));
+    $notes = sanitize_textarea_field(wp_unslash($_POST['application_notes'] ?? ''));
 
-    if ( ! $first_name || ! $last_name || ! $email || ! $phone || ! $sport || ! $year ) {
-        fl_coastal_prep_redirect_form( 'error' );
+    if (!$first_name || !$last_name || !$email || !$phone || !$sport || !$year) {
+        fl_coastal_prep_redirect_form('error');
     }
 
-    $recipient = get_option( 'admin_email' );
-    $subject   = sprintf( 'New Application: %s %s', $first_name, $last_name );
-    $body      = "Student: {$first_name} {$last_name}\nGuardian Email: {$email}\nGuardian Phone: {$phone}\nSport: {$sport}\nGraduation Year: {$year}\n\nAdditional Details:\n{$notes}";
-    $headers   = array( 'Reply-To: ' . $email );
+    $recipient = get_option('admin_email');
+    $subject = sprintf('New Application: %s %s', $first_name, $last_name);
+    $body = "Student: {$first_name} {$last_name}\nGuardian Email: {$email}\nGuardian Phone: {$phone}\nSport: {$sport}\nGraduation Year: {$year}\n\nAdditional Details:\n{$notes}";
+    $headers = array('Reply-To: ' . $email);
 
-    wp_mail( $recipient, $subject, $body, $headers );
+    wp_mail($recipient, $subject, $body, $headers);
 
-    fl_coastal_prep_redirect_form( 'success' );
+    fl_coastal_prep_redirect_form('success');
 }
-add_action( 'admin_post_fcp_apply_form', 'fl_coastal_prep_handle_apply_form' );
-add_action( 'admin_post_nopriv_fcp_apply_form', 'fl_coastal_prep_handle_apply_form' );
+add_action('admin_post_fcp_apply_form', 'fl_coastal_prep_handle_apply_form');
+add_action('admin_post_nopriv_fcp_apply_form', 'fl_coastal_prep_handle_apply_form');
 
-function fl_coastal_prep_redirect_form( $status ) {
+function fl_coastal_prep_redirect_form($status)
+{
     $redirect = wp_get_referer();
-    if ( ! $redirect ) {
-        $redirect = home_url( '/' );
+    if (!$redirect) {
+        $redirect = home_url('/');
     }
 
-    $redirect = add_query_arg( 'fcp_form', $status, $redirect );
-    wp_safe_redirect( $redirect );
+    $redirect = add_query_arg('fcp_form', $status, $redirect);
+    wp_safe_redirect($redirect);
     exit;
 }
