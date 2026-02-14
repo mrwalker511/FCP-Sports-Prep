@@ -1,2 +1,0 @@
-﻿WordPress test suite not found. Please install it first.
-See: https://make.wordpress.org/core/handbook/testing/automated-testing/phpunit/

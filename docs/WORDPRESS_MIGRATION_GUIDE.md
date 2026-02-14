@@ -1,4 +1,5 @@
 # WordPress Theme Migration Guide
+
 ## Florida Coastal Prep - FSE Block Theme
 
 ---
@@ -8,6 +9,7 @@
 This is a **Full Site Editing (FSE) Block Theme** for WordPress. The repository also includes a React/TypeScript preview application (design reference) under `prototype/react/`. The theme is designed for **Florida Coastal Preparatory Academy**, an elite athletic academy with a high-contrast dark aesthetic (Navy/Gold color scheme).
 
 ### Theme Identity
+
 - **Name**: Florida Coastal Prep
 - **Type**: FSE Block Theme (WordPress 6.2+)
 - **Style**: Athletic/Sports, High-Contrast Dark Theme
@@ -23,12 +25,14 @@ This is a **Full Site Editing (FSE) Block Theme** for WordPress. The repository 
 ### 📁 Core WordPress Theme Files (Ready to Use)
 
 #### 1. **style.css** (Theme Header)
+
 - **Purpose**: Theme metadata and identifier
 - **Status**: ✅ Complete and WordPress-ready
 - **Contains**: Theme name, author, description, version, tags, license
 - **Note**: Actual styles are handled via `theme.json` and inline CSS in patterns
 
 #### 2. **functions.php** (Theme Functions)
+
 - **Purpose**: PHP logic for theme setup, CPTs, SEO, scripts
 - **Status**: ✅ Complete and WordPress-ready
 - **Key Functions**:
@@ -40,6 +44,7 @@ This is a **Full Site Editing (FSE) Block Theme** for WordPress. The repository 
   - `fl_coastal_prep_scripts()` - Enqueues fonts and styles
 
 #### 3. **theme.json** (FSE Configuration)
+
 - **Purpose**: Global styles, color palette, typography, layout settings
 - **Status**: ✅ Complete and WordPress-ready
 - **Defines**:
@@ -50,6 +55,7 @@ This is a **Full Site Editing (FSE) Block Theme** for WordPress. The repository 
   - Template parts (header, footer)
 
 #### 4. **readme.txt** (WordPress.org Format)
+
 - **Purpose**: Official WordPress theme documentation
 - **Status**: ✅ Complete
 - **Contains**: Installation instructions, requirements, quick start guide
@@ -95,6 +101,7 @@ Reusable site sections:
 | **footer.html** | Site footer block markup | HTML | ✅ Ready |
 
 **React reference** (not shipped with the theme):
+
 - `prototype/react/parts/Header.tsx`
 - `prototype/react/parts/Footer.tsx`
 
@@ -108,7 +115,8 @@ Reusable site sections:
 
 **React reference patterns** (design source) live in `prototype/react/patterns/` as `.tsx`.
 
-#### Registered Pattern Slugs (in functions.php):
+#### Registered Pattern Slugs (in functions.php)
+
 1. **fl-coastal-prep/hero** - Hero section with background image
 2. **fl-coastal-prep/stats** - Academy statistics bar
 3. **fl-coastal-prep/grid** - Three-column feature grid
@@ -124,7 +132,7 @@ Reusable site sections:
 13. **fl-coastal-prep/donors-showcase** - Donor recognition wall
 14. **fl-coastal-prep/contact-form** - Contact form
 
-#### Pattern File Breakdown:
+#### Pattern File Breakdown
 
 | TSX File | Slug | Visual Description | Migration Priority |
 |----------|------|-------------------|-------------------|
@@ -173,6 +181,7 @@ These files are for the React preview environment and should **NOT** be included
 Registered in `functions.php`:
 
 ### 1. **Faculty** (Staff Members)
+
 - **Slug**: `faculty`
 - **Icon**: dashicons-groups
 - **Features**: title, editor, thumbnail, excerpt, elementor
@@ -181,6 +190,7 @@ Registered in `functions.php`:
 - **Single**: `single.html`
 
 ### 2. **Program**
+
 - **Slug**: `program`
 - **Icon**: dashicons-welcome-learn-more
 - **Features**: title, editor, thumbnail, elementor
@@ -189,6 +199,7 @@ Registered in `functions.php`:
 - **Single**: `single.html`
 
 ### 3. **Schedule** (Games)
+
 - **Slug**: `schedule`
 - **Icon**: dashicons-calendar-alt
 - **Features**: title, editor, thumbnail, custom-fields, elementor
@@ -202,7 +213,8 @@ Registered in `functions.php`:
 ## DESIGN SYSTEM
 
 ### Colors (from theme.json)
-```
+
+```text
 Base (White):     #FFFFFF
 Contrast (Navy):  #0A192F
 Primary (Gold):   #FBBF24
@@ -211,19 +223,22 @@ Deep Space:       #020C1B
 ```
 
 ### Typography
-```
+
+```text
 Display Font:  Bebas Neue (titles, large headings)
 Heading Font:  Oswald (section headers)
 Body Font:     Inter (paragraphs, content)
 ```
 
 ### Layout
-```
+
+```text
 Content Width: 800px  (reading content)
 Wide Width:    1200px (full layouts)
 ```
 
 ### Visual Style
+
 - **High contrast**: Dark navy backgrounds with gold accents
 - **Athletic aesthetic**: Bold typography, dramatic hero sections
 - **Material Icons**: Used for UI elements
@@ -237,12 +252,14 @@ Wide Width:    1200px (full layouts)
 Located in `functions.php`:
 
 ### 1. Meta Tags Function: `fl_coastal_prep_seo_meta()`
+
 - Auto-generates meta descriptions from post excerpts
 - Creates Open Graph tags for social sharing
 - Uses featured images for OG images
 - **Only fires if no SEO plugin detected** (Yoast/RankMath/AIOSEO)
 
 ### 2. Schema Markup: `fl_coastal_prep_schema_markup()`
+
 - JSON-LD structured data for front page
 - Type: EducationalOrganization
 - Includes: name, URL, logo, address
@@ -254,6 +271,7 @@ Located in `functions.php`:
 ## ELEMENTOR INTEGRATION
 
 ### Template Support
+
 1. **Full Width** (`page-elementor-full-width.html`)
    - Keeps theme header/footer
    - Removes content width constraints
@@ -265,6 +283,7 @@ Located in `functions.php`:
    - Pure Elementor control
 
 ### Theme Support Declaration
+
 ```php
 add_theme_support( 'elementor' );
 ```
@@ -276,6 +295,7 @@ All CPTs include `'supports' => array( ..., 'elementor' )`
 ## WORDPRESS BLOCK STRUCTURE EXAMPLES
 
 ### Example: Hero Pattern HTML Structure
+
 ```html
 <!-- wp:cover {"url":"image.jpg","dimRatio":50,"overlayColor":"navy-900"} -->
 <div class="wp-block-cover">
@@ -303,6 +323,7 @@ All CPTs include `'supports' => array( ..., 'elementor' )`
 ## NAVIGATION STRUCTURE
 
 ### Primary Menu (Header)
+
 - Home
 - Programs
 - Faculty
@@ -313,6 +334,7 @@ All CPTs include `'supports' => array( ..., 'elementor' )`
 - **CTA Button**: "Apply Now"
 
 ### Footer Menu
+
 - About
 - Programs
 - Faculty
@@ -326,18 +348,23 @@ All CPTs include `'supports' => array( ..., 'elementor' )`
 ## EXTERNAL DEPENDENCIES
 
 ### Google Fonts
+
 Loaded in `functions.php`:
-```
+
+```text
 https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Oswald:wght@400;600;700&display=swap
 ```
 
 ### Material Icons
-```
+
+```text
 https://fonts.googleapis.com/icon?family=Material+Icons
 ```
 
 ### Images
+
 Currently using Unsplash placeholders:
+
 - Hero backgrounds: Basketball court imagery
 - Faculty photos: Professional headshots needed
 - Campus photos: Facility photography needed
@@ -347,33 +374,39 @@ Currently using Unsplash placeholders:
 ## MIGRATION CHECKLIST
 
 ### Phase 1: Core Setup ✅
+
 - [x] style.css (theme header)
 - [x] functions.php (theme functions)
 - [x] theme.json (global settings)
 - [x] readme.txt (documentation)
 
 ### Phase 2: Templates ✅
+
 - [x] All 18 template files created
 - [x] Template parts (header.html, footer.html)
 - [x] Custom post type templates
 
 ### Phase 3: Pattern Conversion ✅
+
 - [x] Convert 14 React patterns to WordPress block patterns
 - [x] Create pattern PHP files or register inline
 - [x] Test patterns in Site Editor
 
 ### Phase 4: Styling
+
 - [ ] Convert Tailwind CSS to custom CSS or theme.json
 - [ ] Add responsive styles
 - [ ] Test dark theme consistency
 
 ### Phase 5: Content Migration
+
 - [ ] Replace Unsplash placeholders with real images
 - [ ] Create initial Faculty posts
 - [ ] Create initial Program posts
 - [ ] Add sample Schedule entries
 
 ### Phase 6: Testing ✅
+
 - [x] Test in WordPress Site Editor
 - [x] Verify Elementor compatibility
 - [x] Check responsive design
@@ -387,19 +420,23 @@ Currently using Unsplash placeholders:
 The React preview uses **Tailwind CSS** for styling. For WordPress, you need to either:
 
 ### Option A: Extract Used CSS
+
 - Use Tailwind's JIT compiler to generate only used classes
 - Include in theme's style.css or separate stylesheet
 
 ### Option B: Recreate in theme.json
+
 - Map Tailwind classes to WordPress block styles
 - Use theme.json's style variations
 
 ### Option C: Use WordPress Blocks + Custom CSS
+
 - Leverage core block styling
 - Add custom CSS for unique designs
 - Enqueue additional stylesheet
 
-### Common Tailwind Classes Used:
+### Common Tailwind Classes Used
+
 - Layout: `flex`, `grid`, `max-w-[1200px]`, `mx-auto`, `px-6`
 - Colors: `bg-navy-900`, `text-primary`, `border-primary`
 - Typography: `font-display`, `text-7xl`, `tracking-widest`, `uppercase`, `italic`
@@ -411,27 +448,32 @@ The React preview uses **Tailwind CSS** for styling. For WordPress, you need to 
 ## KEY DESIGN PATTERNS TO PRESERVE
 
 ### 1. **Scroll-Activated Header**
+
 - Transparent on page load
 - Becomes solid navy with blur on scroll
 - Sticky positioning
 
 ### 2. **Hero Section**
+
 - Full viewport height
 - Parallax background image
 - Gradient overlay
 - Centered content with large display typography
 
 ### 3. **Stats Bar**
+
 - Floating white card
 - Three columns
 - Negative margin (overlaps hero)
 
 ### 4. **Section Headers**
+
 - Small uppercase label with gold line
 - Large display title
 - Italic description text
 
 ### 5. **CTA Sections**
+
 - Full-width gold background
 - Navy text
 - Centered content
@@ -442,26 +484,30 @@ The React preview uses **Tailwind CSS** for styling. For WordPress, you need to 
 ## RECOMMENDED PLUGINS
 
 ### Essential
+
 1. **Advanced Custom Fields (ACF)** - For Schedule post type fields (date, score, opponent)
 2. **Contact Form 7** or **WPForms** - For application and contact forms
 
 ### Optional
-3. **Yoast SEO** or **Rank Math** - Enhanced SEO (disables theme's fallback)
-4. **Elementor Pro** - Advanced page building features
-5. **Regenerate Thumbnails** - For featured images
-6. **Wordfence** - Security
+
+1. **Yoast SEO** or **Rank Math** - Enhanced SEO (disables theme's fallback)
+2. **Elementor Pro** - Advanced page building features
+3. **Regenerate Thumbnails** - For featured images
+4. **Wordfence** - Security
 
 ---
 
 ## PERFORMANCE OPTIMIZATION
 
-### Already Implemented:
+### Already Implemented
+
 - ✅ Font preloading via PHP
 - ✅ Minimal CSS approach (theme.json)
 - ✅ No jQuery dependency
 - ✅ Async font loading
 
-### Recommended Additions:
+### Recommended Additions
+
 - [ ] Image lazy loading (WordPress 5.5+ native)
 - [ ] CDN for font files
 - [ ] Minify CSS/JS for production
@@ -473,7 +519,8 @@ The React preview uses **Tailwind CSS** for styling. For WordPress, you need to 
 
 Target: Modern browsers (Chrome, Firefox, Safari, Edge - last 2 versions)
 
-### CSS Features Used:
+### CSS Features Used
+
 - CSS Grid
 - Flexbox
 - CSS Variables (theme.json)
@@ -485,14 +532,16 @@ Target: Modern browsers (Chrome, Firefox, Safari, Edge - last 2 versions)
 ## DEPLOYMENT STEPS
 
 1. **Package Theme**:
-   ```
+
+   ```text
    - Remove: node_modules, package files, React files
    - Keep: style.css, functions.php, theme.json, /templates, /parts, /patterns
    - Zip the folder
    ```
 
 2. **Upload to WordPress**:
-   ```
+
+   ```text
    Appearance > Themes > Add New > Upload Theme
    ```
 
@@ -521,31 +570,38 @@ Target: Modern browsers (Chrome, Firefox, Safari, Edge - last 2 versions)
 ## TROUBLESHOOTING COMMON ISSUES
 
 ### Issue: Patterns not appearing in Site Editor
+
 **Solution**: Ensure pattern slugs in templates match registered slugs in functions.php
 
 ### Issue: Colors not showing in Elementor
+
 **Solution**: Verify theme.json color definitions and Elementor > Settings > Theme Style sync
 
 ### Issue: Content too wide on mobile
+
 **Solution**: Check responsive CSS, ensure max-width constraints
 
 ### Issue: SEO tags duplicating
+
 **Solution**: Install SEO plugin (theme's fallback will auto-disable)
 
 ### Issue: Header not sticky
+
 **Solution**: Ensure header template part has position:fixed CSS
 
 ---
 
 ## NOTES FOR LLM MIGRATION
 
-### What Needs Conversion:
+### What Needs Conversion
+
 1. **React TSX → WordPress Block Markup**: All pattern files in `/patterns/` folder
 2. **Tailwind CSS → Custom CSS**: Extract and convert utility classes
 3. **React State/Props → WordPress Dynamic Data**: Replace React logic with PHP/WordPress functions
 4. **Interactive Elements → WordPress/JS**: Handle form submissions, mobile menu, etc.
 
-### What's Already WordPress-Ready:
+### What's Already WordPress-Ready
+
 - ✅ All template files (HTML block markup)
 - ✅ functions.php (pure PHP)
 - ✅ theme.json (JSON configuration)
@@ -554,7 +610,8 @@ Target: Modern browsers (Chrome, Firefox, Safari, Edge - last 2 versions)
 - ✅ SEO functions
 - ✅ Menu registrations
 
-### Preserve These Elements:
+### Preserve These Elements
+
 - 🎨 Color scheme (Navy + Gold)
 - 📝 Typography hierarchy (Bebas/Oswald/Inter)
 - 🎯 Athletic/Elite branding tone
@@ -574,6 +631,7 @@ This is a **100% complete WordPress FSE theme** that has:
 4. **Testing** (Site Editor, Elementor, responsive) - VERIFIED
 
 The theme architecture is **production-ready** with:
+
 - ✅ Proper WordPress structure
 - ✅ Custom post types
 - ✅ SEO optimization
