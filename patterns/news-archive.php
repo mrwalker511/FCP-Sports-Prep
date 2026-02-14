@@ -24,11 +24,11 @@
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}},"layout":{"type":"constrained"}} -->
             <div class="wp-block-group"
                 style="padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
-                <!-- wp:post-date {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-60"} /-->
+                <!-- wp:post-date {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"secondary","className":"opacity-60"} /-->
 
                 <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","lineHeight":"1.1"}},"textColor":"secondary","fontFamily":"display","className":"news-title"} /-->
 
-                <!-- wp:post-excerpt {"style":{"typography":{"fontSize":"0.875rem","fontStyle":"italic"}},"textColor":"base","className":"opacity-60"} /-->
+                <!-- wp:post-excerpt {"style":{"typography":{"fontSize":"0.875rem","fontStyle":"italic"}},"textColor":"secondary","className":"opacity-60"} /-->
 
                 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75rem"}}} -->
                 <div class="wp-block-group">

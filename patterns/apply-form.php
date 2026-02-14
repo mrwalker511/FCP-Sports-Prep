@@ -29,8 +29,9 @@
     </div>
     <!-- /wp:group -->
 
-    <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.25rem","fontStyle":"italic"}},"textColor":"base","className":"opacity-60"} -->
-    <p class="has-base-color has-text-color opacity-60" style="font-size:1.25rem;font-style:italic">Please complete the
+    <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.25rem","fontStyle":"italic"}},"textColor":"secondary","className":"opacity-60"} -->
+    <p class="has-secondary-color has-text-color opacity-60" style="font-size:1.25rem;font-style:italic">Please complete
+        the
         form below to start your application. Our admissions team will respond within two business days.</p>
     <!-- /wp:paragraph -->
 
