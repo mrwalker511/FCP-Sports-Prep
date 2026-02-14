@@ -42,7 +42,7 @@
         <!-- wp:column {"className":"grid-card has-shadow-xl","style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"radius":"2px"}}} -->
         <div class="wp-block-column grid-card has-shadow-xl has-background"
             style="background-color:var(--wp--preset--color--base);border-radius:2px">
-            <!-- wp:cover {"url":"assets/images/placeholder-strength-training.webp","dimRatio":20,"overlayColor":"secondary","minHeight":250,"contentPosition":"center center","isUserOverlayColor":true} -->
+            <!-- wp:cover {"url":"assets/images/placeholder-strength-training.webp","dimRatio":20,"overlayColor":"secondary","minHeight":250,"contentPosition":"center center"} -->
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
@@ -79,7 +79,7 @@
         <!-- wp:column {"className":"grid-card has-shadow-xl","style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"radius":"2px"}}} -->
         <div class="wp-block-column grid-card has-shadow-xl has-background"
             style="background-color:var(--wp--preset--color--base);border-radius:2px">
-            <!-- wp:cover {"url":"assets/images/placeholder-academic-lab.webp","dimRatio":20,"overlayColor":"secondary","minHeight":250,"contentPosition":"center center","isUserOverlayColor":true} -->
+            <!-- wp:cover {"url":"assets/images/placeholder-academic-lab.webp","dimRatio":20,"overlayColor":"secondary","minHeight":250,"contentPosition":"center center"} -->
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
@@ -117,7 +117,7 @@
         <!-- wp:column {"className":"grid-card has-shadow-xl","style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"radius":"2px"}}} -->
         <div class="wp-block-column grid-card has-shadow-xl has-background"
             style="background-color:var(--wp--preset--color--base);border-radius:2px">
-            <!-- wp:cover {"url":"assets/images/placeholder-campus-lifestyle.webp","dimRatio":20,"overlayColor":"secondary","minHeight":250,"contentPosition":"center center","isUserOverlayColor":true} -->
+            <!-- wp:cover {"url":"assets/images/placeholder-campus-lifestyle.webp","dimRatio":20,"overlayColor":"secondary","minHeight":250,"contentPosition":"center center"} -->
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>

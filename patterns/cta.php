@@ -8,7 +8,7 @@
  * Description: Full-width CTA section with headline, description, and dual action buttons
  */
 ?>
-<!-- wp:cover {"url":"assets/images/placeholder-training.webp","dimRatio":90,"overlayColor":"contrast","minHeight":500,"isUserOverlayColor":true,"align":"full"} -->
+<!-- wp:cover {"url":"assets/images/placeholder-training.webp","dimRatio":90,"overlayColor":"contrast","minHeight":500,"align":"full"} -->
 <div class="wp-block-cover alignfull" style="min-height:500px">
     <span aria-hidden="true"
         class="wp-block-cover__background has-contrast-background-color has-background-dim-90 has-background-dim"></span>
