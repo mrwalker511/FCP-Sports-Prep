@@ -8,8 +8,9 @@
  * Description: Three-column feature grid showcasing blueprint cards with icons, titles, and descriptions.
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"5rem","bottom":"5rem"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:5rem;padding-bottom:5rem">
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"8rem","bottom":"8rem"}},"color":{"background":"var(--wp--preset--color--contrast)"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-background"
+    style="background-color:var(--wp--preset--color--contrast);padding-top:8rem;padding-bottom:8rem">
 
     <!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"4rem"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","alignItems":"flex-end"}} -->
     <div class="wp-block-group alignwide" style="margin-bottom:4rem">
@@ -27,8 +28,8 @@
         </div>
         <!-- /wp:group -->
 
-        <!-- wp:paragraph {"align":"right","className":"has-text-color opacity-60","style":{"typography":{"fontStyle":"italic","fontWeight":"300"}},"textColor":"base"} -->
-        <p class="has-text-align-right has-base-color has-text-color opacity-60"
+        <!-- wp:paragraph {"align":"right","className":"has-text-color opacity-80","style":{"typography":{"fontStyle":"italic","fontWeight":"300"}},"textColor":"base"} -->
+        <p class="has-text-align-right has-base-color has-text-color opacity-80"
             style="font-style:italic;font-weight:300">
             We don't just build athletes; we build complete leaders ready for the next level.
         </p>
@@ -61,14 +62,14 @@
                     Performance</h3>
                 <!-- /wp:heading -->
 
-                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"secondary"} -->
-                <p class="has-secondary-color has-text-color opacity-70 text-blueprint-body">Advanced biometrics and
+                <!-- wp:paragraph {"className":"opacity-90 text-blueprint-body","textColor":"secondary"} -->
+                <p class="has-secondary-color has-text-color opacity-90 text-blueprint-body">Advanced biometrics and
                     professional
                     strength programs.</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
-                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a>
+                <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"secondary"} -->
+                <p class="has-secondary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a>
                 </p>
                 <!-- /wp:paragraph -->
             </div>
@@ -98,15 +99,15 @@
                     Academic Lab</h3>
                 <!-- /wp:heading -->
 
-                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"secondary"} -->
-                <p class="has-secondary-color has-text-color opacity-70 text-blueprint-body">Tailored educational
+                <!-- wp:paragraph {"className":"opacity-90 text-blueprint-body","textColor":"secondary"} -->
+                <p class="has-secondary-color has-text-color opacity-90 text-blueprint-body">Tailored educational
                     pathways
                     for
                     college placement.</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
-                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a>
+                <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"secondary"} -->
+                <p class="has-secondary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a>
                 </p>
                 <!-- /wp:paragraph -->
             </div>
@@ -136,14 +137,14 @@
                     Lifestyle</h3>
                 <!-- /wp:heading -->
 
-                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"secondary"} -->
-                <p class="has-secondary-color has-text-color opacity-70 text-blueprint-body">Ocean-front residency with
+                <!-- wp:paragraph {"className":"opacity-90 text-blueprint-body","textColor":"secondary"} -->
+                <p class="has-secondary-color has-text-color opacity-90 text-blueprint-body">Ocean-front residency with
                     professional
                     nutrition.</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
-                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a>
+                <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"secondary"} -->
+                <p class="has-secondary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a>
                 </p>
                 <!-- /wp:paragraph -->
             </div>
@@ -154,4 +155,5 @@
     </div>
     <!-- /wp:columns -->
 </div>
+<!-- /wp:group -->
 <!-- /wp:group -->

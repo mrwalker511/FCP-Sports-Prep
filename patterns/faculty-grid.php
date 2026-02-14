@@ -12,29 +12,29 @@
 <div class="wp-block-query alignwide">
     <!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"2rem"}},"layout":{"type":"grid","columnCount":3}} -->
 
-    <!-- wp:group {"className":"faculty-card has-shadow-xl","style":{"spacing":{"padding":{"top":"1.5rem","right":"1.5rem","bottom":"1.5rem","left":"1.5rem"},"blockGap":"1rem"},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)"},"color":{"background":"var(--wp--preset--color--base)"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+    <!-- wp:group {"className":"faculty-card has-shadow-xl","style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"},"blockGap":"1.5rem"},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent)"},"color":{"background":"var(--wp--preset--color--secondary)"}},"layout":{"type":"flex","orientation":"vertical"}} -->
     <div class="wp-block-group faculty-card has-shadow-xl has-border-color has-background"
-        style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:1.5rem;padding-right:1.5rem;padding-bottom:1.5rem;padding-left:1.5rem">
+        style="border-color:color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--secondary);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
 
         <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"1","align":"center","className":"faculty-image"} /-->
 
         <!-- wp:group {"style":{"spacing":{"blockGap":"0.5rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
         <div class="wp-block-group">
-            <!-- wp:post-excerpt {"showMoreOnNewLine":false,"excerptLength":10,"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"textColor":"primary"} /-->
+            <!-- wp:post-excerpt {"showMoreOnNewLine":false,"excerptLength":10,"style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}},"textColor":"primary"} /-->
 
-            <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","fontSize":"1.875rem"}},"fontFamily":"display","textColor":"secondary"} /-->
+            <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","fontSize":"1.875rem"}},"fontFamily":"display","textColor":"base"} /-->
 
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75rem"}}} -->
             <div class="wp-block-group">
-                <!-- wp:group {"style":{"border":{"top":{"color":"color-mix(in srgb, var(--wp--preset--color--secondary) 20%, transparent)","width":"1px"}},"dimensions":{"minWidth":"1rem"}},"layout":{"type":"flex"}} -->
+                <!-- wp:group {"style":{"border":{"top":{"color":"var(--wp--preset--color--primary)","width":"1px"}},"dimensions":{"minWidth":"1.5rem"}},"layout":{"type":"flex"}} -->
                 <div class="wp-block-group"
-                    style="border-top-color:color-mix(in srgb, var(--wp--preset--color--secondary) 20%, transparent);border-top-width:1px;min-width:1rem">
+                    style="border-top-color:var(--wp--preset--color--primary);border-top-width:1px;min-width:1.5rem">
                 </div>
                 <!-- /wp:group -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.6875rem","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"secondary","className":"opacity-60"} -->
-                <p class="has-secondary-color has-text-color opacity-60"
-                    style="font-size:0.6875rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Learn
+                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.1em"}},"textColor":"base","className":"opacity-80"} -->
+                <p class="has-base-color has-text-color opacity-80"
+                    style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Learn
                     More</p>
                 <!-- /wp:paragraph -->
             </div>

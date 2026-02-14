@@ -15,20 +15,20 @@
     <div class="wp-block-query alignwide">
         <!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"1rem"}}} -->
 
-        <!-- wp:group {"style":{"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)"},"color":{"background":"var(--wp--preset--color--base)"},"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}},"className":"schedule-card","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+        <!-- wp:group {"style":{"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent)"},"color":{"background":"var(--wp--preset--color--secondary)"},"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}},"className":"schedule-card","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
         <div class="wp-block-group schedule-card has-border-color has-background"
-            style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
+            style="border-color:color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--secondary);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
 
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"3rem"}}} -->
             <div class="wp-block-group">
                 <!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
                 <div class="wp-block-group">
-                    <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","textTransform":"uppercase"}},"textColor":"secondary","className":"opacity-40"} -->
-                    <p class="has-text-align-center has-secondary-color has-text-color opacity-40"
+                    <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","textTransform":"uppercase"}},"textColor":"base","className":"opacity-60"} -->
+                    <p class="has-text-align-center has-base-color has-text-color opacity-60"
                         style="font-size:0.625rem;font-weight:700;text-transform:uppercase">Date</p>
                     <!-- /wp:paragraph -->
-                    <!-- wp:paragraph {"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","lineHeight":"1"}},"textColor":"secondary","fontFamily":"display"} -->
-                    <p class="has-secondary-color has-text-color has-display-font-family"
+                    <!-- wp:paragraph {"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","lineHeight":"1"}},"textColor":"base","fontFamily":"display"} -->
+                    <p class="has-base-color has-text-color has-display-font-family"
                         style="font-size:2.25rem;font-style:italic;line-height:1">[fcp_schedule_meta field="game_date"
                         format="M d" fallback="TBD"]</p>
                     <!-- /wp:paragraph -->
@@ -37,12 +37,12 @@
 
                 <!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
                 <div class="wp-block-group">
-                    <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.1em"}},"textColor":"primary"} -->
+                    <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.1em"}},"textColor":"primary"} -->
                     <p class="has-primary-color has-text-color"
-                        style="font-size:0.5625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">
+                        style="font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">
                         [fcp_schedule_meta field="location" fallback="Conference Game"]</p>
                     <!-- /wp:paragraph -->
-                    <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} /-->
+                    <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} /-->
                 </div>
                 <!-- /wp:group -->
             </div>

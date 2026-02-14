@@ -145,6 +145,11 @@ function fl_coastal_prep_apply_form_shortcode()
 
 function fl_coastal_prep_schedule_meta_shortcode($atts)
 {
+    // Lowercase all attribute keys for consistency.
+    if (is_array($atts)) {
+        $atts = array_change_key_case($atts, CASE_LOWER);
+    }
+
     $atts = shortcode_atts(
         array(
             'field' => '',
@@ -164,8 +169,10 @@ function fl_coastal_prep_schedule_meta_shortcode($atts)
         return '';
     }
 
-    $value = get_post_meta($post_id, $atts['field'], true);
-    if ('game_date' === $atts['field'] && $value) {
+    $field = strtolower($atts['field']);
+    $value = get_post_meta($post_id, $field, true);
+
+    if ('game_date' === $field && $value) {
         $timestamp = strtotime($value);
         if ($timestamp) {
             $value = date_i18n($atts['format'], $timestamp);
@@ -181,6 +188,11 @@ function fl_coastal_prep_schedule_meta_shortcode($atts)
 
 function fl_coastal_prep_schedule_link_shortcode($atts)
 {
+    // Lowercase all attribute keys for consistency.
+    if (is_array($atts)) {
+        $atts = array_change_key_case($atts, CASE_LOWER);
+    }
+
     $atts = shortcode_atts(
         array(
             'label' => 'View Details',
