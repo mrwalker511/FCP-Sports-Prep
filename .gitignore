@@ -32,3 +32,4 @@ coverage-report/
 # Development/Prototype (exclude from production)
 /prototype/
 templates/test-tokens.html
+fl-coastal-prep.zip
