@@ -22,15 +22,16 @@
         <h2 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
             style="font-size:3rem;font-style:italic;text-transform:uppercase">Personal Profile</h2>
         <!-- /wp:heading -->
-        <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"blockGap":"0"},"dimensions":{"minHeight":"4px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+        <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"blockGap":"0"},"dimensions":{"minHeight":"4px","minWidth":"33%"}},"layout":{"type":"flex","orientation":"vertical"}} -->
         <div class="wp-block-group has-background"
-            style="background-color:var(--wp--preset--color--primary);height:4px;width:33%"></div>
+            style="background-color:var(--wp--preset--color--primary);min-height:4px;min-width:33%"></div>
         <!-- /wp:group -->
     </div>
     <!-- /wp:group -->
 
     <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.25rem","fontStyle":"italic"}},"textColor":"base","className":"opacity-60"} -->
-    <p class="has-base-color has-text-color opacity-60" style="font-size:1.25rem;font-style:italic">Please complete the form below to start your application. Our admissions team will respond within two business days.</p>
+    <p class="has-base-color has-text-color opacity-60" style="font-size:1.25rem;font-style:italic">Please complete the
+        form below to start your application. Our admissions team will respond within two business days.</p>
     <!-- /wp:paragraph -->
 
     <!-- wp:shortcode -->

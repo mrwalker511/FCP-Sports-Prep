@@ -39,7 +39,7 @@
                     <!-- /wp:paragraph -->
                     <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"dimensions":{"minWidth":"32px","minHeight":"1px"}},"layout":{"type":"flex"}} -->
                     <div class="wp-block-group has-background"
-                        style="background-color:var(--wp--preset--color--primary);height:1px;width:32px"></div>
+                        style="background-color:var(--wp--preset--color--primary);min-height:1px;min-width:32px"></div>
                     <!-- /wp:group -->
                 </div>
                 <!-- /wp:group -->

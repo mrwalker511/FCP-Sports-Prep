@@ -35,8 +35,7 @@
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"donor-image"} -->
-            <figure class="wp-block-image size-large donor-image"><img
-                    src="assets/images/placeholder-donors.webp"
+            <figure class="wp-block-image size-large donor-image"><img src="assets/images/placeholder-donors.webp"
                     alt="Student-athletes celebrating together after a successful scholarship fundraiser" /></figure>
             <!-- /wp:image -->
         </div>
@@ -48,9 +47,9 @@
     <h4 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-display-font-family"
         style="font-size:2.25rem;font-style:italic;letter-spacing:-0.025em;text-transform:uppercase">WALL OF HONOR</h4>
     <!-- /wp:heading -->
-    <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"margin":{"top":"1rem","bottom":"4rem"}},"dimensions":{"minHeight":"4px"}},"layout":{"type":"flex"}} -->
+    <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"margin":{"top":"1rem","bottom":"4rem"}},"dimensions":{"minHeight":"4px","minWidth":"96px"}},"layout":{"type":"flex","justifyContent":"center"}} -->
     <div class="wp-block-group has-background"
-        style="background-color:var(--wp--preset--color--primary);height:4px;width:96px;margin-top:1rem;margin-bottom:4rem;margin-left:auto;margin-right:auto">
+        style="background-color:var(--wp--preset--color--primary);min-height:4px;min-width:96px;margin-top:1rem;margin-bottom:4rem">
     </div>
     <!-- /wp:group -->
 
@@ -61,7 +60,8 @@
             style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.5rem"}}},"backgroundColor":"contrast","textColor":"base","className":"donor-tier"} -->
             <p class="has-text-align-center has-base-color has-text-color has-contrast-background-color has-background donor-tier"
-                style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;padding:0.25rem 0.75rem;display:inline-block;margin-bottom:1.5rem">Platinum Tier
+                style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:1.5rem">
+                Platinum Tier
             </p>
             <!-- /wp:paragraph -->
             <!-- wp:heading {"textAlign":"center","level":5,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
@@ -75,7 +75,8 @@
             style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.5rem"}}},"backgroundColor":"contrast","textColor":"base","className":"donor-tier"} -->
             <p class="has-text-align-center has-base-color has-text-color has-contrast-background-color has-background donor-tier"
-                style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;padding:0.25rem 0.75rem;display:inline-block;margin-bottom:1.5rem">Platinum Tier
+                style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:1.5rem">
+                Platinum Tier
             </p>
             <!-- /wp:paragraph -->
             <!-- wp:heading {"textAlign":"center","level":5,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->

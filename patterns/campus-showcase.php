@@ -15,8 +15,7 @@
     <div class="wp-block-cover alignwide" style="margin-bottom:6rem;min-height:60vh">
         <span aria-hidden="true"
             class="wp-block-cover__background has-contrast-background-color has-background-dim-60 has-background-dim"></span>
-        <img class="wp-block-cover__image-background"
-            src="assets/images/placeholder-campus-aerial.webp"
+        <img class="wp-block-cover__image-background" src="assets/images/placeholder-campus-aerial.webp"
             alt="Aerial view of Florida Coastal Prep main campus and athletic complex" data-object-fit="cover" />
         <div class="wp-block-cover__inner-container">
             <!-- wp:group {"layout":{"type":"constrained"}} -->
@@ -27,7 +26,7 @@
                 </p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(3rem, 6vw, 5rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em"}},"textColor":"base","fontFamily":"display"} -->
+                <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(3rem, 6vw, 5rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
                 <h3 class="wp-block-heading has-base-color has-text-color has-display-font-family"
                     style="font-size:clamp(3rem, 6vw, 5rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
                     CENTRAL COASTAL ARENA</h3>
@@ -78,8 +77,7 @@
         <div class="wp-block-column has-border-color has-background"
             style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
-            <figure class="wp-block-image size-large facility-image"><img
-                    src="assets/images/placeholder-classroom.webp"
+            <figure class="wp-block-image size-large facility-image"><img src="assets/images/placeholder-classroom.webp"
                     alt="Modern classroom building with collaborative learning spaces" /></figure>
             <!-- /wp:image -->
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->
@@ -107,8 +105,7 @@
         <div class="wp-block-column has-border-color has-background"
             style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
-            <figure class="wp-block-image size-large facility-image"><img
-                    src="assets/images/placeholder-residency.webp"
+            <figure class="wp-block-image size-large facility-image"><img src="assets/images/placeholder-residency.webp"
                     alt="Premium student residency suites with ocean-view balconies" /></figure>
             <!-- /wp:image -->
             <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->

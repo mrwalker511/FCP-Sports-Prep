@@ -12,8 +12,7 @@
 <div class="wp-block-cover alignfull" style="min-height:70vh">
     <span aria-hidden="true"
         class="wp-block-cover__background has-contrast-background-color has-background-dim-60 has-background-dim"></span>
-    <img class="wp-block-cover__image-background"
-        src="assets/images/placeholder-programs-hero.webp"
+    <img class="wp-block-cover__image-background" src="assets/images/placeholder-programs-hero.webp"
         alt="Curriculum Hero" data-object-fit="cover" />
     <div class="wp-block-cover__inner-container">
         <!-- wp:group {"layout":{"type":"constrained"}} -->
@@ -31,9 +30,9 @@
             </h1>
             <!-- /wp:heading -->
 
-            <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"blockGap":"0"},"dimensions":{"minHeight":"4px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+            <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"blockGap":"0"},"dimensions":{"minHeight":"4px","minWidth":"128px"}},"layout":{"type":"flex","orientation":"vertical"}} -->
             <div class="wp-block-group has-background"
-                style="background-color:var(--wp--preset--color--primary);height:4px;width:128px"></div>
+                style="background-color:var(--wp--preset--color--primary);min-height:4px;min-width:128px"></div>
             <!-- /wp:group -->
         </div>
         <!-- /wp:group -->

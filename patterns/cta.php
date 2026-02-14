@@ -12,8 +12,7 @@
 <div class="wp-block-cover alignfull" style="min-height:500px">
     <span aria-hidden="true"
         class="wp-block-cover__background has-contrast-background-color has-background-dim-90 has-background-dim"></span>
-    <img class="wp-block-cover__image-background"
-        src="assets/images/placeholder-training.webp"
+    <img class="wp-block-cover__image-background" src="assets/images/placeholder-training.webp"
         alt="Basketball court with players during an intense training session" data-object-fit="cover" />
 
     <div class="wp-block-cover__inner-container">
@@ -39,16 +38,18 @@
             <div class="wp-block-buttons">
                 <!-- wp:button {"backgroundColor":"base","textColor":"secondary","style":{"typography":{"fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1.5rem","right":"4rem","bottom":"1.5rem","left":"4rem"}}},"fontSize":"small"} -->
                 <div class="wp-block-button">
-                    <a href="/contact" class="wp-block-button__link has-secondary-color has-base-background-color has-text-color has-background has-small-font-size has-custom-font-size wp-element-button"
-                        style="padding-top:1.5rem;padding-right:4rem;padding-bottom:1.5rem;padding-left:4rem;font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">Book
+                    <a href="/contact"
+                        class="wp-block-button__link has-secondary-color has-base-background-color has-text-color has-background has-small-font-size wp-element-button"
+                        style="padding-top:1.5rem;padding-right:4rem;padding-bottom:1.5rem;padding-left:4rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">Book
                         Evaluation</a>
                 </div>
                 <!-- /wp:button -->
 
                 <!-- wp:button {"backgroundColor":"transparent","textColor":"base","style":{"typography":{"fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1.5rem","right":"4rem","bottom":"1.5rem","left":"4rem"}},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--base) 10%, transparent)"}},"fontSize":"small"} -->
                 <div class="wp-block-button">
-                    <a href="/programs" class="wp-block-button__link has-base-color has-transparent-background-color has-text-color has-background has-border-color has-small-font-size has-custom-font-size wp-element-button"
-                        style="border-color:color-mix(in srgb, var(--wp--preset--color--base) 10%, transparent);border-style:solid;border-width:1px;padding-top:1.5rem;padding-right:4rem;padding-bottom:1.5rem;padding-left:4rem;font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">Download
+                    <a href="/programs"
+                        class="wp-block-button__link has-base-color has-transparent-background-color has-text-color has-background has-border-color has-small-font-size wp-element-button"
+                        style="border-color:color-mix(in srgb, var(--wp--preset--color--base) 10%, transparent);border-style:solid;border-width:1px;padding-top:1.5rem;padding-right:4rem;padding-bottom:1.5rem;padding-left:4rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">Download
                         PDF</a>
                 </div>
                 <!-- /wp:button -->
