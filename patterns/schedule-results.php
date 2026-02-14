@@ -15,9 +15,9 @@
     <div class="wp-block-query alignwide">
         <!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"1rem"}}} -->
 
-        <!-- wp:group {"style":{"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"},"color":{"background":"var(--wp--preset--color--base)"},"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}},"className":"schedule-card","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+        <!-- wp:group {"style":{"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)"},"color":{"background":"var(--wp--preset--color--base)"},"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}},"className":"schedule-card","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
         <div class="wp-block-group schedule-card has-border-color has-background"
-            style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
+            style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
 
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"3rem"}}} -->
             <div class="wp-block-group">
@@ -27,7 +27,9 @@
                     <p class="has-text-align-center has-base-color has-text-color opacity-40"
                         style="font-size:0.625rem;font-weight:700;text-transform:uppercase">Date</p>
                     <!-- /wp:paragraph -->
-                    <!-- wp:post-date {"format":"M d","style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","lineHeight":"1"}},"textColor":"secondary","fontFamily":"display"} /-->
+                    <!-- wp:paragraph {"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","lineHeight":"1"}},"textColor":"secondary","fontFamily":"display"} -->
+                    <p class="has-secondary-color has-text-color has-display-font-family" style="font-size:2.25rem;font-style:italic;line-height:1">[fcp_schedule_meta field="game_date" format="M d" fallback="TBD"]</p>
+                    <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
 
@@ -35,10 +37,9 @@
                 <div class="wp-block-group">
                     <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.1em"}},"textColor":"primary"} -->
                     <p class="has-primary-color has-text-color"
-                        style="font-size:0.5625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">
-                        Conference Game</p>
+                        style="font-size:0.5625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">[fcp_schedule_meta field="location" fallback="Conference Game"]</p>
                     <!-- /wp:paragraph -->
-                    <!-- wp:post-title {"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} /-->
+                    <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} /-->
                 </div>
                 <!-- /wp:group -->
             </div>
@@ -46,16 +47,9 @@
 
             <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"center","alignItems":"flex-end"}} -->
             <div class="wp-block-group">
-                <!-- wp:buttons -->
-                <div class="wp-block-buttons">
-                    <!-- wp:button {"style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.1)"}},"className":"is-style-outline","textColor":"secondary"} -->
-                    <div class="wp-block-button is-style-outline"><a href="/schedule"
-                            class="wp-block-button__link has-secondary-color has-text-color wp-element-button"
-                            style="border-color:rgba(17,34,64,0.1);border-style:solid;border-width:1px;font-size:0.5625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">View
-                            Details</a></div>
-                    <!-- /wp:button -->
-                </div>
-                <!-- /wp:buttons -->
+                <!-- wp:shortcode -->
+                [fcp_schedule_link]
+                <!-- /wp:shortcode -->
             </div>
             <!-- /wp:group -->
 

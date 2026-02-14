@@ -7,7 +7,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+    exit;
 }
 
 /**
@@ -21,27 +21,28 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return array Modified headers.
  */
 function fl_coastal_prep_security_headers( $headers ) {
-	$theme_uri = get_template_directory_uri();
-	$site_url  = site_url();
+    $theme_uri = get_template_directory_uri();
+    $site_url  = site_url();
 
-	$csp_directives = array(
-		"default-src 'self'",
-		"script-src 'self' 'unsafe-inline' 'unsafe-eval'",
-		"style-src 'self' 'unsafe-inline'",
-		"img-src 'self' data: https:",
-		"font-src 'self' data:",
-		"connect-src 'self'",
-		"frame-src 'self'",
-		"object-src 'none'",
-		"base-uri 'self'",
-	);
+    $csp_directives = array(
+        "default-src 'self'",
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+        "style-src 'self' 'unsafe-inline'",
+        "img-src 'self' data: https:",
+        "font-src 'self' data:",
+        "connect-src 'self'",
+        "frame-src 'self'",
+        "form-action 'self'",
+        "object-src 'none'",
+        "base-uri 'self'",
+    );
 
-	$headers['Content-Security-Policy']   = implode( '; ', $csp_directives );
-	$headers['X-Content-Type-Options']    = 'nosniff';
-	$headers['X-Frame-Options']           = 'SAMEORIGIN';
-	$headers['Referrer-Policy']           = 'strict-origin-when-cross-origin';
-	$headers['Permissions-Policy']        = 'camera=(), microphone=(), geolocation=()';
+    $headers['Content-Security-Policy']   = implode( '; ', $csp_directives );
+    $headers['X-Content-Type-Options']    = 'nosniff';
+    $headers['X-Frame-Options']           = 'SAMEORIGIN';
+    $headers['Referrer-Policy']           = 'strict-origin-when-cross-origin';
+    $headers['Permissions-Policy']        = 'camera=(), microphone=(), geolocation=()';
 
-	return $headers;
+    return $headers;
 }
 add_filter( 'wp_headers', 'fl_coastal_prep_security_headers' );

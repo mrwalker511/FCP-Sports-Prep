@@ -14,9 +14,9 @@
     <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0px","left":"0px"}}}} -->
     <div class="wp-block-columns">
 
-        <!-- wp:column {"style":{"border":{"right":{"color":"rgba(17, 34, 64, 0.05)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
+        <!-- wp:column {"style":{"border":{"right":{"color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
         <div class="wp-block-column has-border-color"
-            style="border-right-color:rgba(17, 34, 64, 0.05);border-right-width:1px;padding-right:1rem;padding-left:1rem">
+            style="border-right-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-right-width:1px;padding-right:1rem;padding-left:1rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
             <p class="has-text-align-center has-secondary-color has-text-color has-display-font-family"
                 style="font-size:3rem;font-style:italic">12</p>
@@ -29,9 +29,9 @@
         </div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"style":{"border":{"right":{"color":"rgba(17, 34, 64, 0.05)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
+        <!-- wp:column {"style":{"border":{"right":{"color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
         <div class="wp-block-column has-border-color"
-            style="border-right-color:rgba(17, 34, 64, 0.05);border-right-width:1px;padding-right:1rem;padding-left:1rem">
+            style="border-right-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-right-width:1px;padding-right:1rem;padding-left:1rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
             <p class="has-text-align-center has-secondary-color has-text-color has-display-font-family"
                 style="font-size:3rem;font-style:italic">3.8</p>
@@ -44,9 +44,9 @@
         </div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"style":{"border":{"right":{"color":"rgba(17, 34, 64, 0.05)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
+        <!-- wp:column {"style":{"border":{"right":{"color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
         <div class="wp-block-column has-border-color"
-            style="border-right-color:rgba(17, 34, 64, 0.05);border-right-width:1px;padding-right:1rem;padding-left:1rem">
+            style="border-right-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-right-width:1px;padding-right:1rem;padding-left:1rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
             <p class="has-text-align-center has-secondary-color has-text-color has-display-font-family"
                 style="font-size:3rem;font-style:italic">24/7</p>
