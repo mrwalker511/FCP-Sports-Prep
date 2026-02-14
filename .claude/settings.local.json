@@ -15,7 +15,8 @@
       "Bash(gemini:*)",
       "WebFetch(domain:www.reddit.com)",
       "Bash(curl:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "WebFetch(domain:trends24.in)"
     ]
   },
   "prefersReducedMotion": true
