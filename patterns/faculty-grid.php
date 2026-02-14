@@ -27,11 +27,13 @@
             <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.75rem"}}} -->
             <div class="wp-block-group">
                 <!-- wp:group {"style":{"border":{"top":{"color":"color-mix(in srgb, var(--wp--preset--color--secondary) 20%, transparent)","width":"1px"}},"dimensions":{"minWidth":"1rem"}},"layout":{"type":"flex"}} -->
-                <div class="wp-block-group" style="border-top-color:color-mix(in srgb, var(--wp--preset--color--secondary) 20%, transparent);border-top-width:1px;min-width:1rem"></div>
+                <div class="wp-block-group"
+                    style="border-top-color:color-mix(in srgb, var(--wp--preset--color--secondary) 20%, transparent);border-top-width:1px;min-width:1rem">
+                </div>
                 <!-- /wp:group -->
 
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.6875rem","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"base","className":"opacity-60"} -->
-                <p class="has-base-color has-text-color opacity-60"
+                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.6875rem","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.05em"}},"textColor":"secondary","className":"opacity-60"} -->
+                <p class="has-secondary-color has-text-color opacity-60"
                     style="font-size:0.6875rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase">Learn
                     More</p>
                 <!-- /wp:paragraph -->

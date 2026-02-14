@@ -23,7 +23,7 @@
  * - inc/security.php     — CSP headers and security hardening
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
@@ -34,22 +34,24 @@ require get_template_directory() . '/inc/seo.php';
 require get_template_directory() . '/inc/block-styles.php';
 require get_template_directory() . '/inc/security.php';
 require get_template_directory() . '/inc/forms.php';
+require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Enqueue theme scripts and styles.
  */
-function fl_coastal_prep_scripts() {
-    $theme_version = wp_get_theme()->get( 'Version' );
-    $theme_uri     = get_template_directory_uri();
+function fl_coastal_prep_scripts()
+{
+    $theme_version = wp_get_theme()->get('Version');
+    $theme_uri = get_template_directory_uri();
 
-    wp_enqueue_style( 'fl-coastal-prep-style', get_stylesheet_uri(), array(), $theme_version );
+    wp_enqueue_style('fl-coastal-prep-style', get_stylesheet_uri(), array(), $theme_version);
 
     // Conditionally enqueue animations only on pages that use animated patterns.
-    if ( is_front_page() || is_page_template( 'page-programs' ) || is_singular() ) {
-        wp_enqueue_style( 'fl-coastal-prep-animations', $theme_uri . '/assets/css/animations.css', array(), $theme_version );
+    if (is_front_page() || is_page_template('page-programs') || is_singular()) {
+        wp_enqueue_style('fl-coastal-prep-animations', $theme_uri . '/assets/css/animations.css', array(), $theme_version);
     }
 }
-add_action( 'wp_enqueue_scripts', 'fl_coastal_prep_scripts' );
+add_action('wp_enqueue_scripts', 'fl_coastal_prep_scripts');
 
 /**
  * Preload critical font files for faster rendering.
@@ -57,20 +59,21 @@ add_action( 'wp_enqueue_scripts', 'fl_coastal_prep_scripts' );
  * Outputs <link rel="preload"> tags in <head> so the browser begins
  * downloading fonts before it encounters the @font-face rules from theme.json.
  */
-function fl_coastal_prep_preload_fonts() {
+function fl_coastal_prep_preload_fonts()
+{
     $theme_uri = get_template_directory_uri();
-    $fonts     = array(
+    $fonts = array(
         'inter-v13-latin.woff2',
         'bebas-neue-v14-latin.woff2',
         'oswald-v53-latin.woff2',
     );
 
-    foreach ( $fonts as $font ) {
+    foreach ($fonts as $font) {
         printf(
             '<link rel="preload" href="%s/assets/fonts/%s" as="font" type="font/woff2" crossorigin>' . "\n",
-            esc_url( $theme_uri ),
-            esc_attr( $font )
+            esc_url($theme_uri),
+            esc_attr($font)
         );
     }
 }
-add_action( 'wp_head', 'fl_coastal_prep_preload_fonts', 0 );
+add_action('wp_head', 'fl_coastal_prep_preload_fonts', 0);

@@ -23,12 +23,14 @@
             <div class="wp-block-group">
                 <!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
                 <div class="wp-block-group">
-                    <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","textTransform":"uppercase"}},"textColor":"base","className":"opacity-40"} -->
-                    <p class="has-text-align-center has-base-color has-text-color opacity-40"
+                    <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","textTransform":"uppercase"}},"textColor":"secondary","className":"opacity-40"} -->
+                    <p class="has-text-align-center has-secondary-color has-text-color opacity-40"
                         style="font-size:0.625rem;font-weight:700;text-transform:uppercase">Date</p>
                     <!-- /wp:paragraph -->
                     <!-- wp:paragraph {"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","lineHeight":"1"}},"textColor":"secondary","fontFamily":"display"} -->
-                    <p class="has-secondary-color has-text-color has-display-font-family" style="font-size:2.25rem;font-style:italic;line-height:1">[fcp_schedule_meta field="game_date" format="M d" fallback="TBD"]</p>
+                    <p class="has-secondary-color has-text-color has-display-font-family"
+                        style="font-size:2.25rem;font-style:italic;line-height:1">[fcp_schedule_meta field="game_date"
+                        format="M d" fallback="TBD"]</p>
                     <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
@@ -37,7 +39,8 @@
                 <div class="wp-block-group">
                     <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.1em"}},"textColor":"primary"} -->
                     <p class="has-primary-color has-text-color"
-                        style="font-size:0.5625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">[fcp_schedule_meta field="location" fallback="Conference Game"]</p>
+                        style="font-size:0.5625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">
+                        [fcp_schedule_meta field="location" fallback="Conference Game"]</p>
                     <!-- /wp:paragraph -->
                     <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} /-->
                 </div>

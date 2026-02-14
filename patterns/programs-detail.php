@@ -16,10 +16,10 @@
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"program-image"} -->
-            <figure
-                class="wp-block-image size-large program-image">
+            <figure class="wp-block-image size-large program-image">
                 <img src="assets/images/placeholder-athletic-track.webp"
-                    alt="Athletes in a professional track and field training session" /></figure>
+                    alt="Athletes in a professional track and field training session" />
+            </figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:column -->
@@ -32,8 +32,8 @@
             </p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
-            <h2 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
+            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
+            <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family"
                 style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
                 The Pro-Informed Methodology</h2>
             <!-- /wp:heading -->
@@ -84,8 +84,8 @@
             </p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
-            <h2 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
+            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
+            <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family"
                 style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
                 University Preparatory Core</h2>
             <!-- /wp:heading -->
@@ -127,10 +127,10 @@
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"program-image"} -->
-            <figure
-                class="wp-block-image size-large program-image">
+            <figure class="wp-block-image size-large program-image">
                 <img src="assets/images/placeholder-academic-study.webp"
-                    alt="Students studying in the university preparatory academic wing" /></figure>
+                    alt="Students studying in the university preparatory academic wing" />
+            </figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:column -->

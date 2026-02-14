@@ -23,8 +23,8 @@
         WHAT SETS US APART</h2>
     <!-- /wp:heading -->
 
-    <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","fontWeight":"300","fontSize":"1.125rem"}},"textColor":"secondary"} -->
-    <p class="has-secondary-color has-text-color" style="font-size:1.125rem;font-style:italic;font-weight:300">
+    <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","fontWeight":"300","fontSize":"1.125rem"}},"textColor":"base"} -->
+    <p class="has-base-color has-text-color" style="font-size:1.125rem;font-style:italic;font-weight:300">
         World-class facilities and expert coaching staff dedicated to your success.
     </p>
     <!-- /wp:paragraph -->

@@ -19,8 +19,8 @@
             <p class="has-primary-color has-text-color"
                 style="font-size:0.625rem;font-weight:700;letter-spacing:0.4em;text-transform:uppercase">Our Mission</p>
             <!-- /wp:paragraph -->
-            <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
-            <h3 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
+            <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
+            <h3 class="wp-block-heading has-base-color has-text-color has-display-font-family"
                 style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;text-transform:uppercase">
                 EQUITY IN <br>ELITE ATHLETICS</h3>
             <!-- /wp:heading -->
@@ -43,8 +43,8 @@
     </div>
     <!-- /wp:columns -->
 
-    <!-- wp:heading {"textAlign":"center","level":4,"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
-    <h4 class="wp-block-heading has-text-align-center has-secondary-color has-text-color has-display-font-family"
+    <!-- wp:heading {"textAlign":"center","level":4,"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
+    <h4 class="wp-block-heading has-text-align-center has-base-color has-text-color has-display-font-family"
         style="font-size:2.25rem;font-style:italic;letter-spacing:-0.025em;text-transform:uppercase">WALL OF HONOR</h4>
     <!-- /wp:heading -->
     <!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--primary)"},"spacing":{"margin":{"top":"1rem","bottom":"4rem"}},"dimensions":{"minHeight":"4px","minWidth":"96px"}},"layout":{"type":"flex","justifyContent":"center"}} -->

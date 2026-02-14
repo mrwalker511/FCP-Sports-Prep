@@ -20,9 +20,8 @@
                 ELITE STANDARDS</p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"className":"text-blueprint-title","textColor":"secondary","fontFamily":"display"} -->
-            <h2
-                class="wp-block-heading has-secondary-color has-text-color has-display-font-family text-blueprint-title">
+            <!-- wp:heading {"className":"text-blueprint-title","textColor":"base","fontFamily":"display"} -->
+            <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family text-blueprint-title">
                 The Coastal <br>Blueprint</h2>
             <!-- /wp:heading -->
         </div>
@@ -47,8 +46,7 @@
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
-                <img class="wp-block-cover__image-background"
-                    src="assets/images/placeholder-strength-training.webp"
+                <img class="wp-block-cover__image-background" src="assets/images/placeholder-strength-training.webp"
                     alt="Athlete performing advanced strength training exercises in the gym" data-object-fit="cover" />
                 <div class="wp-block-cover__inner-container"></div>
             </div>
@@ -63,14 +61,15 @@
                     Performance</h3>
                 <!-- /wp:heading -->
 
-                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"base"} -->
-                <p class="has-base-color has-text-color opacity-70 text-blueprint-body">Advanced biometrics and
+                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"secondary"} -->
+                <p class="has-secondary-color has-text-color opacity-70 text-blueprint-body">Advanced biometrics and
                     professional
                     strength programs.</p>
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
-                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a></p>
+                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a>
+                </p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
@@ -84,8 +83,7 @@
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
-                <img class="wp-block-cover__image-background"
-                    src="assets/images/placeholder-academic-lab.webp"
+                <img class="wp-block-cover__image-background" src="assets/images/placeholder-academic-lab.webp"
                     alt="Students collaborating in a modern science laboratory classroom" data-object-fit="cover" />
                 <div class="wp-block-cover__inner-container"></div>
             </div>
@@ -100,14 +98,16 @@
                     Academic Lab</h3>
                 <!-- /wp:heading -->
 
-                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"base"} -->
-                <p class="has-base-color has-text-color opacity-70 text-blueprint-body">Tailored educational pathways
+                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"secondary"} -->
+                <p class="has-secondary-color has-text-color opacity-70 text-blueprint-body">Tailored educational
+                    pathways
                     for
                     college placement.</p>
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
-                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a></p>
+                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a>
+                </p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
@@ -121,8 +121,7 @@
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
-                <img class="wp-block-cover__image-background"
-                    src="assets/images/placeholder-campus-lifestyle.webp"
+                <img class="wp-block-cover__image-background" src="assets/images/placeholder-campus-lifestyle.webp"
                     alt="Oceanfront campus residence with palm trees and modern architecture" data-object-fit="cover" />
                 <div class="wp-block-cover__inner-container"></div>
             </div>
@@ -137,14 +136,15 @@
                     Lifestyle</h3>
                 <!-- /wp:heading -->
 
-                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"base"} -->
-                <p class="has-base-color has-text-color opacity-70 text-blueprint-body">Ocean-front residency with
+                <!-- wp:paragraph {"className":"opacity-70 text-blueprint-body","textColor":"secondary"} -->
+                <p class="has-secondary-color has-text-color opacity-70 text-blueprint-body">Ocean-front residency with
                     professional
                     nutrition.</p>
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"className":"text-blueprint-link","textColor":"primary"} -->
-                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a></p>
+                <p class="has-primary-color has-text-color text-blueprint-link"><a href="/programs">Explore Block</a>
+                </p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->

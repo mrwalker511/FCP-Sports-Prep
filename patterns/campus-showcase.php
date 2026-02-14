@@ -64,8 +64,8 @@
                 <h4 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                     style="font-size:1.5rem;font-style:italic;text-transform:uppercase">The Performance Lab</h4>
                 <!-- /wp:heading -->
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"base","className":"opacity-60"} -->
-                <p class="has-base-color has-text-color opacity-60" style="font-size:0.875rem">4 Full NBA courts
+                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"secondary","className":"opacity-60"} -->
+                <p class="has-secondary-color has-text-color opacity-60" style="font-size:0.875rem">4 Full NBA courts
                     equipped with 360-degree high-speed motion capture cameras.</p>
                 <!-- /wp:paragraph -->
             </div>
@@ -92,8 +92,8 @@
                 <h4 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                     style="font-size:1.5rem;font-style:italic;text-transform:uppercase">The Academic Wing</h4>
                 <!-- /wp:heading -->
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"base","className":"opacity-60"} -->
-                <p class="has-base-color has-text-color opacity-60" style="font-size:0.875rem">Modern collaborative
+                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"secondary","className":"opacity-60"} -->
+                <p class="has-secondary-color has-text-color opacity-60" style="font-size:0.875rem">Modern collaborative
                     spaces designed for university-level coursework and STEM research.</p>
                 <!-- /wp:paragraph -->
             </div>
@@ -119,8 +119,9 @@
                 <h4 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                     style="font-size:1.5rem;font-style:italic;text-transform:uppercase">Residency Suites</h4>
                 <!-- /wp:heading -->
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"base","className":"opacity-60"} -->
-                <p class="has-base-color has-text-color opacity-60" style="font-size:0.875rem">Premium ocean-view living
+                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"secondary","className":"opacity-60"} -->
+                <p class="has-secondary-color has-text-color opacity-60" style="font-size:0.875rem">Premium ocean-view
+                    living
                     quarters with high-speed fiber and professional recovery zones.</p>
                 <!-- /wp:paragraph -->
             </div>
