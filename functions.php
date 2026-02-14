@@ -1,327 +1,76 @@
 <?php
 /**
  * Florida Coastal Prep functions and definitions
+ *
+ * @package Fl_Coastal_Prep
+ * @since   1.0.0
+ *
+ * THEME ARCHITECTURE:
+ * - WordPress Blocks (Gutenberg): Primary content editor for all post types
+ * - Full Site Editing: Complete FSE block theme with templates and template parts
+ * - Elementor: Optional page builder - users can choose between Gutenberg and Elementor
+ *
+ * CONTENT EDITING WORKFLOW:
+ * - Pages/Posts: Edit with Gutenberg (Site Editor available) or Elementor (optional)
+ * - Patterns: Defined as WordPress block patterns in /patterns/ directory
+ * - Theme Structure: Header/Footer are block template parts in /parts/
+ *
+ * MODULE STRUCTURE:
+ * - inc/setup.php        — Theme supports, menus, starter content
+ * - inc/post-types.php   — Custom Post Types and registered meta fields
+ * - inc/seo.php          — Meta tags, Open Graph, JSON-LD schema, Customizer settings
+ * - inc/block-styles.php — Block pattern categories and custom block styles
+ * - inc/security.php     — CSP headers and security hardening
  */
 
-if (!defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if (!function_exists('fl_coastal_prep_setup')):
-    function fl_coastal_prep_setup()
-    {
-        add_theme_support('wp-block-styles');
-        add_editor_style('style.css');
-        add_theme_support('post-thumbnails');
-        add_theme_support('responsive-embeds');
-        add_theme_support('editor-styles');
-        add_theme_support('html5', array('style', 'script'));
-        add_theme_support('automatic-feed-links');
-        add_theme_support('title-tag');
-
-        // Full Site Editing Support
-        add_theme_support('block-templates');
-        add_theme_support('block-template-parts');
-
-        // Elementor Full Compatibility (FSE Mode)
-        add_theme_support('elementor');
-        add_theme_support('elementor-experimental');
-        add_theme_support('elementor-default-skin');
-        add_theme_support('elementor-pro');
-
-        register_nav_menus(array(
-            'primary' => __('Primary Menu', 'fl-coastal-prep'),
-            'footer' => __('Footer Menu', 'fl-coastal-prep'),
-        ));
-
-        // Starter Content
-        add_theme_support('starter-content', array(
-            'posts' => array(
-                'home' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('Home', 'Theme starter content', 'fl-coastal-prep'),
-                    'content' => '<!-- wp:pattern {"slug":"fl-coastal-prep/hero"} /-->
-                                  <!-- wp:pattern {"slug":"fl-coastal-prep/stats"} /-->
-                                  <!-- wp:pattern {"slug":"fl-coastal-prep/grid"} /-->
-                                  <!-- wp:pattern {"slug":"fl-coastal-prep/cta"} /-->',
-                    'template' => 'front-page',
-                ),
-                'programs' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('Programs', 'Theme starter content', 'fl-coastal-prep'),
-                    'content' => '<!-- wp:pattern {"slug":"fl-coastal-prep/programs-hero"} /-->
-                                  <!-- wp:pattern {"slug":"fl-coastal-prep/programs-detail"} /-->',
-                    'template' => 'page-programs',
-                ),
-                'faculty' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('Faculty & Staff', 'Theme starter content', 'fl-coastal-prep'),
-                    'content' => '<!-- wp:pattern {"slug":"fl-coastal-prep/section-header"} /-->
-                                  <!-- wp:pattern {"slug":"fl-coastal-prep/faculty-grid"} /-->',
-                    'template' => 'page-faculty',
-                ),
-                'campus' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('Campus', 'Theme starter content', 'fl-coastal-prep'),
-                    'content' => '<!-- wp:pattern {"slug":"fl-coastal-prep/campus-showcase"} /-->',
-                ),
-                'contact' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('Contact', 'Theme starter content', 'fl-coastal-prep'),
-                    'content' => '<!-- wp:pattern {"slug":"fl-coastal-prep/contact-form"} /-->',
-                ),
-                'apply' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('Apply Now', 'Theme starter content', 'fl-coastal-prep'),
-                    'content' => '<!-- wp:pattern {"slug":"fl-coastal-prep/apply-form"} /-->',
-                ),
-                'donors' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('Donors', 'Theme starter content', 'fl-coastal-prep'),
-                    'content' => '<!-- wp:pattern {"slug":"fl-coastal-prep/donors-showcase"} /-->',
-                ),
-                'news' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('News', 'Theme starter content', 'fl-coastal-prep'),
-                    'content' => '<!-- wp:pattern {"slug":"fl-coastal-prep/news-archive"} /-->',
-                ),
-                'schedule' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('Schedule', 'Theme starter content', 'fl-coastal-prep'),
-                    'content' => '<!-- wp:pattern {"slug":"fl-coastal-prep/schedule-results"} /-->',
-                ),
-                'privacy-policy' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('Privacy Policy', 'Theme starter content', 'fl-coastal-prep'),
-                ),
-                'terms-of-service' => array(
-                    'post_type' => 'page',
-                    'post_title' => _x('Terms of Service', 'Theme starter content', 'fl-coastal-prep'),
-                ),
-            ),
-            'options' => array(
-                'show_on_front' => 'page',
-                'page_on_front' => '{{home}}',
-                'blogdescription' => _x('The Future of Elite Ball', 'Theme starter content', 'fl-coastal-prep'),
-            ),
-            'nav_menus' => array(
-                'primary' => array(
-                    'name' => _x('Primary Menu', 'Theme starter content', 'fl-coastal-prep'),
-                    'items' => array(
-                        'link.home' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{home}}',
-                        ),
-                        'link.programs' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{programs}}',
-                        ),
-                        'link.faculty' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{faculty}}',
-                        ),
-                        'link.campus' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{campus}}',
-                        ),
-                        'link.news' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{news}}',
-                        ),
-                        'link.apply' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{apply}}',
-                        ),
-                    ),
-                ),
-                'footer' => array(
-                    'name' => _x('Footer Menu', 'Theme starter content', 'fl-coastal-prep'),
-                    'items' => array(
-                        'link.privacy' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{privacy-policy}}',
-                        ),
-                        'link.terms' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{terms-of-service}}',
-                        ),
-                        'link.contact' => array(
-                            'type' => 'post_type',
-                            'object' => 'page',
-                            'object_id' => '{{contact}}',
-                        ),
-                    ),
-                ),
-            ),
-        ));
-    }
-endif;
-add_action('after_setup_theme', 'fl_coastal_prep_setup');
+// Load theme modules.
+require get_template_directory() . '/inc/setup.php';
+require get_template_directory() . '/inc/post-types.php';
+require get_template_directory() . '/inc/seo.php';
+require get_template_directory() . '/inc/block-styles.php';
+require get_template_directory() . '/inc/security.php';
+require get_template_directory() . '/inc/forms.php';
 
 /**
- * Note: Block Patterns are automatically registered from the /patterns directory in WP 6.4+
+ * Enqueue theme scripts and styles.
  */
+function fl_coastal_prep_scripts() {
+    $theme_version = wp_get_theme()->get( 'Version' );
+    $theme_uri     = get_template_directory_uri();
 
-/**
- * SEO Optimization: Meta Tags & Open Graph
- */
-function fl_coastal_prep_seo_meta()
-{
-    if (is_admin())
-        return;
+    wp_enqueue_style( 'fl-coastal-prep-style', get_stylesheet_uri(), array(), $theme_version );
 
-    // Check if common SEO plugins are active
-    if (defined('WPSEO_VERSION') || class_exists('RankMath') || class_exists('AIOSEO_MAIN_TYPE')) {
-        return;
-    }
-
-    global $post;
-    $description = get_bloginfo('description');
-    $image = get_header_image();
-    $url = get_permalink();
-    $title = get_the_title();
-
-    if (is_singular()) {
-        if (has_excerpt($post->ID)) {
-            $description = wp_strip_all_tags(get_the_excerpt($post->ID));
-        }
-        if (has_post_thumbnail($post->ID)) {
-            $image = get_the_post_thumbnail_url($post->ID, 'large');
-        }
-    }
-
-    echo '<meta name="description" content="' . esc_attr($description) . '" />';
-    echo "\n";
-    echo '<meta property="og:title" content="' . esc_attr($title) . '" />';
-    echo "\n";
-    echo '<meta property="og:description" content="' . esc_attr($description) . '" />';
-    echo "\n";
-    echo '<meta property="og:type" content="website" />';
-    echo "\n";
-    echo '<meta property="og:url" content="' . esc_url($url) . '" />';
-    echo "\n";
-    if ($image) {
-        echo '<meta property="og:image" content="' . esc_url($image) . '" />';
-        echo "\n";
+    // Conditionally enqueue animations only on pages that use animated patterns.
+    if ( is_front_page() || is_page_template( 'page-programs' ) || is_singular() ) {
+        wp_enqueue_style( 'fl-coastal-prep-animations', $theme_uri . '/assets/css/animations.css', array(), $theme_version );
     }
 }
-add_action('wp_head', 'fl_coastal_prep_seo_meta', 1);
+add_action( 'wp_enqueue_scripts', 'fl_coastal_prep_scripts' );
 
 /**
- * SEO Optimization: JSON-LD Schema Markup
+ * Preload critical font files for faster rendering.
+ *
+ * Outputs <link rel="preload"> tags in <head> so the browser begins
+ * downloading fonts before it encounters the @font-face rules from theme.json.
  */
-function fl_coastal_prep_schema_markup()
-{
-    if (!is_front_page())
-        return;
-
-    $schema = array(
-        "@context" => "https://schema.org",
-        "@type" => "EducationalOrganization",
-        "name" => get_bloginfo('name'),
-        "url" => get_site_url(),
-        "logo" => get_site_icon_url(),
-        "description" => get_bloginfo('description'),
-        "address" => array(
-            "@type" => "PostalAddress",
-            "streetAddress" => "100 Coastal Elite Dr.",
-            "addressLocality" => "Miami",
-            "addressRegion" => "FL",
-            "postalCode" => "33101",
-            "addressCountry" => "US"
-        )
+function fl_coastal_prep_preload_fonts() {
+    $theme_uri = get_template_directory_uri();
+    $fonts     = array(
+        'inter-v13-latin.woff2',
+        'bebas-neue-v14-latin.woff2',
+        'oswald-v53-latin.woff2',
     );
-    echo '<script type="application/ld+json">';
-    echo json_encode($schema);
-    echo '</script>';
-    echo "\n";
-}
-add_action('wp_head', 'fl_coastal_prep_schema_markup');
 
-/**
- * Register Custom Post Types
- */
-function fl_coastal_prep_register_cpts()
-{
-    register_post_type('faculty', array(
-        'labels' => array('name' => 'Faculty', 'singular_name' => 'Staff Member'),
-        'public' => true,
-        'has_archive' => true,
-        'show_in_rest' => true,
-        'menu_icon' => 'dashicons-groups',
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'elementor'),
-        'template' => array(array('core/post-featured-image'), array('core/post-title'), array('core/post-content')),
-        'template_lock' => false,
-    ));
-
-    register_post_type('program', array(
-        'labels' => array('name' => 'Programs', 'singular_name' => 'Program'),
-        'public' => true,
-        'has_archive' => true,
-        'show_in_rest' => true,
-        'menu_icon' => 'dashicons-welcome-learn-more',
-        'supports' => array('title', 'editor', 'thumbnail', 'elementor'),
-        'template' => array(array('core/post-featured-image'), array('core/post-title'), array('core/post-content')),
-        'template_lock' => false,
-    ));
-
-    register_post_type('schedule', array(
-        'labels' => array('name' => 'Schedule', 'singular_name' => 'Game'),
-        'public' => true,
-        'has_archive' => true,
-        'show_in_rest' => true,
-        'menu_icon' => 'dashicons-calendar-alt',
-        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields', 'elementor'),
-        'template' => array(array('core/post-featured-image'), array('core/post-title'), array('core/post-content')),
-        'template_lock' => false,
-    ));
-
-    // Enable Elementor on all core post types (runs after WP core registers them)
-    add_post_type_support('page', 'elementor');
-    add_post_type_support('post', 'elementor');
-    add_post_type_support('faculty', 'elementor');
-    add_post_type_support('program', 'elementor');
-    add_post_type_support('schedule', 'elementor');
-}
-add_action('init', 'fl_coastal_prep_register_cpts');
-
-/**
- * Ensure FSE template hierarchy works correctly
- */
-function fl_coastal_prep_template_hierarchy($template) {
-    // For FSE themes, we want to use block templates when available
-    if (function_exists('get_block_template')) {
-        $block_template = get_block_template();
-        if ($block_template) {
-            return $block_template;
-        }
+    foreach ( $fonts as $font ) {
+        printf(
+            '<link rel="preload" href="%s/assets/fonts/%s" as="font" type="font/woff2" crossorigin>' . "\n",
+            esc_url( $theme_uri ),
+            esc_attr( $font )
+        );
     }
-    return $template;
 }
-add_filter('template_include', 'fl_coastal_prep_template_hierarchy');
-
-/**
- * Register block pattern categories
- */
-function fl_coastal_prep_register_pattern_categories() {
-    register_block_pattern_category('fl-coastal-prep', array(
-        'label' => __('Florida Coastal Prep', 'fl-coastal-prep'),
-    ));
-}
-add_action('init', 'fl_coastal_prep_register_pattern_categories');
-
-function fl_coastal_prep_scripts()
-{
-    wp_enqueue_style('fl-coastal-prep-style', get_stylesheet_uri(), array(), '1.5.0');
-    wp_enqueue_style('fl-coastal-prep-fonts', 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&family=Oswald:wght@400;600;700&display=swap', array(), null);
-    wp_enqueue_style('material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), null);
-}
-add_action('wp_enqueue_scripts', 'fl_coastal_prep_scripts');
+add_action( 'wp_head', 'fl_coastal_prep_preload_fonts', 0 );

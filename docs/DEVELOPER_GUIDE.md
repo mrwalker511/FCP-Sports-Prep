@@ -1,6 +1,89 @@
+# Developer Guide
+## Architecture
+# THEME ARCHITECTURE GUIDE
+
+## ⚠️ READ FIRST
+Before reading this file, see [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) for critical coordination rules and architecture overview.
+
+## 1. MODULE STRUCTURE (v1.1.0+)
+The theme uses a modular PHP architecture. `functions.php` is a slim loader that requires five modules:
+
+| Module | File | Purpose |
+|--------|------|---------|
+| Setup | `inc/setup.php` | Theme supports, menus, starter content |
+| Post Types | `inc/post-types.php` | CPT registration, post meta with sanitize_callback |
+| SEO | `inc/seo.php` | Meta tags, Open Graph, JSON-LD schema, Customizer address settings |
+| Block Styles | `inc/block-styles.php` | Block pattern categories, custom block styles |
+| Security | `inc/security.php` | CSP headers, X-Frame-Options, Referrer-Policy, Permissions-Policy |
+
+`functions.php` also handles:
+- Conditional enqueuing of `animations.css` (only on pages using animated patterns)
+- Font preloading via `<link rel="preload">` tags for critical WOFF2 files
+
+## 2. PATTERN CONVERSION (CRITICAL)
+When converting a `.tsx` pattern to a WordPress Block Pattern:
+- Use standard WordPress Block Comments: ``.
+- Map Tailwind utility classes to WordPress "Layout" or "Custom CSS" settings.
+- **Query Loops**: For `FacultyPattern.tsx` and `NewsArchivePattern.tsx`, use the `wp:query` block.
+- **Registering**: Patterns in `/patterns/` are auto-registered via PHP headers.
+- **Images**: Reference local placeholders in `assets/images/placeholder-{name}.webp`. Do NOT use external URLs.
+
+## 3. TEMPLATE HIERARCHY
+- Follow `docs/REFERENCE.md` exactly for template naming.
+- Ensure `front-page.html` is the primary entry point.
+- Use the `wp:pattern` block within templates to include patterns.
+
+## 4. CUSTOM POST TYPES
+- Ensure the `Faculty`, `Program`, and `Schedule` types in `inc/post-types.php` have `'show_in_rest' => true` to enable the Block Editor.
+- Support Elementor by including `'elementor'` in the `'supports'` array.
+- Schedule CPT has registered post meta fields with `sanitize_callback` (game_date, opponent, location, score_home, score_away, game_result).
+
+## 5. CSS GUIDELINES
+- **No `!important`**: Use `body .selector` for specificity instead.
+- **Opacity utilities**: Class names must match values (e.g., `.opacity-70 { opacity: 0.7 }`).
+- **Performance hints**: Animated elements must include `will-change: transform` and `contain: layout style`.
+- **Block styles**: Scope under `body` selector (e.g., `body .is-style-glassmorphism`).
+
+## 6. SECURITY
+- All new form handlers must use `wp_nonce_field()` / `check_admin_referer()`.
+- All new REST endpoints must include `permission_callback`.
+- All new post meta must be registered with `sanitize_callback` and `auth_callback`.
+- CSP headers are set in `inc/security.php` — extend directives if adding external services.
+
+## 7. DISTRIBUTION
+Use `.distignore` to build a clean ZIP. Files listed there (tests/, docs/, prototype/, etc.) are excluded.
+## Design System
+# DESIGN & STYLING SYSTEM
+
+## ⚠️ For AI Agents
+Before modifying design tokens, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) — especially the section on theme.json and design tokens.
+
+---
+
+## 1. COLOR PALETTE
+Strictly follow the hex codes from `theme.json`:
+- Gold: `#FBBF24` (Primary CTA)
+- Navy: `#0A192F` (Contrast)
+- Deep Space: `#020C1B` (Section Backgrounds)
+
+## 2. TYPOGRAPHY
+Map font-families as defined in the project:
+- `Display`: Bebas Neue (Titles)
+- `Heading`: Oswald (Section Headers)
+- `Body`: Inter (Content)
+
+## 3. COMPONENT STYLING
+- **Buttons**: Must be `wp-block-button`. Use "Outline" or "Fill" styles rather than custom HTML.
+- **Spacing**: Use the WordPress spacing scale (10, 20, 30, etc.) which maps to the Tailwind `gap` and `padding` scales.
+- **Animations**: Add the custom CSS animations (fade-in, slide-in) to a dedicated `assets/css/animations.css` and enqueue it in `functions.php`.\n## Migration Guide
 # WordPress Theme Migration Guide
 
 ## Florida Coastal Prep - FSE Block Theme
+
+---
+
+## ⚠️ IMPORTANT — For AI Agents
+**Before using this guide**, read [`/AGENT_MEDIATOR.md`](../AGENT_MEDIATOR.md) — the central coordination file that prevents conflicting changes between different LLM sessions.
 
 ---
 
@@ -37,7 +120,7 @@ This is a **Full Site Editing (FSE) Block Theme** for WordPress. The repository 
 - **Status**: ✅ Complete and WordPress-ready
 - **Key Functions**:
   - `fl_coastal_prep_setup()` - Theme support declarations
-  - `fl_coastal_prep_register_patterns()` - Registers 13 block patterns
+  - `fl_coastal_prep_register_patterns()` - Registers 15 block patterns
   - `fl_coastal_prep_seo_meta()` - SEO meta tags (fallback if no plugin)
   - `fl_coastal_prep_schema_markup()` - JSON-LD structured data
   - `fl_coastal_prep_register_cpts()` - Registers 3 Custom Post Types
@@ -99,6 +182,7 @@ Reusable site sections:
 |------|---------|------|--------|
 | **header.html** | Site header block markup | HTML | ✅ Ready |
 | **footer.html** | Site footer block markup | HTML | ✅ Ready |
+| **comments.html** | Comments section block markup | HTML | ✅ Ready |
 
 **React reference** (not shipped with the theme):
 
@@ -642,7 +726,7 @@ The theme architecture is **production-ready** with:
 
 ---
 
-**Generated**: January 2026
+**Generated**: February 2026
 **Theme Version**: 1.0.0
 **WordPress**: 6.2+ required (6.4+ recommended)
 **PHP**: 7.4+ required

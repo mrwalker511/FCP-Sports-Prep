@@ -1,21 +1,15 @@
-<!-- wp:group {"tagName":"footer","style":{"spacing":{"padding":{"top":"6rem","bottom":"3rem"},"blockGap":"0"},"color":{"background":"var:preset|color|contrast"}},"className":"has-contrast-background-color","layout":{"type":"constrained","contentSize":"1200px"}} -->
+<!-- wp:group {"tagName":"footer","style":{"spacing":{"padding":{"top":"6rem","right":"max(2rem, env(safe-area-inset-right))","bottom":"3rem","left":"max(2rem, env(safe-area-inset-left))"},"blockGap":"0"},"color":{"background":"var(--wp--preset--color--contrast)"}},"className":"has-contrast-background-color","layout":{"type":"constrained","contentSize":"1200px"}} -->
 <footer class="wp-block-group has-contrast-background-color has-background"
-    style="padding-top:6rem;padding-bottom:3rem">
+    style="background-color:var(--wp--preset--color--contrast);padding-top:6rem;padding-right:max(2rem, env(safe-area-inset-right));padding-bottom:3rem;padding-left:max(2rem, env(safe-area-inset-left))">
 
     <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"},"margin":{"bottom":"6rem"}}}} -->
     <div class="wp-block-columns" style="margin-bottom:6rem">
 
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
-            <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"400","lineHeight":"1","fontSize":"2.25rem"}},"textColor":"base","fontFamily":"display"} -->
-            <p class="has-base-color has-text-color has-display-font-family"
-                style="font-size:2.25rem;font-style:normal;font-weight:400;line-height:1">
-                FLORIDA <span class="has-primary-color has-text-color"
-                    style="font-style:italic;text-decoration:underline">COASTAL</span> PREP
-            </p>
-            <!-- /wp:paragraph -->
+            <!-- wp:site-title {"style":{"typography":{"fontStyle":"normal","fontWeight":"400","lineHeight":"1","fontSize":"2.25rem"}},"textColor":"base","fontFamily":"display"} /-->
 
-            <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","fontWeight":"300","fontSize":"1.125rem","lineHeight":"1.75"}},"textColor":"base","className":"has-text-color opacity-80"} -->
+            <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","fontWeight":"300","fontSize":"1.125rem","lineHeight":"1.75"}},"textColor":"base","className":"opacity-80"} -->
             <p class="has-base-color has-text-color opacity-80"
                 style="font-size:1.125rem;font-style:italic;font-weight:300;line-height:1.75">
                 The southeast region's most exclusive training environment for elite collegiate prospects.
@@ -32,7 +26,7 @@
                 Sitemaps</h4>
             <!-- /wp:heading -->
 
-            <!-- wp:navigation {"ref":null,"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"},"style":{"typography":{"fontSize":"0.75rem","fontStyle":"normal","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}}} /-->
+            <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"},"style":{"typography":{"fontSize":"0.75rem","fontStyle":"normal","fontWeight":"700","letterSpacing":"0.1em","textTransform":"uppercase"}},"ariaLabel":"Footer navigation"} /-->
         </div>
         <!-- /wp:column -->
 
@@ -56,20 +50,19 @@
     </div>
     <!-- /wp:columns -->
 
-    <!-- wp:separator {"className":"is-style-wide","backgroundColor":"base","style":{"opacity":"0.1"}} -->
-    <hr class="wp-block-separator has-text-color has-base-color has-alpha-channel-opacity has-base-background-color has-background is-style-wide"
-        style="opacity:0.1" />
+    <!-- wp:separator {"className":"is-style-wide","backgroundColor":"base"} -->
+    <hr class="wp-block-separator has-text-color has-base-color has-alpha-channel-opacity has-base-background-color has-background is-style-wide" />
     <!-- /wp:separator -->
 
     <!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
     <div class="wp-block-group">
         <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}},"textColor":"base","className":"opacity-50"} -->
         <p class="has-base-color has-text-color opacity-50"
-            style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">© 2024 Florida
+            style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Florida
             Coastal Preparatory. Built for Elite Athletes.</p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:navigation {"ref":null,"overlayMenu":"never","layout":{"type":"flex","orientation":"horizontal"},"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}}} /-->
+        <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"horizontal"},"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}},"ariaLabel":"Legal navigation"} /-->
     </div>
     <!-- /wp:group -->
 

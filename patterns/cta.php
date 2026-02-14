@@ -3,15 +3,18 @@
  * Title: Ready to Level Up Call to Action
  * Slug: fl-coastal-prep/cta
  * Categories: featured, call-to-action
+ * Viewport Width: 1600
+ * Block Types: core/cover, core/group, core/heading, core/paragraph, core/button
+ * Description: Full-width CTA section with headline, description, and dual action buttons
  */
 ?>
-<!-- wp:cover {"url":"https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format\u0026fit=crop\u0026q=80\u0026w=1600","dimRatio":90,"overlayColor":"contrast","minHeight":500,"isUserOverlayColor":true,"align":"full"} -->
+<!-- wp:cover {"url":"assets/images/placeholder-training.webp","dimRatio":90,"overlayColor":"contrast","minHeight":500,"isUserOverlayColor":true,"align":"full"} -->
 <div class="wp-block-cover alignfull" style="min-height:500px">
     <span aria-hidden="true"
         class="wp-block-cover__background has-contrast-background-color has-background-dim-90 has-background-dim"></span>
     <img class="wp-block-cover__image-background"
-        src="https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&q=80&w=1600"
-        alt="Background" data-object-fit="cover" />
+        src="assets/images/placeholder-training.webp"
+        alt="Basketball court with players during an intense training session" data-object-fit="cover" />
 
     <div class="wp-block-cover__inner-container">
         <!-- wp:group {"layout":{"type":"constrained"}} -->
@@ -34,18 +37,18 @@
 
             <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
             <div class="wp-block-buttons">
-                <!-- wp:button {"backgroundColor":"base","textColor":"secondary","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1.5rem","right":"4rem","bottom":"1.5rem","left":"4rem"}}}} -->
+                <!-- wp:button {"backgroundColor":"base","textColor":"secondary","style":{"typography":{"fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1.5rem","right":"4rem","bottom":"1.5rem","left":"4rem"}}},"fontSize":"small"} -->
                 <div class="wp-block-button">
-                    <a class="wp-block-button__link has-secondary-color has-base-background-color has-text-color has-background"
-                        style="font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;padding-top:1.5rem;padding-right:4rem;padding-bottom:1.5rem;padding-left:4rem">Book
+                    <a href="/contact" class="wp-block-button__link has-secondary-color has-base-background-color has-text-color has-background has-small-font-size has-custom-font-size wp-element-button"
+                        style="padding-top:1.5rem;padding-right:4rem;padding-bottom:1.5rem;padding-left:4rem;font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">Book
                         Evaluation</a>
                 </div>
                 <!-- /wp:button -->
 
-                <!-- wp:button {"backgroundColor":"transparent","textColor":"base","style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1.5rem","right":"4rem","bottom":"1.5rem","left":"4rem"}},"border":{"width":"1px","style":"solid","color":"rgba(255,255,255,0.1)"}}} -->
+                <!-- wp:button {"backgroundColor":"transparent","textColor":"base","style":{"typography":{"fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1.5rem","right":"4rem","bottom":"1.5rem","left":"4rem"}},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--base) 10%, transparent)"}},"fontSize":"small"} -->
                 <div class="wp-block-button">
-                    <a class="wp-block-button__link has-base-color has-transparent-background-color has-text-color has-background"
-                        style="border-width:1px;border-style:solid;border-color:rgba(255,255,255,0.1);font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;padding-top:1.5rem;padding-right:4rem;padding-bottom:1.5rem;padding-left:4rem">Download
+                    <a href="/programs" class="wp-block-button__link has-base-color has-transparent-background-color has-text-color has-background has-border-color has-small-font-size has-custom-font-size wp-element-button"
+                        style="border-color:color-mix(in srgb, var(--wp--preset--color--base) 10%, transparent);border-style:solid;border-width:1px;padding-top:1.5rem;padding-right:4rem;padding-bottom:1.5rem;padding-left:4rem;font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase">Download
                         PDF</a>
                 </div>
                 <!-- /wp:button -->

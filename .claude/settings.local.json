@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(for file in *.php)",
+      "Bash(do)",
+      "Bash(if grep -q 'wp:heading.*text-transform' \"$file\")",
+      "Bash(! grep -q 'textTransform' \"$file\")",
+      "Bash(then)",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(find:*)",
+      "Bash(git restore:*)",
+      "Bash(do head -10 \"$file\")"
+    ]
+  }
+}

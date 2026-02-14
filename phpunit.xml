@@ -37,6 +37,7 @@
         </exclude>
     </coverage>
     <php>
-        <env name="WP_PHPUNIT__TESTS_CONFIG" value="tests/wp-tests-config.php" />
+        <!-- Only set WP_PHPUNIT__TESTS_CONFIG when WordPress test suite is available -->
+        <!-- <env name="WP_PHPUNIT__TESTS_CONFIG" value="tests/wp-tests-config.php" /> -->
     </php>
 </phpunit>

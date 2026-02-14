@@ -1,7 +1,7 @@
-<!-- wp:template-part {"slug":"header","theme":"fl-coastal-prep","area":"header"} /-->
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}},"color":{"background":"var(--wp--preset--color--base)"}},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group has-background"
+<main id="content" class="wp-block-group has-background"
     style="background-color:var(--wp--preset--color--base);padding-top:4rem;padding-bottom:4rem">
 
     <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontFamily":"var(--wp--preset--font-family--heading)"}}} -->
@@ -13,9 +13,9 @@
     <div style="height:2rem" aria-hidden="true" class="wp-block-spacer"></div>
     <!-- /wp:spacer -->
 
-    <!-- wp:query {"queryId":1,"query":{"perPage":12,"pages":0,"offset":0,"postType":"program","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"flex","columns":3}} -->
+    <!-- wp:query {"query":{"perPage":12,"pages":0,"offset":0,"postType":"program","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
     <div class="wp-block-query">
-        <!-- wp:post-template -->
+        <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
         <!-- wp:group {"style":{"border":{"radius":"8px"},"spacing":{"padding":{"top":"1rem","right":"1rem","bottom":"1rem","left":"1rem"}}},"backgroundColor":"secondary"} -->
         <div class="wp-block-group has-secondary-background-color has-background"
             style="border-radius:8px;padding:1rem">
@@ -43,4 +43,4 @@
 </main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","theme":"fl-coastal-prep","area":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

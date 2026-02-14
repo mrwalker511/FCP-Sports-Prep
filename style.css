@@ -2,82 +2,356 @@
 Theme Name: Florida Coastal Prep
 Theme URI: https://flcoastalprep.com
 Author: Senior Frontend Engineer
-Author URI: https://google.com
-Description: A high-performance, elite athletic block theme for Florida Coastal Preparatory Academy. Built with Full Site Editing (FSE) capabilities.
-Version: 1.0.0
+Author URI: https://flcoastalprep.com
+Description: A high-performance, elite athletic block theme for Florida Coastal Preparatory Academy. Built with Full Site Editing (FSE) capabilities, custom block patterns, and three custom post types for faculty, programs, and game schedules.
+Version: 1.1.0
 Requires at least: 6.2
-Tested up to: 6.4
-Requires PHP: 7.4
+Tested up to: 6.7
+Requires PHP: 8.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: fl-coastal-prep
-Tags: block-theme, full-site-editing, athletic, sports, gold, navy, college-prep
+Tags: full-site-editing, wp-block-styles, custom-colors, custom-logo, editor-style, one-column, wide-blocks
 */
 
-/* 
-This file is primarily for theme metadata. 
-All global styles are handled via theme.json or tailwind in this environment.
-*/
+/*
+ * This file is primarily for theme metadata.
+ * Global styles are handled via theme.json.
+ */
+
+/* Skip Link — visible only on keyboard focus */
+.skip-link.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    word-wrap: normal;
+}
+
+.skip-link.screen-reader-text:focus {
+    clip: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    width: auto;
+    height: auto;
+    padding: 1rem 2rem;
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--secondary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: 2px solid var(--wp--preset--color--primary);
+    outline-offset: 2px;
+}
 
 /* Faculty Grid Hover Effects */
 .faculty-card {
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    will-change: transform;
 }
 
 .faculty-card:hover {
-  border-color: rgba(251, 191, 36, 0.5) !important;
+    border-color: color-mix(in srgb, var(--wp--preset--color--primary) 50%, transparent);
 }
 
 .faculty-image img {
-  filter: grayscale(100%);
-  transition: all 0.7s ease;
+    filter: grayscale(100%);
+    transition: all 0.7s ease;
 }
 
 .faculty-card:hover .faculty-image img {
-  filter: grayscale(0%);
-  transform: scale(1.05);
+    filter: grayscale(0%);
+    transform: scale(1.05);
 }
 
 /* Utility Classes for Patterns */
 .text-blueprint-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  font-style: normal;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+/* Block Style: Grid Background — scoped under body for specificity */
+body .is-style-grid-background {
+    background-image: radial-gradient(circle, color-mix(in srgb, var(--wp--preset--color--primary) 15%, transparent) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Block Style: Glassmorphism */
+body .is-style-glassmorphism {
+    background: color-mix(in srgb, var(--wp--preset--color--base) 5%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid color-mix(in srgb, var(--wp--preset--color--base) 10%, transparent);
+}
+
+/* Block Style: Blueprint */
+body .is-style-blueprint {
+    font-family: var(--wp--preset--font-family--display);
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    line-height: 0.9;
+}
+
+/* Block Style: Outline Gold */
+body .wp-block-button.is-style-outline-gold .wp-block-button__link {
+    border: 2px solid var(--wp--preset--color--primary);
+    background: transparent;
+    color: var(--wp--preset--color--primary);
+}
+
+body .wp-block-button.is-style-outline-gold .wp-block-button__link:hover {
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--secondary);
 }
 
 .text-blueprint-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-style: italic;
-  line-height: 1;
-  letter-spacing: -0.025em;
-  text-transform: uppercase;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
 }
 
 .text-blueprint-card-title {
-  font-size: 1.875rem;
-  font-style: italic;
-  text-transform: uppercase;
+    font-size: 1.875rem;
+    font-style: italic;
+    text-transform: uppercase;
 }
 
 .text-blueprint-body {
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.75;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 1.75;
 }
 
 .text-blueprint-link {
-  font-size: 0.625rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* Opacity Utilities — values match class names */
+.opacity-40 {
+    opacity: 0.4;
+}
+
+.opacity-50 {
+    opacity: 0.5;
 }
 
 .opacity-60 {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
 .opacity-70 {
-  opacity: 0.7;
+    opacity: 0.7;
+}
+
+.opacity-80 {
+    opacity: 0.8;
+}
+
+.opacity-90 {
+    opacity: 0.9;
+}
+
+/* Grid Card Styles */
+.grid-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    will-change: transform;
+    contain: layout style;
+}
+
+.grid-card:hover {
+    transform: translateY(-4px);
+}
+
+/* News Card Styles */
+.news-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    will-change: transform;
+    contain: layout style;
+}
+
+.news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--wp--preset--shadow--elevated);
+}
+
+.news-image img {
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-title a {
+    transition: color 0.2s ease;
+}
+
+.news-title a:hover {
+    color: var(--wp--preset--color--primary);
+}
+
+/* Facility Image Styles */
+.facility-image img {
+    transition: transform 0.7s ease;
+}
+
+.facility-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Donor Styles */
+.donor-image img {
+    transition: transform 0.5s ease;
+}
+
+.donor-image:hover img {
+    transform: scale(1.05);
+}
+
+.donor-tier {
+    padding: 0.25rem 0.75rem;
+    display: inline-block;
+}
+
+/* Program Image Styles */
+.program-image img {
+    transition: transform 0.5s ease;
+}
+
+.program-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Schedule Card Styles */
+.schedule-card {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.schedule-card:hover {
+    border-color: color-mix(in srgb, var(--wp--preset--color--primary) 30%, transparent);
+    box-shadow: var(--wp--preset--shadow--soft);
+}
+
+.fcp-form {
+    display: grid;
+    gap: 1.5rem;
+    color: var(--wp--preset--color--secondary);
+}
+
+.fcp-form__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.fcp-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.fcp-form input,
+.fcp-form select,
+.fcp-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid color-mix(in srgb, var(--wp--preset--color--secondary) 10%, transparent);
+    background-color: var(--wp--preset--color--base);
+    color: var(--wp--preset--color--secondary);
+    font-size: 0.875rem;
+    font-family: inherit;
+}
+
+.fcp-form input:focus,
+.fcp-form select:focus,
+.fcp-form textarea:focus {
+    outline: 2px solid var(--wp--preset--color--primary);
+    outline-offset: 2px;
+    border-color: var(--wp--preset--color--primary);
+}
+
+.fcp-form__full {
+    grid-column: 1 / -1;
+}
+
+.fcp-form__submit {
+    justify-self: flex-start;
+    padding: 0.75rem 2.5rem;
+    border: 0;
+    background: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--secondary);
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.fcp-form__submit:hover {
+    background: var(--wp--preset--color--secondary);
+    color: var(--wp--preset--color--base);
+}
+
+.fcp-form__message {
+    margin: 0 0 1.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    border-left: 4px solid var(--wp--preset--color--primary);
+    background: color-mix(in srgb, var(--wp--preset--color--primary) 15%, transparent);
+}
+
+.fcp-form__message--success {
+    border-left-color: var(--wp--preset--color--primary);
+}
+
+.fcp-form__message--error {
+    border-left-color: var(--wp--preset--color--secondary);
+    background: color-mix(in srgb, var(--wp--preset--color--secondary) 10%, transparent);
+}
+
+.fcp-schedule-link {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid color-mix(in srgb, var(--wp--preset--color--secondary) 10%, transparent);
+    color: var(--wp--preset--color--secondary);
+    font-size: 0.5625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.fcp-schedule-link:hover {
+    background: var(--wp--preset--color--secondary);
+    color: var(--wp--preset--color--base);
+}
+
+/* Shadow Utilities */
+.has-shadow-xl {
+    box-shadow: var(--wp--preset--shadow--xl);
+}
+
+.has-shadow-2xl {
+    box-shadow: var(--wp--preset--shadow--2xl);
 }

@@ -1,7 +1,7 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
 <!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
-<main class="wp-block-group">
+<main id="content" class="wp-block-group">
 
     <!-- wp:pattern {"slug":"fl-coastal-prep/hero"} /-->
 
@@ -18,7 +18,14 @@
     <!-- wp:pattern {"slug":"fl-coastal-prep/grid"} /-->
 
     <!-- wp:pattern {"slug":"fl-coastal-prep/cta"} /-->
-    <!-- wp:post-content /-->
+
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group" style="padding-top:4rem;padding-bottom:4rem">
+        <!-- wp:post-content {"layout":{"type":"constrained"}} -->
+        <!-- /wp:post-content -->
+    </div>
+    <!-- /wp:group -->
+
 </main>
 <!-- /wp:group -->
 

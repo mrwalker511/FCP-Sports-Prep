@@ -3,6 +3,9 @@
  * Title: Programs Detail Section
  * Slug: fl-coastal-prep/programs-detail
  * Categories: featured, text
+ * Viewport Width: 1400
+ * Block Types: core/group, core/columns, core/column, core/image, core/heading, core/paragraph
+ * Description: Detailed program information with alternating image/text layout.
  */
 ?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"8rem","bottom":"8rem"}}},"layout":{"type":"constrained"}} -->
@@ -12,11 +15,11 @@
     <div class="wp-block-columns alignwide" style="margin-bottom:10rem">
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
-            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"} -->
+            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"program-image"} -->
             <figure
-                class="wp-block-image size-large shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
-                <img src="https://images.unsplash.com/photo-1505666287802-931dc8394b5f?auto=format&fit=crop&q=80&w=1000"
-                    alt="Athletic Track" /></figure>
+                class="wp-block-image size-large program-image">
+                <img src="assets/images/placeholder-athletic-track.webp"
+                    alt="Athletes in a professional track and field training session" /></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:column -->
@@ -29,7 +32,7 @@
             </p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em"}},"textColor":"secondary","fontFamily":"display"} -->
+            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
             <h2 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                 style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
                 The Pro-Informed Methodology</h2>
@@ -58,9 +61,9 @@
 
             <!-- wp:buttons -->
             <div class="wp-block-buttons">
-                <!-- wp:button {"backgroundColor":"secondary","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1rem","right":"2.5rem","bottom":"1rem","left":"2.5rem"}}}} -->
-                <div class="wp-block-button"><a
-                        class="wp-block-button__link has-secondary-background-color has-background"
+                <!-- wp:button {"backgroundColor":"secondary","textColor":"base","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1rem","right":"2.5rem","bottom":"1rem","left":"2.5rem"}}}} -->
+                <div class="wp-block-button"><a href="/contact"
+                        class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background wp-element-button"
                         style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;padding-top:1rem;padding-right:2.5rem;padding-bottom:1rem;padding-left:2.5rem;text-transform:uppercase">Download
                         Brochure</a></div>
                 <!-- /wp:button -->
@@ -81,7 +84,7 @@
             </p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em"}},"textColor":"secondary","fontFamily":"display"} -->
+            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} -->
             <h2 class="wp-block-heading has-secondary-color has-text-color has-display-font-family"
                 style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
                 University Preparatory Core</h2>
@@ -110,9 +113,9 @@
 
             <!-- wp:buttons -->
             <div class="wp-block-buttons">
-                <!-- wp:button {"backgroundColor":"secondary","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1rem","right":"2.5rem","bottom":"1rem","left":"2.5rem"}}}} -->
-                <div class="wp-block-button"><a
-                        class="wp-block-button__link has-secondary-background-color has-background"
+                <!-- wp:button {"backgroundColor":"secondary","textColor":"base","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1rem","right":"2.5rem","bottom":"1rem","left":"2.5rem"}}}} -->
+                <div class="wp-block-button"><a href="/contact"
+                        class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background wp-element-button"
                         style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;padding-top:1rem;padding-right:2.5rem;padding-bottom:1rem;padding-left:2.5rem;text-transform:uppercase">Download
                         Brochure</a></div>
                 <!-- /wp:button -->
@@ -123,11 +126,11 @@
 
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
-            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"shadow-2xl grayscale hover:grayscale-0 transition-all duration-700"} -->
+            <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"program-image"} -->
             <figure
-                class="wp-block-image size-large shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
-                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=1000"
-                    alt="Academic Track" /></figure>
+                class="wp-block-image size-large program-image">
+                <img src="assets/images/placeholder-academic-study.webp"
+                    alt="Students studying in the university preparatory academic wing" /></figure>
             <!-- /wp:image -->
         </div>
         <!-- /wp:column -->

@@ -4,18 +4,21 @@
  * Slug: fl-coastal-prep/section-header
  * Categories: text
  * Keywords: title, heading
+ * Viewport Width: 800
+ * Block Types: core/group, core/paragraph, core/heading, core/separator
+ * Description: Reusable section header with label, title, description, and accent separator.
  */
 ?>
-<!-- wp:group {"className":"text-navy-900","layout":{"type":"constrained"}} -->
-<div class="wp-block-group text-navy-900">
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group">
     <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.4em","fontSize":"10px"}},"textColor":"primary"} -->
     <p class="has-primary-color has-text-color"
         style="font-size:10px;font-style:normal;font-weight:700;letter-spacing:0.4em;text-transform:uppercase">THE
         COASTAL BLUEPRINT</p>
     <!-- /wp:paragraph -->
 
-    <!-- wp:heading {"style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","letterSpacing":"-0.025em","fontSize":"clamp(3rem, 5vw, 4.5rem)","lineHeight":"1"}},"fontFamily":"display"} -->
-    <h2 class="wp-block-heading has-display-font-family"
+    <!-- wp:heading {"textColor":"base","style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","letterSpacing":"-0.025em","fontSize":"clamp(3rem, 5vw, 4.5rem)","lineHeight":"1"}},"fontFamily":"display"} -->
+    <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family"
         style="font-size:clamp(3rem, 5vw, 4.5rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
         WHAT SETS US APART</h2>
     <!-- /wp:heading -->

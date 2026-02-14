@@ -27,10 +27,7 @@ class ThemeSetupTest extends TestCase
      */
     public function test_theme_setup_hooked()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Hooks are available via stubs in standalone mode
         $this->assertTrue(
             has_action('after_setup_theme', 'fl_coastal_prep_setup') !== false,
             'Theme setup function is not hooked to after_setup_theme'
@@ -53,10 +50,7 @@ class ThemeSetupTest extends TestCase
      */
     public function test_cpt_registration_hooked()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Hooks are available via stubs in standalone mode
         $this->assertTrue(
             has_action('init', 'fl_coastal_prep_register_cpts') !== false,
             'CPT registration function is not hooked to init'
@@ -79,10 +73,7 @@ class ThemeSetupTest extends TestCase
      */
     public function test_scripts_enqueue_hooked()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Hooks are available via stubs in standalone mode
         $this->assertTrue(
             has_action('wp_enqueue_scripts', 'fl_coastal_prep_scripts') !== false,
             'Scripts enqueue function is not hooked to wp_enqueue_scripts'
@@ -105,10 +96,7 @@ class ThemeSetupTest extends TestCase
      */
     public function test_seo_meta_hooked()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Hooks are available via stubs in standalone mode
         $this->assertTrue(
             has_action('wp_head', 'fl_coastal_prep_seo_meta') !== false,
             'SEO meta function is not hooked to wp_head'
@@ -131,10 +119,7 @@ class ThemeSetupTest extends TestCase
      */
     public function test_schema_markup_hooked()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Hooks are available via stubs in standalone mode
         $this->assertTrue(
             has_action('wp_head', 'fl_coastal_prep_schema_markup') !== false,
             'Schema markup function is not hooked to wp_head'

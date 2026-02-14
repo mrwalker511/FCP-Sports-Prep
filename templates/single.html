@@ -1,6 +1,7 @@
-
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
-<main class="wp-block-group">
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main id="content" class="wp-block-group">
     <!-- wp:post-featured-image {"style":{"spacing":{"margin":{"bottom":"50px"}}}} /-->
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
@@ -9,5 +10,8 @@
         <!-- wp:post-content /-->
     </div>
     <!-- /wp:group -->
+    <!-- wp:template-part {"slug":"comments","tagName":"section"} /-->
 </main>
+<!-- /wp:group -->
+
 <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

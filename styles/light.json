@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "title": "Light Mode",
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "name": "Base (White)",
+          "slug": "base",
+          "color": "#F8FAFC"
+        },
+        {
+          "name": "Contrast (Navy)",
+          "slug": "contrast",
+          "color": "#0F172A"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--base)",
+      "text": "var(--wp--preset--color--contrast)"
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "var(--wp--preset--color--primary)",
+          "text": "var(--wp--preset--color--contrast)"
+        }
+      }
+    }
+  }
+}

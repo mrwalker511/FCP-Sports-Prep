@@ -1,0 +1,32 @@
+# Development and build files — excluded from distribution ZIP
+.claude/
+.git/
+.gitignore
+.distignore
+
+# Prototype / dev tooling
+prototype/
+vite.config.ts
+package.json
+package-lock.json
+node_modules/
+
+# PHP testing
+tests/
+bin/
+phpunit.xml
+phpunit-standalone.xml
+composer.json
+composer.lock
+vendor/
+
+# Documentation (internal)
+docs/
+AGENT_MEDIATOR.md
+README.md
+
+# Misc
+metadata.json
+.editorconfig
+.eslintrc*
+.prettierrc*

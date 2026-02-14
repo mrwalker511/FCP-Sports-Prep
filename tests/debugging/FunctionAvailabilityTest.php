@@ -17,11 +17,7 @@ class FunctionAvailabilityTest extends TestCase
      */
     public function test_wordpress_core_functions_exist()
     {
-        // Skip if WordPress test suite is not available
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Functions are available via stubs in standalone mode
         $required_functions = [
             'add_theme_support',
             'add_editor_style',
@@ -64,10 +60,7 @@ class FunctionAvailabilityTest extends TestCase
      */
     public function test_conditional_tags_available()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Functions are available via stubs in standalone mode
         $conditional_tags = [
             'is_front_page',
             'is_singular',
@@ -87,10 +80,7 @@ class FunctionAvailabilityTest extends TestCase
      */
     public function test_i18n_functions_available()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Functions are available via stubs in standalone mode
         $i18n_functions = [
             '__',
             '_e',
@@ -111,10 +101,7 @@ class FunctionAvailabilityTest extends TestCase
      */
     public function test_escaping_functions_available()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Functions are available via stubs in standalone mode
         $escaping_functions = [
             'esc_html',
             'esc_attr',
@@ -139,10 +126,7 @@ class FunctionAvailabilityTest extends TestCase
      */
     public function test_post_functions_available()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Functions are available via stubs in standalone mode
         $post_functions = [
             'get_the_title',
             'get_the_excerpt',
@@ -165,10 +149,7 @@ class FunctionAvailabilityTest extends TestCase
      */
     public function test_custom_post_type_functions_available()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Functions are available via stubs in standalone mode
         $cpt_functions = [
             'register_post_type',
             'post_type_exists',
@@ -187,10 +168,7 @@ class FunctionAvailabilityTest extends TestCase
      */
     public function test_enqueue_functions_available()
     {
-        if (!defined('WP_TESTS_AVAILABLE') || !WP_TESTS_AVAILABLE) {
-            $this->markTestSkipped('WordPress test suite not available');
-        }
-
+        // Functions are available via stubs in standalone mode
         $enqueue_functions = [
             'wp_enqueue_style',
             'wp_enqueue_script',

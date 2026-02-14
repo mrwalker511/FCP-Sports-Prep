@@ -3,17 +3,20 @@
  * Title: Academy Statistics Bar
  * Slug: fl-coastal-prep/stats
  * Categories: featured, text
+ * Viewport Width: 1200
+ * Block Types: core/group, core/columns, core/paragraph
+ * Description: Four-column statistics display with D1 commitments, GPA, facility access, and coaching staff info.
  */
 ?>
-<!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--base)"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}},"border":{"width":"0px 0px 0px 0px","style":"solid","radius":"0px"}},"className":"has-shadow-2xl","layout":{"type":"constrained","contentSize":"1200px"}} -->
+<!-- wp:group {"style":{"color":{"background":"var(--wp--preset--color--base)"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}},"border":{"radius":"0px"}},"className":"has-shadow-2xl","layout":{"type":"constrained","contentSize":"1200px"}} -->
 <div class="wp-block-group has-shadow-2xl has-background"
-    style="background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-radius:0px">
+    style="background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem;border-radius:0px">
     <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0px","left":"0px"}}}} -->
     <div class="wp-block-columns">
 
-        <!-- wp:column {"style":{"border":{"right":{"color":"rgba(17, 34, 64, 0.05)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
-        <div class="wp-block-column"
-            style="border-right-color:rgba(17, 34, 64, 0.05);border-right-width:1px;padding-right:1rem;padding-left:1rem">
+        <!-- wp:column {"style":{"border":{"right":{"color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
+        <div class="wp-block-column has-border-color"
+            style="border-right-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-right-width:1px;padding-right:1rem;padding-left:1rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
             <p class="has-text-align-center has-secondary-color has-text-color has-display-font-family"
                 style="font-size:3rem;font-style:italic">12</p>
@@ -26,9 +29,9 @@
         </div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"style":{"border":{"right":{"color":"rgba(17, 34, 64, 0.05)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
-        <div class="wp-block-column"
-            style="border-right-color:rgba(17, 34, 64, 0.05);border-right-width:1px;padding-right:1rem;padding-left:1rem">
+        <!-- wp:column {"style":{"border":{"right":{"color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
+        <div class="wp-block-column has-border-color"
+            style="border-right-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-right-width:1px;padding-right:1rem;padding-left:1rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
             <p class="has-text-align-center has-secondary-color has-text-color has-display-font-family"
                 style="font-size:3rem;font-style:italic">3.8</p>
@@ -41,9 +44,9 @@
         </div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"style":{"border":{"right":{"color":"rgba(17, 34, 64, 0.05)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
-        <div class="wp-block-column"
-            style="border-right-color:rgba(17, 34, 64, 0.05);border-right-width:1px;padding-right:1rem;padding-left:1rem">
+        <!-- wp:column {"style":{"border":{"right":{"color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)","width":"1px"}},"spacing":{"padding":{"right":"1rem","left":"1rem"}}}} -->
+        <div class="wp-block-column has-border-color"
+            style="border-right-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-right-width:1px;padding-right:1rem;padding-left:1rem">
             <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem","fontStyle":"italic"}},"textColor":"secondary","fontFamily":"display"} -->
             <p class="has-text-align-center has-secondary-color has-text-color has-display-font-family"
                 style="font-size:3rem;font-style:italic">24/7</p>
