@@ -45,9 +45,9 @@
 
     <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"}}}} -->
     <div class="wp-block-columns alignwide">
-        <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}}} -->
+        <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)"}}} -->
         <div class="wp-block-column has-border-color has-background"
-            style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
+            style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
                     src="assets/images/placeholder-basketball-facility.webp"
@@ -74,9 +74,9 @@
         </div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}}} -->
+        <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)"}}} -->
         <div class="wp-block-column has-border-color has-background"
-            style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
+            style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
                     src="assets/images/placeholder-classroom.webp"
@@ -103,9 +103,9 @@
         </div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}}} -->
+        <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)"}}} -->
         <div class="wp-block-column has-border-color has-background"
-            style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
+            style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
                     src="assets/images/placeholder-residency.webp"

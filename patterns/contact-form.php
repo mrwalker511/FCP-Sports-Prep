@@ -20,16 +20,16 @@
                 style="font-size:2.25rem;font-style:italic;text-transform:uppercase">Direct Inquiry</h3>
             <!-- /wp:heading -->
 
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"border":{"width":"1px","style":"solid","color":"rgba(17,34,64,0.05)"}},"backgroundColor":"base"} -->
+            <!-- wp:shortcode -->
+            [fcp_form_message]
+            <!-- /wp:shortcode -->
+
+            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)"}},"backgroundColor":"base"} -->
             <div class="wp-block-group has-border-color has-base-background-color has-background"
-                style="border-color:rgba(17,34,64,0.05);border-style:solid;border-width:1px;padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
-                <!-- wp:paragraph -->
-                <p>For fully functional forms, please integrate with a plugin such as <strong>Contact Form 7</strong> or
-                    <strong>WPForms</strong>.</p>
-                <!-- /wp:paragraph -->
-                <!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">[FORM PLACEHOLDER: Insert Shortcode Here]</p>
-                <!-- /wp:paragraph -->
+                style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
+                <!-- wp:shortcode -->
+                [fcp_contact_form]
+                <!-- /wp:shortcode -->
             </div>
             <!-- /wp:group -->
         </div>
