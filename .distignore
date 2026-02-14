@@ -4,6 +4,10 @@
 .gitignore
 .distignore
 
+# Build / bundle tooling
+bundle.ps1
+fl-coastal-prep.zip
+
 # Prototype / dev tooling
 prototype/
 vite.config.ts
@@ -16,9 +20,13 @@ tests/
 bin/
 phpunit.xml
 phpunit-standalone.xml
+.phpunit.result.cache
 composer.json
 composer.lock
 vendor/
+
+# Demo data (import separately)
+demo-data/
 
 # Documentation (internal)
 docs/
