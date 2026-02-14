@@ -1,0 +1,158 @@
+﻿
+========================================
+  WordPress Block Validation Checker
+========================================
+
+--- Checking: comments.html ---
+  PASS - No issues found.
+
+--- Checking: footer.html ---
+  WARNINGS (1):
+  Line ~57 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: header.html ---
+  WARNINGS (2):
+  Line ~5 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+  Line ~9 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: 404.html ---
+  PASS - No issues found.
+
+--- Checking: archive-faculty.html ---
+  PASS - No issues found.
+
+--- Checking: archive-program.html ---
+  PASS - No issues found.
+
+--- Checking: archive-schedule.html ---
+  PASS - No issues found.
+
+--- Checking: front-page.html ---
+  PASS - No issues found.
+
+--- Checking: index.html ---
+  PASS - No issues found.
+
+--- Checking: page-apply.html ---
+  PASS - No issues found.
+
+--- Checking: page-campus.html ---
+  PASS - No issues found.
+
+--- Checking: page-contact.html ---
+  PASS - No issues found.
+
+--- Checking: page-donors.html ---
+  PASS - No issues found.
+
+--- Checking: page-elementor-canvas.html ---
+  PASS - No issues found.
+
+--- Checking: page-elementor-full-width.html ---
+  PASS - No issues found.
+
+--- Checking: page-faculty.html ---
+  PASS - No issues found.
+
+--- Checking: page-news.html ---
+  PASS - No issues found.
+
+--- Checking: page-privacy.html ---
+  PASS - No issues found.
+
+--- Checking: page-programs.html ---
+  PASS - No issues found.
+
+--- Checking: page-schedule.html ---
+  PASS - No issues found.
+
+--- Checking: page-terms.html ---
+  PASS - No issues found.
+
+--- Checking: page.html ---
+  PASS - No issues found.
+
+--- Checking: search.html ---
+  PASS - No issues found.
+
+--- Checking: single-faculty.html ---
+  PASS - No issues found.
+
+--- Checking: single-program.html ---
+  PASS - No issues found.
+
+--- Checking: single-schedule.html ---
+  PASS - No issues found.
+
+--- Checking: single.html ---
+  PASS - No issues found.
+
+--- Checking: apply-form.php ---
+  WARNINGS (1):
+  Line ~25 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: blueprint-gallery.php ---
+  WARNINGS (1):
+  Line ~14 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: campus-showcase.php ---
+  PASS - No issues found.
+
+--- Checking: contact-form.php ---
+  WARNINGS (2):
+  Line ~40 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+  Line ~55 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: cta.php ---
+  PASS - No issues found.
+
+--- Checking: donors-showcase.php ---
+  WARNINGS (1):
+  Line ~50 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: faculty-grid.php ---
+  WARNINGS (4):
+  Line ~15 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+  Line ~21 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+  Line ~27 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+  Line ~29 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: grid.php ---
+  WARNINGS (1):
+  Line ~14 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: hero.php ---
+  WARNINGS (1):
+  Line ~19 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: news-archive.php ---
+  WARNINGS (2):
+  Line ~33 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+  Line ~40 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: programs-detail.php ---
+  PASS - No issues found.
+
+--- Checking: programs-hero.php ---
+  WARNINGS (1):
+  Line ~33 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: schedule-results.php ---
+  WARNINGS (5):
+  Line ~18 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+  Line ~22 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+  Line ~24 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+  Line ~36 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+  Line ~48 : Group has flex layout in JSON but HTML may be missing 'is-layout-flex' class (WP adds dynamically).
+
+--- Checking: section-header.php ---
+  PASS - No issues found.
+
+--- Checking: stats.php ---
+  PASS - No issues found.
+
+----------------------------------------
+  Files checked : 42
+  Total errors  : 0
+  Total warnings: 22
+----------------------------------------
