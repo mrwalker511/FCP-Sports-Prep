@@ -1,4 +1,5 @@
 # Development and build files — excluded from distribution ZIP
+.agent/
 .claude/
 .git/
 .gitignore
