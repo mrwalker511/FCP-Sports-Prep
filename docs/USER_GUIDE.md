@@ -242,7 +242,7 @@ Manual verification checklist:
 
 ## New Page Templates
 
-### About/Mission Template
+### About Template
 
 **File**: `templates/page-about.html`
 
@@ -250,7 +250,7 @@ Manual verification checklist:
 
 **How to Use**:
 1. Create new page: "About Our Academy"
-2. Page Attributes → Template → "About/Mission"
+2. Page Attributes → Template → "About"
 3. Edit content in Site Editor:
    - Vision statement (paragraph block)
    - Mission statement (paragraph block)
@@ -264,38 +264,52 @@ Manual verification checklist:
 - Values: 3-6 pillars (Excellence, Integrity, Community, etc.)
 - Team photos: High-quality images of staff, students, campus
 
+**Editing Pattern References**:
+This template uses pattern references that embed pre-designed layouts. To customize:
+- **Option 1**: Edit the pattern file directly in `patterns/` directory
+- **Option 2**: Convert to blocks in Site Editor:
+  1. Open the page in Site Editor
+  2. Select the pattern reference block
+  3. Click "Transform" or "Detach" to convert to editable blocks
+  4. Edit blocks directly
+
 ---
 
-### Coaching Staff Template
+### Coaches Template
 
 **File**: `templates/page-coaches.html`
 
-**Purpose**: Display coaching staff directory.
+**Purpose**: Display coaching staff directory using the Faculty post type.
 
 **How to Use**:
 1. Create new page: "Coaching Staff"
-2. Page Attributes → Template → "Coaching Staff"
+2. Page Attributes → Template → "Coaches"
 3. Publish
 
 **Content Setup**:
-1. Posts → Faculty → Categories
-2. Create category: "Coaches"
-3. Create/edit Faculty posts:
+1. Posts → Faculty → Add New
+2. Create Faculty posts for each coach:
    - Add featured image (headshot)
-   - Write excerpt (10-20 words)
-   - Assign "Coaches" category
-4. Posts automatically appear in grid
+   - Write excerpt (10-20 words for role/specialty)
+   - Add full bio in content area
+3. ALL Faculty posts will appear in the grid
+
+**Important**: This template displays ALL Faculty posts without category filtering. Only create Faculty posts for coaches you want displayed on this page. If you need to display both coaches and other staff separately, consider creating separate pages or using categories with manual query customization.
 
 **Coach Post Fields**:
 - Title: Coach name
 - Excerpt: Title/specialty (e.g., "Head Coach • 15 Years Experience")
 - Content: Full bio
-- Featured Image: Professional headshot (square crop)
-- Category: "Coaches"
+- Featured Image: Professional headshot (square crop recommended)
+
+**Editing Pattern References**:
+This template uses the `faculty-grid` pattern. To customize the grid layout or query:
+- **Option 1**: Edit `patterns/faculty-grid.php` to modify the query, columns, or styling
+- **Option 2**: Convert to blocks in Site Editor to customize this page only (see About Template section above)
 
 ---
 
-### Admissions/Enrollment Template
+### Admissions Template
 
 **File**: `templates/page-admissions.html`
 
@@ -303,7 +317,7 @@ Manual verification checklist:
 
 **How to Use**:
 1. Create new page: "Admissions"
-2. Page Attributes → Template → "Admissions/Enrollment"
+2. Page Attributes → Template → "Admissions"
 3. Edit in Site Editor:
    - Hero: Update title, description, button links
    - Requirements: Customize criteria lists
@@ -325,3 +339,8 @@ Manual verification checklist:
 **Hero Button Setup**:
 - Primary button: Text "Apply Now", Link: `#application-form` (anchor to form)
 - Secondary button: Text "Schedule Visit", Link: `/contact` or calendar URL
+
+**Editing Pattern References**:
+This template uses pattern references for hero and other sections. To customize:
+- **Option 1**: Edit pattern files in `patterns/` directory
+- **Option 2**: Convert to blocks in Site Editor (see About Template section above)
