@@ -8,23 +8,22 @@
  * Description: Donor recognition section with tiered giving levels display.
  */
 ?>
-<!-- wp:group {"align":"full","style":{"color":{"background":"var(--wp--preset--color--contrast)"},"spacing":{"padding":{"top":"8rem","bottom":"8rem"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-background"
-    style="background-color:var(--wp--preset--color--contrast);padding-top:8rem;padding-bottom:8rem">
+<!-- wp:group {"align":"full","className":"section-spacing-large","style":{"color":{"background":"var(--wp--preset--color--contrast)"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull section-spacing-large has-background"
+    style="background-color:var(--wp--preset--color--contrast)">
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
         <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"5rem","left":"5rem"},"margin":{"bottom":"8rem"}}}} -->
         <div class="wp-block-columns alignwide are-vertically-aligned-center" style="margin-bottom:8rem">
             <!-- wp:column {"width":"50%"} -->
             <div class="wp-block-column" style="flex-basis:50%">
-                <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","letterSpacing":"0.4em","textTransform":"uppercase"}},"textColor":"primary"} -->
-                <p class="has-primary-color has-text-color"
-                    style="font-size:0.75rem;font-weight:700;letter-spacing:0.4em;text-transform:uppercase">Our Mission
+                <!-- wp:paragraph {"className":"text-label-medium letter-spacing-wider","textColor":"primary"} -->
+                <p class="has-primary-color has-text-color text-label-medium letter-spacing-wider">Our Mission
                 </p>
                 <!-- /wp:paragraph -->
-                <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
-                <h3 class="wp-block-heading has-base-color has-text-color has-display-font-family"
-                    style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;text-transform:uppercase">
+                <!-- wp:heading {"level":3,"className":"text-blueprint-h3","style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)"}},"textColor":"base","fontFamily":"display"} -->
+                <h3 class="wp-block-heading has-base-color has-text-color has-display-font-family text-blueprint-h3"
+                    style="font-size:clamp(2.5rem, 5vw, 4rem)">
                     EQUITY IN <br>ELITE ATHLETICS</h3>
                 <!-- /wp:heading -->
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"1.125rem","lineHeight":"1.75","fontStyle":"italic"}},"textColor":"base","className":"opacity-80"} -->
@@ -48,9 +47,9 @@
         </div>
         <!-- /wp:columns -->
 
-        <!-- wp:heading {"textAlign":"center","level":4,"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
-        <h4 class="wp-block-heading has-text-align-center has-base-color has-text-color has-display-font-family"
-            style="font-size:2.25rem;font-style:italic;letter-spacing:-0.025em;text-transform:uppercase">WALL OF HONOR
+        <!-- wp:heading {"textAlign":"center","level":4,"className":"text-blueprint-h4","style":{"typography":{"fontSize":"2.25rem"}},"textColor":"base","fontFamily":"display"} -->
+        <h4 class="wp-block-heading has-text-align-center has-base-color has-text-color has-display-font-family text-blueprint-h4"
+            style="font-size:2.25rem">WALL OF HONOR
         </h4>
         <!-- /wp:heading -->
         <div class="wp-block-group has-background"
@@ -59,9 +58,9 @@
 
         <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"}}}} -->
         <div class="wp-block-columns alignwide">
-            <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
-            <div class="wp-block-column has-border-color has-background"
-                style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
+            <!-- wp:column {"className":"has-border-color has-border-secondary-5 card-padding-large","style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid"}}} -->
+            <div class="wp-block-column has-border-color has-border-secondary-5 card-padding-large has-background"
+                style="border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
                 <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.5rem"}}},"backgroundColor":"contrast","textColor":"base","className":"donor-tier"} -->
                 <p class="has-text-align-center has-base-color has-text-color has-contrast-background-color has-background donor-tier"
                     style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:1.5rem">
@@ -74,9 +73,9 @@
                 <!-- /wp:heading -->
             </div>
             <!-- /wp:column -->
-            <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent)"},"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
-            <div class="wp-block-column has-border-color has-background"
-                style="border-color:color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base);padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
+            <!-- wp:column {"className":"has-border-color has-border-secondary-5 card-padding-large","style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid"}}} -->
+            <div class="wp-block-column has-border-color has-border-secondary-5 card-padding-large has-background"
+                style="border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
                 <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.5rem"}}},"backgroundColor":"contrast","textColor":"base","className":"donor-tier"} -->
                 <p class="has-text-align-center has-base-color has-text-color has-contrast-background-color has-background donor-tier"
                     style="font-size:0.5625rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:1.5rem">

@@ -8,8 +8,8 @@
  * Description: Campus facilities showcase with hero image and feature grid.
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:6rem;padding-bottom:6rem">
+<!-- wp:group {"className":"section-spacing-medium","layout":{"type":"constrained"}} -->
+<div class="wp-block-group section-spacing-medium">
 
     <!-- wp:cover {"url":"assets/images/placeholder-campus-aerial.webp","dimRatio":60,"overlayColor":"contrast","minHeight":60,"minHeightUnit":"vh","align":"wide","style":{"spacing":{"margin":{"bottom":"6rem"}}}} -->
     <div class="wp-block-cover alignwide" style="margin-bottom:6rem;min-height:60vh">
@@ -20,15 +20,14 @@
         <div class="wp-block-cover__inner-container">
             <!-- wp:group {"layout":{"type":"constrained"}} -->
             <div class="wp-block-group">
-                <!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.4em","textTransform":"uppercase","fontSize":"0.75rem","fontWeight":"700"}},"textColor":"primary"} -->
-                <p class="has-primary-color has-text-color"
-                    style="font-size:0.75rem;font-weight:700;letter-spacing:0.4em;text-transform:uppercase">Main Complex
+                <!-- wp:paragraph {"className":"text-label-medium letter-spacing-wider","textColor":"primary"} -->
+                <p class="has-primary-color has-text-color text-label-medium letter-spacing-wider">Main Complex
                 </p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"clamp(3rem, 6vw, 5rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
-                <h3 class="wp-block-heading has-base-color has-text-color has-display-font-family"
-                    style="font-size:clamp(3rem, 6vw, 5rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
+                <!-- wp:heading {"level":3,"className":"text-blueprint-h3","style":{"typography":{"fontSize":"clamp(3rem, 6vw, 5rem)"}},"textColor":"base","fontFamily":"display"} -->
+                <h3 class="wp-block-heading has-base-color has-text-color has-display-font-family text-blueprint-h3"
+                    style="font-size:clamp(3rem, 6vw, 5rem)">
                     CENTRAL COASTAL ARENA</h3>
                 <!-- /wp:heading -->
 
@@ -44,25 +43,23 @@
 
     <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"}}}} -->
     <div class="wp-block-columns alignwide">
-        <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--secondary)"},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent)"}}} -->
-        <div class="wp-block-column has-border-color has-background"
-            style="border-color:color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--secondary)">
+        <!-- wp:column {"className":"has-border-color has-border-primary-20","style":{"color":{"background":"var(--wp--preset--color--secondary)"},"border":{"width":"1px","style":"solid"}}} -->
+        <div class="wp-block-column has-border-color has-border-primary-20 has-background"
+            style="border-style:solid;border-width:1px;background-color:var(--wp--preset--color--secondary)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img
                     src="assets/images/placeholder-basketball-facility.webp"
                     alt="Interior of the high-tech basketball training facility with multiple courts" /></figure>
             <!-- /wp:image -->
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->
-            <div class="wp-block-group"
-                style="padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
+            <!-- wp:group {"className":"card-padding-standard"} -->
+            <div class="wp-block-group card-padding-standard">
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}},"textColor":"primary"} -->
                 <p class="has-primary-color has-text-color"
                     style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Training
                     Hub</p>
                 <!-- /wp:paragraph -->
-                <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"1.5rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
-                <h4 class="wp-block-heading has-base-color has-text-color has-display-font-family"
-                    style="font-size:1.5rem;font-style:italic;text-transform:uppercase">The Performance Lab</h4>
+                <!-- wp:heading {"level":4,"className":"text-blueprint-h4","textColor":"base","fontFamily":"display"} -->
+                <h4 class="wp-block-heading has-base-color has-text-color has-display-font-family text-blueprint-h4">The Performance Lab</h4>
                 <!-- /wp:heading -->
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"base","className":"opacity-80"} -->
                 <p class="has-base-color has-text-color opacity-80" style="font-size:0.875rem">4 Full NBA courts
@@ -73,24 +70,22 @@
         </div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--secondary)"},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent)"}}} -->
-        <div class="wp-block-column has-border-color has-background"
-            style="border-color:color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--secondary)">
+        <!-- wp:column {"className":"has-border-color has-border-primary-20","style":{"color":{"background":"var(--wp--preset--color--secondary)"},"border":{"width":"1px","style":"solid"}}} -->
+        <div class="wp-block-column has-border-color has-border-primary-20 has-background"
+            style="border-style:solid;border-width:1px;background-color:var(--wp--preset--color--secondary)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img src="assets/images/placeholder-classroom.webp"
                     alt="Modern classroom building with collaborative learning spaces" /></figure>
             <!-- /wp:image -->
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->
-            <div class="wp-block-group"
-                style="padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
+            <!-- wp:group {"className":"card-padding-standard"} -->
+            <div class="wp-block-group card-padding-standard">
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}},"textColor":"primary"} -->
                 <p class="has-primary-color has-text-color"
                     style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Core
                     Education</p>
                 <!-- /wp:paragraph -->
-                <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"1.5rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
-                <h4 class="wp-block-heading has-base-color has-text-color has-display-font-family"
-                    style="font-size:1.5rem;font-style:italic;text-transform:uppercase">The Academic Wing</h4>
+                <!-- wp:heading {"level":4,"className":"text-blueprint-h4","textColor":"base","fontFamily":"display"} -->
+                <h4 class="wp-block-heading has-base-color has-text-color has-display-font-family text-blueprint-h4">The Academic Wing</h4>
                 <!-- /wp:heading -->
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"base","className":"opacity-80"} -->
                 <p class="has-base-color has-text-color opacity-80" style="font-size:0.875rem">Modern collaborative
@@ -101,23 +96,21 @@
         </div>
         <!-- /wp:column -->
 
-        <!-- wp:column {"style":{"color":{"background":"var(--wp--preset--color--secondary)"},"border":{"width":"1px","style":"solid","color":"color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent)"}}} -->
-        <div class="wp-block-column has-border-color has-background"
-            style="border-color:color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--secondary)">
+        <!-- wp:column {"className":"has-border-color has-border-primary-20","style":{"color":{"background":"var(--wp--preset--color--secondary)"},"border":{"width":"1px","style":"solid"}}} -->
+        <div class="wp-block-column has-border-color has-border-primary-20 has-background"
+            style="border-style:solid;border-width:1px;background-color:var(--wp--preset--color--secondary)">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"facility-image"} -->
             <figure class="wp-block-image size-large facility-image"><img src="assets/images/placeholder-residency.webp"
                     alt="Premium student residency suites with ocean-view balconies" /></figure>
             <!-- /wp:image -->
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2rem","right":"2rem","bottom":"2rem","left":"2rem"}}}} -->
-            <div class="wp-block-group"
-                style="padding-top:2rem;padding-right:2rem;padding-bottom:2rem;padding-left:2rem">
+            <!-- wp:group {"className":"card-padding-standard"} -->
+            <div class="wp-block-group card-padding-standard">
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}},"textColor":"primary"} -->
                 <p class="has-primary-color has-text-color"
                     style="font-size:0.75rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Housing</p>
                 <!-- /wp:paragraph -->
-                <!-- wp:heading {"level":4,"style":{"typography":{"fontSize":"1.5rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
-                <h4 class="wp-block-heading has-base-color has-text-color has-display-font-family"
-                    style="font-size:1.5rem;font-style:italic;text-transform:uppercase">Residency Suites</h4>
+                <!-- wp:heading {"level":4,"className":"text-blueprint-h4","textColor":"base","fontFamily":"display"} -->
+                <h4 class="wp-block-heading has-base-color has-text-color has-display-font-family text-blueprint-h4">Residency Suites</h4>
                 <!-- /wp:heading -->
                 <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.875rem"}},"textColor":"base","className":"opacity-80"} -->
                 <p class="has-base-color has-text-color opacity-80" style="font-size:0.875rem">Premium ocean-view

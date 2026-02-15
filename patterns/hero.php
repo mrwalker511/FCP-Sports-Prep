@@ -28,9 +28,9 @@
             </div>
             <!-- /wp:group -->
 
-            <!-- wp:heading {"level":1,"textAlign":"center","style":{"typography":{"lineHeight":"0.8","fontSize":"clamp(4.5rem, 8vw, 10rem)","fontStyle":"italic","letterSpacing":"-0.025em"}},"textColor":"base","fontFamily":"display"} -->
-            <h1 class="wp-block-heading has-text-align-center has-base-color has-text-color has-display-font-family"
-                style="font-size:clamp(4.5rem, 8vw, 10rem);font-style:italic;line-height:0.8;letter-spacing:-0.025em">
+            <!-- wp:heading {"level":1,"textAlign":"center","style":{"typography":{"lineHeight":"0.8","fontSize":"clamp(4.5rem, 8vw, 10rem)"}},"className":"text-blueprint-title","textColor":"base","fontFamily":"display"} -->
+            <h1 class="wp-block-heading has-text-align-center has-base-color has-text-color has-display-font-family text-blueprint-title"
+                style="font-size:clamp(4.5rem, 8vw, 10rem);line-height:0.8">
                 THE FUTURE <br><span class="has-primary-color has-text-color">OF ELITE</span> BALL
             </h1>
             <!-- /wp:heading -->
@@ -44,20 +44,20 @@
 
             <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
             <div class="wp-block-buttons">
-                <!-- wp:button {"backgroundColor":"primary","textColor":"secondary","style":{"typography":{"letterSpacing":"0.2em","textTransform":"uppercase","fontWeight":"700"},"spacing":{"padding":{"top":"1.25rem","right":"3.5rem","bottom":"1.25rem","left":"3.5rem"}}},"fontSize":"small"} -->
-                <div class="wp-block-button">
+                <!-- wp:button {"backgroundColor":"primary","textColor":"secondary","className":"is-style-medium","style":{"typography":{"letterSpacing":"0.2em","textTransform":"uppercase","fontWeight":"700"}},"fontSize":"small"} -->
+                <div class="wp-block-button is-style-medium">
                     <a href="/apply"
                         class="wp-block-button__link has-secondary-color has-primary-background-color has-text-color has-background has-small-font-size wp-element-button"
-                        style="padding-top:1.25rem;padding-right:3.5rem;padding-bottom:1.25rem;padding-left:3.5rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Start
+                        style="font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Start
                         Journey</a>
                 </div>
                 <!-- /wp:button -->
 
-                <!-- wp:button {"style":{"typography":{"letterSpacing":"0.2em","textTransform":"uppercase","fontWeight":"700"},"spacing":{"padding":{"top":"1.25rem","right":"3.5rem","bottom":"1.25rem","left":"3.5rem"}},"border":{"width":"1px","style":"solid","color":"var(--wp--preset--color--base)"}},"className":"is-style-outline","textColor":"base","fontSize":"small"} -->
-                <div class="wp-block-button is-style-outline">
+                <!-- wp:button {"style":{"typography":{"letterSpacing":"0.2em","textTransform":"uppercase","fontWeight":"700"},"border":{"width":"1px","style":"solid","color":"var(--wp--preset--color--base)"}},"className":"is-style-outline is-style-medium","textColor":"base","fontSize":"small"} -->
+                <div class="wp-block-button is-style-outline is-style-medium">
                     <a href="/campus"
                         class="wp-block-button__link has-base-color has-text-color has-border-color has-small-font-size wp-element-button"
-                        style="border-color:var(--wp--preset--color--base);border-style:solid;border-width:1px;padding-top:1.25rem;padding-right:3.5rem;padding-bottom:1.25rem;padding-left:3.5rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Academy
+                        style="border-color:var(--wp--preset--color--base);border-style:solid;border-width:1px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Academy
                         Tour</a>
                 </div>
                 <!-- /wp:button -->

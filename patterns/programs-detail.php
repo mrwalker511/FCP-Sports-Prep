@@ -8,8 +8,8 @@
  * Description: Detailed program information with alternating image/text layout.
  */
 ?>
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"8rem","bottom":"8rem"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-top:8rem;padding-bottom:8rem">
+<!-- wp:group {"className":"section-spacing-large","layout":{"type":"constrained"}} -->
+<div class="wp-block-group section-spacing-large">
 
     <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"4rem","left":"4rem"},"margin":{"bottom":"10rem"}}}} -->
     <div class="wp-block-columns alignwide" style="margin-bottom:10rem">
@@ -26,15 +26,13 @@
 
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
-            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}},"textColor":"primary"} -->
-            <p class="has-primary-color has-text-color"
-                style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Athletic Track
+            <!-- wp:paragraph {"className":"text-label-small letter-spacing-normal","textColor":"primary"} -->
+            <p class="has-primary-color has-text-color text-label-small letter-spacing-normal">Athletic Track
             </p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
-            <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family"
-                style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
+            <!-- wp:heading {"level":2,"className":"text-blueprint-h2","textColor":"base","fontFamily":"display"} -->
+            <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family text-blueprint-h2">
                 The Pro-Informed Methodology</h2>
             <!-- /wp:heading -->
 
@@ -61,10 +59,10 @@
 
             <!-- wp:buttons -->
             <div class="wp-block-buttons">
-                <!-- wp:button {"backgroundColor":"secondary","textColor":"base","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1rem","right":"2.5rem","bottom":"1rem","left":"2.5rem"}}}} -->
-                <div class="wp-block-button"><a href="/contact"
+                <!-- wp:button {"backgroundColor":"secondary","textColor":"base","className":"is-style-small","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}}} -->
+                <div class="wp-block-button is-style-small"><a href="/contact"
                         class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background wp-element-button"
-                        style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;padding-top:1rem;padding-right:2.5rem;padding-bottom:1rem;padding-left:2.5rem;text-transform:uppercase">Download
+                        style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Download
                         Brochure</a></div>
                 <!-- /wp:button -->
             </div>
@@ -78,15 +76,13 @@
     <div class="wp-block-columns alignwide">
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
-            <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}},"textColor":"primary"} -->
-            <p class="has-primary-color has-text-color"
-                style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Academic Track
+            <!-- wp:paragraph {"className":"text-label-small letter-spacing-normal","textColor":"primary"} -->
+            <p class="has-primary-color has-text-color text-label-small letter-spacing-normal">Academic Track
             </p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:heading {"level":2,"style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)","fontStyle":"italic","lineHeight":"1","letterSpacing":"-0.025em","textTransform":"uppercase"}},"textColor":"base","fontFamily":"display"} -->
-            <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family"
-                style="font-size:clamp(2.5rem, 5vw, 4rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
+            <!-- wp:heading {"level":2,"className":"text-blueprint-h2","textColor":"base","fontFamily":"display"} -->
+            <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family text-blueprint-h2">
                 University Preparatory Core</h2>
             <!-- /wp:heading -->
 
@@ -113,10 +109,10 @@
 
             <!-- wp:buttons -->
             <div class="wp-block-buttons">
-                <!-- wp:button {"backgroundColor":"secondary","textColor":"base","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"},"spacing":{"padding":{"top":"1rem","right":"2.5rem","bottom":"1rem","left":"2.5rem"}}}} -->
-                <div class="wp-block-button"><a href="/contact"
+                <!-- wp:button {"backgroundColor":"secondary","textColor":"base","className":"is-style-small","style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}}} -->
+                <div class="wp-block-button is-style-small"><a href="/contact"
                         class="wp-block-button__link has-base-color has-secondary-background-color has-text-color has-background wp-element-button"
-                        style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;padding-top:1rem;padding-right:2.5rem;padding-bottom:1rem;padding-left:2.5rem;text-transform:uppercase">Download
+                        style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">Download
                         Brochure</a></div>
                 <!-- /wp:button -->
             </div>

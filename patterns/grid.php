@@ -8,9 +8,9 @@
  * Description: Three-column feature grid showcasing blueprint cards with icons, titles, and descriptions.
  */
 ?>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"8rem","bottom":"8rem"}},"color":{"background":"var(--wp--preset--color--contrast)"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-background"
-    style="background-color:var(--wp--preset--color--contrast);padding-top:8rem;padding-bottom:8rem">
+<!-- wp:group {"align":"full","className":"section-spacing-large","style":{"color":{"background":"var(--wp--preset--color--contrast)"}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull section-spacing-large has-background"
+    style="background-color:var(--wp--preset--color--contrast)">
 
     <!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"4rem"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","alignItems":"flex-end"}} -->
     <div class="wp-block-group alignwide" style="margin-bottom:4rem">
@@ -53,9 +53,8 @@
             </div>
             <!-- /wp:cover -->
 
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
-            <div class="wp-block-group"
-                style="padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
+            <!-- wp:group {"className":"card-padding-large"} -->
+            <div class="wp-block-group card-padding-large">
                 <!-- wp:heading {"level":3,"className":"text-blueprint-card-title","textColor":"secondary","fontFamily":"display"} -->
                 <h3
                     class="wp-block-heading has-secondary-color has-text-color has-display-font-family text-blueprint-card-title">
@@ -90,9 +89,8 @@
             </div>
             <!-- /wp:cover -->
 
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
-            <div class="wp-block-group"
-                style="padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
+            <!-- wp:group {"className":"card-padding-large"} -->
+            <div class="wp-block-group card-padding-large">
                 <!-- wp:heading {"level":3,"className":"text-blueprint-card-title","textColor":"secondary","fontFamily":"display"} -->
                 <h3
                     class="wp-block-heading has-secondary-color has-text-color has-display-font-family text-blueprint-card-title">
@@ -128,9 +126,8 @@
             </div>
             <!-- /wp:cover -->
 
-            <!-- wp:group {"style":{"spacing":{"padding":{"top":"2.5rem","right":"2.5rem","bottom":"2.5rem","left":"2.5rem"}}}} -->
-            <div class="wp-block-group"
-                style="padding-top:2.5rem;padding-right:2.5rem;padding-bottom:2.5rem;padding-left:2.5rem">
+            <!-- wp:group {"className":"card-padding-large"} -->
+            <div class="wp-block-group card-padding-large">
                 <!-- wp:heading {"level":3,"className":"text-blueprint-card-title","textColor":"secondary","fontFamily":"display"} -->
                 <h3
                     class="wp-block-heading has-secondary-color has-text-color has-display-font-family text-blueprint-card-title">

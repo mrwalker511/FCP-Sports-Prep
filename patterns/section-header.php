@@ -14,16 +14,15 @@
     style="background-color:var(--wp--preset--color--contrast);padding-top:6rem;padding-bottom:4rem">
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
-        <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.4em","fontSize":"0.75rem"}},"textColor":"primary"} -->
-        <p class="has-primary-color has-text-color"
-            style="font-size:0.75rem;font-style:normal;font-weight:700;letter-spacing:0.4em;text-transform:uppercase">
+        <!-- wp:paragraph {"className":"text-label-medium letter-spacing-wider","textColor":"primary"} -->
+        <p class="has-primary-color has-text-color text-label-medium letter-spacing-wider">
             THE
             COASTAL BLUEPRINT</p>
         <!-- /wp:paragraph -->
 
-        <!-- wp:heading {"textColor":"base","style":{"typography":{"fontStyle":"italic","textTransform":"uppercase","letterSpacing":"-0.025em","fontSize":"clamp(3rem, 5vw, 4.5rem)","lineHeight":"1"}},"fontFamily":"display"} -->
-        <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family"
-            style="font-size:clamp(3rem, 5vw, 4.5rem);font-style:italic;line-height:1;letter-spacing:-0.025em;text-transform:uppercase">
+        <!-- wp:heading {"className":"text-blueprint-h2","style":{"typography":{"fontSize":"clamp(3rem, 5vw, 4.5rem)"}},"textColor":"base","fontFamily":"display"} -->
+        <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family text-blueprint-h2"
+            style="font-size:clamp(3rem, 5vw, 4.5rem)">
             WHAT SETS US APART</h2>
         <!-- /wp:heading -->
 
