@@ -8,9 +8,9 @@
  * Description: Donor recognition section with tiered giving levels display.
  */
 ?>
-<!-- wp:group {"align":"full","className":"section-spacing-large","style":{"color":{"background":"var(--wp--preset--color--contrast)"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull section-spacing-large has-background"
-    style="background-color:var(--wp--preset--color--contrast)">
+<!-- wp:group {"align":"full","className":"section-spacing-large","backgroundColor":"contrast","textColor":"base","layout":{"type":"constrained"}} -->
+<div
+    class="wp-block-group alignfull section-spacing-large has-base-color has-contrast-background-color has-text-color has-background">
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
         <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"5rem","left":"5rem"},"margin":{"bottom":"8rem"}}}} -->
@@ -91,5 +91,6 @@
         </div>
         <!-- /wp:columns -->
     </div>
+    <!-- /wp:group -->
 </div>
 <!-- /wp:group -->

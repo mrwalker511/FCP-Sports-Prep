@@ -8,9 +8,8 @@
  * Description: Three-column feature grid showcasing blueprint cards with icons, titles, and descriptions.
  */
 ?>
-<!-- wp:group {"align":"full","className":"section-spacing-large","style":{"color":{"background":"var(--wp--preset--color--contrast)"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull section-spacing-large has-background"
-    style="background-color:var(--wp--preset--color--contrast)">
+<!-- wp:group {"align":"full","className":"section-spacing-large","backgroundColor":"contrast","textColor":"base","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull section-spacing-large has-base-color has-contrast-background-color has-text-color has-background">
 
     <!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"4rem"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","alignItems":"flex-end"}} -->
     <div class="wp-block-group alignwide" style="margin-bottom:4rem">
@@ -28,7 +27,7 @@
         </div>
         <!-- /wp:group -->
 
-        <!-- wp:paragraph {"align":"right","className":"has-text-color opacity-80","style":{"typography":{"fontStyle":"italic","fontWeight":"300"}},"textColor":"base"} -->
+        <!-- wp:paragraph {"align":"right","className":"opacity-80","style":{"typography":{"fontStyle":"italic","fontWeight":"300"}},"textColor":"base"} -->
         <p class="has-text-align-right has-base-color has-text-color opacity-80"
             style="font-style:italic;font-weight:300">
             We don't just build athletes; we build complete leaders ready for the next level.
@@ -152,5 +151,4 @@
     </div>
     <!-- /wp:columns -->
 </div>
-<!-- /wp:group -->
 <!-- /wp:group -->
