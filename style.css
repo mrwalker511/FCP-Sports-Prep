@@ -154,6 +154,7 @@ body .is-style-blueprint {
     text-transform: uppercase;
     letter-spacing: -0.025em;
     line-height: 0.9;
+    color: var(--wp--preset--color--base);
 }
 
 /* Block Style: Outline Gold */
@@ -188,6 +189,7 @@ body .wp-block-button.is-style-large .wp-block-button__link {
     line-height: 1;
     letter-spacing: -0.025em;
     text-transform: uppercase;
+    color: var(--wp--preset--color--base);
 }
 
 /* Heading Utilities - Blueprint Style */
@@ -197,6 +199,7 @@ body .wp-block-button.is-style-large .wp-block-button__link {
     line-height: 1;
     letter-spacing: -0.025em;
     text-transform: uppercase;
+    color: var(--wp--preset--color--base);
 }
 
 .text-blueprint-h3 {
@@ -205,6 +208,7 @@ body .wp-block-button.is-style-large .wp-block-button__link {
     line-height: 1;
     letter-spacing: -0.025em;
     text-transform: uppercase;
+    color: var(--wp--preset--color--base);
 }
 
 .text-blueprint-h4 {

@@ -3,16 +3,20 @@
 **MANDATORY**: Every LLM agent working on this repository MUST read this file BEFORE reading any other documentation or making any changes.
 
 ## Purpose
+
 This file serves as the **single source of truth** and coordination point for all AI agents working on the Florida Coastal Prep WordPress FSE Block Theme. It prevents conflicting changes and ensures consistency across different LLM sessions.
 
 ## 🚀 Quick Start (60-Second Overview)
 
 **What is this project?**
+
 - WordPress Full Site Editing (FSE) Block Theme
 - Production-ready theme for Florida Coastal Prep academy  
 - React prototype exists as reference only (not shipped)
 
 **Where are the files?**
+
+
 ```
 /                          ← Production theme files (root)
 ├── theme.json            ← Design tokens (colors, fonts, spacing)
@@ -23,10 +27,12 @@ This file serves as the **single source of truth** and coordination point for al
 ├── /prototype/react/     ← Reference implementation (not shipped)
 └── /docs/                ← Internal documentation
 ```
+code
 
 **Text Domain**: `fl-coastal-prep` (NEVER change this)
 
 **Your First 3 Steps**:
+
 1. Read this entire file (10 minutes)
 2. Check `docs/STATUS.md` (2 minutes)
 3. Review recent commits: `git log -5`
@@ -52,22 +58,27 @@ This file serves as the **single source of truth** and coordination point for al
 ## 🎨 Role-Specific Guidelines
 
 ### 🎨 Design Agent
+
 - **Focus**: Design tokens, `theme.json`, visual consistency.
 - **Key Files**: `theme.json`, `docs/DEVELOPER_GUIDE.md`
 
 ### 🧩 Pattern Agent
+
 - **Focus**: Block patterns in `/patterns/` (PHP only).
 - **Key Files**: `/patterns/*.php`, `docs/REFERENCE.md`
 
 ### 📝 Template Agent
+
 - **Focus**: HTML templates in `/templates/` and parts in `/parts/`.
 - **Key Files**: `/templates/*.html`, `/parts/*.html`, `docs/REFERENCE.md`
 
 ### 🔧 Functionality Agent
+
 - **Focus**: `functions.php`, CPTs, theme logic.
 - **Key Files**: `functions.php`, `docs/DEVELOPER_GUIDE.md`
 
 ### 🧪 QA Agent
+
 - **Focus**: Testing, validation, audit reports.
 - **Key Files**: `/tests/`, `docs/AUDIT_REPORTS.md`
 
