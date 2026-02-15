@@ -27,19 +27,17 @@
                     <p class="has-text-align-center has-base-color has-text-color opacity-40"
                         style="font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase">Date</p>
                     <!-- /wp:paragraph -->
-                    <!-- wp:paragraph {"style":{"typography":{"fontSize":"2.25rem","fontStyle":"italic","lineHeight":"1"}},"textColor":"base","fontFamily":"display"} -->
-                    <p class="has-base-color has-text-color has-display-font-family"
-                        style="font-size:2.25rem;font-style:italic;line-height:1">[fcp_schedule_meta field="game_date" format="M d" fallback="TBD"]</p>
-                    <!-- /wp:paragraph -->
+                    <!-- wp:shortcode -->
+                    <div class="has-base-color has-text-color has-display-font-family" style="font-size:2.25rem;font-style:italic;line-height:1">[fcp_schedule_meta field="game_date" format="M d" fallback="TBD"]</div>
+                    <!-- /wp:shortcode -->
                 </div>
                 <!-- /wp:group -->
 
                 <!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
                 <div class="wp-block-group">
-                    <!-- wp:paragraph {"style":{"typography":{"fontSize":"0.625rem","fontWeight":"700","textTransform":"uppercase","letterSpacing":"0.2em"}},"textColor":"primary"} -->
-                    <p class="has-primary-color has-text-color"
-                        style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">[fcp_schedule_meta field="location" fallback="Home Game"]</p>
-                    <!-- /wp:paragraph -->
+                    <!-- wp:shortcode -->
+                    <div class="has-primary-color has-text-color" style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">[fcp_schedule_meta field="location" fallback="Home Game"]</div>
+                    <!-- /wp:shortcode -->
                     <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"primary","fontFamily":"display"} /-->
                 </div>
                 <!-- /wp:group -->
