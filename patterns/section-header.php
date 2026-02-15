@@ -9,9 +9,9 @@
  * Description: Reusable section header with label, title, description, and accent separator.
  */
 ?>
-<!-- wp:group {"align":"full","style":{"color":{"background":"var(--wp--preset--color--contrast)"},"spacing":{"padding":{"top":"6rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-background"
-    style="background-color:var(--wp--preset--color--contrast);padding-top:6rem;padding-bottom:4rem">
+<!-- wp:group {"align":"full","backgroundColor":"contrast","textColor":"base","style":{"spacing":{"padding":{"top":"6rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull has-base-color has-contrast-background-color has-text-color has-background"
+    style="padding-top:6rem;padding-bottom:4rem">
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
         <!-- wp:paragraph {"className":"text-label-medium letter-spacing-wider","textColor":"primary"} -->
