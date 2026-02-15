@@ -77,21 +77,89 @@ if (Test-Path $zipPath) { Remove-Item $zipPath -Force }
 Write-Host ""
 Write-Host "Compressing -> $zipName (using forward-slash paths)" -ForegroundColor Yellow
 
-$zipStream = [System.IO.File]::Create($zipPath)
-$archive = New-Object System.IO.Compression.ZipArchive($zipStream, [System.IO.Compression.ZipArchiveMode]::Create)
+$zipStream = $null
+$archive = $null
+$filesAdded = 0
 
-foreach ($f in $filesToBundle) {
-    $entryName = $f.EntryName
-    $entry = $archive.CreateEntry($entryName, [System.IO.Compression.CompressionLevel]::Optimal)
-    $entryStream = $entry.Open()
-    $fileStream = [System.IO.File]::OpenRead($f.FullPath)
-    $fileStream.CopyTo($entryStream)
-    $fileStream.Close()
-    $entryStream.Close()
+try {
+    $zipStream = [System.IO.File]::Create($zipPath)
+    $archive = New-Object System.IO.Compression.ZipArchive($zipStream, [System.IO.Compression.ZipArchiveMode]::Create)
+
+    $currentFile = 0
+    foreach ($f in $filesToBundle) {
+        $currentFile++
+
+        # Progress indication every 10 files
+        if ($currentFile % 10 -eq 0) {
+            Write-Progress -Activity "Creating ZIP" -Status "File $currentFile of $($filesToBundle.Count)" -PercentComplete (($currentFile / $filesToBundle.Count) * 100)
+        }
+
+        # Skip if file was deleted since enumeration
+        if (-not (Test-Path $f.FullPath)) {
+            Write-Warning "Skipping deleted file: $($f.EntryName)"
+            continue
+        }
+
+        $entryName = $f.EntryName
+        $entry = $archive.CreateEntry($entryName, [System.IO.Compression.CompressionLevel]::Optimal)
+
+        $entryStream = $null
+        $fileStream = $null
+        try {
+            $entryStream = $entry.Open()
+            $fileStream = [System.IO.File]::OpenRead($f.FullPath)
+            $fileStream.CopyTo($entryStream)
+            $filesAdded++
+        }
+        finally {
+            # Always dispose streams, even on exception
+            if ($fileStream) { $fileStream.Dispose() }
+            if ($entryStream) { $entryStream.Dispose() }
+        }
+    }
+
+    Write-Progress -Activity "Creating ZIP" -Completed
+}
+catch {
+    Write-Error "Failed to create ZIP: $_"
+
+    # Clean up resources
+    if ($archive) { $archive.Dispose() }
+    if ($zipStream) { $zipStream.Close() }
+
+    # Remove partial/corrupted ZIP file
+    if (Test-Path $zipPath) {
+        Write-Host "Removing partial ZIP file..." -ForegroundColor Yellow
+        Remove-Item $zipPath -Force
+    }
+
+    exit 1
+}
+finally {
+    # Ensure resources are always released
+    if ($archive) { $archive.Dispose() }
+    if ($zipStream) { $zipStream.Close() }
 }
 
-$archive.Dispose()
-$zipStream.Close()
+# ── 3.1. Validate ZIP integrity ──────────────────────────────────
+Write-Host "Validating ZIP integrity..." -ForegroundColor Yellow
+try {
+    $testArchive = [System.IO.Compression.ZipFile]::OpenRead($zipPath)
+    $entryCount = $testArchive.Entries.Count
+    $testArchive.Dispose()
+
+    if ($entryCount -ne $filesAdded) {
+        Write-Warning "ZIP entry count mismatch: expected $filesAdded, got $entryCount"
+    }
+    else {
+        Write-Host "  ZIP validation: PASSED ($entryCount entries)" -ForegroundColor Green
+    }
+}
+catch {
+    Write-Error "ZIP validation failed: $_"
+    Remove-Item $zipPath -Force -ErrorAction SilentlyContinue
+    exit 1
+}
 
 # ── 4. Report ────────────────────────────────────────────────────
 $zipInfo = Get-Item $zipPath
@@ -101,7 +169,7 @@ $zipMB = [math]::Round($zipInfo.Length / 1MB, 2)
 Write-Host ""
 Write-Host "Bundle complete!" -ForegroundColor Green
 Write-Host "  Output : $zipPath"
-Write-Host "  Files  : $($filesToBundle.Count) production files"
+Write-Host "  Files  : $filesAdded files added to ZIP"
 Write-Host "  Size   : $zipKB KB ($zipMB MB)"
 
 # Show top-level contents summary
