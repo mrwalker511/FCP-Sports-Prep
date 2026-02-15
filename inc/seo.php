@@ -57,7 +57,7 @@ function fl_coastal_prep_seo_meta() {
 		echo '<meta property="og:image" content="' . esc_url( $image ) . '" />' . "\n";
 	}
 }
-add_action( 'wp_head', 'fl_coastal_prep_seo_meta', 1 );
+// Called from fl_coastal_prep_head_output() in functions.php
 
 /**
  * SEO Optimization: JSON-LD Schema Markup
@@ -89,7 +89,7 @@ function fl_coastal_prep_schema_markup() {
 
 	echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_UNESCAPED_SLASHES ) . '</script>' . "\n";
 }
-add_action( 'wp_head', 'fl_coastal_prep_schema_markup' );
+// Called from fl_coastal_prep_head_output() in functions.php
 
 /**
  * Register Customizer settings for schema address fields.

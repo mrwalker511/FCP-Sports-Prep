@@ -76,4 +76,25 @@ function fl_coastal_prep_preload_fonts()
         );
     }
 }
-add_action('wp_head', 'fl_coastal_prep_preload_fonts', 0);
+
+/**
+ * Consolidated wp_head output.
+ *
+ * Reduces wp_head hook overhead by consolidating multiple callbacks into a single function.
+ * Functions are called in priority order to maintain intended execution sequence.
+ */
+function fl_coastal_prep_head_output()
+{
+    // Priority 0: Preload fonts (critical for performance).
+    fl_coastal_prep_preload_fonts();
+
+    // Priority 1: SEO meta tags (defer to SEO plugins if present).
+    fl_coastal_prep_seo_meta();
+
+    // Priority 10: JSON-LD schema markup (front page only).
+    fl_coastal_prep_schema_markup();
+
+    // Priority 100: Customizer CSS overrides (must run late).
+    fl_coastal_prep_customizer_css();
+}
+add_action('wp_head', 'fl_coastal_prep_head_output', 1);

@@ -110,7 +110,7 @@ function fl_coastal_prep_customizer_css()
     </style>
     <?php
 }
-add_action('wp_head', 'fl_coastal_prep_customizer_css', 100);
+// wp_head hook: Called from fl_coastal_prep_head_output() in functions.php
 add_action('enqueue_block_editor_assets', 'fl_coastal_prep_customizer_css', 100);
 
 /**
