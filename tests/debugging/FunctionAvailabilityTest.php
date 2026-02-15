@@ -45,6 +45,10 @@ class FunctionAvailabilityTest extends TestCase
             'esc_attr',
             'esc_url',
             'esc_html',
+            'get_transient',
+            'set_transient',
+            'delete_transient',
+            'wp_generate_uuid4',
         ];
 
         foreach ($required_functions as $function) {

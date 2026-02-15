@@ -44,6 +44,20 @@ if (!$wp_tests_requirements_met) {
         define('ABSPATH', dirname(__DIR__) . '/');
     }
 
+    // Define common WordPress constants
+    if (!defined('MINUTE_IN_SECONDS'))
+        define('MINUTE_IN_SECONDS', 60);
+    if (!defined('HOUR_IN_SECONDS'))
+        define('HOUR_IN_SECONDS', 3600);
+    if (!defined('DAY_IN_SECONDS'))
+        define('DAY_IN_SECONDS', 86400);
+    if (!defined('WEEK_IN_SECONDS'))
+        define('WEEK_IN_SECONDS', 604800);
+    if (!defined('MONTH_IN_SECONDS'))
+        define('MONTH_IN_SECONDS', 2592000);
+    if (!defined('YEAR_IN_SECONDS'))
+        define('YEAR_IN_SECONDS', 31536000);
+
     // Define WordPress function stubs for standalone testing
     // These allow functions.php to load without fatal errors
 
@@ -619,6 +633,46 @@ if (!$wp_tests_requirements_met) {
         function add_shortcode($tag, $callback)
         {
             return true;
+        }
+    }
+
+    // Transient stubs
+    $GLOBALS['wp_transients'] = [];
+    if (!function_exists('get_transient')) {
+        function get_transient($transient)
+        {
+            return $GLOBALS['wp_transients'][$transient] ?? false;
+        }
+    }
+    if (!function_exists('set_transient')) {
+        function set_transient($transient, $value, $expiration = 0)
+        {
+            $GLOBALS['wp_transients'][$transient] = $value;
+            return true;
+        }
+    }
+    if (!function_exists('delete_transient')) {
+        function delete_transient($transient)
+        {
+            unset($GLOBALS['wp_transients'][$transient]);
+            return true;
+        }
+    }
+
+    if (!function_exists('wp_generate_uuid4')) {
+        function wp_generate_uuid4()
+        {
+            return sprintf(
+                '%04x%04x-%04x-%04x-%04x-%04x%04x%04x',
+                mt_rand(0, 0xffff),
+                mt_rand(0, 0xffff),
+                mt_rand(0, 0xffff),
+                mt_rand(0, 0x0fff) | 0x4000,
+                mt_rand(0, 0x3fff) | 0x8000,
+                mt_rand(0, 0xffff),
+                mt_rand(0, 0xffff),
+                mt_rand(0, 0xffff)
+            );
         }
     }
 
