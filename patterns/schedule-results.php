@@ -11,7 +11,7 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:6rem;padding-bottom:6rem">
 
-    <!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"schedule","order":"ASC","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"align":"wide","layout":{"type":"constrained"}} -->
+    <!-- wp:query {"query":{"perPage":10,"pages":0,"offset":0,"postType":"schedule","order":"ASC","orderBy":"meta_value","meta_key":"game_date","meta_type":"DATE","author":"","search":"","exclude":[],"sticky":"","inherit":false},"align":"wide","layout":{"type":"constrained"}} -->
     <div class="wp-block-query alignwide">
         <!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"1.5rem"}}} -->
 

@@ -181,10 +181,20 @@ function fl_coastal_prep_schedule_meta_shortcode($atts)
     $value = get_post_meta($post_id, $field, true);
 
     if ('game_date' === $field && $value) {
-        $timestamp = strtotime($value);
-        if ($timestamp) {
-            $value = date_i18n($atts['format'], $timestamp);
+        // Cache formatted dates to avoid redundant strtotime() calls.
+        static $date_cache = array();
+        $cache_key = $post_id . '_' . $value . '_' . $atts['format'];
+
+        if (!isset($date_cache[$cache_key])) {
+            $timestamp = strtotime($value);
+            if ($timestamp) {
+                $date_cache[$cache_key] = date_i18n($atts['format'], $timestamp);
+            } else {
+                $date_cache[$cache_key] = '';
+            }
         }
+
+        $value = $date_cache[$cache_key];
     }
 
     if (!$value && $atts['fallback']) {

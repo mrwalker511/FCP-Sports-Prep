@@ -21,8 +21,12 @@ function fl_coastal_prep_seo_meta() {
 		return;
 	}
 
-	// Check if common SEO plugins are active.
-	if ( defined( 'WPSEO_VERSION' ) || class_exists( 'RankMath' ) || class_exists( 'AIOSEO_MAIN_TYPE' ) ) {
+	// Check if common SEO plugins are active (cached in static variable).
+	static $has_seo_plugin = null;
+	if ( null === $has_seo_plugin ) {
+		$has_seo_plugin = defined( 'WPSEO_VERSION' ) || class_exists( 'RankMath' ) || class_exists( 'AIOSEO_MAIN_TYPE' );
+	}
+	if ( $has_seo_plugin ) {
 		return;
 	}
 

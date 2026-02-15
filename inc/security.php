@@ -21,9 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return array Modified headers.
  */
 function fl_coastal_prep_security_headers( $headers ) {
-    $theme_uri = get_template_directory_uri();
-    $site_url  = site_url();
-
     $csp_directives = array(
         "default-src 'self'",
         "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
