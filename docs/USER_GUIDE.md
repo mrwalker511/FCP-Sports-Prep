@@ -237,3 +237,91 @@ Manual verification checklist:
 - [x] Faculty archive displays grid of staff
 - [x] Schedule archive displays game list
 - [x] Navigation menus appear in header/footer
+
+---
+
+## New Page Templates
+
+### About/Mission Template
+
+**File**: `templates/page-about.html`
+
+**Purpose**: Showcase academy's vision, mission, values, and team.
+
+**How to Use**:
+1. Create new page: "About Our Academy"
+2. Page Attributes → Template → "About/Mission"
+3. Edit content in Site Editor:
+   - Vision statement (paragraph block)
+   - Mission statement (paragraph block)
+   - Values grid (edit card titles, descriptions, images)
+   - Team photos (replace images, update labels)
+4. Publish
+
+**Content Tips**:
+- Vision: 2-3 sentences, aspirational future state
+- Mission: 2-3 sentences, current purpose
+- Values: 3-6 pillars (Excellence, Integrity, Community, etc.)
+- Team photos: High-quality images of staff, students, campus
+
+---
+
+### Coaching Staff Template
+
+**File**: `templates/page-coaches.html`
+
+**Purpose**: Display coaching staff directory.
+
+**How to Use**:
+1. Create new page: "Coaching Staff"
+2. Page Attributes → Template → "Coaching Staff"
+3. Publish
+
+**Content Setup**:
+1. Posts → Faculty → Categories
+2. Create category: "Coaches"
+3. Create/edit Faculty posts:
+   - Add featured image (headshot)
+   - Write excerpt (10-20 words)
+   - Assign "Coaches" category
+4. Posts automatically appear in grid
+
+**Coach Post Fields**:
+- Title: Coach name
+- Excerpt: Title/specialty (e.g., "Head Coach • 15 Years Experience")
+- Content: Full bio
+- Featured Image: Professional headshot (square crop)
+- Category: "Coaches"
+
+---
+
+### Admissions/Enrollment Template
+
+**File**: `templates/page-admissions.html`
+
+**Purpose**: Guide prospective students through admissions.
+
+**How to Use**:
+1. Create new page: "Admissions"
+2. Page Attributes → Template → "Admissions/Enrollment"
+3. Edit in Site Editor:
+   - Hero: Update title, description, button links
+   - Requirements: Customize criteria lists
+   - Process Timeline: Update steps and images
+   - FAQ: Edit questions and answers
+4. Set up WPForms:
+   - Create admissions application form
+   - Copy shortcode
+   - Replace `[wpforms id="123"]` in form section
+5. Publish
+
+**Sections**:
+- Hero: Compelling CTA with apply button
+- Requirements: Academic and athletic eligibility
+- Process: 4-6 enrollment steps with visuals
+- FAQ: 6-10 common admissions questions
+- Form: WPForms application with fields for personal, academic, athletic info
+
+**Hero Button Setup**:
+- Primary button: Text "Apply Now", Link: `#application-form` (anchor to form)
+- Secondary button: Text "Schedule Visit", Link: `/contact` or calendar URL
