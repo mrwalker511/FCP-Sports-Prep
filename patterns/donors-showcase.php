@@ -38,7 +38,8 @@
             <!-- wp:column {"width":"50%"} -->
             <div class="wp-block-column" style="flex-basis:50%">
                 <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"donor-image"} -->
-                <figure class="wp-block-image size-large donor-image"><img src="assets/images/placeholder-donors.webp"
+                <figure class="wp-block-image size-large donor-image"><img
+                        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-donors.webp"
                         alt="Student-athletes celebrating together after a successful scholarship fundraiser" />
                 </figure>
                 <!-- /wp:image -->

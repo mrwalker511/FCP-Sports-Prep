@@ -8,11 +8,12 @@
  * Description: Full-width hero section with title, subtitle, and CTA buttons
  */
 ?>
-<!-- wp:cover {"url":"assets/images/placeholder-hero.webp","dimRatio":40,"overlayColor":"contrast","minHeight":100,"minHeightUnit":"vh","align":"full","style":{"color":{"duotone":"unset"}},"layout":{"type":"constrained"}} -->
+<!-- wp:cover {"url":"<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-hero.webp","dimRatio":40,"overlayColor":"contrast","minHeight":100,"minHeightUnit":"vh","align":"full","style":{"color":{"duotone":"unset"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull" style="min-height:100vh">
     <span aria-hidden="true"
         class="wp-block-cover__background has-contrast-background-color has-background-dim-40 has-background-dim"></span>
-    <img class="wp-block-cover__image-background" src="assets/images/placeholder-hero.webp"
+    <img class="wp-block-cover__image-background"
+        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-hero.webp"
         alt="Basketball players in competitive game action on an indoor court" data-object-fit="cover" />
 
     <div class="wp-block-cover__inner-container">
@@ -23,7 +24,9 @@
             <div class="wp-block-group has-border-color has-background"
                 style="border-color:var(--wp--preset--color--primary);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--primary);padding-top:0.25rem;padding-right:1rem;padding-bottom:0.25rem;padding-left:1rem">
                 <!-- wp:paragraph {"className":"text-label-medium letter-spacing-wider","textColor":"secondary","fontFamily":"heading"} -->
-                <p class="has-secondary-color has-text-color has-heading-font-family text-label-medium letter-spacing-wider">Official Prep Academy</p>
+                <p
+                    class="has-secondary-color has-text-color has-heading-font-family text-label-medium letter-spacing-wider">
+                    Official Prep Academy</p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->

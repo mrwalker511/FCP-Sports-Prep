@@ -8,11 +8,12 @@
  * Description: Full-width CTA section with headline, description, and dual action buttons
  */
 ?>
-<!-- wp:cover {"url":"assets/images/placeholder-training.webp","dimRatio":90,"overlayColor":"contrast","minHeight":500,"align":"full"} -->
+<!-- wp:cover {"url":"<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-training.webp","dimRatio":90,"overlayColor":"contrast","minHeight":500,"align":"full"} -->
 <div class="wp-block-cover alignfull" style="min-height:500px">
     <span aria-hidden="true"
         class="wp-block-cover__background has-contrast-background-color has-background-dim-90 has-background-dim"></span>
-    <img class="wp-block-cover__image-background" src="assets/images/placeholder-training.webp"
+    <img class="wp-block-cover__image-background"
+        src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-training.webp"
         alt="Basketball court with players during an intense training session" data-object-fit="cover" />
 
     <div class="wp-block-cover__inner-container">

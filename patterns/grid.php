@@ -9,7 +9,8 @@
  */
 ?>
 <!-- wp:group {"align":"full","className":"section-spacing-large","backgroundColor":"contrast","textColor":"base","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull section-spacing-large has-base-color has-contrast-background-color has-text-color has-background">
+<div
+    class="wp-block-group alignfull section-spacing-large has-base-color has-contrast-background-color has-text-color has-background">
 
     <!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"4rem"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","alignItems":"flex-end"}} -->
     <div class="wp-block-group alignwide" style="margin-bottom:4rem">
@@ -46,7 +47,8 @@
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
-                <img class="wp-block-cover__image-background" src="assets/images/placeholder-strength-training.webp"
+                <img class="wp-block-cover__image-background"
+                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-strength-training.webp"
                     alt="Athlete performing advanced strength training exercises in the gym" data-object-fit="cover" />
                 <div class="wp-block-cover__inner-container"></div>
             </div>
@@ -82,7 +84,8 @@
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
-                <img class="wp-block-cover__image-background" src="assets/images/placeholder-academic-lab.webp"
+                <img class="wp-block-cover__image-background"
+                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-academic-lab.webp"
                     alt="Students collaborating in a modern science laboratory classroom" data-object-fit="cover" />
                 <div class="wp-block-cover__inner-container"></div>
             </div>
@@ -119,7 +122,8 @@
             <div class="wp-block-cover" style="min-height:250px">
                 <span aria-hidden="true"
                     class="wp-block-cover__background has-secondary-background-color has-background-dim-20 has-background-dim"></span>
-                <img class="wp-block-cover__image-background" src="assets/images/placeholder-campus-lifestyle.webp"
+                <img class="wp-block-cover__image-background"
+                    src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-campus-lifestyle.webp"
                     alt="Oceanfront campus residence with palm trees and modern architecture" data-object-fit="cover" />
                 <div class="wp-block-cover__inner-container"></div>
             </div>

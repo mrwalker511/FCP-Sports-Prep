@@ -17,7 +17,7 @@
         <div class="wp-block-column" style="flex-basis:50%">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"program-image"} -->
             <figure class="wp-block-image size-large program-image">
-                <img src="assets/images/placeholder-athletic-track.webp"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-athletic-track.webp"
                     alt="Athletes in a professional track and field training session" />
             </figure>
             <!-- /wp:image -->
@@ -124,7 +124,7 @@
         <div class="wp-block-column" style="flex-basis:50%">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"program-image"} -->
             <figure class="wp-block-image size-large program-image">
-                <img src="assets/images/placeholder-academic-study.webp"
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-academic-study.webp"
                     alt="Students studying in the university preparatory academic wing" />
             </figure>
             <!-- /wp:image -->
