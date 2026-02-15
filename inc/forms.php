@@ -26,11 +26,19 @@ add_action('init', 'fl_coastal_prep_register_form_shortcodes');
 
 function fl_coastal_prep_form_message_shortcode()
 {
-    if (!isset($_GET['fcp_form'])) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+    // Use transient-based one-time message instead of URL parameters (security + performance).
+    if (!isset($_GET['fcp_msg_id'])) {
         return '';
     }
 
-    $status = sanitize_text_field(wp_unslash($_GET['fcp_form'])); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+    $msg_id = sanitize_text_field(wp_unslash($_GET['fcp_msg_id']));
+    $transient_key = 'fcp_form_msg_' . $msg_id;
+    $status = get_transient($transient_key);
+
+    // One-time use: delete transient after reading.
+    if (false !== $status) {
+        delete_transient($transient_key);
+    }
 
     $allowed_statuses = array('success', 'invalid', 'error');
     if (!in_array($status, $allowed_statuses, true)) {
@@ -234,7 +242,12 @@ function fl_coastal_prep_handle_contact_form()
     $body = "Name: {$name}\nEmail: {$email}\nPhone: {$phone}\nReason: {$reason}\n\nMessage:\n{$message}";
     $headers = array('Reply-To: ' . $email);
 
-    wp_mail($recipient, $subject, $body, $headers);
+    $sent = wp_mail($recipient, $subject, $body, $headers);
+
+    if (!$sent) {
+        error_log(sprintf('FL Coastal Prep: Contact form submission failed for %s (%s)', $name, $email));
+        fl_coastal_prep_redirect_form('error');
+    }
 
     fl_coastal_prep_redirect_form('success');
 }
@@ -264,7 +277,12 @@ function fl_coastal_prep_handle_apply_form()
     $body = "Student: {$first_name} {$last_name}\nGuardian Email: {$email}\nGuardian Phone: {$phone}\nSport: {$sport}\nGraduation Year: {$year}\n\nAdditional Details:\n{$notes}";
     $headers = array('Reply-To: ' . $email);
 
-    wp_mail($recipient, $subject, $body, $headers);
+    $sent = wp_mail($recipient, $subject, $body, $headers);
+
+    if (!$sent) {
+        error_log(sprintf('FL Coastal Prep: Application form submission failed for %s %s (%s)', $first_name, $last_name, $email));
+        fl_coastal_prep_redirect_form('error');
+    }
 
     fl_coastal_prep_redirect_form('success');
 }
@@ -273,12 +291,18 @@ add_action('admin_post_nopriv_fcp_apply_form', 'fl_coastal_prep_handle_apply_for
 
 function fl_coastal_prep_redirect_form($status)
 {
+    // Generate unique message ID and store status in transient (60 second TTL).
+    $message_id = wp_generate_uuid4();
+    $transient_key = 'fcp_form_msg_' . $message_id;
+    set_transient($transient_key, $status, 60);
+
     $redirect = wp_get_referer();
     if (!$redirect) {
         $redirect = home_url('/');
     }
 
-    $redirect = add_query_arg('fcp_form', $status, $redirect);
+    // Use message ID in URL instead of status (prevents XSS/CSRF).
+    $redirect = add_query_arg('fcp_msg_id', $message_id, $redirect);
     wp_safe_redirect($redirect);
     exit;
 }

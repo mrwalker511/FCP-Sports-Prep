@@ -8,7 +8,7 @@
  * Description: Grid display of faculty members with hover effects and 3-column layout.
  */
 ?>
-<!-- wp:query {"query":{"perPage":99,"pages":0,"offset":0,"postType":"faculty","order":"ASC","orderBy":"menu_order","author":"","search":"","exclude":[],"sticky":"","inherit":false},"align":"wide","layout":{"type":"constrained"}} -->
+<!-- wp:query {"query":{"perPage":12,"pages":0,"offset":0,"postType":"faculty","order":"ASC","orderBy":"menu_order","author":"","search":"","exclude":[],"sticky":"","inherit":false},"align":"wide","layout":{"type":"constrained"}} -->
 <div class="wp-block-query alignwide">
     <!-- wp:post-template {"align":"wide","style":{"spacing":{"blockGap":"2rem"}},"layout":{"type":"grid","columnCount":3}} -->
 
@@ -46,5 +46,11 @@
     <!-- /wp:group -->
 
     <!-- /wp:post-template -->
+
+    <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"4rem"}}}} -->
+    <!-- wp:query-pagination-previous {"label":"Previous"} /-->
+    <!-- wp:query-pagination-numbers /-->
+    <!-- wp:query-pagination-next {"label":"Next"} /-->
+    <!-- /wp:query-pagination -->
 </div>
 <!-- /wp:query -->
