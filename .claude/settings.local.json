@@ -16,7 +16,15 @@
       "WebFetch(domain:www.reddit.com)",
       "Bash(curl:*)",
       "Bash(python3:*)",
-      "WebFetch(domain:trends24.in)"
+      "WebFetch(domain:trends24.in)",
+      "Bash(git -C \"C:/Users/Matt Walker/Desktop/FCP/FCP-Sports-Prep\" diff \"docs/USER_GUIDE.md\")",
+      "Bash(git -C \"C:/Users/Matt Walker/Desktop/FCP/FCP-Sports-Prep\" show HEAD:\"docs/USER_GUIDE.md\")",
+      "Bash(git -C \"C:/Users/Matt Walker/Desktop/FCP/FCP-Sports-Prep\" log --oneline \"docs/USER_GUIDE.md\")",
+      "Bash(git -C \"C:/Users/Matt Walker/Desktop/FCP/FCP-Sports-Prep\" show ad547a6:\"docs/USER_GUIDE.md\")",
+      "Bash(git -C \"C:/Users/Matt Walker/Desktop/FCP/FCP-Sports-Prep\" show 2ad6f73 --stat)",
+      "Bash(git -C \"C:/Users/Matt Walker/Desktop/FCP/FCP-Sports-Prep\" diff HEAD~1 HEAD -- \"docs/USER_GUIDE.md\")",
+      "Bash(git -C \"C:/Users/Matt Walker/Desktop/FCP/FCP-Sports-Prep\" add \"docs/USER_GUIDE.md\")",
+      "Bash(git -C:*)"
     ]
   },
   "prefersReducedMotion": true
