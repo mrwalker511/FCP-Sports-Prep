@@ -80,7 +80,51 @@ Tags: full-site-editing, wp-block-styles, custom-colors, custom-logo, editor-sty
     transform: scale(1.05);
 }
 
-/* Utility Classes for Patterns */
+/* ========================================
+   UTILITY CLASSES FOR PATTERNS
+
+   Standardized utilities to maintain consistency
+   across all patterns and templates.
+
+   Contents:
+   - Label utilities (sizes & spacing)
+   - Button size variants
+   - Heading utilities (blueprint style)
+   - Border color utilities
+   - Shadow utilities
+   - Section spacing utilities
+   - Component spacing utilities
+   ======================================== */
+
+/* Label Utilities - Standardized Sizes */
+.text-label-small {
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.text-label-medium {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+/* Label Letter Spacing Variants */
+.letter-spacing-normal {
+    letter-spacing: 0.2em;
+}
+
+.letter-spacing-wide {
+    letter-spacing: 0.3em;
+}
+
+.letter-spacing-wider {
+    letter-spacing: 0.4em;
+}
+
+/* Legacy Blueprint Label - Updated to use standard size */
 .text-blueprint-label {
     font-size: 0.75rem;
     font-weight: 700;
@@ -124,11 +168,56 @@ body .wp-block-button.is-style-outline-gold .wp-block-button__link:hover {
     color: var(--wp--preset--color--secondary);
 }
 
+/* Button Size Variants */
+body .wp-block-button.is-style-small .wp-block-button__link {
+    padding: 1rem 2.5rem;
+}
+
+body .wp-block-button.is-style-medium .wp-block-button__link,
+body .wp-block-button .wp-block-button__link {
+    padding: 1.25rem 3.5rem;
+}
+
+body .wp-block-button.is-style-large .wp-block-button__link {
+    padding: 1.5rem 4rem;
+}
+
 .text-blueprint-title {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-style: italic;
     line-height: 1;
     letter-spacing: -0.025em;
+    text-transform: uppercase;
+}
+
+/* Heading Utilities - Blueprint Style */
+.text-blueprint-h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+}
+
+.text-blueprint-h3 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+}
+
+.text-blueprint-h4 {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.text-blueprint-h5 {
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.2;
     text-transform: uppercase;
 }
 
@@ -358,11 +447,73 @@ body .wp-block-button.is-style-outline-gold .wp-block-button__link:hover {
     color: var(--wp--preset--color--base);
 }
 
+/* Border Color Utilities - Standardized */
+.has-border-primary-20 {
+    border-color: color-mix(in srgb, var(--wp--preset--color--primary) 20%, transparent);
+}
+
+.has-border-primary-15 {
+    border-color: color-mix(in srgb, var(--wp--preset--color--primary) 15%, transparent);
+}
+
+.has-border-secondary-10 {
+    border-color: color-mix(in srgb, var(--wp--preset--color--secondary) 10%, transparent);
+}
+
+.has-border-secondary-5 {
+    border-color: color-mix(in srgb, var(--wp--preset--color--secondary) 5%, transparent);
+}
+
+.has-border-base-10 {
+    border-color: color-mix(in srgb, var(--wp--preset--color--base) 10%, transparent);
+}
+
 /* Shadow Utilities */
+.has-shadow-soft {
+    box-shadow: var(--wp--preset--shadow--soft);
+}
+
+.has-shadow-elevated {
+    box-shadow: var(--wp--preset--shadow--elevated);
+}
+
 .has-shadow-xl {
     box-shadow: var(--wp--preset--shadow--xl);
 }
 
 .has-shadow-2xl {
     box-shadow: var(--wp--preset--shadow--2xl);
+}
+
+/* Section Spacing Utilities */
+.section-spacing-small {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.section-spacing-medium {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.section-spacing-large {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+/* Component Spacing Utilities */
+.card-padding-standard {
+    padding: 2rem;
+}
+
+.card-padding-large {
+    padding: 2.5rem;
+}
+
+.column-gap-standard {
+    gap: 2rem;
+}
+
+.column-gap-large {
+    gap: 4rem;
 }

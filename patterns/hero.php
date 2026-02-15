@@ -22,9 +22,8 @@
             <!-- wp:group {"style":{"border":{"width":"1px","color":"var(--wp--preset--color--primary)","style":"solid"},"spacing":{"padding":{"top":"0.25rem","right":"1rem","bottom":"0.25rem","left":"1rem"}},"color":{"background":"var(--wp--preset--color--primary)"}}} -->
             <div class="wp-block-group has-border-color has-background"
                 style="border-color:var(--wp--preset--color--primary);border-style:solid;border-width:1px;background-color:var(--wp--preset--color--primary);padding-top:0.25rem;padding-right:1rem;padding-bottom:0.25rem;padding-left:1rem">
-                <!-- wp:paragraph {"style":{"typography":{"letterSpacing":"0.5em","textTransform":"uppercase","fontSize":"0.875rem"}},"textColor":"secondary","fontFamily":"heading"} -->
-                <p class="has-secondary-color has-text-color has-heading-font-family"
-                    style="font-size:0.875rem;letter-spacing:0.5em;text-transform:uppercase">Official Prep Academy</p>
+                <!-- wp:paragraph {"className":"text-label-medium letter-spacing-wider","textColor":"secondary","fontFamily":"heading"} -->
+                <p class="has-secondary-color has-text-color has-heading-font-family text-label-medium letter-spacing-wider">Official Prep Academy</p>
                 <!-- /wp:paragraph -->
             </div>
             <!-- /wp:group -->
