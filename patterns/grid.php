@@ -12,8 +12,8 @@
 <div
     class="wp-block-group alignfull section-spacing-large has-base-color has-contrast-background-color has-text-color has-background">
 
-    <!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"4rem"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","alignItems":"flex-end"}} -->
-    <div class="wp-block-group alignwide" style="margin-bottom:4rem">
+    <!-- wp:group {"align":"full","style":{"spacing":{"margin":{"bottom":"4rem"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","alignItems":"flex-end"}} -->
+    <div class="wp-block-group alignfull" style="margin-bottom:4rem">
         <!-- wp:group {"layout":{"type":"constrained"}} -->
         <div class="wp-block-group">
             <!-- wp:paragraph {"className":"text-blueprint-label","textColor":"primary"} -->
@@ -37,8 +37,8 @@
     </div>
     <!-- /wp:group -->
 
-    <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"}}}} -->
-    <div class="wp-block-columns alignwide">
+    <!-- wp:columns {"align":"full","style":{"spacing":{"blockGap":{"top":"2rem","left":"2rem"}}}} -->
+    <div class="wp-block-columns alignfull">
 
         <!-- wp:column {"className":"grid-card has-shadow-xl","style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"radius":"2px"}}} -->
         <div class="wp-block-column grid-card has-shadow-xl has-background"

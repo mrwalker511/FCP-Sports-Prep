@@ -11,8 +11,8 @@
 <!-- wp:group {"className":"section-spacing-large","layout":{"type":"constrained"}} -->
 <div class="wp-block-group section-spacing-large">
 
-    <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"4rem","left":"4rem"},"margin":{"bottom":"10rem"}}}} -->
-    <div class="wp-block-columns alignwide" style="margin-bottom:10rem">
+    <!-- wp:columns {"align":"full","style":{"spacing":{"blockGap":{"top":"4rem","left":"4rem"},"margin":{"bottom":"10rem"}}}} -->
+    <div class="wp-block-columns alignfull" style="margin-bottom:10rem">
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
             <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"program-image"} -->
@@ -72,8 +72,8 @@
     </div>
     <!-- /wp:columns -->
 
-    <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"4rem","left":"4rem"}}}} -->
-    <div class="wp-block-columns alignwide">
+    <!-- wp:columns {"align":"full","style":{"spacing":{"blockGap":{"top":"4rem","left":"4rem"}}}} -->
+    <div class="wp-block-columns alignfull">
         <!-- wp:column {"width":"50%"} -->
         <div class="wp-block-column" style="flex-basis:50%">
             <!-- wp:paragraph {"className":"text-label-small letter-spacing-normal","textColor":"primary"} -->
