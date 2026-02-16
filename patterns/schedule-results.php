@@ -24,10 +24,12 @@
                 <!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
                 <div class="wp-block-group">
                     <!-- wp:paragraph {"align":"center","className":"text-label-small letter-spacing-normal opacity-40","textColor":"base"} -->
-                    <p class="has-text-align-center has-base-color has-text-color text-label-small letter-spacing-normal opacity-40">Date</p>
+                    <p
+                        class="has-text-align-center has-base-color has-text-color text-label-small letter-spacing-normal opacity-40">
+                        Date</p>
                     <!-- /wp:paragraph -->
                     <!-- wp:shortcode -->
-                    <div class="has-base-color has-text-color has-display-font-family" style="font-size:2.25rem;font-style:italic;line-height:1">[fcp_schedule_meta field="game_date" format="M d" fallback="TBD"]</div>
+                    [fcp_schedule_meta field="game_date" format="M d" fallback="TBD" wrapper_class="has-base-color has-text-color has-display-font-family" wrapper_style="font-size:2.25rem;font-style:italic;line-height:1"]
                     <!-- /wp:shortcode -->
                 </div>
                 <!-- /wp:group -->
@@ -35,7 +37,7 @@
                 <!-- wp:group {"style":{"spacing":{"blockGap":"0.25rem"}},"layout":{"type":"flex","orientation":"vertical"}} -->
                 <div class="wp-block-group">
                     <!-- wp:shortcode -->
-                    <div class="has-primary-color has-text-color" style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase">[fcp_schedule_meta field="location" fallback="Home Game"]</div>
+                    [fcp_schedule_meta field="location" fallback="Home Game" wrapper_class="has-primary-color has-text-color" wrapper_style="font-size:0.625rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase"]
                     <!-- /wp:shortcode -->
                     <!-- wp:post-title {"isLink":true,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"primary","fontFamily":"display"} /-->
                 </div>

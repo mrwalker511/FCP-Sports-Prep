@@ -163,6 +163,8 @@ function fl_coastal_prep_schedule_meta_shortcode($atts)
             'field' => '',
             'format' => 'M d',
             'fallback' => '',
+            'wrapper_class' => '',
+            'wrapper_style' => '',
         ),
         $atts,
         'fcp_schedule_meta'
@@ -201,7 +203,16 @@ function fl_coastal_prep_schedule_meta_shortcode($atts)
         $value = $atts['fallback'];
     }
 
-    return esc_html($value);
+    $output = esc_html($value);
+
+    // Wrap in a styled container when wrapper attributes are provided.
+    if ($atts['wrapper_class'] || $atts['wrapper_style']) {
+        $class_attr = $atts['wrapper_class'] ? ' class="' . esc_attr($atts['wrapper_class']) . '"' : '';
+        $style_attr = $atts['wrapper_style'] ? ' style="' . esc_attr($atts['wrapper_style']) . '"' : '';
+        $output = '<div' . $class_attr . $style_attr . '>' . $output . '</div>';
+    }
+
+    return $output;
 }
 
 function fl_coastal_prep_schedule_link_shortcode($atts)
