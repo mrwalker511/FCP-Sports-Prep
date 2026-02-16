@@ -17,7 +17,7 @@ import { DonorsPattern } from './patterns/DonorsPattern';
 import { ContactPattern } from './patterns/ContactPattern';
 import { LegalPattern } from './patterns/LegalPattern';
 
-type PageType = 'home' | 'programs' | 'faculty' | 'campus' | 'news' | 'schedule' | 'apply' | 'donors' | 'contact' | 'privacy' | 'terms' | '404' | 'elementor-test' | 'manual';
+export type PageType = 'home' | 'programs' | 'faculty' | 'campus' | 'news' | 'schedule' | 'apply' | 'donors' | 'contact' | 'privacy' | 'terms' | '404' | 'elementor-test' | 'manual';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -42,8 +42,8 @@ const App: React.FC = () => {
       schema: "EducationalOrganization",
       og: "og:image, og:type, og:url"
     };
-    
-    switch(currentPage) {
+
+    switch (currentPage) {
       case 'programs': return { ...base, title: "Curriculum | Coastal Prep Athletics", desc: "View our D1-informed basketball and academic roadmap." };
       case 'faculty': return { ...base, title: "Leadership | Our Elite Coaching Staff", desc: "Meet the NBA scouts and D1 coaches leading our athletes." };
       case 'schedule': return { ...base, title: "Game Schedule | Florida Coastal Prep", desc: "Upcoming tournaments and scouting showcases." };
@@ -63,13 +63,13 @@ const App: React.FC = () => {
             <h2 className="font-display text-4xl text-navy-900 italic mb-6 uppercase">Elementor Mode</h2>
             <p className="text-slate-600 mb-8 italic">You are viewing the "Full Width" FSE template. This ensures that Elementor sections can stretch 100% without being boxed by the theme's CSS.</p>
             <div className="flex gap-4">
-               <button 
+              <button
                 onClick={() => setIsElementorCanvas(!isElementorCanvas)}
                 className="bg-navy-900 text-white px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-navy-900"
-               >
-                 Toggle Canvas Mode: {isElementorCanvas ? 'ON' : 'OFF'}
-               </button>
-               <button onClick={() => setCurrentPage('home')} className="border border-navy-900/10 px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-slate-50">Exit</button>
+              >
+                Toggle Canvas Mode: {isElementorCanvas ? 'ON' : 'OFF'}
+              </button>
+              <button onClick={() => setCurrentPage('home')} className="border border-navy-900/10 px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-slate-50">Exit</button>
             </div>
           </div>
         </div>
@@ -81,26 +81,27 @@ const App: React.FC = () => {
         <div className="bg-white min-h-screen pt-40 pb-24">
           <div className="max-w-[800px] mx-auto px-6">
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">Documentation</span>
-            <h1 className="font-display text-7xl text-navy-900 italic uppercase mb-12 leading-none">Theme Owner's Manual</h1>
+            <h1 className="font-display text-7xl text-navy-900 italic uppercase mb-12 leading-none">{"Theme Owner's Manual"}</h1>
             <div className="prose prose-slate italic font-light space-y-8 text-slate-600">
-               <section>
-                  <h3 className="text-navy-900 font-display text-3xl uppercase not-italic">1. Build & Deploy</h3>
-                  <p>Zip the theme contents. In WordPress, go to Appearance > Themes > Upload. This FSE theme is modular; patterns are found in the /patterns folder and registered in functions.php.</p>
-               </section>
-               <section>
-                  <h3 className="text-navy-900 font-display text-3xl uppercase not-italic">2. Custom Post Types</h3>
-                  <p>Faculty, Programs, and Schedules are registered in functions.php. Use the WordPress dashboard to add new items. Single and Archive templates are pre-styled.</p>
-               </section>
-               <section>
-                  <h3 className="text-navy-900 font-display text-3xl uppercase not-italic">3. Elementor Templates</h3>
-                  <p>Select "Elementor Full Width" in Page Attributes to use the Header/Footer while building full-width content. Use "Canvas" for landing pages.</p>
-               </section>
-               <div className="bg-slate-50 p-8 border-l-4 border-primary">
-                  <p className="text-sm">For full technical details, refer to <strong>docs/USER_MANUAL.md</strong> and <strong>docs/DEBUG_LOG.md</strong>.</p>
-               </div>
+              <section>
+                <h3 className="text-navy-900 font-display text-3xl uppercase not-italic">{"1. Build & Deploy"}</h3>
+                <p>{"Zip the theme contents. In WordPress, go to Appearance > Themes > Upload. This FSE theme is modular; patterns are found in the /patterns folder and registered in functions.php."}</p>
+              </section>
+              <section>
+                <h3 className="text-navy-900 font-display text-3xl uppercase not-italic">2. Custom Post Types</h3>
+                <p>Faculty, Programs, and Schedules are registered in functions.php. Use the WordPress dashboard to add new items. Single and Archive templates are pre-styled.</p>
+              </section>
+              <section>
+                <h3 className="text-navy-900 font-display text-3xl uppercase not-italic">3. Elementor Templates</h3>
+                <p>{"Select \"Elementor Full Width\" in Page Attributes to use the Header/Footer while building full-width content. Use \"Canvas\" for landing pages."}</p>
+              </section>
+              <div className="bg-slate-50 p-8 border-l-4 border-primary">
+                <p className="text-sm">For full technical details, refer to <strong>docs/USER_MANUAL.md</strong> and <strong>docs/DEBUG_LOG.md</strong>.</p>
+              </div>
+            </div>
 
             <button onClick={() => setCurrentPage('home')} className="mt-12 text-navy-900 font-bold uppercase tracking-widest text-[10px] hover:text-primary flex items-center gap-2">
-               <span className="material-icons text-sm">arrow_back</span> Return to Court
+              <span className="material-icons text-sm">arrow_back</span> Return to Court
             </button>
           </div>
         </div>
@@ -116,7 +117,7 @@ const App: React.FC = () => {
               <StatsPattern />
             </div>
             <div className="py-24 max-w-[1200px] mx-auto px-6">
-               <GridPattern />
+              <GridPattern />
             </div>
             <CTAPattern />
           </>
@@ -124,14 +125,14 @@ const App: React.FC = () => {
       case 'programs':
         return (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-             <div className="bg-navy-950 pt-24 pb-4">
-               <div className="max-w-[1200px] mx-auto px-6">
-                 <div className="inline-flex items-center space-x-2 text-primary font-bold text-[9px] uppercase tracking-[0.4em] mb-4">
-                   <span className="w-8 h-[1px] bg-primary"></span>
-                   <span>Custom Post Type: Program</span>
-                 </div>
-               </div>
-             </div>
+            <div className="bg-navy-950 pt-24 pb-4">
+              <div className="max-w-[1200px] mx-auto px-6">
+                <div className="inline-flex items-center space-x-2 text-primary font-bold text-[9px] uppercase tracking-[0.4em] mb-4">
+                  <span className="w-8 h-[1px] bg-primary"></span>
+                  <span>Custom Post Type: Program</span>
+                </div>
+              </div>
+            </div>
             <ProgramsHeroPattern />
             <div className="bg-white">
               <ProgramsDetailPattern />
@@ -143,18 +144,18 @@ const App: React.FC = () => {
         return (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 bg-slate-50">
             <div className="pt-40 pb-20 bg-navy-950">
-               <div className="max-w-[1200px] mx-auto px-6">
-                  <div className="inline-flex items-center space-x-2 text-primary font-bold text-[9px] uppercase tracking-[0.4em] mb-4">
-                    <span className="w-8 h-[1px] bg-primary"></span>
-                    <span>Custom Post Type: Faculty</span>
-                  </div>
-                  <SectionHeaderPattern 
-                    tag="The Minds Behind the Players"
-                    title="ELITE LEADERSHIP"
-                    desc="Our staff comprises former NBA scouts, D1 head coaches, and Ivy League academic advisors."
-                    light
-                  />
-               </div>
+              <div className="max-w-[1200px] mx-auto px-6">
+                <div className="inline-flex items-center space-x-2 text-primary font-bold text-[9px] uppercase tracking-[0.4em] mb-4">
+                  <span className="w-8 h-[1px] bg-primary"></span>
+                  <span>Custom Post Type: Faculty</span>
+                </div>
+                <SectionHeaderPattern
+                  tag="The Minds Behind the Players"
+                  title="ELITE LEADERSHIP"
+                  desc="Our staff comprises former NBA scouts, D1 head coaches, and Ivy League academic advisors."
+                  light
+                />
+              </div>
             </div>
             <FacultyPattern />
             <CTAPattern />
@@ -163,15 +164,15 @@ const App: React.FC = () => {
       case 'campus':
         return (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 bg-white">
-             <div className="pt-40 pb-20 bg-navy-950">
-               <div className="max-w-[1200px] mx-auto px-6">
-                  <SectionHeaderPattern 
-                    tag="World Class Environment"
-                    title="COASTAL FACILITIES"
-                    desc="A training ground built for excellence, located in the heart of Florida's premier sports corridor."
-                    light
-                  />
-               </div>
+            <div className="pt-40 pb-20 bg-navy-950">
+              <div className="max-w-[1200px] mx-auto px-6">
+                <SectionHeaderPattern
+                  tag="World Class Environment"
+                  title="COASTAL FACILITIES"
+                  desc="A training ground built for excellence, located in the heart of Florida's premier sports corridor."
+                  light
+                />
+              </div>
             </div>
             <CampusPattern />
             <CTAPattern />
@@ -180,19 +181,19 @@ const App: React.FC = () => {
       case 'news':
         return (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 bg-slate-50 min-h-screen">
-             <div className="pt-40 pb-20 bg-navy-950">
-               <div className="max-w-[1200px] mx-auto px-6">
-                  <div className="inline-flex items-center space-x-2 text-primary font-bold text-[9px] uppercase tracking-[0.4em] mb-4">
-                    <span className="w-8 h-[1px] bg-primary"></span>
-                    <span>Standard Post Category: News</span>
-                  </div>
-                  <SectionHeaderPattern 
-                    tag="Academy Intel"
-                    title="NEWS & ANNOUNCEMENTS"
-                    desc="Stay updated with recruitment news, campus developments, and player milestones."
-                    light
-                  />
-               </div>
+            <div className="pt-40 pb-20 bg-navy-950">
+              <div className="max-w-[1200px] mx-auto px-6">
+                <div className="inline-flex items-center space-x-2 text-primary font-bold text-[9px] uppercase tracking-[0.4em] mb-4">
+                  <span className="w-8 h-[1px] bg-primary"></span>
+                  <span>Standard Post Category: News</span>
+                </div>
+                <SectionHeaderPattern
+                  tag="Academy Intel"
+                  title="NEWS & ANNOUNCEMENTS"
+                  desc="Stay updated with recruitment news, campus developments, and player milestones."
+                  light
+                />
+              </div>
             </div>
             <NewsArchivePattern />
             <CTAPattern />
@@ -201,19 +202,19 @@ const App: React.FC = () => {
       case 'schedule':
         return (
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 bg-white min-h-screen">
-             <div className="pt-40 pb-20 bg-navy-900">
-               <div className="max-w-[1200px] mx-auto px-6 text-center flex flex-col items-center">
-                  <div className="inline-flex items-center space-x-2 text-primary font-bold text-[9px] uppercase tracking-[0.4em] mb-4">
-                    <span className="w-8 h-[1px] bg-primary"></span>
-                    <span>Custom Post Type: Schedule</span>
-                  </div>
-                  <SectionHeaderPattern 
-                    tag="The Pro Circuit"
-                    title="SEASON SCHEDULE"
-                    desc="Live scores, upcoming tournament dates, and scouting showcase locations."
-                    light
-                  />
-               </div>
+            <div className="pt-40 pb-20 bg-navy-900">
+              <div className="max-w-[1200px] mx-auto px-6 text-center flex flex-col items-center">
+                <div className="inline-flex items-center space-x-2 text-primary font-bold text-[9px] uppercase tracking-[0.4em] mb-4">
+                  <span className="w-8 h-[1px] bg-primary"></span>
+                  <span>Custom Post Type: Schedule</span>
+                </div>
+                <SectionHeaderPattern
+                  tag="The Pro Circuit"
+                  title="SEASON SCHEDULE"
+                  desc="Live scores, upcoming tournament dates, and scouting showcase locations."
+                  light
+                />
+              </div>
             </div>
             <SchedulePattern />
             <CTAPattern />
@@ -224,12 +225,12 @@ const App: React.FC = () => {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 bg-white min-h-screen">
             <div className="pt-40 pb-20 bg-navy-950">
               <div className="max-w-[1200px] mx-auto px-6">
-                 <SectionHeaderPattern 
-                   tag="Future Prospects"
-                   title="ADMISSIONS PORTAL"
-                   desc="Begin your journey. We are looking for athletes with high character, elite potential, and academic ambition."
-                   light
-                 />
+                <SectionHeaderPattern
+                  tag="Future Prospects"
+                  title="ADMISSIONS PORTAL"
+                  desc="Begin your journey. We are looking for athletes with high character, elite potential, and academic ambition."
+                  light
+                />
               </div>
             </div>
             <ApplyPattern />
@@ -241,12 +242,12 @@ const App: React.FC = () => {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 bg-slate-50 min-h-screen">
             <div className="pt-40 pb-20 bg-navy-950">
               <div className="max-w-[1200px] mx-auto px-6">
-                 <SectionHeaderPattern 
-                   tag="Support the Dream"
-                   title="DONORS & PARTNERS"
-                   desc="Florida Coastal Prep is a non-profit foundation. Your contributions provide scholarships for underprivileged athletes."
-                   light
-                 />
+                <SectionHeaderPattern
+                  tag="Support the Dream"
+                  title="DONORS & PARTNERS"
+                  desc="Florida Coastal Prep is a non-profit foundation. Your contributions provide scholarships for underprivileged athletes."
+                  light
+                />
               </div>
             </div>
             <DonorsPattern />
@@ -258,12 +259,12 @@ const App: React.FC = () => {
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 bg-white min-h-screen">
             <div className="pt-40 pb-20 bg-navy-950">
               <div className="max-w-[1200px] mx-auto px-6">
-                 <SectionHeaderPattern 
-                   tag="Get in Touch"
-                   title="CONTACT ACADEMY"
-                   desc="Connect with our recruitment team, academic advisors, or administrative offices."
-                   light
-                 />
+                <SectionHeaderPattern
+                  tag="Get in Touch"
+                  title="CONTACT ACADEMY"
+                  desc="Connect with our recruitment team, academic advisors, or administrative offices."
+                  light
+                />
               </div>
             </div>
             <ContactPattern />
@@ -300,28 +301,28 @@ const App: React.FC = () => {
         {renderContent()}
       </main>
       {!hideHeaderFooter && <Footer setPage={setCurrentPage} />}
-      
+
       <div className="fixed bottom-4 left-4 z-50 pointer-events-none flex flex-col space-y-2">
         {showSeoPanel && (
           <div className="bg-white p-6 shadow-2xl border border-slate-200 w-80 mb-4 rounded-sm animate-in slide-in-from-bottom-4 duration-300 pointer-events-auto">
-             <h4 className="font-display text-xl text-navy-900 italic mb-4">SEO HEAD INSPECTOR</h4>
-             <div className="space-y-4">
-                <div>
-                   <span className="text-[8px] font-bold text-slate-400 uppercase tracking-widest block">Title Tag</span>
-                   <p className="text-[11px] text-navy-900 font-medium italic">{seo.title}</p>
+            <h4 className="font-display text-xl text-navy-900 italic mb-4">SEO HEAD INSPECTOR</h4>
+            <div className="space-y-4">
+              <div>
+                <span className="text-[8px] font-bold text-slate-400 uppercase tracking-widest block">Title Tag</span>
+                <p className="text-[11px] text-navy-900 font-medium italic">{seo.title}</p>
+              </div>
+              <div>
+                <span className="text-[8px] font-bold text-slate-400 uppercase tracking-widest block">Meta Description</span>
+                <p className="text-[11px] text-slate-500 font-light italic leading-relaxed">{seo.desc}</p>
+              </div>
+              <div>
+                <span className="text-[8px] font-bold text-slate-400 uppercase tracking-widest block">Schema JSON-LD</span>
+                <div className="bg-slate-50 p-2 border border-slate-100 mt-1">
+                  <code className="text-[9px] text-primary font-bold">@type: {seo.schema}</code>
                 </div>
-                <div>
-                   <span className="text-[8px] font-bold text-slate-400 uppercase tracking-widest block">Meta Description</span>
-                   <p className="text-[11px] text-slate-500 font-light italic leading-relaxed">{seo.desc}</p>
-                </div>
-                <div>
-                   <span className="text-[8px] font-bold text-slate-400 uppercase tracking-widest block">Schema JSON-LD</span>
-                   <div className="bg-slate-50 p-2 border border-slate-100 mt-1">
-                      <code className="text-[9px] text-primary font-bold">@type: {seo.schema}</code>
-                   </div>
-                </div>
-             </div>
-             <button onClick={() => setShowSeoPanel(false)} className="w-full mt-6 py-2 bg-navy-900 text-white text-[9px] font-bold uppercase tracking-widest hover:bg-primary hover:text-navy-900">Close</button>
+              </div>
+            </div>
+            <button onClick={() => setShowSeoPanel(false)} className="w-full mt-6 py-2 bg-navy-900 text-white text-[9px] font-bold uppercase tracking-widest hover:bg-primary hover:text-navy-900">Close</button>
           </div>
         )}
 
@@ -331,19 +332,19 @@ const App: React.FC = () => {
             CMS STATUS: SEO OPTIMIZED
           </span>
           <div className="w-[1px] h-3 bg-white/20 ml-2"></div>
-          <button 
+          <button
             onClick={() => setShowSeoPanel(!showSeoPanel)}
             className="text-white hover:text-primary px-2 transition-colors"
           >
             <span className="material-icons text-[16px]">visibility</span>
           </button>
-          <button 
+          <button
             onClick={() => setCurrentPage('elementor-test')}
             className="bg-primary/20 hover:bg-primary text-primary hover:text-navy-900 px-2 py-1 rounded text-[8px] transition-colors ml-2 font-bold"
           >
             TEST BUILDER
           </button>
-          <button 
+          <button
             onClick={() => setCurrentPage('manual')}
             className="bg-white/10 hover:bg-white/20 text-white px-3 py-1 rounded text-[8px] transition-colors ml-1 font-bold border border-white/10"
           >

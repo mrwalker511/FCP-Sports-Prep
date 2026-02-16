@@ -1,9 +1,10 @@
 
 import React from 'react';
+import type { PageType } from '../App';
 
 interface LegalProps {
   title: string;
-  setPage: (page: any) => void;
+  setPage: (page: PageType) => void;
 }
 
 export const LegalPattern: React.FC<LegalProps> = ({ title, setPage }) => {
@@ -11,9 +12,9 @@ export const LegalPattern: React.FC<LegalProps> = ({ title, setPage }) => {
     <section className="bg-white min-h-screen">
       <div className="pt-40 pb-20 bg-slate-50 border-b border-slate-100">
         <div className="max-w-[800px] mx-auto px-6">
-           <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">Academy Governance</span>
-           <h1 className="font-display text-7xl text-navy-900 italic uppercase leading-none">{title}</h1>
-           <div className="h-1 w-24 bg-primary mt-8"></div>
+          <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">Academy Governance</span>
+          <h1 className="font-display text-7xl text-navy-900 italic uppercase leading-none">{title}</h1>
+          <div className="h-1 w-24 bg-primary mt-8"></div>
         </div>
       </div>
 
@@ -40,13 +41,13 @@ export const LegalPattern: React.FC<LegalProps> = ({ title, setPage }) => {
         </div>
 
         <div className="mt-20 pt-12 border-t border-slate-100 flex justify-between items-center">
-           <button onClick={() => setPage('home')} className="text-navy-900 font-bold uppercase tracking-widest text-[10px] hover:text-primary transition-colors flex items-center space-x-2">
-              <span className="material-icons text-sm">arrow_back</span>
-              <span>Back to Home</span>
-           </button>
-           <button onClick={() => window.print()} className="px-8 py-3 bg-navy-900 text-white font-bold uppercase tracking-widest text-[10px] hover:bg-primary hover:text-navy-900 transition-all">
-              Print Document
-           </button>
+          <button onClick={() => setPage('home')} className="text-navy-900 font-bold uppercase tracking-widest text-[10px] hover:text-primary transition-colors flex items-center space-x-2">
+            <span className="material-icons text-sm">arrow_back</span>
+            <span>Back to Home</span>
+          </button>
+          <button onClick={() => window.print()} className="px-8 py-3 bg-navy-900 text-white font-bold uppercase tracking-widest text-[10px] hover:bg-primary hover:text-navy-900 transition-all">
+            Print Document
+          </button>
         </div>
       </div>
     </section>

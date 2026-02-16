@@ -7,7 +7,7 @@ export const GridPattern: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
         <div className="max-w-2xl">
           <span className="text-primary font-heading font-bold tracking-[0.3em] text-xs uppercase block mb-4">Elite Standards</span>
-          <h2 className="font-display text-5xl md:text-7xl text-navy-900 leading-none italic uppercase">The Coastal <br/>Blueprint</h2>
+          <h2 className="font-display text-5xl md:text-7xl text-navy-900 leading-none italic uppercase">The Coastal <br />Blueprint</h2>
         </div>
         <p className="text-slate-500 italic max-w-sm text-right font-light">
           We don't just build athletes; we build complete leaders ready for the next level.
@@ -34,7 +34,7 @@ export const GridPattern: React.FC = () => {
         ].map((block, i) => (
           <div key={i} className="wp-block-column group bg-white rounded-sm overflow-hidden shadow-xl hover:shadow-2xl transition-all">
             <div className="h-64 overflow-hidden relative">
-              <img src={block.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={block.title} />
+              <img src={block.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={block.title} loading="lazy" />
               <div className="absolute inset-0 bg-navy-900/20 group-hover:bg-transparent transition-colors"></div>
             </div>
             <div className="p-10">

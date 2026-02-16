@@ -46,8 +46,8 @@ export const ApplyPattern: React.FC = () => {
             </span>
           </div>
           <div className="h-1 w-full bg-slate-100 relative">
-            <div 
-              className="absolute top-0 left-0 h-full bg-primary transition-all duration-500" 
+            <div
+              className="absolute top-0 left-0 h-full bg-primary transition-all duration-500"
               style={{ width: `${(step / 3) * 100}%` }}
             ></div>
           </div>
@@ -59,42 +59,42 @@ export const ApplyPattern: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">First Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     required
                     onChange={(e) => handleInputChange('firstName', e.target.value)}
-                    className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic" 
-                    placeholder="e.g. Marcus" 
+                    className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic"
+                    placeholder="e.g. Marcus"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Last Name</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     required
                     onChange={(e) => handleInputChange('lastName', e.target.value)}
-                    className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic" 
-                    placeholder="e.g. Jordan" 
+                    className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic"
+                    placeholder="e.g. Jordan"
                   />
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Email Address</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   required
                   onChange={(e) => handleInputChange('email', e.target.value)}
-                  className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic" 
-                  placeholder="name@example.com" 
+                  className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic"
+                  placeholder="name@example.com"
                 />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Home City / Country</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   onChange={(e) => handleInputChange('location', e.target.value)}
-                  className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic" 
-                  placeholder="Miami, FL" 
+                  className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic"
+                  placeholder="Miami, FL"
                 />
               </div>
             </div>
@@ -105,7 +105,7 @@ export const ApplyPattern: React.FC = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Primary Position</label>
-                  <select 
+                  <select
                     onChange={(e) => handleInputChange('position', e.target.value)}
                     className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic appearance-none bg-transparent"
                   >
@@ -118,30 +118,30 @@ export const ApplyPattern: React.FC = () => {
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Current Height</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     onChange={(e) => handleInputChange('height', e.target.value)}
-                    className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic" 
-                    placeholder="6' 5\" 
+                    className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic"
+                    placeholder={"6' 5\""}
                   />
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Highlight Reel Link (YouTube/Hudl)</label>
-                <input 
-                  type="url" 
+                <input
+                  type="url"
                   onChange={(e) => handleInputChange('videoLink', e.target.value)}
-                  className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic" 
-                  placeholder="https://..." 
+                  className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic"
+                  placeholder="https://..."
                 />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Current High School / Team</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   onChange={(e) => handleInputChange('team', e.target.value)}
-                  className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic" 
-                  placeholder="Elite Academy HS" 
+                  className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic"
+                  placeholder="Elite Academy HS"
                 />
               </div>
             </div>
@@ -151,19 +151,19 @@ export const ApplyPattern: React.FC = () => {
             <div className="animate-in fade-in slide-in-from-left-4 duration-500 space-y-8">
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Current GPA</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   onChange={(e) => handleInputChange('gpa', e.target.value)}
-                  className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic" 
-                  placeholder="3.85" 
+                  className="w-full border-b-2 border-slate-200 focus:border-primary outline-none py-3 text-lg font-light italic"
+                  placeholder="3.85"
                 />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Brief Personal Statement</label>
-                <textarea 
-                  rows={4} 
+                <textarea
+                  rows={4}
                   onChange={(e) => handleInputChange('statement', e.target.value)}
-                  className="w-full border-2 border-slate-100 p-4 focus:border-primary outline-none text-lg font-light italic" 
+                  className="w-full border-2 border-slate-100 p-4 focus:border-primary outline-none text-lg font-light italic"
                   placeholder="Tell us why you deserve a spot at Coastal Prep..."
                 ></textarea>
               </div>
@@ -175,7 +175,7 @@ export const ApplyPattern: React.FC = () => {
 
           <div className="flex justify-between pt-12">
             {step > 1 && (
-              <button 
+              <button
                 type="button"
                 onClick={() => setStep(step - 1)}
                 className="px-10 py-4 border-2 border-navy-900/10 text-navy-900 font-bold uppercase tracking-widest text-[10px] hover:border-primary transition-all"
@@ -185,7 +185,7 @@ export const ApplyPattern: React.FC = () => {
             )}
             <div className="ml-auto">
               {step < 3 ? (
-                <button 
+                <button
                   type="button"
                   onClick={() => setStep(step + 1)}
                   className="px-12 py-4 bg-navy-900 text-white font-bold uppercase tracking-widest text-[10px] hover:bg-primary hover:text-navy-900 transition-all shadow-xl"
@@ -193,7 +193,7 @@ export const ApplyPattern: React.FC = () => {
                   Next Step
                 </button>
               ) : (
-                <button 
+                <button
                   type="submit"
                   className="px-12 py-4 bg-primary text-navy-900 font-bold uppercase tracking-widest text-[10px] hover:bg-navy-900 hover:text-white transition-all shadow-xl"
                 >

@@ -16,9 +16,9 @@ export const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-5">
               {['facebook', 'camera_alt', 'play_arrow'].map((icon) => (
-                <a 
+                <a
                   key={icon}
-                  href="#" 
+                  href="#"
                   className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-navy-900 transition-all transform hover:scale-110"
                 >
                   <span className="material-icons text-base">{icon}</span>
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-5 text-sm font-medium">
               <li className="flex items-start space-x-3 text-slate-400">
                 <span className="material-icons text-primary text-xl">place</span>
-                <span className="leading-tight">Coastal Drive, Suite 100<br/>Clearwater, FL 33755, USA</span>
+                <span className="leading-tight">Coastal Drive, Suite 100<br />Clearwater, FL 33755, USA</span>
               </li>
               <li className="flex items-center space-x-3 text-slate-400">
                 <span className="material-icons text-primary text-xl">email</span>
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-slate-600 font-bold">
-          <p className="mb-4 md:mb-0">© 2024 FLORIDA COASTAL PREPARATORY ACADEMY. ALL RIGHTS RESERVED.</p>
+          <p className="mb-4 md:mb-0">© {new Date().getFullYear()} FLORIDA COASTAL PREPARATORY ACADEMY. ALL RIGHTS RESERVED.</p>
           <div className="flex space-x-8">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

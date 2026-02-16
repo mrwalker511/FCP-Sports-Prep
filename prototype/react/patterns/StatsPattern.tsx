@@ -12,7 +12,8 @@ export const StatsPattern: React.FC = () => {
       ].map((item, i) => (
         <div key={i} className="wp-block-column p-10 border-r border-navy-900/5 last:border-0 flex flex-col items-center justify-center group cursor-default">
           <span className="font-display text-5xl text-navy-900 mb-1 group-hover:scale-110 transition-transform">{item.n}</span>
-          <span className="text-[10px] font-bold tracking-widest uppercase text-navy-900/80 mb-2">{item.l}</span>
+          <span className="text-[10px] font-bold tracking-widest uppercase text-navy-900/80 mb-1">{item.l}</span>
+          <span className="text-[9px] tracking-wider uppercase text-navy-900/40 opacity-0 group-hover:opacity-100 transition-opacity">{item.s}</span>
           <div className="h-0.5 w-0 group-hover:w-8 bg-navy-900/20 transition-all duration-500"></div>
         </div>
       ))}
