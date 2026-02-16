@@ -100,12 +100,42 @@ function fl_coastal_prep_register_cpts() {
 		'template_lock' => false,
 	) );
 
+	register_post_type( 'donor', array(
+		'labels'        => array(
+			'name'                  => _x( 'Donors', 'Post type general name', 'fl-coastal-prep' ),
+			'singular_name'         => _x( 'Donor', 'Post type singular name', 'fl-coastal-prep' ),
+			'add_new'               => _x( 'Add New', 'donor', 'fl-coastal-prep' ),
+			'add_new_item'          => __( 'Add New Donor', 'fl-coastal-prep' ),
+			'edit_item'             => __( 'Edit Donor', 'fl-coastal-prep' ),
+			'new_item'              => __( 'New Donor', 'fl-coastal-prep' ),
+			'view_item'             => __( 'View Donor', 'fl-coastal-prep' ),
+			'search_items'          => __( 'Search Donors', 'fl-coastal-prep' ),
+			'not_found'             => __( 'No donors found.', 'fl-coastal-prep' ),
+			'not_found_in_trash'    => __( 'No donors found in Trash.', 'fl-coastal-prep' ),
+			'all_items'             => __( 'All Donors', 'fl-coastal-prep' ),
+			'archives'              => __( 'Donor Archives', 'fl-coastal-prep' ),
+		),
+		'public'        => true,
+		'has_archive'   => true,
+		'show_in_rest'  => true,
+		'menu_icon'     => 'dashicons-heart',
+		'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
+		'taxonomies'    => array( 'donor_tier' ),
+		'template'      => array(
+			array( 'core/post-featured-image' ),
+			array( 'core/post-title' ),
+			array( 'core/post-content' ),
+		),
+		'template_lock' => false,
+	) );
+
 	// Enable Elementor on all core post types (runs after WP core registers them).
 	add_post_type_support( 'page', 'elementor' );
 	add_post_type_support( 'post', 'elementor' );
 	add_post_type_support( 'faculty', 'elementor' );
 	add_post_type_support( 'program', 'elementor' );
 	add_post_type_support( 'schedule', 'elementor' );
+	add_post_type_support( 'donor', 'elementor' );
 }
 add_action( 'init', 'fl_coastal_prep_register_cpts' );
 

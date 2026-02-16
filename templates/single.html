@@ -2,14 +2,27 @@
 
 <!-- wp:group {"tagName":"main","align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <main id="content" class="wp-block-group alignfull" style="padding-top:0;padding-bottom:0">
-    <!-- wp:post-featured-image {"style":{"spacing":{"margin":{"bottom":"50px"}}}} /-->
-    <!-- wp:group {"layout":{"type":"constrained"}} -->
-    <div class="wp-block-group">
-        <!-- wp:post-title {"level":1,"fontFamily":"display","style":{"typography":{"fontStyle":"italic","fontSize":"4rem"}}} /-->
-        <!-- wp:post-date /-->
-        <!-- wp:post-content /-->
+
+    <!-- Article Header -->
+    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"6rem","bottom":"3rem"}},"color":{"background":"var(--wp--preset--color--contrast)"}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignfull has-background" style="background-color:var(--wp--preset--color--contrast);padding-top:6rem;padding-bottom:3rem">
+        <!-- wp:group {"layout":{"type":"constrained"}} -->
+        <div class="wp-block-group">
+            <!-- wp:post-date {"style":{"typography":{"fontSize":"0.75rem","fontWeight":"700","letterSpacing":"0.2em","textTransform":"uppercase"}},"textColor":"primary"} /-->
+            <!-- wp:post-title {"level":1,"className":"text-blueprint-h2","style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)"}},"textColor":"base","fontFamily":"display"} /-->
+        </div>
+        <!-- /wp:group -->
     </div>
     <!-- /wp:group -->
+
+    <!-- Article Content -->
+    <!-- wp:group {"style":{"spacing":{"padding":{"top":"4rem","bottom":"4rem"}}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group" style="padding-top:4rem;padding-bottom:4rem">
+        <!-- wp:post-featured-image {"align":"wide","style":{"spacing":{"margin":{"bottom":"3rem"}}}} /-->
+        <!-- wp:post-content {"style":{"typography":{"fontSize":"1.125rem","lineHeight":"1.75"}}} /-->
+    </div>
+    <!-- /wp:group -->
+
     <!-- wp:template-part {"slug":"comments","tagName":"section"} /-->
 </main>
 <!-- /wp:group -->
