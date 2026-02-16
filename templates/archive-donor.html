@@ -27,8 +27,17 @@
     <!-- /wp:group -->
 
     <!-- Donors Grid -->
-    <!-- wp:group {"className":"section-spacing-large","layout":{"type":"constrained"}} -->
-    <div class="wp-block-group section-spacing-large">
+    <!-- wp:group {"align":"full","className":"section-spacing-large","style":{"color":{"background":"var(--wp--preset--color--contrast)"}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignfull section-spacing-large has-background" style="background-color:var(--wp--preset--color--contrast)">
+
+        <!-- Wall of Honor Title -->
+        <!-- wp:heading {"textAlign":"center","level":4,"className":"text-blueprint-h4","style":{"typography":{"fontSize":"2.25rem"},"spacing":{"margin":{"bottom":"2rem"}}},"textColor":"base","fontFamily":"display"} -->
+        <h4 class="wp-block-heading has-text-align-center has-base-color has-text-color has-display-font-family text-blueprint-h4" style="font-size:2.25rem;margin-bottom:2rem">WALL OF HONOR</h4>
+        <!-- /wp:heading -->
+
+        <!-- Decorative Line -->
+        <div class="wp-block-group has-background" style="background-color:var(--wp--preset--color--primary);min-height:4px;min-width:96px;margin:0 auto 4rem auto"></div>
+
         <!-- wp:query {"query":{"perPage":12,"pages":0,"offset":0,"postType":"donor","order":"desc","orderBy":"date"},"align":"full"} -->
         <div class="wp-block-query alignfull">
             <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
@@ -41,15 +50,15 @@
                 <!-- /wp:group -->
             <!-- /wp:post-template -->
 
-            <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+            <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"4rem"}}},"textColor":"base"} -->
                 <!-- wp:query-pagination-previous /-->
                 <!-- wp:query-pagination-numbers /-->
                 <!-- wp:query-pagination-next /-->
             <!-- /wp:query-pagination -->
 
             <!-- wp:query-no-results -->
-                <!-- wp:paragraph {"align":"center"} -->
-                <p class="has-text-align-center">No donors found.</p>
+                <!-- wp:paragraph {"align":"center","textColor":"base","className":"opacity-80"} -->
+                <p class="has-text-align-center has-base-color has-text-color opacity-80">No donors found. Please add donors through the WordPress admin.</p>
                 <!-- /wp:paragraph -->
             <!-- /wp:query-no-results -->
         </div>
