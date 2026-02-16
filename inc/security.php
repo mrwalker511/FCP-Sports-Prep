@@ -30,6 +30,7 @@ function fl_coastal_prep_security_headers( $headers ) {
         "connect-src 'self'",
         "frame-src 'self'",
         "form-action 'self'",
+        "worker-src 'self' blob:",
         "object-src 'none'",
         "base-uri 'self'",
     );
