@@ -8,8 +8,8 @@
  * Description: Hero section for programs page with cover image and headline.
  */
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-programs-hero.webp","dimRatio":60,"overlayColor":"contrast","minHeight":70,"minHeightUnit":"vh","align":"full"} -->
-<div class="wp-block-cover alignfull" style="min-height:70vh">
+<!-- wp:cover {"url":"<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/placeholder-programs-hero.webp","dimRatio":60,"overlayColor":"contrast","minHeight":100,"minHeightUnit":"vh","align":"full"} -->
+<div class="wp-block-cover alignfull" style="min-height:100vh">
     <span aria-hidden="true"
         class="wp-block-cover__background has-contrast-background-color has-background-dim-60 has-background-dim"></span>
     <img class="wp-block-cover__image-background"

@@ -54,6 +54,29 @@ Tags: full-site-editing, wp-block-styles, custom-colors, custom-logo, editor-sty
     z-index: 100;
 }
 
+/* Hero Section Fixes - Ensure heroes extend to full viewport and screen edges */
+/* Remove any unwanted spacing from hero cover blocks */
+.wp-block-cover.alignfull[style*="min-height:100vh"],
+.wp-block-cover.alignfull[style*="min-height: 100vh"],
+.wp-block-cover.alignfull {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Ensure main content wrapper doesn't add spacing before hero sections */
+main.wp-block-group.alignfull > .wp-block-cover.alignfull:first-child {
+    margin-top: 0 !important;
+}
+
+/* Ensure constrained content has proper side padding since we removed root padding */
+.wp-block-group:not(.alignfull):not(.alignwide) > *:not(.alignfull):not(.alignwide),
+.has-global-padding > :not(.alignfull):not(.alignwide) {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+}
+
 /* Donor tier badge — styled via CSS to avoid block validation errors */
 .donor-tier {
     padding: 0.25rem 0.75rem;
