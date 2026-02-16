@@ -11,7 +11,7 @@ Welcome to the **Florida Coastal Prep** FSE Block Theme. This theme is designed 
 
 ## 1. Technical Requirements
 - **WordPress Version**: 6.2 or higher (6.4+ recommended for full FSE support).
-- **PHP Version**: 7.4 or higher.
+- **PHP Version**: 8.0 or higher.
 - **Plugins (Optional)**: 
   - **Elementor**: For custom page building using our optimized templates.
   - **Advanced Custom Fields (ACF)**: Recommended for expanding the Schedule CPT.

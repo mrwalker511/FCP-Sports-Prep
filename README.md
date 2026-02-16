@@ -24,12 +24,20 @@ This repository contains the **Florida Coastal Prep** Full Site Editing (FSE) Wo
 
 ## 🧪 Testing
 
-The theme includes a comprehensive test suite.
+The theme includes a comprehensive test suite (configured via `phpunit.xml.dist`).
 
 ```bash
 composer install
 composer test
 ```
+
+To run the suite directly:
+
+```bash
+./vendor/bin/phpunit --configuration phpunit.xml.dist
+```
+
+For full WordPress integration tests, install the WordPress test library or set `WP_TESTS_DIR` before running.
 
 See [tests/README.md](tests/README.md) for more information.
 
