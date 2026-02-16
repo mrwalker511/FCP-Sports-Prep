@@ -76,10 +76,10 @@ export WP_TESTS_DIR=/path/to/wordpress-tests-lib
 composer test
 ```
 
-Or directly with PHPUnit:
+Or directly with PHPUnit (uses the WordPress-style `phpunit.xml.dist` configuration):
 
 ```bash
-./vendor/bin/phpunit
+./vendor/bin/phpunit --configuration phpunit.xml.dist
 ```
 
 ### Run Specific Test Suites
@@ -88,38 +88,42 @@ Or directly with PHPUnit:
 ```bash
 composer test:security
 # or
-./vendor/bin/phpunit tests/security
+./vendor/bin/phpunit --configuration phpunit.xml.dist tests/security
 ```
 
 **Debugging Tests Only:**
 ```bash
 composer test:debugging
 # or
-./vendor/bin/phpunit tests/debugging
+./vendor/bin/phpunit --configuration phpunit.xml.dist tests/debugging
 ```
 
 **Pattern Validation Only:**
 ```bash
 composer test:patterns
 # or
-./vendor/bin/phpunit tests/patterns
+./vendor/bin/phpunit --configuration phpunit.xml.dist tests/patterns
 ```
 
 **Template Validation Only:**
 ```bash
-./vendor/bin/phpunit tests/templates
+composer test:templates
+# or
+./vendor/bin/phpunit --configuration phpunit.xml.dist tests/templates
 ```
 
 **Code Quality Tests Only:**
 ```bash
-./vendor/bin/phpunit tests/code-quality
+composer test:code-quality
+# or
+./vendor/bin/phpunit --configuration phpunit.xml.dist tests/code-quality
 ```
 
 ### Run Individual Test Files
 
 ```bash
-./vendor/bin/phpunit tests/security/SecurityTest.php
-./vendor/bin/phpunit tests/debugging/FunctionAvailabilityTest.php
+./vendor/bin/phpunit --configuration phpunit.xml.dist tests/security/SecurityTest.php
+./vendor/bin/phpunit --configuration phpunit.xml.dist tests/debugging/FunctionAvailabilityTest.php
 ```
 
 ### Generate Code Coverage Report
@@ -127,7 +131,7 @@ composer test:patterns
 ```bash
 composer test:coverage
 # or
-./vendor/bin/phpunit --coverage-html coverage-report
+./vendor/bin/phpunit --configuration phpunit.xml.dist --coverage-html coverage-report
 ```
 
 Then open `coverage-report/index.html` in your browser.

@@ -17,11 +17,13 @@
         }
     },
     "scripts": {
-        "test": "phpunit",
-        "test:security": "phpunit tests/security",
-        "test:debugging": "phpunit tests/debugging",
-        "test:patterns": "phpunit tests/patterns",
-        "test:coverage": "phpunit --coverage-html coverage-report"
+        "test": "phpunit --configuration phpunit.xml.dist",
+        "test:security": "phpunit --configuration phpunit.xml.dist tests/security",
+        "test:debugging": "phpunit --configuration phpunit.xml.dist tests/debugging",
+        "test:patterns": "phpunit --configuration phpunit.xml.dist tests/patterns",
+        "test:templates": "phpunit --configuration phpunit.xml.dist tests/templates",
+        "test:code-quality": "phpunit --configuration phpunit.xml.dist tests/code-quality",
+        "test:coverage": "phpunit --configuration phpunit.xml.dist --coverage-html coverage-report"
     },
     "config": {
         "allow-plugins": {
