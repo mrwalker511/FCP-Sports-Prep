@@ -136,6 +136,26 @@ function fl_coastal_prep_register_cpts() {
 	add_post_type_support( 'program', 'elementor' );
 	add_post_type_support( 'schedule', 'elementor' );
 	add_post_type_support( 'donor', 'elementor' );
+	// Register Donor Tier Taxonomy
+	register_taxonomy( 'donor_tier', array( 'donor' ), array(
+		'labels'            => array(
+			'name'              => _x( 'Donor Tiers', 'taxonomy general name', 'fl-coastal-prep' ),
+			'singular_name'     => _x( 'Donor Tier', 'taxonomy singular name', 'fl-coastal-prep' ),
+			'search_items'      => __( 'Search Donor Tiers', 'fl-coastal-prep' ),
+			'all_items'         => __( 'All Donor Tiers', 'fl-coastal-prep' ),
+			'edit_item'         => __( 'Edit Donor Tier', 'fl-coastal-prep' ),
+			'update_item'       => __( 'Update Donor Tier', 'fl-coastal-prep' ),
+			'add_new_item'      => __( 'Add New Donor Tier', 'fl-coastal-prep' ),
+			'new_item_name'     => __( 'New Donor Tier Name', 'fl-coastal-prep' ),
+			'menu_name'         => __( 'Donor Tiers', 'fl-coastal-prep' ),
+		),
+		'hierarchical'      => true,
+		'show_ui'           => true,
+		'show_in_rest'      => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'donor-tier' ),
+	) );
 }
 add_action( 'init', 'fl_coastal_prep_register_cpts' );
 
@@ -203,6 +223,47 @@ function fl_coastal_prep_register_post_meta() {
 			$allowed = array( 'win', 'loss', 'draw', 'upcoming' );
 			return in_array( $value, $allowed, true ) ? $value : 'upcoming';
 		},
+		'auth_callback'     => function () {
+			return current_user_can( 'edit_posts' );
+		},
+	) );
+
+	// Donor custom meta fields
+	register_post_meta( 'donor', 'donation_amount', array(
+		'show_in_rest'      => true,
+		'single'            => true,
+		'type'              => 'number',
+		'sanitize_callback' => 'absint',
+		'auth_callback'     => function () {
+			return current_user_can( 'edit_posts' );
+		},
+	) );
+
+	register_post_meta( 'donor', 'donation_year', array(
+		'show_in_rest'      => true,
+		'single'            => true,
+		'type'              => 'string',
+		'sanitize_callback' => 'sanitize_text_field',
+		'auth_callback'     => function () {
+			return current_user_can( 'edit_posts' );
+		},
+	) );
+
+	register_post_meta( 'donor', 'organization_type', array(
+		'show_in_rest'      => true,
+		'single'            => true,
+		'type'              => 'string',
+		'sanitize_callback' => 'sanitize_text_field',
+		'auth_callback'     => function () {
+			return current_user_can( 'edit_posts' );
+		},
+	) );
+
+	register_post_meta( 'donor', 'website_url', array(
+		'show_in_rest'      => true,
+		'single'            => true,
+		'type'              => 'string',
+		'sanitize_callback' => 'esc_url_raw',
 		'auth_callback'     => function () {
 			return current_user_can( 'edit_posts' );
 		},

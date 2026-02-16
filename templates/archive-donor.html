@@ -1,0 +1,63 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<main id="content" class="wp-block-group alignfull" style="padding-top:0;padding-bottom:0">
+
+    <!-- Header Section -->
+    <!-- wp:group {"align":"full","className":"section-spacing-large","style":{"color":{"background":"var(--wp--preset--color--contrast)"}},"layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignfull section-spacing-large has-background" style="background-color:var(--wp--preset--color--contrast)">
+        <!-- wp:group {"layout":{"type":"constrained"}} -->
+        <div class="wp-block-group">
+            <!-- wp:paragraph {"className":"text-label-medium letter-spacing-wider","textColor":"primary"} -->
+            <p class="has-primary-color has-text-color text-label-medium letter-spacing-wider">WALL OF HONOR</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:heading {"className":"text-blueprint-h2","style":{"typography":{"fontSize":"clamp(2.5rem, 5vw, 4rem)"}},"textColor":"base","fontFamily":"display"} -->
+            <h2 class="wp-block-heading has-base-color has-text-color has-display-font-family text-blueprint-h2" style="font-size:clamp(2.5rem, 5vw, 4rem)">OUR DONORS</h2>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph {"style":{"typography":{"fontStyle":"italic","fontWeight":"300","fontSize":"1.125rem"}},"textColor":"base","className":"opacity-80"} -->
+            <p class="has-base-color has-text-color opacity-80" style="font-size:1.125rem;font-style:italic;font-weight:300">
+                Recognizing the visionaries who make elite athletic and academic excellence accessible to all.
+            </p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Donors Grid -->
+    <!-- wp:group {"className":"section-spacing-large","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group section-spacing-large">
+        <!-- wp:query {"query":{"perPage":12,"pages":0,"offset":0,"postType":"donor","order":"desc","orderBy":"date"},"align":"full"} -->
+        <div class="wp-block-query alignfull">
+            <!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+                <!-- wp:group {"className":"has-border-color has-border-secondary-5 card-padding-large","style":{"color":{"background":"var(--wp--preset--color--base)"},"border":{"width":"1px","style":"solid"}},"layout":{"type":"constrained"}} -->
+                <div class="wp-block-group has-border-color has-border-secondary-5 card-padding-large has-background" style="border-style:solid;border-width:1px;background-color:var(--wp--preset--color--base)">
+                    <!-- wp:post-terms {"term":"donor_tier","textAlign":"center","style":{"typography":{"fontSize":"0.5625rem","fontWeight":"700","letterSpacing":"0.3em","textTransform":"uppercase"},"spacing":{"margin":{"bottom":"1.5rem"}}},"backgroundColor":"contrast","textColor":"base","className":"donor-tier"} /-->
+
+                    <!-- wp:post-title {"textAlign":"center","level":5,"isLink":true,"style":{"typography":{"fontSize":"1.875rem","fontStyle":"italic","textTransform":"uppercase"}},"textColor":"secondary","fontFamily":"display"} /-->
+                </div>
+                <!-- /wp:group -->
+            <!-- /wp:post-template -->
+
+            <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+                <!-- wp:query-pagination-previous /-->
+                <!-- wp:query-pagination-numbers /-->
+                <!-- wp:query-pagination-next /-->
+            <!-- /wp:query-pagination -->
+
+            <!-- wp:query-no-results -->
+                <!-- wp:paragraph {"align":"center"} -->
+                <p class="has-text-align-center">No donors found.</p>
+                <!-- /wp:paragraph -->
+            <!-- /wp:query-no-results -->
+        </div>
+        <!-- /wp:query -->
+    </div>
+    <!-- /wp:group -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
