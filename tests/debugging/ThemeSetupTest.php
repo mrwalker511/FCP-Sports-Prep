@@ -92,14 +92,14 @@ class ThemeSetupTest extends TestCase
     }
 
     /**
-     * Test that SEO meta is hooked correctly
+     * Test that SEO meta is hooked correctly (via parent head_output function)
      */
     public function test_seo_meta_hooked()
     {
-        // Hooks are available via stubs in standalone mode
+        // SEO functions are called from fl_coastal_prep_head_output(), which is hooked to wp_head
         $this->assertTrue(
-            has_action('wp_head', 'fl_coastal_prep_seo_meta') !== false,
-            'SEO meta function is not hooked to wp_head'
+            has_action('wp_head', 'fl_coastal_prep_head_output') !== false,
+            'Head output function is not hooked to wp_head (SEO meta is called from this function)'
         );
     }
 
@@ -115,14 +115,14 @@ class ThemeSetupTest extends TestCase
     }
 
     /**
-     * Test that schema markup is hooked correctly
+     * Test that schema markup is hooked correctly (via parent head_output function)
      */
     public function test_schema_markup_hooked()
     {
-        // Hooks are available via stubs in standalone mode
+        // Schema functions are called from fl_coastal_prep_head_output(), which is hooked to wp_head
         $this->assertTrue(
-            has_action('wp_head', 'fl_coastal_prep_schema_markup') !== false,
-            'Schema markup function is not hooked to wp_head'
+            has_action('wp_head', 'fl_coastal_prep_head_output') !== false,
+            'Head output function is not hooked to wp_head (schema markup is called from this function)'
         );
     }
 

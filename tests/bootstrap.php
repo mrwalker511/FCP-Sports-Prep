@@ -635,6 +635,36 @@ if (!$wp_tests_requirements_met) {
             return true;
         }
     }
+    if (!function_exists('register_taxonomy')) {
+        $GLOBALS['wp_taxonomies'] = [];
+        function register_taxonomy($taxonomy, $object_type, $args = [])
+        {
+            $defaults = [
+                'public' => false,
+                'hierarchical' => false,
+                'show_in_rest' => false,
+                'labels' => [],
+            ];
+            $args = array_merge($defaults, $args);
+
+            $label_defaults = [
+                'name' => $taxonomy,
+                'singular_name' => $taxonomy,
+            ];
+            $args['labels'] = (object) array_merge($label_defaults, (array) ($args['labels'] ?? []));
+
+            $taxonomy_object = (object) $args;
+            $taxonomy_object->name = $taxonomy;
+            $GLOBALS['wp_taxonomies'][$taxonomy] = $taxonomy_object;
+            return $taxonomy_object;
+        }
+    }
+    if (!function_exists('taxonomy_exists')) {
+        function taxonomy_exists($taxonomy)
+        {
+            return isset($GLOBALS['wp_taxonomies'][$taxonomy]);
+        }
+    }
 
     // Transient stubs
     $GLOBALS['wp_transients'] = [];

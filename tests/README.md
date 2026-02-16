@@ -28,6 +28,7 @@ composer test:patterns    # Pattern validation only
 ```
 
 **Expected Results:**
+
 - ✅ 56+ tests passing
 - ⚠️ 22 tests skipped (WordPress test suite not installed - this is normal)
 - ⚠️ 1 warning (informational - inline styles in grid.php)
@@ -47,6 +48,7 @@ composer install
 ```
 
 This will install:
+
 - PHPUnit 9.6
 - WordPress PHPUnit Polyfills
 - WordPress Test Library
@@ -85,6 +87,7 @@ Or directly with PHPUnit (uses the WordPress-style `phpunit.xml.dist` configurat
 ### Run Specific Test Suites
 
 **Security Tests Only:**
+
 ```bash
 composer test:security
 # or
@@ -92,6 +95,7 @@ composer test:security
 ```
 
 **Debugging Tests Only:**
+
 ```bash
 composer test:debugging
 # or
@@ -99,6 +103,7 @@ composer test:debugging
 ```
 
 **Pattern Validation Only:**
+
 ```bash
 composer test:patterns
 # or
@@ -106,6 +111,7 @@ composer test:patterns
 ```
 
 **Template Validation Only:**
+
 ```bash
 composer test:templates
 # or
@@ -113,6 +119,7 @@ composer test:templates
 ```
 
 **Code Quality Tests Only:**
+
 ```bash
 composer test:code-quality
 # or
@@ -163,6 +170,7 @@ tests/
 ### Security Tests
 
 **SecurityTest.php:**
+
 - ✅ No raw SQL queries (prevents SQL injection)
 - ✅ Proper output escaping (prevents XSS)
 - ✅ SEO meta function escaping
@@ -175,6 +183,7 @@ tests/
 - ✅ No sensitive information exposure
 
 **OutputEscapingTest.php:**
+
 - ✅ Pattern files escape dynamic content
 - ✅ Meta tags properly escaped
 - ✅ URLs escaped with esc_url()
@@ -184,6 +193,7 @@ tests/
 ### Debugging Tests
 
 **FunctionAvailabilityTest.php:**
+
 - ✅ WordPress core functions exist
 - ✅ Conditional tags available
 - ✅ Internationalization functions available
@@ -193,6 +203,7 @@ tests/
 - ✅ Enqueue functions available
 
 **ThemeSetupTest.php:**
+
 - ✅ Theme setup function exists and is hooked
 - ✅ CPT registration hooked correctly
 - ✅ Scripts enqueue hooked correctly
@@ -204,6 +215,7 @@ tests/
 - ✅ Function naming conventions followed
 
 **CustomPostTypeTest.php:**
+
 - ✅ Faculty CPT registered with correct settings
 - ✅ Program CPT registered with correct settings
 - ✅ Schedule CPT registered with correct settings
@@ -213,6 +225,7 @@ tests/
 ### Pattern Validation Tests
 
 **PatternValidationTest.php:**
+
 - ✅ All pattern files have valid PHP syntax
 - ✅ Patterns have required metadata (Title, Slug, Categories)
 - ✅ Pattern slugs follow naming convention
@@ -226,6 +239,7 @@ tests/
 ### Template Validation Tests
 
 **TemplateValidationTest.php:**
+
 - ✅ Required templates exist (index, front-page, single, 404)
 - ✅ Valid HTML structure
 - ✅ Valid WordPress block markup
@@ -240,6 +254,7 @@ tests/
 ### Code Quality Tests
 
 **ThemeStandardsTest.php:**
+
 - ✅ Required theme files exist
 - ✅ style.css has required headers
 - ✅ theme.json has correct version
@@ -314,6 +329,7 @@ class YourTest extends TestCase
 ### 2. Add to Appropriate Directory
 
 Place your test file in the relevant directory:
+
 - `tests/security/` for security tests
 - `tests/debugging/` for debugging tests
 - `tests/patterns/` for pattern tests
@@ -366,6 +382,7 @@ Many tests will be skipped if WordPress test suite is not installed. **This is n
 - ⚠️ **22 tests will be skipped** (these require full WordPress environment)
 
 To run all tests:
+
 1. Install WordPress test suite (see Installation section)
 2. Or set `WP_TESTS_DIR` environment variable
 
@@ -382,6 +399,7 @@ Run PowerShell as Administrator or adjust file permissions.
 **Issue:** Tests were incorrectly flagging self-closing WordPress blocks as unclosed.
 
 **Solution:** The block markup validator has been fixed to properly handle self-closing blocks like:
+
 ```html
 <!-- wp:template-part {"slug":"header"} /-->
 ```

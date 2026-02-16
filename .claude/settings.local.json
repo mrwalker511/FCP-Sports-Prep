@@ -25,7 +25,13 @@
       "Bash(git -C \"C:/Users/Matt Walker/Desktop/FCP/FCP-Sports-Prep\" diff HEAD~1 HEAD -- \"docs/USER_GUIDE.md\")",
       "Bash(git -C \"C:/Users/Matt Walker/Desktop/FCP/FCP-Sports-Prep\" add \"docs/USER_GUIDE.md\")",
       "Bash(git -C:*)",
-      "Bash(composer test:*)"
+      "Bash(composer test:*)",
+      "Bash(composer test:security:*)",
+      "Bash(composer test:debugging:*)",
+      "Bash(composer test:patterns:*)",
+      "Bash(composer test:templates:*)",
+      "Bash(composer test:code-quality:*)",
+      "Bash(./vendor/bin/phpunit:*)"
     ]
   },
   "prefersReducedMotion": true
