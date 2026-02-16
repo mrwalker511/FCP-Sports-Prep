@@ -19,6 +19,7 @@ node_modules/
 # PHP testing
 tests/
 bin/
+phpunit.xml.dist
 phpunit.xml
 phpunit-standalone.xml
 .phpunit.result.cache

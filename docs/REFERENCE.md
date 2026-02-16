@@ -177,10 +177,10 @@ Legacy React components used by the Vite prototype only.
 |------|---------|----------|-------|
 | `README.md` | Project overview | Developers | 1 |
 | `docs/USER_GUIDE.md` | Theme usage guide | End users | 2 |
-| `docs/DEBUG_LOG.md` | Development log | Developers | 1.5 |
-| `docs/DEVELOPER_GUIDE.md` | Migration instructions | Developers/LLM | 12 |
-| `docs/REFERENCE.md` | Pattern design specs | Developers/LLM | 15 |
-| `docs/REFERENCE.md` | This file | All | 3 |
+| `docs/STATUS.md` | Theme status + change history | Developers | 2 |
+| `docs/AUDIT_REPORTS.md` | Audit history and findings | Developers | 20 |
+| `docs/DEVELOPER_GUIDE.md` | Architecture + migration guide | Developers/LLM | 12 |
+| `docs/REFERENCE.md` | Reference + packaging guide | Developers/LLM | 15 |
 
 **Recommendation**: Include `docs/USER_GUIDE.md` in the WordPress theme ZIP (or copy it to the theme root before packaging). Others are for development reference.
 
@@ -228,8 +228,8 @@ Test Suite (🛠️):           15+ files (QA)
 - [x] `/patterns/` folder (15 converted .php files)
 
 ### Optional but Recommended:
-- [x] `USER_MANUAL.md`
-- [ ] `screenshot.png` (1200x900px theme preview)
+- [x] `docs/USER_GUIDE.md`
+- [x] `screenshot.png` (1200x900px theme preview)
 - [ ] `/assets/` folder (if custom images/CSS needed)
 - [ ] `/languages/` folder (if translation-ready)
 
@@ -247,12 +247,13 @@ Test Suite (🛠️):           15+ files (QA)
 florida-coastal-prep/
 ├── style.css               ← Theme header
 ├── functions.php           ← PHP logic
-├── theme.json             ← FSE config
-├── readme.txt             ← WordPress docs
-├── USER_MANUAL.md         ← End user guide
-├── screenshot.png         ← Theme preview (add this!)
+├── theme.json              ← FSE config
+├── readme.txt              ← WordPress docs
+├── screenshot.png          ← Theme preview
+├── docs/                   ← Optional documentation
+│   └── USER_GUIDE.md       ← End user guide
 │
-├── templates/             ← Page templates
+├── templates/              ← Page templates
 │   ├── front-page.html
 │   ├── index.html
 │   ├── single.html
@@ -260,11 +261,11 @@ florida-coastal-prep/
 │   ├── archive-*.html (2 files)
 │   └── page-*.html (12 files)
 │
-├── parts/                 ← Template parts
+├── parts/                  ← Template parts
 │   ├── header.html
 │   └── footer.html
 │
-└── patterns/              ← Block patterns (NEEDS WORK)
+└── patterns/               ← Block patterns
     ├── hero.php
     ├── stats.php
     ├── grid.php
@@ -363,7 +364,7 @@ florida-coastal-prep/
 
 ### WordPress Requirements:
 - **Version**: 6.2 minimum, 6.4+ recommended
-- **PHP**: 7.4 minimum
+- **PHP**: 8.0 minimum
 - **MySQL**: 5.7+ or MariaDB 10.2+
 
 ### Theme Features:
@@ -436,11 +437,12 @@ zip -r florida-coastal-prep.zip florida-coastal-prep/ \
 
 For detailed information, see:
 
-1. **WORDPRESS_MIGRATION_GUIDE.md** - Complete migration instructions
-2. **PATTERN_VISUAL_REFERENCE.md** - Visual specifications for each pattern
-3. **USER_MANUAL.md** - End user theme guide
-4. **DEBUG_LOG.md** - Development decisions and fixes
-5. **README.md** - Project overview
+1. **docs/DEVELOPER_GUIDE.md** - Architecture and migration guide
+2. **docs/REFERENCE.md** - Reference and packaging notes
+3. **docs/USER_GUIDE.md** - End user theme guide
+4. **docs/STATUS.md** - Status summary and change history
+5. **docs/AUDIT_REPORTS.md** - Audit history and findings
+6. **README.md** - Project overview
 
 ---
 
@@ -467,15 +469,15 @@ For detailed information, see:
 ---
 
 **Last Updated**: February 2026
-**Theme Version**: 1.0.0
+**Theme Version**: 1.1.0
 **Total Project Lines**: ~4,500 (including tests)
 **Estimated Completion**: 100% (COMPLETE)
-\n## Production File List
+## Production File List
 # Production Theme Package File List
 ## Florida Coastal Prep WordPress Theme - Ready for Upload
 
 **Generated**: February 01, 2026  
-**Theme Version**: 1.0.0  
+**Theme Version**: 1.1.0  
 **Total Production Files**: 63 files
 
 ---
@@ -504,7 +506,7 @@ florida-coastal-prep-theme/
 | `parts/` | ✅ YES | Template parts - header.html, footer.html, comments.html |
 | `patterns/` | ✅ YES | Block patterns (15 .php files) |
 | `demo-data/` | ⚡ Optional | demo-content.xml for CPT imports |
-| `docs/` | ⚡ Optional | USER_MANUAL.md, DEMO_CONTENT.md |
+| `docs/` | ⚡ Optional | USER_GUIDE.md |
 
 > **Note**: Folders must exist even if empty for WordPress to recognize the theme structure properly.
 
@@ -581,8 +583,7 @@ florida-coastal-prep-theme/
 ### 📚 Documentation (Optional)
 ```
 ✅ docs/USER_GUIDE.md            - End user guide (optional; include in ZIP if desired)
-✅ docs/USER_GUIDE.md           - Demo content setup instructions
-✅ README.md                     - Project overview
+✅ README.md                     - Project overview (optional)
 ```
 
 ### 📦 Demo Data (Optional)
@@ -629,7 +630,9 @@ florida-coastal-prep-theme/
 ```
 ❌ composer.json
 ❌ composer.lock
+❌ phpunit.xml.dist
 ❌ phpunit.xml
+❌ phpunit-standalone.xml
 ❌ tests/**
 ❌ vendor/**
 ❌ .phpunit.result.cache
@@ -667,8 +670,7 @@ Copy-Item "FCP-Sports-Prep\patterns" "$staging\patterns" -Recurse
 
 # Copy optional folders
 New-Item -ItemType Directory -Path "$staging\docs" | Out-Null
-Copy-Item "FCP-Sports-Prep\docs\USER_MANUAL.md" "$staging\docs"
-Copy-Item "FCP-Sports-Prep\docs\DEMO_CONTENT.md" "$staging\docs"
+Copy-Item "FCP-Sports-Prep\docs\USER_GUIDE.md" "$staging\docs"
 Copy-Item "FCP-Sports-Prep\demo-data" "$staging\demo-data" -Recurse
 
 # Create the ZIP archive
@@ -696,11 +698,9 @@ zip -r florida-coastal-prep-theme.zip FCP-Sports-Prep/ \
   -x "prototype/react/*" "prototype/react/**" \
   -x "*node_modules/*" "*/.git/*" "*/dist/*" \
   -x "package.json" "package-lock.json" "vite.config.ts" \
-  -x "composer.json" "composer.lock" "phpunit.xml" "tests/**" "vendor/**" \
+  -x "composer.json" "composer.lock" "phpunit.xml.dist" "phpunit.xml" "phpunit-standalone.xml" "tests/**" "vendor/**" \
   -x "AGENT_MEDIATOR.md" \
-  -x "docs/DEVELOPER_GUIDE.md" "docs/DEBUG_LOG.md" "docs/DEVELOPER_GUIDE.md" \
-  -x "docs/REFERENCE.md" "docs/REFERENCE.md" "docs/REFERENCE.md" \
-  -x "docs/DEVELOPER_GUIDE.md" \
+  -x "docs/DEVELOPER_GUIDE.md" "docs/STATUS.md" "docs/AUDIT_REPORTS.md" "docs/REFERENCE.md" \
   -x "*/test-tokens.html"
 ```
 
@@ -779,7 +779,7 @@ zip -r florida-coastal-prep-theme.zip FCP-Sports-Prep/ \
 **Ready to Package**: YES ✅  
 **Estimated Package Size**: ~325 KB  
 **WordPress Compatibility**: 6.2+ (6.4+ recommended)  
-**PHP Requirement**: 7.4+
+**PHP Requirement**: 8.0+
 \n## Pattern Visual Reference
 # Pattern Visual Reference Guide
 ## Detailed Component Descriptions for WordPress Block Conversion

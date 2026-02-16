@@ -34,7 +34,7 @@ composer test:patterns    # Pattern validation only
 
 ## Requirements
 
-- PHP 7.4 or higher
+- PHP 8.0 or higher
 - Composer
 - WordPress Test Library (optional, for full WordPress integration tests)
 
@@ -347,7 +347,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '7.4'
+        php-version: '8.0'
         
     - name: Install dependencies
       run: composer install

@@ -727,6 +727,6 @@ The theme architecture is **production-ready** with:
 ---
 
 **Generated**: February 2026
-**Theme Version**: 1.0.0
+**Theme Version**: 1.1.0
 **WordPress**: 6.2+ required (6.4+ recommended)
-**PHP**: 7.4+ required
+**PHP**: 8.0+ required

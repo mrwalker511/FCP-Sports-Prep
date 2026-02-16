@@ -2830,7 +2830,7 @@ The code is well-organized, properly documented, follows WordPress best practice
 **Theme:** Florida Coastal Prep (fl-coastal-prep)
 **Version Reviewed:** Current
 **WordPress Version:** 6.4+
-**PHP Version:** 7.4+
+**PHP Version:** 8.0+
 
 ---
 
@@ -3421,7 +3421,7 @@ The theme is ready for launch with the understanding that:
 - **Theme:** Florida Coastal Prep
 - **Audit Version:** 1.0
 - **WordPress Version:** 6.4+
-- **PHP Version:** 7.4+
+- **PHP Version:** 8.0+
 
 ---
 
@@ -3621,7 +3621,7 @@ The theme is now fully compliant with WordPress block validation standards.
 4. **Performance Optimization** - Identify asset loading issues, optimization opportunities, and bottlenecks
 5. **Functionality Verification** - Test all theme features, custom post types, and template rendering
 
-**Tech Stack:** WordPress 6.4, PHP 7.4+, PHPUnit for testing, WordPress coding standards (WPCS)
+**Tech Stack:** WordPress 6.4, PHP 8.0+, PHPUnit for testing, WordPress coding standards (WPCS)
 
 ---
 
@@ -3945,7 +3945,7 @@ Append findings to `docs/code-quality-findings.md`
 **Files:**
 
 - Review: `tests/` directory
-- Review: `phpunit.xml`
+- Review: `phpunit.xml.dist`
 - Update: `docs/code-quality-findings.md`
 
 **Step 1: Review test suite structure**
