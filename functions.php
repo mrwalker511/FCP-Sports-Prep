@@ -3,7 +3,7 @@
  * Florida Coastal Prep functions and definitions
  *
  * @package Fl_Coastal_Prep
- * @since   1.0.0
+ * @since   2.0.0
  *
  * THEME ARCHITECTURE:
  * - WordPress Blocks (Gutenberg): Primary content editor for all post types

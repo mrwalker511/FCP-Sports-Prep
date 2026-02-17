@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "version": 2,
+  "version": 3,
   "title": "Florida Coastal Prep",
   "settings": {
     "appearanceTools": true,
@@ -166,13 +166,48 @@
         "vw",
         "%"
       ],
-      "spacingScale": {
-        "operator": "*",
-        "increment": 1.5,
-        "steps": 7,
-        "mediumStep": 1.5,
-        "unit": "rem"
-      }
+      "spacingSizes": [
+        {
+          "name": "Extra Small",
+          "slug": "10",
+          "size": "0.5rem"
+        },
+        {
+          "name": "Small",
+          "slug": "20",
+          "size": "0.75rem"
+        },
+        {
+          "name": "Medium Small",
+          "slug": "30",
+          "size": "1rem"
+        },
+        {
+          "name": "Medium",
+          "slug": "40",
+          "size": "1.5rem"
+        },
+        {
+          "name": "Medium Large",
+          "slug": "50",
+          "size": "2.25rem"
+        },
+        {
+          "name": "Large",
+          "slug": "60",
+          "size": "3.375rem"
+        },
+        {
+          "name": "Extra Large",
+          "slug": "70",
+          "size": "5rem"
+        },
+        {
+          "name": "Huge",
+          "slug": "80",
+          "size": "7.5rem"
+        }
+      ]
     },
     "shadows": {
       "presets": [
@@ -273,6 +308,67 @@
         "bottom": "0px",
         "left": "0px"
       }
+    },
+    "blocks": {
+      "core/navigation": {
+        "typography": {
+          "fontSize": "0.675rem",
+          "fontWeight": "700",
+          "letterSpacing": "0.2em",
+          "textTransform": "uppercase"
+        }
+      },
+      "core/post-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--display)"
+        }
+      },
+      "core/query-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--display)"
+        }
+      },
+      "core/site-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--display)",
+          "fontWeight": "400"
+        }
+      }
     }
-  }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    },
+    {
+      "name": "comments",
+      "title": "Comments",
+      "area": "uncategorized"
+    }
+  ],
+  "patterns": [
+    "fl-coastal-prep/hero",
+    "fl-coastal-prep/stats",
+    "fl-coastal-prep/grid",
+    "fl-coastal-prep/cta",
+    "fl-coastal-prep/section-header",
+    "fl-coastal-prep/faculty-grid",
+    "fl-coastal-prep/campus-showcase",
+    "fl-coastal-prep/programs-hero",
+    "fl-coastal-prep/programs-detail",
+    "fl-coastal-prep/blueprint-gallery",
+    "fl-coastal-prep/donors-grid",
+    "fl-coastal-prep/donors-showcase",
+    "fl-coastal-prep/news-archive",
+    "fl-coastal-prep/schedule-results",
+    "fl-coastal-prep/contact-form",
+    "fl-coastal-prep/apply-form"
+  ]
 }

@@ -3,7 +3,7 @@
  * Theme setup and configuration.
  *
  * @package Fl_Coastal_Prep
- * @since   1.1.0
+ * @since   2.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -36,6 +36,7 @@ if ( ! function_exists( 'fl_coastal_prep_setup' ) ) :
 			'header-text'          => array( 'site-title', 'site-description' ),
 			'unlink-homepage-logo' => true,
 		) );
+		add_theme_support( 'block-template-parts' );
 
 		// Elementor Support (Optional)
 		add_theme_support( 'elementor' );
