@@ -24,16 +24,21 @@ function fl_coastal_prep_seo_meta() {
 	// Check if common SEO plugins are active (cached in static variable).
 	static $has_seo_plugin = null;
 	if ( null === $has_seo_plugin ) {
-		$has_seo_plugin = defined( 'WPSEO_VERSION' ) || class_exists( 'RankMath' ) || class_exists( 'AIOSEO_MAIN_TYPE' );
+		$has_seo_plugin = defined( 'WPSEO_VERSION' )
+			|| class_exists( 'RankMath' )
+			|| class_exists( 'AIOSEO\Plugin\AIOSEO' )
+			|| defined( 'AIOSEO_FILE' );
 	}
 	if ( $has_seo_plugin ) {
 		return;
 	}
 
+	$site_name   = get_bloginfo( 'name' );
 	$description = get_bloginfo( 'description' );
 	$image       = get_header_image();
 	$url         = home_url( '/' );
 	$title       = wp_get_document_title();
+	$og_type     = 'website';
 
 	if ( is_singular() ) {
 		$post_obj = get_queried_object();
@@ -44,17 +49,25 @@ function fl_coastal_prep_seo_meta() {
 			if ( has_post_thumbnail( $post_obj->ID ) ) {
 				$image = get_the_post_thumbnail_url( $post_obj->ID, 'large' );
 			}
-			$url = get_permalink( $post_obj->ID );
+			$url     = get_permalink( $post_obj->ID );
+			$og_type = 'article';
 		}
 	}
 
 	echo '<meta name="description" content="' . esc_attr( $description ) . '" />' . "\n";
+	echo '<meta property="og:site_name" content="' . esc_attr( $site_name ) . '" />' . "\n";
 	echo '<meta property="og:title" content="' . esc_attr( $title ) . '" />' . "\n";
 	echo '<meta property="og:description" content="' . esc_attr( $description ) . '" />' . "\n";
-	echo '<meta property="og:type" content="website" />' . "\n";
+	echo '<meta property="og:type" content="' . esc_attr( $og_type ) . '" />' . "\n";
 	echo '<meta property="og:url" content="' . esc_url( $url ) . '" />' . "\n";
 	if ( $image ) {
 		echo '<meta property="og:image" content="' . esc_url( $image ) . '" />' . "\n";
+	}
+	echo '<meta name="twitter:card" content="summary_large_image" />' . "\n";
+	echo '<meta name="twitter:title" content="' . esc_attr( $title ) . '" />' . "\n";
+	echo '<meta name="twitter:description" content="' . esc_attr( $description ) . '" />' . "\n";
+	if ( $image ) {
+		echo '<meta name="twitter:image" content="' . esc_url( $image ) . '" />' . "\n";
 	}
 }
 // Called from fl_coastal_prep_head_output() in functions.php

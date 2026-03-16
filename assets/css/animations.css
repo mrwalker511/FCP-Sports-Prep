@@ -33,28 +33,44 @@
     60% {transform: translateY(-5px);}
 }
 
-.animate-fade-in {
-    animation: fadeIn 1s ease-out forwards;
+/* Respect user's motion preference (WCAG 2.1 SC 2.3.3) */
+@media (prefers-reduced-motion: no-preference) {
+    .animate-fade-in {
+        animation: fadeIn 1s ease-out forwards;
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .animate-slide-in-left {
+        animation: slideInLeft 1s ease-out forwards;
+    }
+
+    .animate-bounce-slow {
+        animation: bounceSlow 2s infinite;
+    }
+
+    /* Block Style: Animated Fade In Up */
+    .is-style-animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    /* Block Style: Animated Slide In */
+    .is-style-animate-slide-in {
+        animation: slideInLeft 1s ease-out forwards;
+    }
 }
 
-.animate-fade-in-up {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-.animate-slide-in-left {
-    animation: slideInLeft 1s ease-out forwards;
-}
-
-.animate-bounce-slow {
-    animation: bounceSlow 2s infinite;
-}
-
-/* Block Style: Animated Fade In Up */
-.is-style-animate-fade-in-up {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-/* Block Style: Animated Slide In */
-.is-style-animate-slide-in {
-    animation: slideInLeft 1s ease-out forwards;
+/* Ensure animated elements remain visible if motion is reduced */
+@media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-fade-in-up,
+    .animate-slide-in-left,
+    .is-style-animate-fade-in-up,
+    .is-style-animate-slide-in {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
 }

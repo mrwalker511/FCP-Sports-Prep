@@ -83,6 +83,7 @@ function fl_coastal_prep_contact_form_shortcode()
             <label>
                 Reason for Inquiry
                 <select name="contact_reason" required>
+                    <option value="" disabled selected>Select a reason</option>
                     <option value="Admissions">Admissions</option>
                     <option value="Programs">Programs</option>
                     <option value="Schedule">Schedule</option>
@@ -254,7 +255,8 @@ function fl_coastal_prep_handle_contact_form()
     $reason = sanitize_text_field(wp_unslash($_POST['contact_reason'] ?? ''));
     $message = sanitize_textarea_field(wp_unslash($_POST['contact_message'] ?? ''));
 
-    if (!$name || !$email || !$message) {
+    $allowed_reasons = array( 'Admissions', 'Programs', 'Schedule', 'General' );
+    if (!$name || !$email || !$message || !in_array($reason, $allowed_reasons, true)) {
         fl_coastal_prep_redirect_form('error');
     }
 

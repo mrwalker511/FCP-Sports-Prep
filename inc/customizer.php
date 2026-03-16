@@ -85,7 +85,9 @@ function fl_coastal_prep_get_cached_colors()
 }
 
 /**
- * Output Customizer CSS to override theme.json variables.
+ * Output Customizer CSS to override theme.json variables on the frontend.
+ *
+ * Called via wp_head (from fl_coastal_prep_head_output() in functions.php).
  */
 function fl_coastal_prep_customizer_css()
 {
@@ -99,19 +101,39 @@ function fl_coastal_prep_customizer_css()
             --wp--preset--color--contrast: <?php echo esc_attr($colors['contrast']); ?>;
             --wp--preset--color--base: <?php echo esc_attr($colors['base']); ?>;
         }
-
-        /* Ensure editor styles also get the override if possible */
-        .editor-styles-wrapper {
-            --wp--preset--color--primary: <?php echo esc_attr($colors['primary']); ?>;
-            --wp--preset--color--secondary: <?php echo esc_attr($colors['secondary']); ?>;
-            --wp--preset--color--contrast: <?php echo esc_attr($colors['contrast']); ?>;
-            --wp--preset--color--base: <?php echo esc_attr($colors['base']); ?>;
-        }
     </style>
     <?php
 }
-// wp_head hook: Called from fl_coastal_prep_head_output() in functions.php
-add_action('enqueue_block_editor_assets', 'fl_coastal_prep_customizer_css', 100);
+// Called from fl_coastal_prep_head_output() in functions.php via wp_head.
+
+/**
+ * Inject Customizer color overrides into the block editor via wp_add_inline_style.
+ *
+ * enqueue_block_editor_assets fires in the editor context; inline styles must be
+ * attached to an already-enqueued stylesheet handle, not echoed directly.
+ */
+function fl_coastal_prep_editor_customizer_css()
+{
+    $colors = fl_coastal_prep_get_cached_colors();
+
+    $css = sprintf(
+        ':root,
+        .editor-styles-wrapper {
+            --wp--preset--color--primary: %s;
+            --wp--preset--color--secondary: %s;
+            --wp--preset--color--contrast: %s;
+            --wp--preset--color--base: %s;
+        }',
+        esc_attr($colors['primary']),
+        esc_attr($colors['secondary']),
+        esc_attr($colors['contrast']),
+        esc_attr($colors['base'])
+    );
+
+    // wp-edit-blocks is always enqueued in the block editor.
+    wp_add_inline_style('wp-edit-blocks', $css);
+}
+add_action('enqueue_block_editor_assets', 'fl_coastal_prep_editor_customizer_css', 100);
 
 /**
  * Invalidate color cache when Customizer settings are saved.

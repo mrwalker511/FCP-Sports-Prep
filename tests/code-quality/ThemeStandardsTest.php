@@ -70,7 +70,8 @@ class ThemeStandardsTest extends TestCase
         $theme_json = json_decode(file_get_contents($theme_json_file), true);
 
         $this->assertArrayHasKey('version', $theme_json, 'theme.json missing version');
-        $this->assertEquals(2, $theme_json['version'], 'theme.json should use version 2');
+        $this->assertGreaterThanOrEqual(2, $theme_json['version'], 'theme.json version should be 2 or higher');
+        $this->assertEquals(3, $theme_json['version'], 'theme.json should use version 3 (current FSE schema)');
     }
 
     /**
