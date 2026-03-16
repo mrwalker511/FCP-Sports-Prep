@@ -29,6 +29,21 @@ function fl_coastal_prep_register_block_styles() {
 		'label' => __( 'Outline Gold', 'fl-coastal-prep' ),
 	) );
 
+	register_block_style( 'core/button', array(
+		'name'  => 'small',
+		'label' => __( 'Small', 'fl-coastal-prep' ),
+	) );
+
+	register_block_style( 'core/button', array(
+		'name'  => 'medium',
+		'label' => __( 'Medium', 'fl-coastal-prep' ),
+	) );
+
+	register_block_style( 'core/button', array(
+		'name'  => 'large',
+		'label' => __( 'Large', 'fl-coastal-prep' ),
+	) );
+
 	register_block_style( 'core/group', array(
 		'name'  => 'glassmorphism',
 		'label' => __( 'Glassmorphism', 'fl-coastal-prep' ),

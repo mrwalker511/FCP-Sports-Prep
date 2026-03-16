@@ -46,8 +46,14 @@ function fl_coastal_prep_scripts()
 
     wp_enqueue_style('fl-coastal-prep-style', get_stylesheet_uri(), array(), $theme_version);
 
-    // Conditionally enqueue animations only on pages that use animated patterns.
-    if (is_front_page() || is_page_template('page-programs') || is_singular()) {
+    // Enqueue animations only on pages that use animated block patterns.
+    $animated_templates = array(
+        'page-programs',
+        'page-about',
+        'page-campus',
+        'page-faculty',
+    );
+    if (is_front_page() || is_page_template($animated_templates)) {
         wp_enqueue_style('fl-coastal-prep-animations', $theme_uri . '/assets/css/animations.css', array(), $theme_version);
     }
 }

@@ -91,12 +91,6 @@ header + main {
     margin-right: 0 !important;
 }
 
-/* Donor tier badge — styled via CSS to avoid block validation errors */
-.donor-tier {
-    padding: 0.25rem 0.75rem;
-    display: inline-block;
-}
-
 /* Faculty Grid Hover Effects */
 .faculty-card {
     transition: all 0.3s ease;
